@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>레이아웃배치를 쉽게~ 플렉스블박스</title>
+    <!-- 레이아웃배치 용도로 : IE 11부터 지원 -->
+    <!-- Flexbox, Flexable Box, Flex -->
+    <!-- Caniuse.com에서 지원 버전 확인 -->
+    <!-- flex 설명 블로그 -->
+    <!-- https://studiomeal.com/archives/197 -->
+    <!-- flexbox의 주축 방향 -->
+    <!-- flex-direction -->
+    <!--        |            -->
+    <!-- ---------주축---- > -->
+    <!--        |            -->
+    <!--      보조축         -->
+    <!--        V            -->
+    <style>
+      .container {
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 10px;
+        /* 컨테이너를 플럭스박스로 지정 */
+        display: flex;
+      }
+      .box {
+        width: 80px;
+        background-color: green;
+        margin: 5px;
+        /*       상하 좌우 */
+        padding: 5px 45px;
+      }
+      p {
+        color: white;
+        text-align: center;
+      }
+      .opt1 {
+        /* 주축방향 설정: 왼쪽->오른쪽, 기본값 */
+        flex-direction: row;
+      }
+      .opt2 {
+      }
+      .opt3 {
+      }
+      .opt4 {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container opt1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt3">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt4">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+  </body>
+</html>

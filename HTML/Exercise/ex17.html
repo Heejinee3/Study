@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>입력 양식 태그: form 태그</title>
+    <!-- 회원가입, 로그인 페이지에 사용 -->
+    <!-- 웹브라우저가 서버에 요청(데이터)을 보낼 때 2가지 방법 -->
+    <!-- 1. form 태그 : html로 보낼때 - GET/POST-->
+    <!-- 2. JS의 Ajax(비동기통신)/fetch/axios : 리액트.js/Vue.js -->
+    <!--    REST API: GET/POST/PUT/DELETE -->
+    <!--            : 서버의 표준 API -->
+  </head>
+  <body>
+    <!-- form 태그: input 태그의 데이터를 서버에 전송함 -->
+    <!-- action: 서버 주소 -->
+    <!-- method: http 통신 방식 GET/POST 2개만 존재 -->
+    <form action="http://myserver.com" method="POST">
+      <!-- input 태그: 사용자의 데이터를 입력받는 태그 -->
+      <!-- type 속성: 입력되는 데이터의 타입을 의미 -->
+      <!-- name 속성: 서버에서 받아들이는 변수이름 -->
+      <input type="text" name="id" /><br />
+      <input type="password" name="pw" /><br />
+      <input type="file" name="file" /><br />
+      <input type="submit" />
+    </form>
+    <!-- HTTP 통신 방식 GET/POST -->
+    <!-- GET 방식: 주소줄에 데이터를 함께 실어 보냄(노출) -->
+    <!-- 예) http://myserver.com?id=hong&pw=1234 -->
+    <!--     http        : 통신 방식(ftp, smtp, telnet) -->
+    <!--     ://         : 구분자 -->
+    <!--     myserver.com: 서버 주소(URL) -->
+    <!--     ?           : 구분자(서버 주소와 데이터) -->
+    <!--     id, pw      : name 역할 -->
+    <!--     hong, 1234  : 데이터 -->
+    <!--     =           : 구분자 -->
+    <!--     $           : 구분자 -->
+    <!-- POST 방식: HTTP BODY에 데이터를 실어 보냄 -->
+    <!-- 예) http://myserver.com?   payload/body 데이터 실림-->
+  </body>
+</html>

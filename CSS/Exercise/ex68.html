@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>vh와 vw 단위</title>
+    <!-- 단위: px % em rem -->
+    <!-- % 단위: 부모컨테이너에 비례, 100% = 부모컨테이너의 크기만큼 -->
+    <!-- v 단위: viewport(화면크기)에 비례하는 너비/높이 -->
+    <!--       : 화면크기가 1000px(세로)이면, 1vh = 10px -->
+    <!--       : 화면크기가 1000px(가로)이면, 1vw = 10px -->
+    <!-- vmax: 화면 너비나 높이 중에서 큰 값으로 선택 -->
+    <!-- vmin: 화면 너비나 높이 중에서 작은 값으로 선택 -->
+    <style>
+      .box1 {
+        width: 50vw;
+        height: 50vh;
+        font-size: 6vw;
+        background-color: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box2 {
+        width: 50vmax;
+        height: 50vmax;
+        font-size: 6vw;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box3 {
+        width: 50vmin;
+        height: 50vmin;
+        font-size: 6vw;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">50vw, 50vh</div>
+    <div class="box2">50vmax</div>
+    <div class="box3">50vmin</div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>입력 양식 태그의 종류 2/3</title>
+    <!-- input type-button과 button type-button 차이 -->
+  </head>
+  <body>
+    <form action="">
+      <input type="text" value="" /><br />
+      <!-- button 클릭 효과만 있음. 통신 안됨 -->
+      <input type="button" value="Input button" /><br />
+      <!-- input 태그의 입력값을 초기화. 통신 안됨 -->
+      <input type="reset" value="Input reset" /><br />
+      <!-- form 태그 통신이 이루어짐 -->
+      <input type="submit" value="Input submit" /><br />
+      <!-- formaction: 서버 주소를 다르게 지정할 수 있음 -->
+      <input
+        type="submit"
+        value="Input submit2"
+        formaction="http://myserver2.com"
+      /><br />
+      <input
+        type="submit"
+        value="Input submit3"
+        formaction="http://myserver3.com"
+      /><br />
+
+      <!-- button 태그는 HTML 4.0부터 소개됨 -->
+      <!-- button submit과 동일함. 통신됨 -->
+      <button>Button</button><br />
+      <!-- 통신됨 -->
+      <button type="submit">Button submit</button><br />
+      <button type="submit" formaction="http://myserver4.com">
+        Button submit</button
+      ><br />
+      <!-- button 효과만 있음. 통신 안됨 -->
+      <button type="button">Button button</button><br />
+      <!-- 입력값을 초기화 통신안됨 -->
+      <button type="reset">Button reset</button><br />
+
+      <!-- 이미지 버튼: submit 기능을 하면서 이미지 표현 -->
+      <!-- input type-image가 submit 기능을 한다 -->
+      <input
+        type="image"
+        src="./img/play.png"
+        width="100"
+        formaction="http://myserver5.com"
+      />
+      <button type="submit" width="100" formaction="http://myserver5.com">
+        <img src="./img/play.png" />
+      </button>
+    </form>
+  </body>
+</html>

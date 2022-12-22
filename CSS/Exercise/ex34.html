@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <!-- 웹 페이지를 만드는 과정 -->
+    <!-- 화면 레이아웃 배치 과정 -->
+    <!-- 1. html 태그 -->
+    <!-- 2. 시멘틱 태그(header, nav, main, section, asidem footer) -->
+    <!-- 3. div 안에 넣는다 -->
+    <!-- 4. block, inline, inline-block 구분 -->
+    <!-- 5. float => flexbox -->
+    <!-- 6. width, height -->
+    <!-- 7. overflow:hidden -->
+    <!-- 8. margin, padding -->
+    <!-- 9. position(절대, 상대) -->
+    <!-- 상대 좌표: 기본값 현재로부터 떨어진 위치 -->
+    <!-- 절대 좌표: 부모 원점(0,0 스크린 좌표계)으로부터 떨어진 위치 -->
+    <!--          : 1. 요소 위에 요소를 중첩시킬때 -->
+    <!--          : 2. 부모 컨테이너로부터 간단히 이동시킬때 -->
+    <!-- 스크린좌표계: left top이 0, 0 -->
+    <!--             : 해상도 1024 x 768: 0~1023까지 Left -> Right -->
+    <!--                                  0~767까지  Top  -> Bottom -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+      }
+      #red {
+        background-color: red;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+      #green {
+        background-color: green;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+      }
+      #blue {
+        background-color: blue;
+        position: absolute;
+        left: 80px;
+        top: 80px;
+      }
+      #yellow {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="red">
+      <div id="yellow"></div>
+    </div>
+    <div id="green"></div>
+    <div id="blue"></div>
+  </body>
+</html>

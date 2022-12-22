@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>word-break 속성과 word-wrap 속성</title>
+    <!-- word-break : 단어의 분리를 어떻게 할 것인지 결정. -->
+    <!-- word-wrap : 자기영역을 벗어난 단어의 줄바꿈을 어떻게 할 것인가? -->
+
+    <!-- CJK(Chinese, Japanes, Korean 의 약자) : 중국어/일본어/한글 -->
+    <!-- non-CJK(숫자, 영어, 베트남어 등) -->
+
+    <!-- word-break의 단어 분리 -->
+    <!--                   normal(기본값) break-all keep-all             -->
+    <!-- non-CJK의 경우 - 공백, 하이픈(-) 음절    공백,하이픈            -->
+    <!-- CJK의 경우     - 음절            음절    공백,하이픈,그외기호   -->
+
+    <!-- word-wrap의 단어 분리 -->
+    <!--                   normal(기본값)    break-word             -->
+    <!-- non-CJK의 경우 - 단어넘침 O	       단어넘침 X            -->
+    <!-- CJK의 경우     - 단어넘침 X        단어넘침 X   -->
+
+    <style>
+      .container {
+        border: 2px solid black;
+        /* word-wrap: normal; */
+        word-wrap: break-word;
+        /* word-break: normal;  */
+        /* word-break: keep-all; */
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      한국어 김춘수의 「꽃」 내가 그의 이름을 불러 주기 전에는 그는 다만 하나의
+      몸짓에 지나지 않았다. 내가 그의 이름을 불러 주었을 때 그는 나에게로 와서
+      꽃이 되었다.
+    </div>
+    <div class="container">
+      일본어 キム・チュンスの「花」 私が彼の名前を呼ぶ前に 彼はちょうど
+      一つのジェスチャーに過ぎなかった。 私が彼の名前を呼んだとき 彼は私に来て
+      花になった。
+    </div>
+    <div class="container">
+      중국어 金春洙的《花》 直到我叫他的名字 他只是 这只不过是一个手势。
+      当我叫他的名字时 他来找我 变成了一朵花
+    </div>
+    <br />
+    <div class="container">
+      영어 “Flower” by Chunsu Kim Until I called his name he just It was nothing
+      more than a gesture. when i called his name he came to me has become a
+      flower
+    </div>
+    <div class="container">
+      베트남어 “Hoa” của Chunsu Kim Cho đến khi tôi gọi tên anh ấy anh ấy chỉ Đó
+      chẳng qua chỉ là một cử chỉ. khi tôi gọi tên anh ấy anh ấy đến với tôi đã
+      trở thành một bông hoa
+    </div>
+    <div class="container">
+      아랍어 "زهرة" تشونسو كيم حتى اتصلت باسمه هو فقط لم يكن أكثر من لفتة. عندما
+      ناديت اسمه جاء إلي أصبحت زهرة
+    </div>
+    <div class="container">
+      프랑스어 "Fleur" de Chunsu Kim Jusqu'à ce que j'appelle son nom Il a juste
+      Ce n'était rien de plus qu'un geste. quand j'ai appelé son nom il est venu
+      vers moi est devenu une fleur
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      TweenMax.to(".container", 8, {
+        width: 200,
+        repeat: -1,
+        repeatDelay: 2,
+        yoyo: true,
+        ease: Power0.easeNone,
+      });
+    </script>
+  </body>
+</html>

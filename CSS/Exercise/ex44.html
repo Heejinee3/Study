@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex44.html -->
+    <title>flex-flow : 주축,줄바꿈 같이 지정</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+
+        width: 50%;
+        min-width: 300px;
+        height: 400px;
+
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 10px;
+      }
+      .box {
+        padding: 5px 45px;
+        margin: 5px;
+        width: 80px;
+        background-color: green;
+      }
+      p {
+        color: white;
+        text-align: center;
+      }
+      .opt1 {
+        flex-flow: row nowrap;
+      }
+      .opt2 {
+        flex-flow: column-reverse wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container opt1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+      <div class="box"><p>4</p></div>
+      <div class="box"><p>5</p></div>
+      <div class="box"><p>6</p></div>
+    </div>
+    <div class="container opt2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+      <div class="box"><p>4</p></div>
+      <div class="box"><p>5</p></div>
+      <div class="box"><p>6</p></div>
+    </div>
+  </body>
+</html>

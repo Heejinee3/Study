@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>배경 이미지 입히기 - div 박스</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-image: url("img/cafe.jpg");
+        background-repeat: no-repeat;
+        /* contain: 이미지의 W, H 중에 작은 것에 맞춤 */
+        /*        : 공백(여백)이 생김 */
+        /* cover  : 이미지의 W, H 중에 큰 것에 맞춤 */
+        /*        : 이미지가 잘림 */
+        /* 하지만 제일 좋은 것은 이미지 원본과 출력 공간 비율을 모두 맞추는게 좋다 */
+        background-size: contain;
+        /* x좌표 y좌표 */
+        background-position: 10px 0px;
+        border: 1px solid red;
+      }
+      p {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div><p>카페이미지</p></div>
+  </body>
+</html>

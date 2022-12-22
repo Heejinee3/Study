@@ -1,0 +1,386 @@
+<!-- 무료 아이콘 사이트: Flaticon.com -->
+<!-- 썸네일 이미지 만들기 : 캔바닷컴 https://www.canva.com/ -->
+<!-- 이미지 다운로드 하기: 최대 이미지 무료 사이트 - 픽사베이 -->
+    <!-- CSS 속성 지원하는 웹브라우저 버전 확인 -->
+    <!-- Caniuse.com 사이트 -->
+    https://fonts.google.com/
+        <!-- Gradient: 2가지의 색상의 혼합되는 것 -->
+    <!-- https://www.colorzilla.com/gradient-editor/ -->
+
+# Basic Structure
+
+    <!DOCTYPE html>
+    <html lang="ko">
+      <head>
+        <title>Title</title>
+      </head>
+      <body>
+        <header>Header</header>    // 윗쪽 구역                           
+        <main>Main</main>          // 본문                               
+        <aside>Aside</aside>       // 사이드바                            
+        <footer>Footer</footer>    // 아랫쪽 구역                         
+        <article>Article</article> // 개별적이고 독립적인 콘텐츠마다 사용  
+        <section>Section</section> // 관련있는 콘텐츠를 묶을 때 사용      
+        <div>Division</div>        // 페이지를 block으로 나눌 때 사용     
+      </body>
+    </html>
+
+# Title
+
+    <h1>Title</h1> // 2 times    
+    <h2>Title</h2> // 1.5 times  
+    <h3>Title</h3> // 1.33 times 
+    <h4>Title</h4> // 1.17 times 
+    <h5>Title</h5> // 0.83 times 
+    <h6>Title</h6> // 0.67 times 
+
+# Paragraph
+
+    <br>                                 // 줄바꿈 
+    <p>Paragraph</p>                     // 단락   
+    <blockquote>Block Quote</blockquote> // 인용문 
+    <hr>                                 // 수평선
+    <div>Division</div>                  // block
+    <span>Span</span>                    // inline
+
+# Text
+
+    <b>Text</b>                                               // 굵은 글씨                    
+    <strong>Text</strong>                                     // 굵은 글씨(강조)              
+    <i>Text</i>                                               // 기울어진 글씨(관용구)        
+    <em>Text</em>                                             // 기울어진 글씨(강조)          
+    <cite>Text</cite>                                         // 기울어진 글씨(창작물의 제목) 
+    <small>Text</small>                                       // 작은 글씨                    
+    <sub>Text</sub>                                           // 아래쪽 글씨                  
+    <sup>Text</sup>                                           // 위쪽 글씨                    
+    <s>Text</s>                                               // 가운데줄 그어진 글씨(잘못됨) 
+    <del>Text</del>                                           // 가운데줄 그어진 글씨(삭제)   
+    <u>Text</u>                                               // 밑줄 그어진 글씨             
+    <ins>Text</ins>                                           // 밑줄 그어진 글씨(추가)       
+    <abbr title="Original Text">Abbreviated Text</abbr>       // 축약된 글씨                  
+    <code>Text</code>                                         // 코드 글씨                   
+    <font color="#000000" size="10px" face="돋움">Text</font> // 색깔, 크기, 모양 조절 글씨   
+
+# List
+
+    /* 순서가 있는 목록 */
+    /* 
+       type = "1","a","A","i","I"
+       start = "1"
+    */
+    <ol> 
+      <li>List</li>
+      <li>List</li>
+      <li>List</li>
+    </ol>
+
+    /* 순서가 없는 목록 */
+    <ul> 
+      <li>List</li>
+      <li>List</li>
+      <li>List</li>
+    </ul>
+
+    /* 용어 목록 */
+    <dl>
+      <dt>Terms</dt>
+      <dd>Explanation</dd>
+      <dd>Explanation</dd>
+    </dl>
+
+# Table
+
+    /* 
+       border="1px"
+       rowspan="1"
+       colspan="1" 
+       align="center","left","right" 
+       bgcolor="#000000" 
+    */
+
+    <table width="100px" height="100px">
+      <caption>Title</caption> // 제목 
+      <colgroup>               // 열   
+        <col>
+        <col>
+      </colgroup>
+      <thead>                  // 헤드 
+        <tr>
+          <th>Head</th>
+          <th>Head</th>
+        </tr>
+      </thead>
+      <tbody>                  // 본문 
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+      <tfoot>                  // 요약 
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tfoot>
+    </table>
+
+# Multimedia
+
+    <object width="100px" data="data.pdf">Alternative</object>        // 멀티미디어 
+    <embed width="100px" src="data.pdf">Alternative</embed>           // 멀티미디어      
+    <img src="data.jpg" alt="Alternative" width="100px">              // 이미지     
+    <audio src="data.mp3" width="100px" controls >Alternative</audio> // 오디오     
+    <video src="data.mp4" width="100px" controls >Alternative</video> // 비디오      
+                                                                      /* 오디오/비디오 속성
+                                                                         autoplay
+                                                                         loop
+                                                                         muted
+                                                                         preload="auto","metadata","none"
+                                                                         poster="data.jpg"        
+                                                                      */
+
+# Link
+
+    <a href="http://www.naver.com" target="_blank">Move</a>                                               // 링크로 이동(텍스트) 
+    <a href="http://www.naver.com" target="_blank"><img src="data.jpg" alt="Alternative" width="100"></a> // 링크로 이동(이미지) 
+    <a href="#id">Move</a>                                                                                // 해당 구역으로 이동  
+    <a href="#" download="data.jpg">Download</a>                                                          // 다운로드            
+
+# Form
+    <form action="http://myserver.com">                                                             /* 
+                                                                                                       method="POST","GET"
+                                                                                                       name="name"    
+                                                                                                       target="_blank","_self" 
+                                                                                                       autocomplete="on","off"
+                                                                                                    */
+      <fieldset>
+        <legend>Group</legend>
+          <label for="id">Label</label>
+          <input type="text" name="name" id="id">                                                   /* 
+                                                                                                       placeholder="placeholder"
+                                                                                                       value="value"
+                                                                                                       size="10" 
+                                                                                                       minlength="0"  
+                                                                                                       maxlength="10" 
+                                                                                                       required         
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="password" name="name" id="id">                                               /* 
+                                                                                                       placeholder="placeholder"
+                                                                                                       size="10" 
+                                                                                                       minlength="0" 
+                                                                                                       maxlength="10"  
+                                                                                                       required   
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="file" name="name" id="id">                                                   /* 
+                                                                                                       placeholder="placeholder"
+                                                                                                       required 
+                                                                                                    */
+          <input type="checkbox" name="name" id="id1" value="value1"><label for="id1">Label</label> 
+          <input type="checkbox" name="name" id="id2" value="value2"><label for="id2">Label</label> /*                                       
+                                                                                                       checked
+                                                                                                       required
+                                                                                                    */
+          <input type="radio" name="name" id="id1" value="value1"><label for="id1">Label</label>
+          <input type="radio" name="name" id="id2" value="value2"><label for="id2">Label</label>    /*                                        
+                                                                                                       checked
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="number" name="name" id="id" value="1" min="1" max="10">                      /*                                        
+                                                                                                       step="1"    
+                                                                                                       value="1"
+                                                                                                       placeholder="placeholder"
+                                                                                                       required  
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="range" name="name" id="id" min="1"max="10" step="1"/>                        /*                                        
+                                                                                                       step="1"  
+                                                                                                       value="1" 
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="date" name="name" id="id">                                                   /*                                        
+                                                                                                       min="2022-01-01" 
+                                                                                                       max="2022-12-31"   
+                                                                                                       step="1" 
+                                                                                                       value="2022-01-01"
+                                                                                                       required   
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="month" name="name" id="id">                                                  /*                                     
+                                                                                                       min="2022-01" 
+                                                                                                       max="2022-12" 
+                                                                                                       step="1"
+                                                                                                       value="2022-01"
+                                                                                                       required 
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="week" name="name" id="id">                                                   /*                                        
+                                                                                                       min="2022-W01" 
+                                                                                                       max="2023-W01"  
+                                                                                                       step="1" 
+                                                                                                       value="2022-W01"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="time" name="name" id="id">                                                   /*                                        
+                                                                                                       min="00:00" 
+                                                                                                       max="23:59"   
+                                                                                                       step="1" 
+                                                                                                       value="00:00"
+                                                                                                       required 
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="datetime" name="name" id="id">                                               /*                                        
+                                                                                                       min="2022-01-01T00:00" 
+                                                                                                       max="2022-12-23T23:59"  
+                                                                                                       step="1" 
+                                                                                                       value="2022-01-01T00:00"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="datetime-local" name="name" id="id">                                         /*                                        
+                                                                                                       min="2022-01-01T00:00" 
+                                                                                                       max="2022-12-23T23:59"  
+                                                                                                       step="1" 
+                                                                                                       value="2022-01-01T00:00"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="submit" name="name" id="id">
+          <button type="submit">submit</button>                                                     /*  
+                                                                                                       value="submit" 
+                                                                                                       formaction="http://myserver.com"
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="reset" name="name" id="id">                                                  
+          <button type="reset">reset</button>                                                       /* 
+                                                                                                       value="reset"
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="image" name="name" id="id" src="data.jpg" alt="Alternative">                 
+          <button type="submit">
+            <img src="data.jpg">
+          </button>                                                                                 /*  
+                                                                                                       width="100px"
+                                                                                                       formaction="http://myserver.com"
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="email" name="name" id="id">                                                  /*  
+                                                                                                       value="aaa@gmail.com"
+                                                                                                       minlength="0"  
+                                                                                                       maxlength="10" 
+                                                                                                       placeholder="placeholder"
+                                                                                                       size="10" 
+                                                                                                       multiple
+                                                                                                       pattern=".+@naver\.com"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="search" name="name" id="id">                                                 /*  
+                                                                                                       value="value"
+                                                                                                       minlength="0"  
+                                                                                                       maxlength="10" 
+                                                                                                       placeholder="placeholder"
+                                                                                                       size="10" 
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="url" name="name" id="id">                                                    /*  
+                                                                                                       value="https://naver.com"
+                                                                                                       minlength="0"  
+                                                                                                       maxlength="10" 
+                                                                                                       placeholder="placeholder"
+                                                                                                       size="10" 
+                                                                                                       pattern="https://.*"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="tel" name="name" id="id">                                                    /*  
+                                                                                                       value="010-0000-0000"
+                                                                                                       minlength="0"  
+                                                                                                       maxlength="10" 
+                                                                                                       placeholder="placeholder"
+                                                                                                       size="10" 
+                                                                                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <input type="button" name="name" id="id" value="button" onclick="function();">
+          <button type="button" name="name" id="id" onclick="function();">button</button>
+
+          <label for="id">Label</label>
+          <input type="hidden" name="name" id="id" value="value">
+
+          <label for="id">Label</label>
+          <textarea name="name" id="id" cols="30" rows="10">Text</textarea>                         /*  
+                                                                                                       minlength="0"  
+                                                                                                       maxlength="10" 
+                                                                                                       placeholder="placeholder"
+                                                                                                       required
+                                                                                                    */
+          <label for="id">Label</label>
+          <select name="name" id="id">                                                              
+            <option value="1">option</option>
+            <option value="2">option</option>
+            <option value="3">option</option>
+          </select>                                                                                 /*  
+                                                                                                       multiple 
+                                                                                                       size
+                                                                                                       required
+                                                                                                       selected(option) 
+                                                                                                    */
+          <label for="id">Label</label>
+          <input list="id" id="id" name="name">
+          <datalist id="id" name="name">
+              <option value="1">option</option>
+              <option value="2">option</option>
+              <option value="3">option</option>
+          </datalist>
+          
+          <label for="id">Label</label>
+          <input type="color" name="name" id="id" value="#000000">
+      </fieldset>
+    </form>
+
+# Meta Tag
+
+
+
+
+
+    <!-- charset         : 문자인코딩 타입 - UTF-8, EUC-KR -->
+    <meta charset="UTF-8" />
+    <!-- viewport        : 모바일 해상도 대응 -->
+    <!-- device-width    : 웹페이지의 너비가 모바일기기 너비와 동일 -->
+    <!-- initial-scale   : 확대 비율 1.0 원래 비율 2.0 2배 확대-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- X-UA-Compatible : 익스플러러 브라우저의 최신 버전에 대응 -->
+    <!-- ie=edge         : IE가 없으면 엣지 브라우저로 대치 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- content-type: 콘텐츠의 형식을 알려줌 -->
+    <!-- text/html       : text 기반의 html 콘텐츠이다 -->
+    <!-- text/xml        : text 기반의 xml 콘텐츠이다 -->
+    <!-- application/json: AOS/IOS 앱과 통신할 때 콘텐츠 형식 -->
+    <!--                 : REST API 서버와 통신할 때 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- keword          : 검색 로봇에 의해 검색되는 단어(키워드)를 지정 -->
+    <meta name="keyword" content="Web, html, 웹, 과자, 콜라" />
+    <!-- description     : 검색 로봇에 의해 검색되는 문자열 -->
+    <meta name="description" content="저의 웹사이트입니다." />
+    <!-- noindex         : 검색 로봇에 검색 안되게 함 -->
+    <!-- nofollow        : 검색 로봇이 페이지 링크를 따라가지 않도록 함 -->
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- author          : 웹사이트 제작자 표시 -->
+    <meta http-equiv="author" content="홍길동개발자" />
+    <!-- 5초 간격으로 새로고침이 됨 -->
+    <!-- refresh는 페이지를 다 새로 그림 -->
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <!-- <meta http-equiv="refresh" content="5;url=http://www.naver.com" /> -->
+    <meta http-equiv="refresh" content="5;url=./ex25.html" />
+

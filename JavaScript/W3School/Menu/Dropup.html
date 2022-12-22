@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .dropbtn {
+        /* Dropup 꾸미기 */
+        background-color: #3498db;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      .dropup {
+        /* 전체 설정 */
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropup-content {
+        /* Link 1, Link 2 Link 3 꾸미기 */
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        bottom: 50px;
+        z-index: 1;
+      }
+
+      .dropup-content a {
+        /* Link 1, Link 2 Link 3 꾸미기 */
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropup-content a:hover {
+        /* hover할때 Link 1, Link 2 Link 3 색 바꾸기 */
+        background-color: #ccc;
+      }
+
+      .dropup:hover .dropup-content {
+        /* hover할때 Link 1, Link 2 Link 3 나타나기 */
+        display: block;
+      }
+
+      .dropup:hover .dropbtn {
+        /* hover할때 Dropup 색 바꾸기 */
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="dropup">
+      <button class="dropbtn">Dropup</button>
+      <div class="dropup-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>마진과 패딩</title>
+    <!-- 마진: 다른요소와 테두리선의 간격 -->
+    <!-- 패딩: 테두리선과 콘텐츠와의 간격 -->
+    <style>
+      body {
+        border: 10px solid blue;
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: 10px solid black;
+        margin: 10px;
+        /*      상하 좌우 */
+        margin: 10px 20px;
+        /* 시계방향 상우하좌 */
+        margin: 10px 20px 30px 40px;
+        margin-right: 5px;
+        margin-left: 10px;
+        padding: 10px;
+        padding-top: 10px;
+        padding-left: 20px;
+      }
+      span {
+        display: inline-block;
+        /* 자신이 차지할 수 있는 공간의 최대치 */
+        width: 100%;
+        height: 100%;
+        background-color: purple;
+        /* border: 10px solid red; */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span></span>
+      <span></span>
+    </div>
+    <div>
+      <span></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>box-sizing 속성</title>
+    <!-- width, height의 단위를 정의 -->
+    <!-- content-box : 기본값. 콘텐츠의 너비/높이로 크기지정  -->
+    <!-- border-box : 콘텐츠+패딩+테두리두께로 너비/높이로 크기지정 -->
+
+    <!-- content-box을 이용하면, 패딩과 테두리두께까지 고려해서 위치잡기, -->
+    <!-- 배치하기가 어려움이 있음. -->
+    <!-- *-------------*    *- -->
+    <!-- |   *------*  |    |  -->
+    <!-- | P |  C   |  B  M |  -->
+    <!-- |   *------*  |    |  -->
+    <!-- *-------------*    *- -->
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 10px solid black;
+        /* 콘텐츠가 자기영역을 벗어나면 안보이게 자른다. */
+        overflow: hidden;
+
+        margin: 10px;
+        padding: 10px;
+      }
+      div:nth-child(1) {
+        box-sizing: content-box;
+        background-color: aqua;
+      }
+      div:nth-child(2) {
+        box-sizing: border-box;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    content-box : width/height = 콘텐츠 크기
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime illum cum
+      dolore qui? Beatae, veniam dolores alias nulla quam eum maiores dolorum
+      exercitationem debitis repellendus quos nostrum quae doloribus esse.
+    </div>
+    border-box : width/height = 콘텐츠 + 패딩 + 테두리두께
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime illum cum
+      dolore qui? Beatae, veniam dolores alias nulla quam eum maiores dolorum
+      exercitationem debitis repellendus quos nostrum quae doloribus esse.
+    </div>
+  </body>
+</html>

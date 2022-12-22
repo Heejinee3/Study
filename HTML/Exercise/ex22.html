@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>회원가입 폼</title>
+  </head>
+  <body>
+    <h1>회원가입 폼</h1>
+    <form action="http://myserver.com" name="myForm"> 
+
+    <label for="name">이름 : </label>
+    <input type="text" name="name" id="name" placeholder="이름을 입력하세요." value=""></br>
+
+    <label for="password">암호 : </label>
+    <input type="password" name="password" id="password" placeholder="비번을 입력하세요." value=""></br>
+    
+    <label for="phone">핸드폰 : </label>
+    <input type="tel" name="phone" id="phone" placeholder="핸드폰을 입력하세요." value=""></br>
+   
+    <label for="email">이메일 : </label>
+    <input type="email" name="email" id="email" placeholder="이메일을 입력하세요." value=""/><br />
+
+    <label for="gender">성별 : </label>
+    <input type="radio" id="male" name="gender" value="male"><label for="male">남성</label>
+    <input type="radio" id="female" name="gender" value="female"><label for="female">여성</label><br>
+  
+    <label for="hobby">취미 : </label>
+    <input type="checkbox" id="walk" name="hobby" value="walk"><label for="walk">걷기</label>
+    <input type="checkbox" id="run" name="hobby" value="run"><label for="run">달리기</label>
+    <input type="checkbox" id="ride_bike" name="hobby" value="ride_bike"><label for="ride_bike">자전거 타기</label><br>
+  
+    <label for="region">사는 곳 : </label>
+    <select name="region">
+      <option value="1">서울</option>
+      <option value="2">경기</option>
+      <option value="3">인천</option>
+    </select><br>
+
+    <input type="submit" value="회원가입"><br>
+
+  </form>
+  </body>
+</html>

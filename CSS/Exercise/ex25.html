@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>배치 - 박스모델</title>
+    <!-- 박스 모델: 모든 레이아웃(배치)은 사각형으로 됨 -->
+    <!-- 4가지 공간 -->
+    <!-- margin: 다른요소와의 관계 -->
+    <!-- border: 테두리선 두께 -->
+    <!-- padding: 테두리선과 내용물과의 간격 -->
+    <!-- content: 내용물의 크기 -->
+    <style>
+      /* body 태그의 기본 padding 갑싱 8이다 */
+      body {
+        border: 10px solid red;
+        /* 상하좌우 마진을 10px으로 함 */
+        margin: 10px;
+        /* 상하좌우 패딩을 10px로 함 */
+        padding: 10px;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: 10px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div><span></span></div>
+    <div><span></span></div>
+  </body>
+</html>

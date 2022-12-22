@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>테두리선 속성</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        /* CSS 속성: 한줄 표현(단축 표현) */
+        /*      두께 타입  색상 */
+        border: 10px solid red;
+        border-width: 10px;
+        /* solid 실선 dashed 줄선 dotted 점선 */
+        border-style: solid;
+        border-color: red;
+
+        /* 모서리를 둥글게 */
+        /* 반지름 값을 준다 */
+        /* 네군데 모서리: LT RT RB LB */
+        border-radius: 10px;
+        /*             LT,RB RT,LB */
+        border-radius: 20px 50px;
+        /*             LT   RT   RB   LB */
+        border-radius: 10px 20px 30px 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

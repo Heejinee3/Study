@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>입력 양식 태그의 종류 3/3</title>
+  </head>
+  <body>
+    <form action="http://myserver.com">
+      <!-- hidden 속성: 화면에 표시되지 않지만, 서버에서 값을 받을 수 있음 -->
+      <!-- 게시물의 DB index 같은 값을 value에 가질 수 있다 -->
+      <input type="hidden" name="hiddenValue" value="hiddenValue" />
+
+      <!-- 선택 목록 태그: select 태그 -->
+      <select name="drink">
+        <option value="1">콜라</option>
+        <option value="2" selected>사이다</option>
+        <option value="3">오렌지쥬스</option>
+        <option value="4">맥심커피</option>
+      </select>
+
+      <!-- 수평선(구분선) 태그: hr 태그 horizontal row -->
+      <hr />
+
+      <!-- 색상 선택 태그 - Color Picker -->
+      <!-- #RGB: R 00~FF G 00~FF B 00~FF -->
+      <input type="color" name="color" value="#00ff00" /><br />
+
+      <!-- 날짜 선택 -->
+      <input type="date" name="date" value="2022-12-12" /><br />
+
+      <!-- 날짜-시간 선택 -->
+      <input type="datetime-local" name="datetime" value="2022-12-12T15:07" />
+
+      <!-- 이메일 -->
+      <input
+        type="email"
+        name="email"
+        value="aaa@gmail.com,bbb@gmail.com"
+        multiple
+      /><br />
+
+      <!-- 달 입력 -->
+      <input type="month" name="month" value="2022-12" /><br />
+
+      <!-- 숫자 입력 -->
+      <input
+        type="number"
+        value="1"
+        name="number"
+        min="1"
+        max="10"
+        step="2"
+      /><br />
+
+      <!-- 범위 입력 -->
+      <input
+        type="range"
+        value="1"
+        name="range"
+        min="1"
+        max="10"
+        step="1"
+      /><br />
+
+      <!-- 많은 양의 텍스트 입력: textarea 태그 -->
+      <textarea name="memo" cols="30" rows="10">
+많은 양의 문자열을 넣을 수 있음</textarea
+      ><br />
+    </form>
+  </body>
+</html>

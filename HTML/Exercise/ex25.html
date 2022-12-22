@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>시맨틱 태그</title>
+    <!-- HTML5 시멘틱(Semantic): 의미론적 태그 -->
+    <!-- 웹사이트의 공통적인 공간 구성요소를 태그 형식으로 분류한 것 -->
+    <!-- 공통적인 구성요소: 헤더(탑), 메인(섹션), 푸터, 사이드 -->
+    <!-- 사용하는 이유: 유지 보수가 쉽고, 검색 엔진에 잘 노출된다 -->
+    <!-- header 태그 : 이름만 header이고, 속성은 div와 동일하다 -->
+    <!--             : 상위 공간(헤더)을 의미 -->
+    <!-- nav 태그    : 네비게이션(메뉴-바로가기) -->
+    <!-- aside 태그  : 사이드(왼쪽, 오른쪽) 공간 -->
+    <!-- section 태그: 주된 내용(콘텐츠)를 담는 공간 -->
+    <!-- article 태그: 섹션 안에서 글자를 주로 담는 공간, 선택적 -->
+    <!-- footer 태그 : 바닥 공간을 의미함 -->
+    <!-- main   태그 : section + article를 담는 콘텐츠 주 공간 -->
+    <!-- *-----------------* -->
+    <!-- |   Header(Top)   | -->
+    <!-- *-----------------* -->
+    <!-- |        Nav      | -->
+    <!-- * ----------------*      -->
+    <!-- |      |          |      -->
+    <!-- |Aside | Section  | Main -->
+    <!-- |      |          |      -->
+    <!-- *-----------------*      -->
+    <!-- |      Footer     | -->
+    <!-- *-----------------* -->
+    <!-- 모든 시멘틱 태그는 div와 속성이 같다, block 한줄차지 속성 -->
+    <style>
+      /* *: 모든 html 요소 */
+      /* border: 테두리선 */
+      /* body의 기본 마직(여백)은 8이다*/
+      body {
+        margin: 0;
+        padding: 0;
+        border: 1px solid green;
+      }
+      header {
+        border: 1px solid red;
+      }
+      nav {
+        border: 1px solid blue;
+      }
+      main {
+        border: 1px solid orange;
+      }
+      aside {
+        border: 1px solid skyblue;
+        /* float: inline 속성으로 변경하고, 왼쪽으로 배치 */
+        float: left;
+        /* width: 너비값을 지정하고, 15%는 전체 화면에서 15% 차지 */
+        width: 15%;
+      }
+      section {
+        border: 1px solid purple;
+        /* float: inline 속성으로 변경하고, 오른쪽으로 배치 */
+        float: right;
+        /* width: 너비값을 지정하고, 15%는 전체 화면에서 80% 차지 */
+        width: 80%;
+      }
+      article {
+        border: 1px solid brown;
+      }
+      footer {
+        border: 1px solid pink;
+        /* clear: float 속성을 제거한다, footer를 block 속성을 갖도록 한다 */
+        /* float 속성은 clear로 제거하지 않으면 위에서부터 아래로 전달된다 */
+        clear: both;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>헤더 영역 타이틀</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside>
+        <ul>
+          <li><a href="#">사이드메뉴1</a></li>
+          <li><a href="#">사이드메뉴2</a></li>
+          <li><a href="#">사이드메뉴3</a></li>
+        </ul>
+      </aside>
+      <section>
+        <article>
+          <h3>내용1</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+            consectetur eum, excepturi est nostrum harum animi repellat
+            laboriosam totam, cumque fugiat! Quisquam velit deserunt illum quos
+            et error veniam nesciunt!
+          </p>
+        </article>
+        <article>
+          <h3>내용2</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+            distinctio amet soluta, quos natus alias rem. Nobis, omnis aliquid
+            quibusdam voluptates eveniet quod ex quisquam excepturi temporibus
+            velit libero deleniti.
+          </p>
+        </article>
+        <article>
+          <h3>내용3</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+            distinctio amet soluta, quos natus alias rem. Nobis, omnis aliquid
+            quibusdam voluptates eveniet quod ex quisquam excepturi temporibus
+            velit libero deleniti.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>회사소개 및 주소</p>
+    </footer>
+  </body>
+</html>
