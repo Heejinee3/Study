@@ -76,6 +76,7 @@
         Number.Max_SAFE_INTEGER
         Number.Min_SAFE_INTEGER
         string.length
+        list.length
 
         alert("Hello!")
         console.log("Hello!");
