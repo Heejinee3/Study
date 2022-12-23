@@ -507,7 +507,11 @@ https://amango.tistory.com/7
                                            ease-out                : ease-out
                                            ease-in-out             : ease-in-out
                                            cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
-                                           
+                             
+                             
+                             
+                             
+    transition: all 1s 1s linear;  
                                            
                                            
                                            
