@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>조건문</title>
+    <script>
+      // 조건문 if문 switch-case문(조건식이 정수일때)
+      // if (조건식(비교, 논리)){
+      //   조건식이 true이면 수행
+      // }
+
+      let myVar = 20;
+      if (myVar == 20) {
+        document.write(20 + "<br>");
+      }
+
+      // 연습문제 4
+      // 1. myNum 변수를 선언하고 30으로 초기화 한 후에 document.write로 출력하시오.
+      //    h3태그에 담아서 출력
+      document.write("1번");
+      let myNum = 30;
+      document.write("<h3>" + myNum + "</h3>");
+      // 2. myNum이 30보다 크면, "30보다 큽니다.",
+      //    같거나 작으면 "30보다 작거나 같습니다."라고 출력하시오.
+      document.write("2번 <br>");
+      if (myNum > 30) {
+        document.write("30보다 큽니다.<br>");
+      } else {
+        document.write("30보다 작거나 같습니다.<br>");
+      }
+      // 3. 문자열 비교
+      //    myStr 변수에 "abc"를 입력하고, myStr이 "abc"와 같은지 값 비교를 한후에,
+      //    같으면 "abc와 같음", 다르면 "abc와 다름"
+      //    자바: equals() JS: == !=
+      document.write("3번 <br>");
+      let myStr = "abc";
+      if (myStr == "abc") {
+        document.write("abc와 같음<br>");
+      } else {
+        document.write("abc와 다름<br>");
+      }
+      // 4. prompt로 이름을 입력받고, 입력 받은 이름이 "김삿갓"이 맞으면 "김삿갓입니다."
+      //    아니면 "김삿갓이 아닙니다"라고 출력
+      document.write("4번 <br>");
+      let input = prompt("이름을 입력하세요.");
+      if (input == "김삿갓") {
+        document.write("김삿갓입니다.<br>");
+      } else {
+        document.write("김삿갓이 아닙니다.<br>");
+      }
+      // 5. prompt로 5자리 숫자를 문자열로 입력받고, 이 안에 홀수의 갯수를 출력하시오.
+      document.write("5번 <br>");
+      let input2 = prompt("5자리 숫자를 입력하세요.");
+      let sum = 0;
+      for (let i = 0; i < 5; i++) {
+        if (Number(input2.charAt(i)) % 2 == 1) sum++;
+      }
+      document.write(sum + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

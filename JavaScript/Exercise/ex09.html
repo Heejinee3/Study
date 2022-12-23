@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>JS 연습문제1</title>
+    <script>
+      // DM으로 제출
+      //1. prompt함수를 이용하여 사용자로부터 문자열(아라비아숫자)을 입력
+      //   받는다.
+      //   그 수에 2를 곱한 값을 출력하시오.
+      let str = prompt("숫자를 입력하세요.");
+      let value = Number(str);
+      document.write("입력된 값:" + value);
+      document.write("<br>");
+      document.write("2 곱하기:" + value * 2);
+      document.write("<br>");
+
+      //2. 1에서 입력받은 숫자를 3으로 나눈 다음 몫과 나머지를 출력하시오.
+      //    / 몫 연산자, % 나머지 연산자
+      document.write("몫:" + Math.floor(value / 3));
+      document.write("<br>");
+      document.write("나머지:" + (value % 3));
+      document.write("<br>");
+      //3. 입력받은 숫자의 백의 자릿수,십의 자릿수와 일의 자릿수를 출력하시오.
+      //   예) "123" => 백의 자릿수 1, 십의 자릿수 2, 일의 자릿수 3
+      //   Math.floor함수 : 소숫점 버림함수
+      //   Math.floor( 1.23 ) => 1123
+      document.write("백의 자릿수:" + Math.floor((value / 100) % 10));
+      document.write("<br>");
+      document.write("십의 자릿수:" + Math.floor((value / 10) % 10));
+      document.write("<br>");
+      document.write("일의 자릿수:" + Math.floor((value / 1) % 10));
+    </script>
+  </head>
+  <body></body>
+</html>

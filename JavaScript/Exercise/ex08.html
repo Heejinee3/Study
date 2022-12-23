@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>문자열형을 숫자형으로 타입 변경하기</title>
+    <script>
+      // 문자열형을 숫자형으로
+      let myStr = "123";
+      let myNum = Number(myStr);
+      console.log(typeof myNum);
+      console.log(myNum * 2);
+
+      let myStr3 = "123.45";
+      let myNum3 = parseInt(myStr3);
+      console.log(myNum3);
+      let myNum4 = parseFloat(myStr3);
+      console.log(myNum4);
+
+      // 숫자형을 문자열형으로
+      let myNum2 = 456;
+      let myStr2 = String(myNum2);
+      console.log(typeof myStr2);
+    </script>
+  </head>
+  <body></body>
+</html>
