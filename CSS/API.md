@@ -427,7 +427,40 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
                                                                                                    다섯번째 인자 ~ 마지막 인자(색상, 위치)
                                                                                                      #000000 20%: 색상, 위치                                                  */
                                                                  
-  
+# Transform
+    
+    transform: translate(10px, 10px);        // x, y축 이동
+    
+    transform: translate3d(10px, 10px,10px); // x, y, z축 이동
+    
+    transform: translateX(10px);             // x축 이동
+    
+    transform: translateY(10px);             // y축 이동
+    
+    transform: translateZ(10px);             // z축 이동
+    
+    transform: scale(1, 1);                  // x, y축 확대, 축소
+    
+    transform: scale3d(1, 1);                // x, y, z축 확대, 축소
+    
+    transform: scaleX(1);                    // x축 확대, 축소
+    
+    transform: scaleY(1);                    // y축 확대, 축소
+    
+    transform: scaleZ(1);                    // z축 확대, 축소
+    
+    transform: rotate(10deg);                // x, y축 회전
+    
+    transform: rotate3d(1, 1, 1, 10deg);     // x, y, z축 회전
+    
+    transform: rotateX(10deg);               // x축 회전
+    
+    transform: rotateY(10deg);               // y축 회전
+    
+    transform: rotateZ(10deg);               // z축 회전
+    
+    perspective(100px);                      // 입체적으로 보일 수 있게 깊이 조정
+    
 # Object Fit
 
     object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐               
