@@ -12,9 +12,9 @@
     
 # Variable/Constant
 
-    var myVar     = 10; // 변수(재선언 O)
-    let myLet     = 10; // 변수(재선언 X)
-    const myConst = 10; // 상수
+    var myVar     = value; // 변수(재선언 O)
+    let myLet     = value; // 변수(재선언 X)
+    const myConst = value; // 상수
 
 # If/Switch
 
@@ -62,9 +62,34 @@
       수행문;
     }while(조건식);
     
+# Array
+
+    let array = []; 
+    let array = [value1, value2, ...]; 
+    let array = Array(); 
+    let array = Array(length);                       
+    let array = Array(value1, value2, ...); 
+
+    array.push(value);                               // 마지막 요소 추가
+    array.unshift(value);                            // 처음 요소  추가
+    array[index] = value;                            // index 자리에 value 넣기
+
+    array.pop();                                     // 마지막 요소 삭제
+    array.shift();                                   // 처음 요소 삭제
+    delete array[index];                             // index 자리 value 삭제(empty로 남아있음)
+
+    array.splice(index, count, value1, value2, ...); // index에 count만큼 삭제하고 value넣기
+    array.splice(index, count);                      // index에 count만큼 삭제
+
+    array = array1.concat(array2, array3, ...);      // array 병합 
     
     
     
+    
+    
+    
+    arrayE.reverse();
+    arrayE.sort();
          <img onmouseover="this.src='img/banana.png'" onmouseout="this.src='img/apple.png'"/>
         <a href="javascript:alert('클릭하셨어요?')"></a>
         <button onclick="Hello!"></button>
