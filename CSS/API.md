@@ -507,15 +507,21 @@ https://amango.tistory.com/7
                                            ease-out                : ease-out
                                            ease-in-out             : ease-in-out
                                            cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
-                             
-                             
-                             
-                             
-    transition: all 1s 1s linear;  
-                                           
-                                           
-                                           
-    
+
+    transition: all 1s 1s linear;       /* property, duration, delay, timing-function */
+
+# Animation
+  
+    @keyframes name{     /* Animation 선언
+      0%{                   0%  : 백분율
+      }                     from: 처음
+      50%{                  to  : 끝       */
+      }
+      100%{
+      }
+    }
+
+
 # Object Fit
 
     object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐               
