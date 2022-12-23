@@ -29,6 +29,46 @@
     double                  = myDouble.DoubleValue();
     boolean                 = myBoolean.BooleanValue();
     Character               = myCharacter.CharacterValue();
+    
+# If/Switch
+
+    if (조건문) {
+        수행문;
+    } else if (조건문) {
+        수행문;
+    } else {
+        수행문;
+    }
+
+    switch (변수) {
+      case 1:
+        수행문;
+        break;
+      case 2:
+        수행문;
+        break;
+      default:
+        수행문;
+        break;
+    }
+    
+# For/While/Do-while
+
+    for (초기화; 조건식; 증감문){
+      수행문;
+    }
+
+    for (int value: array) {     
+        수행문;
+    }
+
+    while(조건식){
+      수행문;
+    }
+
+    do{
+      수행문;
+    }while(조건식);
 
 # Print
 
