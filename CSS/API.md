@@ -429,6 +429,10 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
                                                                  
 # Transform
     
+    /* X: +방향(왼쪽)      -방향(오른쪽)
+       Y: +방향(아래쪽)    -방향(위쪽)
+       Z: +방향(화면 앞쪽) -방향(화면 뒤쪽) */
+    
     transform: translate(10px, 10px);        // x, y축 이동
     
     transform: translate3d(10px, 10px,10px); // x, y, z축 이동
@@ -449,7 +453,7 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
     
     transform: scaleZ(1);                    // z축 확대, 축소
     
-    transform: rotate(10deg);                // x, y축 회전
+    transform: rotate(10deg, 10deg);         // x, y축 회전
     
     transform: rotate3d(1, 1, 1, 10deg);     // x, y, z축 회전
     
@@ -458,6 +462,26 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
     transform: rotateY(10deg);               // y축 회전
     
     transform: rotateZ(10deg);               // z축 회전
+    
+    transform: skew(10deg, 10deg);           // x, y축 비틀기
+    
+    transform: skewX(10deg);                 // x축 비틀기
+    
+    transform: skewY(10deg);                 // y축 비틀기
+    
+    transform-origin: 10% 10%;               /* pivot
+    
+                                                첫번째 인자(가로 위치)
+                                                  10%   : 백분율
+                                                  left  : 왼쪽
+                                                  center: 가운데
+                                                  right : 오른쪽
+
+                                                네번째 인자(세로 위치)
+                                                  10%   : 백분율
+                                                  top   : 위쪽
+                                                  center: 가운데
+                                                  bottom: 아래쪽     */
     
     perspective(100px);                      // 입체적으로 보일 수 있게 깊이 조정
     
@@ -673,10 +697,3 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
         /* 가로 30% 세로 60% 기준 */
         /* transform-origin: 30% 60%; */
 
-        /* transform: translate(30px, 30px); */
-        /* transform: rotate(30deg); */
-        /* transform: translate(30px, 30px) rotate(45deg); */
-        /* transform: translate(100px, 200px) scale(2, 2); */
-        /* transform: skewX( 45deg ); */
-        /* transform: skewY( 45deg ); */
-        transform: skew(-15deg, 15deg);
