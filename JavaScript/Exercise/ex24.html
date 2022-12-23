@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>연습문제 7</title>
+    <script>
+      let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      document.write("<table border='1'>");
+      document.write("<tr>");
+      for (let value of list) {
+        if (value != 1)
+          document.write("<td style='text-align: center'>" + value + "단</td>");
+      }
+      document.write("</tr>");
+
+      for (let value1 of list) {
+        document.write("<tr>");
+        for (let value2 of list) {
+          if (value2 != 1)
+            document.write(
+              "<td>" + value2 + "*" + value1 + "=" + value1 * value2 + "</td>"
+            );
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+    </script>
+  </head>
+  <body></body>
+</html>

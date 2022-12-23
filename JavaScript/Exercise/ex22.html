@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>반복문의 break문, continue문</title>
+    <script>
+      // break문: 해당 회차(loop)에서 반복문을 빠져나옴
+      // continue문: 해당 회차(loop)를 중지하고, 루프처음-증감문으로 이동
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+        if (i == 5) break;
+      }
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+        if (i % 2 == 0) continue;
+      }
+
+      // 레이블 이용
+      loop1: for (let i = 2; i <= 9; i++) {
+        loop2: for (let j = 1; j <= 9; j++) {
+          console.log(i + "*" + j + "=" + i * j);
+          if (j > 5) continue loop2;
+          if (j > 3) break loop1;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
