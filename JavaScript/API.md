@@ -12,8 +12,8 @@
     
 # Variable/Constant
 
-    var myVar     = 10; // 변수
-    let myLet     = 10; // 변수
+    var myVar     = 10; // 변수(재선언 O)
+    let myLet     = 10; // 변수(재선언 X)
     const myConst = 10; // 상수
 
 # If/Switch
