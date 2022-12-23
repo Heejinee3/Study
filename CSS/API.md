@@ -345,7 +345,7 @@ https://amango.tistory.com/7
                                                             
 # Gradation
 
-https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이트
+    https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이트
 
     background: linear-gradient(to right bottom, #000000, #FFFFFF);                             /* 선형 그라데이션
     
@@ -485,6 +485,33 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
     
     perspective(100px);                      // 입체적으로 보일 수 있게 깊이 조정
     
+# Transition
+
+    transition-property: all;           /* 대상 지정
+                                           all  : 모든 속성
+                                           none : 없음
+                                           width: 속성 이름 */
+                                 
+    transition-duration: 1s;            /* 진행 시간
+                                           1s : 초
+                                           1ms: 밀리초 */
+                                
+    transition-delay: 1s;               /* 지연 시간
+                                           1s : 초
+                                           1ms: 밀리초 */
+                                
+    transition-timing-function: linear; /* 속도 곡선 지정
+                                           linear                  : linear
+                                           ease                    : ease
+                                           ease-in                 : ease-in
+                                           ease-out                : ease-out
+                                           ease-in-out             : ease-in-out
+                                           cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
+                                           
+                                           
+                                           
+                                           
+    
 # Object Fit
 
     object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐               
@@ -593,33 +620,7 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
     
     
     
-        <!-- CSS 변환효과 Transition -->
-    <!-- 위치속성: top left right bottom -->
-    <!-- 크기속성: width height -->
-    <!-- 박스속성: margin padding -->
-    <!-- 테두리속성: border-width radius color sytle -->
-    <!-- 색상속성: color background-color -->
-    <!-- 투명도속성: opacity 0.0(투명)~1.0(불투명) -->
-    <!-- 보기속성: display visivility -->
-    <!-- 형태속성: transform(기울기,스케일-늘어나고줄어듬) -->
-        transition: all 2s;
-        
-        
-            <!-- transition-delay : 지연시간(몇초있다가) -->
-    <!--           -duration : 변환시간 -->
-    <!--           -property : 어떤속성에 변형을 줄것인가 -->
-    <!--           -timing-function :  보간타입(시간 vs 변화량) -->
-
-    <!-- 보간 : 인터폴레이션(시간의 간격을 채우는 것) -->
-    <!-- 보간타입 : linear, ease(기본값),  ease-in, ease-out, ease-in-out -->
-    
-    
-            /* 변환시간 */
-        transition-duration: 3s;
-        /* 지연시간 */
-        transition-delay: 0.2s;
-        /* 변환속성 */
-        transition-property: width, background-color;
+  
         
         
               /* 보간 방법 */
@@ -672,28 +673,5 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
             주로 새로운기능 : transition transform gradient user-select
             
             
-                <!-- Transform : 변형 (크기,각도) -->
-    <!-- 2차원(XY평면), 3차원(XYZ평면) -->
-    <!-- 2차원 좌표계 : Left-Top이 0,0인 지점(스크린좌표계) -->
-    <!-- 3차원 좌표계 : 2차원좌표계 + z축 -->
-    <!--  Z+ 방향 : 모니터앞쪽, Z- 방향 : 사용자측 -->
-    <!-- rotate(각도값) : 회전 -->
-    <!-- translate(X,Y) : X,Y 위치로 이동 -->
-    <!-- translateX(X): X위치로 이동 -->
-    <!-- translateY(Y): Y위치로 이동 -->
-    <!-- scale(X,Y): 크기를 변경 1은 원본, 2는 2배, 0.5 절반크기 -->
-    <!-- scaleX(X): 가로 크기 변경 -->
-    <!-- scaleY(Y): 세로 크기 변경 -->
-    <!-- skew(X,Y 각도값) : 기울이기, X축방향,Y축방향으로 -->
-    <!-- skewX(X): X축 기준 기울이기 -->
-    <!-- skewY(Y): Y축 기준 기울이기 -->
-    <!-- transform-origin : 앵커값 회전기준값 -->
-    
-        /* transform: rotate(45deg); */
-        /*왼쪽 아래 기준 */
-        /* transform-origin: left top; */
-        /* 오른쪽 아래 기준 */
-        /* transform-origin: right bottom; */
-        /* 가로 30% 세로 60% 기준 */
-        /* transform-origin: 30% 60%; */
+
 
