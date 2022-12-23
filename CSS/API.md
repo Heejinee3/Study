@@ -585,3 +585,65 @@ https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이�
       .bar:nth-child(6) {
         transition-timing-function: cubic-bezier(0.15, 1.53, 0, -0.87);
       }
+      
+       @media screen and (max-width: 767px) and (orientation: portrait) {
+        body {
+          background-color: red;
+        }
+      }
+      /* 최대너비 0~767px에서, 가로모드일때 */
+      @media screen and (max-width: 767px) and (orientation: landscape) {
+        body {
+          background-color: orange;
+        }
+      }
+      /* 태블릿 해상도일때 적용됨 */
+      /* 최대너비 768~959px 까지의 너비일때 */
+      @media screen and (min-width: 768px) and (max-width: 959px) {
+        body {
+          background-color: yellow;
+        }
+      }
+      /* pc 해상도 */
+      @media screen and (min-width: 960px) {
+        body {
+          background-color: green;
+        }
+      }
+      
+      벤더 프리픽스
+            주로 새로운기능 : transition transform gradient user-select
+            
+            
+                <!-- Transform : 변형 (크기,각도) -->
+    <!-- 2차원(XY평면), 3차원(XYZ평면) -->
+    <!-- 2차원 좌표계 : Left-Top이 0,0인 지점(스크린좌표계) -->
+    <!-- 3차원 좌표계 : 2차원좌표계 + z축 -->
+    <!--  Z+ 방향 : 모니터앞쪽, Z- 방향 : 사용자측 -->
+    <!-- rotate(각도값) : 회전 -->
+    <!-- translate(X,Y) : X,Y 위치로 이동 -->
+    <!-- translateX(X): X위치로 이동 -->
+    <!-- translateY(Y): Y위치로 이동 -->
+    <!-- scale(X,Y): 크기를 변경 1은 원본, 2는 2배, 0.5 절반크기 -->
+    <!-- scaleX(X): 가로 크기 변경 -->
+    <!-- scaleY(Y): 세로 크기 변경 -->
+    <!-- skew(X,Y 각도값) : 기울이기, X축방향,Y축방향으로 -->
+    <!-- skewX(X): X축 기준 기울이기 -->
+    <!-- skewY(Y): Y축 기준 기울이기 -->
+    <!-- transform-origin : 앵커값 회전기준값 -->
+    
+        /* transform: rotate(45deg); */
+        /*왼쪽 아래 기준 */
+        /* transform-origin: left top; */
+        /* 오른쪽 아래 기준 */
+        /* transform-origin: right bottom; */
+        /* 가로 30% 세로 60% 기준 */
+        /* transform-origin: 30% 60%; */
+
+        /* transform: translate(30px, 30px); */
+        /* transform: rotate(30deg); */
+        /* transform: translate(30px, 30px) rotate(45deg); */
+        /* transform: translate(100px, 200px) scale(2, 2); */
+        /* transform: skewX( 45deg ); */
+        /* transform: skewY( 45deg ); */
+        transform: skew(-15deg, 15deg);
