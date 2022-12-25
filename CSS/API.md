@@ -520,6 +520,37 @@ https://amango.tistory.com/7
       100%{
       }
     }
+    
+    animation-name: name;                   // Animation name 
+    
+    animation-duration:1s;                  */ 지속 시간
+                                               1s : 초
+                                               1ms: 밀리초 */
+                                               
+    animation-delay:1s;                     /* 지연 시간
+                                               1s : 초
+                                               1ms: 밀리초 */
+                                               
+    animation-direction: normal;            /* 진행 방향
+                                               normal: from에서 to로 진행
+                                               reverse: to에서 from으로 진행
+                                               alternate: 홀수번째는 normal, 짝수번째는 reverse
+                                               alternate-reverse: 홀수번째는 reverse, 짝수번째는 normal */
+                                             
+    animation-iteration-count: 1;           /* 반복 횟수
+                                               1: 반복 획수
+                                               infinite: 무힌 반복 */
+                                              
+    animation-timing-function: linear;      /* 속도 곡선 지정
+                                               linear                  : linear
+                                               ease                    : ease
+                                               ease-in                 : ease-in
+                                               ease-out                : ease-out
+                                               ease-in-out             : ease-in-out
+                                               cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
+                                           
+    animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
+    
 
 
 # Object Fit
