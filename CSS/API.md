@@ -8,13 +8,13 @@ https://amango.tistory.com/7
 
 # CSS Apply
 
-    <style>                                  // 1 
+    <style>                                  // 1(head 사이)
       h {color: red;}
     </style>
     
-    <h style="color: red;"></h>              // 2 
+    <h style="color: red;"></h>              // 2(body 사이)
     
-    <link rel="stylesheet" href="mycss.css"> // 3 
+    <link rel="stylesheet" href="mycss.css"> // 3(head 사이)
 
 # Selector
 
@@ -551,8 +551,61 @@ https://amango.tistory.com/7
                                            
     animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
     
+# Media Query
 
+    <link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
+    
+    @import url("mycss.css") only screen and (min-width:768px) and (max-width:1024px); // 외부 css 파일 연결(비추천, head 사이)
+    
+    <style media="only screen and (min-width:768px) and (max-width:1024px)">           // 내부 직접 정의(head 사이)
+    </style>
+    
+    <style>
+      @media only screen and (min-width:768px) and (max-width:1024px){                 // 내부 직접 정의(head 사이)
+      }
+    </style>
 
+    @media [only|not] 미디어유형 [and 조건] [and 조건] ...
+    
+    /* only: 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음
+       not : not 다음에 지정하는 미디어 유형을 제외  
+       and : 조건을 여러개 연결해서 추가                                                    */
+       
+    /* 미디어 유형
+       all       : 모든 유형
+       print     : 인쇄 장치
+       screen    : 컴퓨터, 스마트폰 스크린
+       tv        : TV
+       aural     : 화면을 읽어 소리로 출력해주는 장치
+       braille   : 점자 표시 장치
+       handheld  : 손에 들고 다니는 장치
+       projection: 프로젝터
+       tty       : 디스플레이 기능이 제한된 장치
+       embossed  : 점자 프린터                      */
+       
+    /* 웹 문서의 너비 높이
+       width     : 너비
+       height    : 높이
+       min-width : 최소 너비
+       min-height: 최소 높이
+       max-width : 최대 너비
+       max-height: 최대 높이 */
+       
+    /* 단말기의 너비 높이
+       device-width     : 너비
+       device-height    : 높이
+       min-device-width : 최소 너비
+       min-device-height: 최소 높이
+       max-device-width : 최대 너비
+       max-device-height: 최대 높이 */
+       
+    /* 화면 회전 
+       orientation: portrait : 세로 모드
+       orientation: landscape: 가로 모드 */
+       
+    yesviz.com/devices.php: 기기 물리적 해상도, 논리적 해상도 정리 사이트
+       
+    
 # Object Fit
 
     object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐               
@@ -565,74 +618,77 @@ https://amango.tistory.com/7
 
 # Flex
 
-    display: flex;                  // flex로 설정                                   
+    display: flex;               /* container 지정   
+                                    flex       : flex
+                                    inline-flex: inline-flex */
+                                       
+    flex-direction: row;         /* 주축 설정
+                                    row           : 오른 방향                              
+                                    row-reverse   : 왼 방향                                
+                                    column        : 아래 방향                              
+                                    column-reverse: 위 방향   */                               
 
-    /* 주축 설정 */
-    flex-direction: row;            // 주축이 오른 방향                              
-    flex-direction: row-reverse;    // 주축이 왼 방향                                
-    flex-direction: column;         // 주축이 아래 방향                              
-    flex-direction: column-reverse; // 주축이 위 방향                                
+    flex-wrap: nowrap;           /* 보조축 설정
+                                    nowrap      : 컨테이너를 넘어가도 박스는 안넘어감           
+                                    wrap        : 보조축이 아래 또는 오른 방향                  
+                                    wrap-reverse: 보조축이 위 또는 왼 방향           */       
 
-    /* 보조축 설정 */
-    flex-wrap: nowrap;              // 컨테이너를 넘어가도 박스는 안넘어감           
-    flex-wrap: wrap;                // 보조축이 아래 또는 오른 방향                  
-    flex-wrap: wrap-reverse;        // 보조축이 위 또는 왼 방향                      
+    flex-flow: row nowrap;       // direction, flex-wrap             
+    
+    justify-content: flex-start; /* 주축 이동
+                                    flex-start   : 주축의 원점으로 이동                          
+                                    flex-end     : 주축의 화살표로 이동                          
+                                    center       : 주축의 가운데로 이동                          
+                                    space-between: between 방식으로 주축을 고르게 이동           
+                                    space-around : around 방식으로 주축을 고르게 이동            
+                                    space-evenly : evenly 방식으로 주축을 고르게 이동  */  
 
-    /* 주축, 보조축 설정 */
-    flex-flow: row nowrap;          // flex-direction과 flex-wrap을 합침             
+    align-items: flex-start;     /* 한줄 보조축 이동
+                                    flex-start: 보조축의 원점으로 이동                        
+                                    flex-end  : 보조축의 화살표로 이동                        
+                                    center    : 보조축의 가운데로 이동                        
+                                    stretch   : 보조축 방향에 따라 길게 늘림                  
+                                    baseline  : 보조축 방향의 텍스트 베이스라인 기준으로 정렬 */
+                                       
+    align-content: flex-start;   /* 여러줄 보조축 이동 
+                                    flex-start   : 보조축의 원점으로 이동                        
+                                    flex-end     : 보조축의 화살표로 이동                        
+                                    center       : 보조축의 가운데로 이동                        
+                                    space-between: between 방식으로 보조축을 고르게 이동         
+                                    space-around : around 방식으로 보조축을 고르게 이동          
+                                    stretch      : 보조축 방향에 따라 길게 늘림          */          
 
-    /* 주축 이동 */
-    justify-content: flex-start;    // 주축의 원점으로 이동                          
-    justify-content: flex-end;      // 주축의 화살표로 이동                          
-    justify-content: center;        // 주축의 가운데로 이동                          
-    justify-content: space-between; // between 방식으로 주축을 고르게 이동           
-    justify-content: space-around;  // around 방식으로 주축을 고르게 이동            
-    justify-content: space-evenly;  // evenly 방식으로 주축을 고르게 이동            
+    align-self: flex-start;      /* 각 box 보조축 이동  
+                                    flex-start: 보조축의 원점으로 이동                       
+                                    flex-end  : 보조축의 화살표로 이동                       
+                                    center    : 보조축의 가운데로 이동                       
+                                    stretch   : 보조축 방향에 따라 길게 늘림                  
+                                    baseline  : 보조축 방향의 텍스트 베이스라인 기준으로 정렬 */
 
-    /* 한줄 보조축 이동 */
-    align-items: flex-start;        // 보조축의 원점으로 이동                        
-    align-items: flex-end;          // 보조축의 화살표로 이동                        
-    align-items: center;            // 보조축의 가운데로 이동                        
-    align-items: stretch;           // 보조축 방향에 따라 길게 늘림                  
-    align-items: baseline;          // 보조축 방향의 텍스트 베이스라인 기준으로 정렬 
+    flex-basis: 100px;           /* content 크기 */
+                                    주축이 row일때는 width
+                                    column일때는 height를 바꿈 
+                                    basis값보다 content가 크면 더 크게 바꿈 */ 
+                                       
+    flex-grow: 1;                /* 늘어나는 공백 비율을 따질 수 있음 
+                                    0: 안늘어남
+                                    1: 길게 늘어남                         */ 
+                                       
+    flex-shrink: 1;              /* 줄어드는 공백 비율을 따질 수 있음 
+                                    0: 안늘어남
+                                    1: 길게 늘어남                         */
+                                       
+    flex: 1 1 auto;              // grow shrink basis
 
-    /* 여러줄 보조축 이동 */
-    align-content: flex-start;      // 보조축의 원점으로 이동                        
-    align-content: flex-end;        // 보조축의 화살표로 이동                        
-    align-content: center;          // 보조축의 가운데로 이동                        
-    align-content: space-between;   // between 방식으로 보조축을 고르게 이동         
-    align-content: space-around;    // around 방식으로 보조축을 고르게 이동          
-    align-content: stretch;         // 보조축 방향에 따라 길게 늘림                  
-
-    /* 각 box 보조축 이동 */
-    align-self: flex-start;         // 보조축의 원점으로 이동                       
-    align-self: flex-end;           // 보조축의 화살표로 이동                       
-    align-self: center;             // 보조축의 가운데로 이동                       
-    align-self: stretch;            // 보조축 방향에 따라 길게 늘림                  
-    align-self: baseline;           // 보조축 방향의 텍스트 베이스라인 기준으로 정렬 
-
-    /* content 크기 */
-    flex-basis: 100px;              /* 주축이 row일때는 width
-                                       column일때는 height를 바꿈 
-                                       basis값보다 content가 크면 더 크게 바꿈 */       
-    flex-grow: 1;                   /* 늘어나는 공백 비율을 따질 수 있음 
-                                       0: 안늘어남
-                                       1: 길게 늘어남                         */           
-    flex-shrink: 1;                 /* 줄어드는 공백 비율을 따질 수 있음 
-                                       0: 안늘어남
-                                       1: 길게 늘어남                         */
-    flex: 1 1 auto;                 // grow shrink basis
-
-    /* 그 외 속성 */
-    order: 1;                       // content의 순서 변경                                              
-    gap: 10px;                      // content 사이의 gap 크기                       
-    transform: scale(1.5);          // content의 크기 변경                           
+    order: 1;                    // content의 순서 변경  
+    
+    gap: 10px;                   // content 사이의 gap 크기   
+    
+    
+                           
     opacity: 0.5;                   // content의 투명도 변경                         
 
-    /* 글 가운데로 만드는 법 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 
 # Word Break
 
@@ -685,30 +741,7 @@ https://amango.tistory.com/7
         transition-timing-function: cubic-bezier(0.15, 1.53, 0, -0.87);
       }
       
-       @media screen and (max-width: 767px) and (orientation: portrait) {
-        body {
-          background-color: red;
-        }
-      }
-      /* 최대너비 0~767px에서, 가로모드일때 */
-      @media screen and (max-width: 767px) and (orientation: landscape) {
-        body {
-          background-color: orange;
-        }
-      }
-      /* 태블릿 해상도일때 적용됨 */
-      /* 최대너비 768~959px 까지의 너비일때 */
-      @media screen and (min-width: 768px) and (max-width: 959px) {
-        body {
-          background-color: yellow;
-        }
-      }
-      /* pc 해상도 */
-      @media screen and (min-width: 960px) {
-        body {
-          background-color: green;
-        }
-      }
+      
       
       벤더 프리픽스
             주로 새로운기능 : transition transform gradient user-select
