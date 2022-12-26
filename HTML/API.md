@@ -1,6 +1,5 @@
  무료 아이콘 사이트: Flaticon.com -->
  썸네일 이미지 만들기 : 캔바닷컴 https://www.canva.com/ -->
- 이미지 다운로드 하기: 최대 이미지 무료 사이트 - 픽사베이 -->
 
 
 # Basic Structure
@@ -128,7 +127,9 @@
 
     <object width="100px" data="data.pdf">Alternative</object>        // 멀티미디어 
     <embed width="100px" src="data.pdf">Alternative</embed>           // 멀티미디어      
-    <img src="data.jpg" alt="Alternative" width="100px">              // 이미지 (https://pixabay.com/ko/: 이미지 무료 사이트)   
+    <img src="data.jpg" alt="Alternative" width="100px">              /* 이미지
+                                                                         https://pixabay.com/ko/: 무료 이미지 다운로드 사이트
+                                                                         https://www.canva.com/: 이미지 만들기 사이트         */
     <audio src="data.mp3" width="100px" controls >Alternative</audio> // 오디오     
     <video src="data.mp4" width="100px" controls >Alternative</video> // 비디오      
                                                                       /* 오디오/비디오 속성
