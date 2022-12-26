@@ -169,7 +169,3 @@
     while(iterator.hasNext())
     element                     = iterator.next();
     int[]                       = queue.stream().mapToInt(i -> i).toArray();                // LinkedList<Integer> -> int[]로 바꾸기
-
-******************************* ENUMSET *******************************
-******************************* VECTOR *******************************
-******************************* HASHTABLE *******************************
