@@ -1,11 +1,7 @@
-<!-- 무료 아이콘 사이트: Flaticon.com -->
-<!-- 썸네일 이미지 만들기 : 캔바닷컴 https://www.canva.com/ -->
-<!-- 이미지 다운로드 하기: 최대 이미지 무료 사이트 - 픽사베이 -->
-    <!-- CSS 속성 지원하는 웹브라우저 버전 확인 -->
-    <!-- Caniuse.com 사이트 -->
-    https://fonts.google.com/
-        <!-- Gradient: 2가지의 색상의 혼합되는 것 -->
-    <!-- https://www.colorzilla.com/gradient-editor/ -->
+ 무료 아이콘 사이트: Flaticon.com -->
+ 썸네일 이미지 만들기 : 캔바닷컴 https://www.canva.com/ -->
+ 이미지 다운로드 하기: 최대 이미지 무료 사이트 - 픽사베이 -->
+
 
 # Basic Structure
 
