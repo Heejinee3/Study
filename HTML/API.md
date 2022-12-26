@@ -344,34 +344,26 @@
 
 # Meta Tag
 
-   
-    <meta charset="UTF-8">                                                 // charset: 문자인코딩 타입(UTF-8, EUC-KR)
+    <meta charset="UTF-8">                                                 // 문자인코딩 타입(UTF-8, EUC-KR)
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* viewport     : 뷰포트
                                                                               device-width : 웹페이지의 너비가 기기 너비와 동일 
                                                                               initial-scale: 초기 확대 비율                   */
     
-    
-    <!-- X-UA-Compatible : 익스플러러 브라우저의 최신 버전에 대응 -->
-    <!-- ie=edge         : IE가 없으면 엣지 브라우저로 대치 -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- content-type: 콘텐츠의 형식을 알려줌 -->
-    <!-- text/html       : text 기반의 html 콘텐츠이다 -->
-    <!-- text/xml        : text 기반의 xml 콘텐츠이다 -->
-    <!-- application/json: AOS/IOS 앱과 통신할 때 콘텐츠 형식 -->
-    <!--                 : REST API 서버와 통신할 때 -->
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <!-- keword          : 검색 로봇에 의해 검색되는 단어(키워드)를 지정 -->
-    <meta name="keyword" content="Web, html, 웹, 과자, 콜라" />
-    <!-- description     : 검색 로봇에 의해 검색되는 문자열 -->
-    <meta name="description" content="저의 웹사이트입니다." />
-    <!-- noindex         : 검색 로봇에 검색 안되게 함 -->
-    <!-- nofollow        : 검색 로봇이 페이지 링크를 따라가지 않도록 함 -->
-    <meta name="robots" content="noindex,nofollow" />
-    <!-- author          : 웹사이트 제작자 표시 -->
-    <meta http-equiv="author" content="홍길동개발자" />
-    <!-- 5초 간격으로 새로고침이 됨 -->
-    <!-- refresh는 페이지를 다 새로 그림 -->
-    <!-- <meta http-equiv="refresh" content="5" /> -->
-    <!-- <meta http-equiv="refresh" content="5;url=http://www.naver.com" /> -->
-    <meta http-equiv="refresh" content="5;url=./ex25.html" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">                  // IE브라우저에서 각 버전 중 가장 최신 표준 모드를 선택하는 문서 모드
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    /* content-type    : 콘텐츠의 형식을 알려줌
+                                                                              text/html       : text 기반의 html 콘텐츠
+                                                                              text/xml        : text 기반의 xml 콘텐츠
+                                                                              application/json: AOS/IOS 앱 또는 REST API 서버와 통신할 때 콘텐츠 형식 */
+                                                                           
+    <meta name="keyword" content="Web, html, 웹, 블로그">                   // 검색 로봇에 의해 검색되는 단어를 지정
+ 
+    <meta name="description" content="저의 웹사이트입니다.">                 // 검색 로봇에 의해 검색되는 문자열
+
+    <meta name="robots" content="noindex,nofollow">                        /* noindex: 검색 로봇에 검색 안되게 함
+                                                                              nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함 
+  
+    <meta http-equiv="author" content="홍길동">                             // 제작자 표시
+
+    <meta http-equiv="refresh" content="5;url=http://www.naver.com">       // 5초 간격으로 새로고침
