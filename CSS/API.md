@@ -701,12 +701,12 @@ https://amango.tistory.com/7
                                                repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
                                               
     grid-template-rows: 100px 100px ...; /* 줄의 크기와 개수 지정
-                                            100px 100px ...                      : 크기
-                                            1fr 1fr                              : 상대적 크기
-                                            repeat(3, 1fr)                       : 반복(n번, 길이)
-                                            minmax(100px, 1fr)                   : 최소, 최대
-                                            repeat(auto-fit, minmax(100px, 1fr)) : 남는 공간 없음
-                                            repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
+                                            100px 100px ...         : 크기
+                                            1fr 1fr ...             : 상대적 크기
+                                            repeat(3, 1fr)          : 반복(n번, 길이)
+                                            minmax(100px, 1fr)      : 최소, 최대
+                                            repeat(auto-fit, 100px) : 남는 공간 없음
+                                            repeat(auto-fill, 100px): 남는 공간 있음  */
                                             
     grid-column-gap: 10px;               // 열 간격 지정
      
@@ -757,6 +757,22 @@ https://amango.tistory.com/7
                                             center  : column의 가운데로 이동                       
                                             stretch : column 방향에 따라 길게 늘림                  
                                             baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
+                                            
+    grid-column-start: 1;                // 열 시작 라인 번호 지정
+    
+    grid-column-end: 1;                  // 열 끝 라인 번호 지정
+    
+    grid-column: 1/1;                    // 열 시작/끝 라인 번호 지정
+    
+    grid-row-start: 1;                   // 줄 시작 라인 번호 지정
+    
+    grid-row-end: 1;                     // 줄 끝 라인 번호 지정
+    
+    grid-row: 1/1;                       // 줄 시작/끝 라인 번호 지정
+    
+    grid-template-areas: "box1 box1"     // 영역 배치
+                         "box2 .";
+    grid-area: box1;                     // 영역 이름 
 
 
 
