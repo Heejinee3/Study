@@ -128,7 +128,7 @@
 
     <object width="100px" data="data.pdf">Alternative</object>        // 멀티미디어 
     <embed width="100px" src="data.pdf">Alternative</embed>           // 멀티미디어      
-    <img src="data.jpg" alt="Alternative" width="100px">              // 이미지     
+    <img src="data.jpg" alt="Alternative" width="100px">              // 이미지 (https://pixabay.com/ko/: 이미지 무료 사이트)   
     <audio src="data.mp3" width="100px" controls >Alternative</audio> // 오디오     
     <video src="data.mp4" width="100px" controls >Alternative</video> // 비디오      
                                                                       /* 오디오/비디오 속성
