@@ -32,15 +32,15 @@
     
 # If/Switch
 
-    if (조건문) {
+    if (조건문) {        // if문
         수행문;
-    } else if (조건문) {
+    } else if (조건문) { 
         수행문;
     } else {
         수행문;
     }
 
-    switch (변수) {
+    switch (변수) {      // switch문
       case 1:
         수행문;
         break;
@@ -54,71 +54,107 @@
     
 # For/While/Do-while
 
-    for (초기화; 조건식; 증감문){
+    for (초기화; 조건식; 증감문){ // for문
       수행문;
     }
 
-    for (int value: array) {     
+    for (int value: array) {    // 간단한 for문
         수행문;
     }
 
-    while(조건식){
+    while(조건식){               // while문
       수행문;
     }
 
-    do{
+    do{                         // do-while문
       수행문;
     }while(조건식);
     
     
 # Class
 
-    class ClassName{
-        int value = value;                // instance valuable
+    class ClassName{                                   // class 이름
+    
+        int value;                                     // instance valuable
         
-        void function(){                 // instance function
+        static int staticValue;                        // static valuable
+
+        void function(int param){                      // instance function
         }
         
-        static int staticValue = value;  // static valuable
-        
-        static void staticFunction(){    // static function
+        static void staticFunction(int param){         // static function
         }
         
-        public ClassName(value){     // constructor
+        public ClassName(int value){                   // constructor
             this.value = value;
-        }
-        
-        public int getValue() {
-        return this.value;
         }
 
-        public void setValue(int value) {
+        public int getValue() {                        // instance valuable get 함수
+            return this.value;
+        }
+
+        public static int getStaticValue() {           // static valuable get 함수
+            return staticValue;
+        }
+
+        public void setValue(int value) {              // instance valuable set 함수
             this.value = value;
+        }
+
+        public static void setStaticValue(int value) { // static valuable set 함수
+            staticValue = value;
         }
     }
     
     public class Main {
         public static void main(String[] args) {
-            ClassName object = new ClassName(value);  // instance
-            object.value;                           // instance valuable
-            object.function();                     // instance function
-            ClassName.staticValue;                  //static valueable      
-            ClassName.staticFunction();             //static function
+        
+            ClassName object = new ClassName(value); // 객체 생성
+
+            object.value;                            // instance valuable
+            object.function(value);                  // instance function
+            object.setValue(value);                  // instance valuable set 함수
+            object.getValue();                       // instance valuable get 함수
             
-            object.getValue();
-            object.setValue(value);
+            ClassName.staticValue;                   // static valuable
+            ClassName.staticFunction(value);         // static function
+            ClassName.setStaticValue(value);         // static valuable set 함수
+            ClassName.getStaticValue();              // static valuable get 함수
+            
+        }
+    }
+   
+# Access Modifier
+
+    /* public   : 모든 클래스(파일)에서 접근 가능
+       protected: 같은 폴더(패키지) or 자식 클래스(하위)에서 부모 클래스(상위) 접근 가능
+       default  : 같은 폴더(패키지)에서 접근 가능
+       private  : 같은 클래스 안에서만 접근 가능                                      */
+       
+# Inheritance
+
+    class ClassName1{
+    
+        int value;
+        void function(int param) {
+        }
+        public ClassName1(int value){  
+            this.value = value;
+        }
+    }
+    
+    class  ClassName2 extends ClassName1{
+        public ClassName2(int value) {
+            super(value);
+        }
+        @Override
+        void function(int param) {
+            System.out.println(param);
         }
     }
 
-// 접근제한자 4가지
-// 접근제한자는 클래스, 함수, 변수 앞에 위치하여 접근하는 권한을 제어할 때 사용함
-// public: 모든 클래스(파일)에서 접근 가능
-// protected: 같은 폴더(패키지) or 상속관계의 클래스는 접근 가능
-//            자식 클래스(하위)에서 부모 클래스(상위) 접근 가능
-// default: 같은 폴더(패키지)에서 접근 가능
-// private: 같은 클래스 안에서만 접근 가능, 캡슐화(은닉)에 적합
-
 # Abstract Class
+
     abstract class ClassName1{
         abstract void function1();
         void function2(){
