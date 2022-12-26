@@ -344,16 +344,14 @@
 
 # Meta Tag
 
+   
+    <meta charset="UTF-8">                                                 // charset: 문자인코딩 타입(UTF-8, EUC-KR)
 
-
-
-
-    <!-- charset         : 문자인코딩 타입 - UTF-8, EUC-KR -->
-    <meta charset="UTF-8" />
-    <!-- viewport        : 모바일 해상도 대응 -->
-    <!-- device-width    : 웹페이지의 너비가 모바일기기 너비와 동일 -->
-    <!-- initial-scale   : 확대 비율 1.0 원래 비율 2.0 2배 확대-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* viewport     : 뷰포트
+                                                                              device-width : 웹페이지의 너비가 기기 너비와 동일 
+                                                                              initial-scale: 초기 확대 비율                   */
+    
+    
     <!-- X-UA-Compatible : 익스플러러 브라우저의 최신 버전에 대응 -->
     <!-- ie=edge         : IE가 없으면 엣지 브라우저로 대치 -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
