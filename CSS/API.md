@@ -15,6 +15,8 @@ https://amango.tistory.com/7
     <h style="color: red;"></h>              // 2(body 사이)
     
     <link rel="stylesheet" href="mycss.css"> // 3(head 사이)
+    
+    https://caniuse.com/: CSS 속성 지원하는 웹브라우저 버전 확인
 
 # Selector
 
