@@ -70,6 +70,20 @@
       수행문;
     }while(조건식);
     
+# Array
+
+    int[] arr = new int[length];
+    int[] arr = {value1, value2, ...};
+    arr[index] = value;
+
+    int[][] arr = new int[row-length][column-length];
+    int[][] arr = {
+        {value1, value2, value3},
+        {value4, value5, value6}
+    };
+    arr[row-index][column-index] = value;
+    
+    
     
 # Class
 
