@@ -62,6 +62,15 @@
       수행문;
     }while(조건식);
     
+# Function
+  
+    function Func(param) {
+      수행문
+      return 반환값;
+    }
+    
+    Func(param);
+    
 # Array
 
     let array = []; 
