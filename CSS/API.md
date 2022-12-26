@@ -342,6 +342,8 @@ https://amango.tistory.com/7
                                                                   100px  : 단위
                                                                   100%   : 원래 크기의 백분율
                                                                   auto   : 원래 이미지 크기                 */
+                                                                  
+    opacity: 0.5;                                              // 투명도 변경    
                                                             
 # Gradation
 
@@ -684,9 +686,77 @@ https://amango.tistory.com/7
     
     gap: 10px;                   // content 사이의 gap 크기   
     
+# Grid
     
-                           
-    opacity: 0.5;                   // content의 투명도 변경                         
+    display: grid; /* 그리드 지정
+                      grid       : grid
+                      inline-grid: inline-grid */
+                      
+    grid-template-columns: 100px 100px ...; /* 열의 크기와 개수 지정
+                                               100px                                : 크기
+                                               1fr                                  : 상대적 크기
+                                               repeat(3, 1fr)                       : 반복(n번, 길이)
+                                               minmax(100px, 1fr)                   : 최소, 최대
+                                               repeat(auto-fit, minmax(100px, 1fr)) : 남는 공간 없음
+                                               repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
+                                              
+    grid-template-rows: 100px 100px ...; /* 줄의 크기와 개수 지정
+                                            100px 100px ...                      : 크기
+                                            1fr 1fr                              : 상대적 크기
+                                            repeat(3, 1fr)                       : 반복(n번, 길이)
+                                            minmax(100px, 1fr)                   : 최소, 최대
+                                            repeat(auto-fit, minmax(100px, 1fr)) : 남는 공간 없음
+                                            repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
+                                            
+    grid-column-gap: 10px;               // 열 간격 지정
+     
+    grid-row-gap: 10px;                  // 행 간격 지정
+     
+    grid-gap: 10px 10px;                 // 행, 열 간격 지정
+    
+    align-items: start;                  /* 한줄 row 이동
+                                            start   : row의 원점으로 이동                        
+                                            end     : row의 화살표로 이동                        
+                                            center  : row의 가운데로 이동                        
+                                            stretch : row 방향에 따라 길게 늘림                  
+                                            baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
+                                       
+    align-content: start;                /* 여러줄 row 이동 
+                                            start        : row의 원점으로 이동                        
+                                            end          : row의 화살표로 이동                        
+                                            center       : row의 가운데로 이동                        
+                                            space-between: between 방식으로 row을 고르게 이동         
+                                            space-around : around 방식으로 row을 고르게 이동          
+                                            stretch      : row 방향에 따라 길게 늘림          */          
+
+    align-self: start;                   /* 각 box row 이동  
+                                            start   : row의 원점으로 이동                       
+                                            end     : row의 화살표로 이동                       
+                                            center  : row의 가운데로 이동                       
+                                            stretch : row 방향에 따라 길게 늘림                  
+                                            baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
+                                            
+    justify-items: start;                /* 한줄 column 이동
+                                            start   : column의 원점으로 이동                        
+                                            end     : column의 화살표로 이동                        
+                                            center  : column의 가운데로 이동                        
+                                            stretch : column 방향에 따라 길게 늘림                  
+                                            baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
+                                       
+    justify-content: start;              /* 여러줄 column 이동 
+                                            start        : column의 원점으로 이동                        
+                                            end          : column의 화살표로 이동                        
+                                            center       : column의 가운데로 이동                        
+                                            space-between: between 방식으로 column을 고르게 이동         
+                                            space-around : around 방식으로 column을 고르게 이동          
+                                            stretch      : column 방향에 따라 길게 늘림          */          
+
+    justify-self: start;                 /* 각 box column 이동  
+                                            start   : column의 원점으로 이동                       
+                                            end     : column의 화살표로 이동                       
+                                            center  : column의 가운데로 이동                       
+                                            stretch : column 방향에 따라 길게 늘림                  
+                                            baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
 
 
 
