@@ -83,7 +83,16 @@
     };
     arr[row-index][column-index] = value;
     
+# Enum
     
+    enum EnumName {
+        enumtype1,
+        enumtype2,
+        enumtype3
+    };
+    
+    EnumName myEnum = EnumName.enumtype; 
+    EnumName.values();                   // enumtype list
     
 # Class
 
