@@ -774,12 +774,10 @@ https://amango.tistory.com/7
                          "box2 .";
     grid-area: box1;                     // 영역 이름 
 
-
-
 # Word Break
 
     /* word-break : 단어의 분리를 어떻게 할 것인지 결정
-       word-wrap  : 자기영역을 벗어난 단어의 줄바꿈을 어떻게 할 것인지 결정 
+       word-wrap  : 자기영역을 벗어난 단어의 줄바꿈을 어떻게 할 것인지 결정  
 
        CJK    : 중국어, 일본어, 한글
        non-CJK: 숫자, 영어, 베트남어
@@ -796,42 +794,18 @@ https://amango.tistory.com/7
 
     word-wrap: normal; 
     word-break: normal; 
+    
+# Vendor Prefix
 
+    background: red;                                  // gradient 속성을 지원하지 않는 모든 브라우저를 위한 코드
 
-    
-    
-    
-    
-    
-  
-        
-        
-              /* 보간 방법 */
-      .bar:nth-child(1) {
-        transition-timing-function: linear;
-      }
-      .bar:nth-child(2) {
-        transition-timing-function: ease;
-      }
-      .bar:nth-child(3) {
-        transition-timing-function: ease-in;
-      }
-      .bar:nth-child(4) {
-        transition-timing-function: ease-out;
-      }
-      .bar:nth-child(5) {
-        transition-timing-function: ease-in-out;
-      }
-      /* 베지어곡선함수 이용 cubic-bezier.com */
-      .bar:nth-child(6) {
-        transition-timing-function: cubic-bezier(0.15, 1.53, 0, -0.87);
-      }
-      
-      
-      
-      벤더 프리픽스
-            주로 새로운기능 : transition transform gradient user-select
+    background: -webkit-linear-gradient(red, yellow); // 크롬과 사파리 4.0 이상을 위한 코드 
+
+    background: -moz-linear-gradient(red, yellow);    // 파이어폭스 3.6 이상을 위한 코드 
+
+    background: -ms-linear-gradient(red, yellow);     // 익스플로러 10.0 이상을 위한 코드 
+
+    background: -o-linear-gradient(red, yellow);      // 오페라 10.0 이상을 위한 코드 
+
+    background: linear-gradient(red, yellow);         // CSS 표준 문법 코드
             
-            
-
-
