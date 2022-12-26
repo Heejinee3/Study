@@ -1,6 +1,3 @@
- 무료 아이콘 사이트: Flaticon.com -->
- 썸네일 이미지 만들기 : 캔바닷컴 https://www.canva.com/ -->
-
 
 # Basic Structure
 
@@ -380,4 +377,3 @@
     <!-- <meta http-equiv="refresh" content="5" /> -->
     <!-- <meta http-equiv="refresh" content="5;url=http://www.naver.com" /> -->
     <meta http-equiv="refresh" content="5;url=./ex25.html" />
-
