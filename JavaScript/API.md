@@ -135,5 +135,135 @@
         parseFloat(myStr);
         String(myNum2);
         Math.floor(value / 3);
+        
+        Math.max();
+
+
+      let timer = setTimeout(() => {
+        console.log("3초후 호출됨!");
+      }, 3000);
+
+      clearTimeout(timer);
+      
+      let interval = setInterval(() => {
+        console.log(Date());
+        console.log(new Date().toTimeString().split(" ")[0]);
+        console.log(new Date().toISOString().split("T")[0]);
+      }, 1000);
+
+        clearInterval(interval);
+
+              var keyValue = {
+        apple: 1000,
+        banana: 2000,
+        pear: 3000,
+      };
+      console.log(keyValue["apple"]);
+      console.log(keyValue.apple);
+
+            for (var key in toy) {
+        console.log("key:" + key);
+        console.log("value:" + toy[key]);
+      }
+
+      // for of문: key, value를 함께 받아옴
+      for (const [key, value] of Object.entries(toy)) {
+        console.log("key:" + key);
+        console.log("value:" + value);
+      }
+
+      
+      class Person3 {
+        constructor(name, age) {
+          console.log("생성자 함수 자동 호출됨");
+          this.name = name;
+          this.age = age;
+        }
+        get name() {
+          console.log("name값을 읽으면 자동 호출됨");
+          return this._name;
+        }
+        set name(newValue) {
+          if (newValue) {
+            console.log("name에 값을 대입하면 자동호출됨");
+            this._name = newValue;
+          }
+        }
+      }
+
+      let person3 = new Person3("이몽룡", 30);
+      console.log(person3.name);
+      person3.name = "변사또";
+
+      // 상속
+      class Man {
+        constructor() {}
+        run() {
+          console.log("남자가 달린다");
+        }
+      }
+      class Superman extends Man {
+        constructor() {
+          super();
+        }
+        // 메소드 오버라이딩: 자식 클래스에서 부모 클래스의 메소드 재정의
+        run() {
+          console.log("수퍼맨이 달린다.");
+        }
+      }
+      let superman = new Superman();
+      superman.run();
+
+      let string1 = "문자열";
+      let string2 = new String("문자열");
+      console.log(typeof string1);
+      console.log(typeof string2);
+
+      let string3 = "Abcdef";
+      // 문자열길이
+      console.log(string3.length);
+      // 대문자로 변경
+      console.log(string3.toUpperCase());
+      console.log(string3.toLowerCase());
+      let char = string3.charAt(0); // 첫번째 한자
+      console.log(char);
+
+      // 문자의 인덱스 찾기
+      var string4 = "java_script_programming";
+      console.log(string4.indexOf("script")); // 첫번째 발생 인덱스
+      console.log(string4.lastIndexOf("i")); // 마지막 발생 인덱스
+
+      // 문자열 치환
+      var replaced = string4.replace("java", "ECMA");
+      console.log(replaced);
+      console.log(string4); // 원본 그대로
+
+      // 문자열 일부 가져오기
+      let substr1 = string4.substring(5, 11); // 시작인덱스, 종료 인덱스 + 1
+      console.log(substr1);
+      let substr2 = string4.substring(5, 6); // 시작인덱스, 개수
+      console.log(substr2);
+
+      // 문자열 분리 split = > 배열로 반환
+      var string5 = "사과,배,딸기,바나나,포도";
+      let array = string5.split(",");
+      for (let fruit of array) {
+        console.log(fruit);
+      }
+
+      // 문자열 연결 + concat() 함수
+      let string6 = "ECMA";
+      let string7 = "Script";
+      var concated = string6.concat(string7);
+      console.log(concated);
+
+      // 공백 제거: 처음과 끝 공백만 제고(가운데 공백은 제거 안함)
+      let string8 = "    This is java script    ";
+      console.log(string8.trim());
+
+      // 모든 공백을 제거하는 정규식
+      let fullTrimStr = string8.replace(/(\s*)/g, "");
+      console.log(fullTrimStr);
+      console.log(string10.charCodeAt(i));
     
     
