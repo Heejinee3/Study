@@ -69,6 +69,54 @@
     do{
       수행문;
     }while(조건식);
+    
+    
+# Class
+
+    class ClassName{
+        int value = value;                // instance valuable
+        
+        void function(){                 // instance function
+        }
+        
+        static int staticValue = value;  // static valuable
+        
+        static void staticFunction(){    // static function
+        }
+        
+        public ClassName(value){     // constructor
+            this.value = value;
+        }
+        
+        public int getValue() {
+        return this.value;
+        }
+
+        public void setValue(int value) {
+            this.value = value;
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            ClassName object = new ClassName(value);  // instance
+            object.value;                           // instance valuable
+            object.function();                     // instance function
+            ClassName.staticValue;                  //static valueable      
+            ClassName.staticFunction();             //static function
+            
+            object.getValue();
+            object.setValue(value);
+        }
+    }
+
+// 접근제한자 4가지
+// 접근제한자는 클래스, 함수, 변수 앞에 위치하여 접근하는 권한을 제어할 때 사용함
+// public: 모든 클래스(파일)에서 접근 가능
+// protected: 같은 폴더(패키지) or 상속관계의 클래스는 접근 가능
+//            자식 클래스(하위)에서 부모 클래스(상위) 접근 가능
+// default: 같은 폴더(패키지)에서 접근 가능
+// private: 같은 클래스 안에서만 접근 가능, 캡슐화(은닉)에 적합
 
 # Abstract Class
     abstract class ClassName1{
