@@ -64,12 +64,24 @@
     
 # Function
   
-    function myFunc(param) {
+    function myFunc(param) {        // 함수 선언
       수행문
       return 반환값;
     }
     
-    myFunc(param);
+    var myFunc = function (param) { // 함수형 변수 선언 1
+      수행문
+      return 반환값;
+    };
+    
+    var myFunc = (param) => {       // 함수형 변수 선언 2
+      수행문
+      return 반환값;
+    };
+    
+    myFunc(param);                  // 함수 호출
+    
+
     
 # Array
 
