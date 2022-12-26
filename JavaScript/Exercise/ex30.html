@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>타이머 관련 함수</title>
+    <script>
+      // setTimeout: 일정시간 후 한번 호출
+      // setInterval: 일정시간마다 주기적 호출
+      // 매개 변수로 익명함수 주입
+      let timer = setTimeout(() => {
+        console.log("3초후 호출됨!");
+      }, 3000);
+
+      clearTimeout(timer);
+
+      let interval = setInterval(() => {
+        console.log(Date());
+        console.log(new Date().toTimeString().split(" ")[0]);
+        console.log(new Date().toISOString().split("T")[0]);
+      }, 1000);
+
+      clearInterval(interval);
+    </script>
+  </head>
+  <body></body>
+</html>

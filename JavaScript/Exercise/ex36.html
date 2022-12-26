@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>HTML 로딩완료 이벤트함수 - onload함수</title>
+    <script>
+      // onload()함수 : 웹브라우저가 HTML을 자체 DOM메모리에 적재완료했을때
+      //                딱 한번 호출해주는 이벤트함수
+      //              : HTML이 DOM에 적재되기 전에 JS에서 HTML요소를 제어할 수
+      //               없다.
+
+      window.onload = () => {
+        console.log("onload함수 호출됨.");
+        document.body.innerHTML += "<h1>문서로딩완료!</h1>";
+      };
+    </script>
+  </head>
+  <body>
+    <h1>제목태그 H1</h1>
+
+    <script>
+      // body 마지막에 스크립트가 있다면, onload함수를 안써도 됨.
+      console.log("body 끝에서 호출됨.");
+      document.body.innerHTML += "<h1>문서 읽었음!</h1>";
+    </script>
+  </body>
+</html>

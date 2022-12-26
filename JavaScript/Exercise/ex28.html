@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>함수 function</title>
+    <script>
+      // 함수: 기능단위의 코드 블럭(뭉치)
+      // 사용하는 이유
+      // 1. 코드의 재사용성 - 코드 중복을 피할 수 있음
+      // 2. 함수 이름 - 코드에 이름을 붙여서 가독성 증가
+
+      // 함수의 4가지 형식
+      // 1. 매개변수(입력값) X 반환값 X
+      function myFunc1() {
+        console.log("myFunc1 호출됨");
+        return;
+      }
+      myFunc1();
+      // 2. 매개변수(입력값) O 반환값 X
+      function myFunc2(param) {
+        console.log("myFunc2 호출됨");
+        console.log("매개변수:" + param);
+        return;
+      }
+      myFunc2(10);
+      // 3. 매개변수(입력값) X 반환값 O
+      function myFunc3() {
+        console.log("myFunc3 호출됨");
+        return 10;
+      }
+      let result = myFunc3();
+      console.log("result:" + result);
+      // 4. 매개변수(입력값) O 반환값 O
+      function myFunc4(param) {
+        console.log("myFunc4 호출됨");
+        console.log("매개변수:" + param);
+        return 10;
+      }
+      result = myFunc4("이순신");
+      console.log("result:" + result);
+
+      // return문: 함수의 종료(반환값을 준다)
+      // break문: 반복문의 종료, switch문의 종료
+
+      //연습문제 9
+      // 매개변수가 2개 있고, 반환값이 있는
+      // add이라는 이름의 함수를 선언하고,
+      // 매개변수는 num1, num2
+      // 반환값은 num1 + num2의 합산 결과값이다.
+      // add 함수를 선언하고 호출(수행)해서 결과값을 출력하시오.
+      // 입력값 : 10, 20
+      // 출력값 : 30
+      function add(num1, num2) {
+        return num1 + num2;
+      }
+      result = add(10, 20);
+      console.log("1번문제");
+      console.log("result:" + result);
+      // 연습문제 10
+      // 매개변수가 2개 있고, 반환값이 있는
+      // mul이라는 이름의 함수를 선언하고,
+      // 반환값은 매개변수 2개를 곱한 값을 반환한다.
+      // mul 함수를 선언하고 호출(수행)해서 결과값을 출력하시오.
+      // 입력값 : 10, 20
+      // 출력값 : 200
+      function mul(num1, num2) {
+        return num1 * num2;
+      }
+      result = mul(10, 20);
+      console.log("2번문제");
+      console.log("result:" + result);
+      // 연습문제 11
+      // 매개변수가 2개 있고, 반환값이 있는 max 함수를 선언하고,
+      // 반환값은 매개변수 2개 중 큰값을 반환한다.
+      // max 함수를 선언하고 호출(수행)해서 결과값을 출력하시오.
+      // 입력값 : 10, 20
+      // 출력값 : 20
+      function max(num1, num2) {
+        return num1 > num2 ? num1 : num2;
+      }
+      result = max(10, 20);
+      console.log("3번문제");
+      console.log("result:" + result);
+      //연습문제 12
+      //어떤 양의 정수( 0 ~ n ) 를 입력받고,
+      // 2이 배수이거나 3의 배수이면
+      // "2이 배수이거나 3의 배수입니다." 라고 출력하는
+      // 함수 display를 선언하고 호출하시오.
+      // 2이 배수이거나 3의 배수가 아니면,
+      // "2이 배수이거나 3의 배수가 아닙니다."라고 출력하시오.
+      // 출력은 함수안에서!
+      // 리턴값 : 없음
+      // 입력값 : 5
+      // 출력값 : "2이 배수이거나 3의 배수가 아닙니다."
+      // 입력값 : 6
+      // 출력값 : "2이 배수이거나 3의 배수입니다."
+      function display(num) {
+        if (num % 2 == 0 || num % 3 == 0)
+          console.log("2의 배수이거나 3의 배수입니다.");
+        else console.log("2의 배수이거나 3의 배수가 아닙니다");
+        return;
+      }
+      console.log("4번문제");
+      display(5);
+      display(6);
+    </script>
+  </head>
+  <body></body>
+</html>

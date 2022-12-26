@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>문자열 관련 함수들</title>
+    <script>
+      let string1 = "문자열";
+      let string2 = new String("문자열");
+      console.log(typeof string1);
+      console.log(typeof string2);
+
+      let string3 = "Abcdef";
+      // 문자열길이
+      console.log(string3.length);
+      // 대문자로 변경
+      console.log(string3.toUpperCase());
+      console.log(string3.toLowerCase());
+      let char = string3.charAt(0); // 첫번째 한자
+      console.log(char);
+
+      // 문자의 인덱스 찾기
+      var string4 = "java_script_programming";
+      console.log(string4.indexOf("script")); // 첫번째 발생 인덱스
+      console.log(string4.lastIndexOf("i")); // 마지막 발생 인덱스
+
+      // 문자열 치환
+      var replaced = string4.replace("java", "ECMA");
+      console.log(replaced);
+      console.log(string4); // 원본 그대로
+
+      // 문자열 일부 가져오기
+      let substr1 = string4.substring(5, 11); // 시작인덱스, 종료 인덱스 + 1
+      console.log(substr1);
+      let substr2 = string4.substr(5, 6); // 시작인덱스, 개수
+      console.log(substr2);
+
+      // 문자열 분리 split = > 배열로 반환
+      var string5 = "사과,배,딸기,바나나,포도";
+      let array = string5.split(",");
+      for (let fruit of array) {
+        console.log(fruit);
+      }
+
+      // 문자열 연결 + concat() 함수
+      let string6 = "ECMA";
+      let string7 = "Script";
+      var concated = string6.concat(string7);
+      console.log(concated);
+
+      // 공백 제거: 처음과 끝 공백만 제고(가운데 공백은 제거 안함)
+      let string8 = "    This is java script    ";
+      console.log(string8.trim());
+
+      // 모든 공백을 제거하는 정규식
+      let fullTrimStr = string8.replace(/(\s*)/g, "");
+      console.log(fullTrimStr);
+
+      //연습문제 15
+      let string10 = "Hello java script world!";
+      console.log("연습문제 15");
+
+      //1."java"문자열만 추출해서 출력하시오.
+      console.log(string10.substr(6, 4));
+
+      //2."java"문자열을 "ECMA"로 바꿔서 출력하시오.
+      console.log(string10.replace("java", "ECMA"));
+
+      //3.string10을 공백으로 구분하여(Split)
+      // 배열 ["Hello", "java", "script", "world!"]을
+      // 만들어 출력하시오.
+      console.log(string10.split(" "));
+
+      //4."sciprt"문자열의 위치를 출력하시오.
+      console.log(string10.indexOf("script"));
+
+      //5. 문자 한자 한자씩 아스키코드값(유니코드값)으로 출력하시오.
+      // string10.charCodeAt( 인덱스 ) 사용
+      for (let i = 0; i < string10.length; i++) {
+        console.log(string10.charCodeAt(i));
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

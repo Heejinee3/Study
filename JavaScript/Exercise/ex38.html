@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>문서객체 선택하는 방법</title>
+    <script>
+      //문서 객체 모델(Document Object Model)
+      //DOM이란? 웹브라우저가 HTML문서를 로딩후에, 메모리에 트리구조로
+      // 관리하는 데이타 구조 및 객체
+
+      //문서객체 선택하기
+      //1. 아이디로 선택 : getElementById( id ) : 객체 한개로 반환
+      //2. 클래스로 선택 : getElementsByClassName( class ) : 배열로 반환
+      //3. 태그로 선택 : getElementsByTagName( tag ) : 배열로 반환
+      //4. css선택자로 선택 : querySelctor( css선택자 ) : 객체 한개로 반환
+      //                      querySlectorAll( css선택자 ) : 배열로 반환
+      window.onload = () => {
+        //id로 찾기 : header1의 innerHTML을 "제목태그 1 찾음"으로 변경
+        let a = document.getElementById("header1");
+        a.innerHTML = "제목태그 1 찾음";
+        //class로 찾기 : 제목태그 3,4,5의
+        //                innerHTML을 "제목태그 3,4,5 찾음"으로 변경
+        let b = document.getElementsByClassName("header-h2");
+        for (let e of b) {
+          e.innerHTML = "제목태그 3,4,5 찾음";
+        }
+        //tag로 찾기 : 문단태그의 innerHTML "tag로 p 찾음"으로 변경
+        let c = document.getElementsByTagName("p");
+        for (let e of c) {
+          e.innerHTML = "tag로 p 찾음";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="header1">제목태그 1</h1>
+    <h1 id="header2">제목태그 2</h1>
+    <h2 class="header-h2">제목태그 3</h2>
+    <h2 class="header-h2">제목태그 4</h2>
+    <h2 class="header-h2">제목태그 5</h2>
+    <p>문단태그 p</p>
+    <p>문단태그 p</p>
+    <p>문단태그 p</p>
+  </body>
+</html>

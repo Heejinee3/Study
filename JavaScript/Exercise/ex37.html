@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- ex37 -->
+    <title>innerHTML과 innerText</title>
+    <script>
+      // 공통점 : HTML태그의 내용을 문자열로 보관하고 있음.
+      // innerHTML : 문자열이 HTML 태그로 인식이 됨.
+      // innerText : 문자열이 단순 Text로 인식이 됨.
+    </script>
+  </head>
+  <body>
+    <h1 id="innerHTML">innerHTML 내용</h1>
+    <h1 id="innerText">innerText 내용</h1>
+
+    <script>
+      let innerHTML = document.getElementById("innerHTML");
+      innerHTML.innerHTML = "<ins>변경된 innerHTML 내용</ins>";
+      let innerText = document.getElementById("innerText");
+      innerText.innerText = "<ins>변경된 innerText 내용</ins>";
+    </script>
+  </body>
+</html>
