@@ -110,7 +110,7 @@ https://amango.tistory.com/7
        
 # Font Apply
 
-    <style>                                                                                        // Google Font Apply
+    <style>                                                                                        // Google Font Apply (https://fonts.google.com/)
       @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap");
       h {font-family: "Noto Serif KR", serif;}
     </style>
