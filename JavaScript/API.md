@@ -64,12 +64,12 @@
     
 # Function
   
-    function Func(param) {
+    function myFunc(param) {
       수행문
       return 반환값;
     }
     
-    Func(param);
+    myFunc(param);
     
 # Array
 
