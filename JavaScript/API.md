@@ -87,6 +87,8 @@
 
     let array = []; 
     let array = [value1, value2, ...]; 
+    let [var1, ] = [value1, value2, ...]; 
+    let array = [value1, value2, ...]; 
     let array = Array(); 
     let array = Array(length);                       
     let array = Array(value1, value2, ...); 
