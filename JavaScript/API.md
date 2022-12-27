@@ -193,7 +193,24 @@
     let string = string.trim();                   // 처음, 끝 공백 제거
 
     let string = string.replace(/(\s*)/g, "");    // 모든 공백 제거
+    
 
+String replaceAll()
+
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+
+String charCodeAt()
+
+
+String search()
+String match()
+String matchAll()
+String includes()
+String startsWith()
+String endsWith()
 
 
 
