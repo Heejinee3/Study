@@ -3,7 +3,7 @@
 
     /* Mouse Event
        click: 사용자가 HTML 요소를 클릭할 때 이벤트 발생
-       dbclick: 사용자가 HTML 요소를 더블클릭할 때 이벤트 발생
+       dblclick: 사용자가 HTML 요소를 더블클릭할 때 이벤트 발생
        mousedown: 사용자가 요소 위에서 마우스 버튼을 눌렀을 때 이벤트 발생
        mousemove: 사용자가 요소 위에서 포인터를 움직일 때 이벤트 발생
        mouseover: 마우스 포인터가 요소 위로 옮겨질 때 이벤트 발생
