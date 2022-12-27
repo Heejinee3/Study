@@ -37,7 +37,11 @@
       statement;
     }; 
        
-       
+alert("string")
+confirm("string")
+prompt("string","value")
+document.write("eee")
+console.log("eee")
        
        
        document.querySelector(" ").style.display
