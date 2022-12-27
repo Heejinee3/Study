@@ -32,7 +32,10 @@
        reset : 폼이 리셋되었을 때 이벤트 발생
        submit: submit 버튼을 클릭했을 때 이벤트 발생       */
        
-       
+    // Event Handler
+    document.querySelector(selector).onEvent = (parameter) => {
+      statement;
+    }; 
        
        
        
