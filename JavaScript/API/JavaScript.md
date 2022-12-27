@@ -88,17 +88,31 @@
     let array = Array(); 
     let array = Array(length);                       
     let array = Array(value1, value2, ...); 
+    
+    let length = array.length;                                   // 길이
+    
+    let array = array1.concat(array2, array3, ...);              // 병합 
+    
+    let string = array.join("string");                           // array의 요소를 구분자로 구분해 병합하여 string으로 반환
 
-    array.push(value);                               // 마지막 요소 추가
-    array.unshift(value);                            // 처음 요소  추가
+    let length = array.push(value1, value2, ...);                // 마지막에 요소 추가
+    
+    let length = array.unshift(value1, value2, ...);             // 처음에 요소 추가
+    
+    let element = array.pop();                                   // 마지막 요소 삭제
+    
+    let element = array.shift();                                 // 처음 요소 삭제
+    
+    let array = array.splice(index, count, value1, value2, ...); /* index에 count만큼 삭제하고 value넣기
+                                                                    count가 없으면 끝까지 삭제
+                                                                    value는 없어도 됨                   */
+    
+    
+    
     array[index] = value;                            // index 자리에 value 넣기
 
-    array.pop();                                     // 마지막 요소 삭제
-    array.shift();                                   // 처음 요소 삭제
-    delete array[index];                             // index 자리 value 삭제(empty로 남아있음)
 
-    array.splice(index, count, value1, value2, ...); // index에 count만큼 삭제하고 value넣기
-    array.splice(index, count);                      // index에 count만큼 삭제
+    delete array[index];                             // index 자리 value 삭제(empty로 남아있음)
 
     array = array1.concat(array2, array3, ...);      // array 병합 
     
