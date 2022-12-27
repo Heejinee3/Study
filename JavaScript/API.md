@@ -12,9 +12,9 @@
     
 # Variable/Constant
 
-    var myVar     = value; // 변수(재선언 O, 호이스팅 O)
-    let myLet     = value; // 변수(재선언 X, 호이스팅 X)
-    const myConst = value; // 상수
+    var myVar     = value; // 변수(재선언 O, 호이스팅 O, 함수 scope)
+    let myLet     = value; // 변수(재선언 X, 호이스팅 X, 블록 scope)
+    const myConst = value; // 상수(재선언 X, 호이스팅 X, 블록 scope)
 
 # If/Switch
 
