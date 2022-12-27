@@ -80,9 +80,7 @@
     };
     
     myFunc(param);                  // 함수 호출
-    
-
-    
+       
 # Array
 
     let array = []; 
@@ -129,6 +127,42 @@
     let array2 = [value3, value2];
     let array3 = [...array1, ...array2];
     
+# Class
+
+    class Class {                  // class 선언
+      constructor(value) {         // constructor
+        this.var = value;
+      }
+      get var() {                  // get variable
+        return this._var;
+      }
+      set var(value) {             // set variable
+        if (value) {
+          this._var = value;
+        }
+      }
+    }
+
+    let object = new Class(value); // object 생성
+    object.var;                    // get variable
+    object.var = value;            // set variable
+    
+# Inheritance
+
+    class Class1 {                // 부모 클래스
+      constructor() {}
+      function() {
+      }
+    }
+    
+    class Class2 extends Class1 { // 자식 클래스
+      constructor() {
+          super();
+      }
+      run() {                     // 오버라이딩
+      }
+    }
+  
 # String
 
     let string = "string";                        // 문자열 선언
@@ -231,46 +265,6 @@
       }
 
       
-      class Person3 {
-        constructor(name, age) {
-          console.log("생성자 함수 자동 호출됨");
-          this.name = name;
-          this.age = age;
-        }
-        get name() {
-          console.log("name값을 읽으면 자동 호출됨");
-          return this._name;
-        }
-        set name(newValue) {
-          if (newValue) {
-            console.log("name에 값을 대입하면 자동호출됨");
-            this._name = newValue;
-          }
-        }
-      }
-
-      let person3 = new Person3("이몽룡", 30);
-      console.log(person3.name);
-      person3.name = "변사또";
-
-      // 상속
-      class Man {
-        constructor() {}
-        run() {
-          console.log("남자가 달린다");
-        }
-      }
-      class Superman extends Man {
-        constructor() {
-          super();
-        }
-        // 메소드 오버라이딩: 자식 클래스에서 부모 클래스의 메소드 재정의
-        run() {
-          console.log("수퍼맨이 달린다.");
-        }
-      }
-      let superman = new Superman();
-      superman.run();
 
 
     
