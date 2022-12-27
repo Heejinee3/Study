@@ -175,34 +175,38 @@
     let string = string.toLowerCase();            // 소문자로 바꾸기
     
     let char = string.charAt(index);              // index에 있는 character 반환
-
-    let index = string.indexOf("find");           // 첫번째 발생 인덱스 반환
     
-    let index = string.lastIndexOf("find");       // 마지막 발생 인덱스 반환
+    let code = string.charCodeAt(index);          // index에 있는 character의 아스키코드 반환
 
-    let string = string.replace("from", "to");    // 치환
+    let index = string.indexOf(find);             // 첫번째 발생 인덱스 반환
+    
+    let index = string.lastIndexOf(find);         // 마지막 발생 인덱스 반환
+
+    let string = string.replace(from, to);        // 처음 한개 치환
+    
+    let string = string.replaceAll(from, to);     /* 모두 치환
+    let string = string.replace(/from/gi, to);       replace 함수 이용 */
 
     let string = string.substring(start, end);    // 일부 반환(start index부터 end index- 1까지)
    
     let string = string.substring(start, length); // 일부 반환(start index부터 length만큼)
 
-    let array = string.split("split");            // 분리
+    let array = string.split(split);              // 분리
 
     let string = string1.concat(string2);         // 연결
 
     let string = string.trim();                   // 처음, 끝 공백 제거
-
-    let string = string.replace(/(\s*)/g, "");    // 모든 공백 제거
     
+    let string = string.trimStart();              // 처음 공백 제거
+    
+    let string = string.trimEnd();                // 끝 공백 제거
+    
+    let string = string.padStart(1ength, pad);    // 반환된 string이 length가 될때까지 앞쪽 pad
+    
+    let string = string.padEnd(1ength, pad);      // 반환된 string이 length가 될때까지 뒤쪽 pad
 
-String replaceAll()
-
-String trimStart()
-String trimEnd()
-String padStart()
-String padEnd()
-
-String charCodeAt()
+    let string = string.replace(/ /g, "");        // 모든 공백 제거
+    
 
 
 String search()
