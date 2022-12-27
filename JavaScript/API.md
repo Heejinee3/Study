@@ -165,57 +165,66 @@
   
 # String
 
-    let string = "string";                        // 문자열 선언
+    let string = "string";                              // 문자열 선언
     let string = new String("string");
  
-    let lengh = string3.length;                   // 길이
+    let lengh = string.length;                          // 길이
 
-    let string = string.toUpperCase();            // 대문자로 바꾸기
+    let string = string.toUpperCase();                  // 대문자로 바꾸기
     
-    let string = string.toLowerCase();            // 소문자로 바꾸기
+    let string = string.toLowerCase();                  // 소문자로 바꾸기
     
-    let char = string.charAt(index);              // index에 있는 character 반환
+    let char = string.charAt(index);                    // index에 있는 character 반환
     
-    let code = string.charCodeAt(index);          // index에 있는 character의 아스키코드 반환
+    let num = string.charCodeAt(index);                 // index에 있는 character의 아스키코드 반환
 
-    let index = string.indexOf(find);             // 첫번째 발생 인덱스 반환
+    let index = string1.indexOf(string2, index);        /* index부터 첫번째 string2 발생 인덱스 반환
+                                                           선택적 두번째 인자
+                                                           regular expressions 불가능               */
     
-    let index = string.lastIndexOf(find);         // 마지막 발생 인덱스 반환
+    let index = string1.lastIndexOf(string2, index);    /* index부터 마지막 string2 발생 인덱스 반환
+                                                           선택적 두번째 인자
+                                                           regular expressions 불가능               */
+                                                           
+    let index = string1.search(string2);                /* 첫번째 string2 발생 인덱스 반환
+                                                           regular expressions 가능       */
 
-    let string = string.replace(from, to);        // 처음 한개 치환
+    let string = string1.replace(string2, string3);     // 처음 한개 치환
     
-    let string = string.replaceAll(from, to);     /* 모두 치환
-    let string = string.replace(/from/gi, to);       replace 함수 이용 */
+    let string = string1.replaceAll(string2, string3);  /* 모두 치환
+    let string = string1.replace(/string2/gi, string3);    replace 함수 이용 */
 
-    let string = string.substring(start, end);    // 일부 반환(start index부터 end index- 1까지)
+    let string = string.substring(index1, index2);      // 일부 반환(index1부터 index2 - 1까지)
    
-    let string = string.substring(start, length); // 일부 반환(start index부터 length만큼)
+    let string = string.substring(index, length);       // 일부 반환(index부터 length만큼)
 
-    let array = string.split(split);              // 분리
+    let array = string1.split(string2);                 // 분리
 
-    let string = string1.concat(string2);         // 연결
+    let string = string1.concat(string2);               // 연결
 
-    let string = string.trim();                   // 처음, 끝 공백 제거
+    let string = string.trim();                         // 처음, 끝 공백 제거
     
-    let string = string.trimStart();              // 처음 공백 제거
+    let string = string.trimStart();                    // 처음 공백 제거
     
-    let string = string.trimEnd();                // 끝 공백 제거
+    let string = string.trimEnd();                      // 끝 공백 제거
     
-    let string = string.padStart(1ength, pad);    // 반환된 string이 length가 될때까지 앞쪽 pad
+    let string = string1.padStart(1ength, string2);     // 반환된 string이 length가 될때까지 앞쪽 pad
     
-    let string = string.padEnd(1ength, pad);      // 반환된 string이 length가 될때까지 뒤쪽 pad
+    let string = string1.padEnd(1ength, string2);       // 반환된 string이 length가 될때까지 뒤쪽 pad
 
-    let string = string.replace(/ /g, "");        // 모든 공백 제거
+    let string = string.replace(/ /g, "");              // 모든 공백 제거
     
-    let boolean = string.startsWith(start);       // string이 start로 시작하는지 확인
+    let boolean = string1.startsWith(string2);          // string1이 string2로 시작하는지 확인
     
-    let boolean = string.endsWith(end);           // string이 end로 끝나는지 확인
+    let boolean = string1.endsWith(string2);            // string1이 string2로 끝나는지 확인
 
-    let boolean = string.includes(search);        // string이 search를 포함하는지 확인
-String search()
-String match()
-String matchAll()
-String includes()
+    let boolean = string1.includes(string2);            // string1이 string2를 포함하는지 확인
+
+    let array = string1.match(string2);                 // string1에서 첫번째로 string2와 매치되는 substring array 반환
+    
+    let array = string1.matchAll(string2);              // string1에서 string2와 매치되는 substring array 모두 반환
+
+
 
 
 
