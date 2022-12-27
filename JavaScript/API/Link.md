@@ -1,7 +1,7 @@
 
 # Event
 
-      /* Mouse Event
+    /* Mouse Event
          click: 사용자가 HTML 요소를 클릭할 때 이벤트 발생
          dbclick: 사용자가 HTML 요소를 더블클릭할 때 이벤트 발생
          mousedown: 사용자가 요소 위에서 마우스 버튼을 눌렀을 때 이벤트 발생
