@@ -98,9 +98,9 @@
 
     class ClassName{                                   // class 이름
     
-        int value;                                     // instance valuable
+        int value;                                     // instance variable
         
-        static int staticValue;                        // static valuable
+        static int staticValue;                        // static variable
 
         void function(int param){                      // instance function
         }
@@ -112,19 +112,19 @@
             this.value = value;
         }
 
-        public int getValue() {                        // instance valuable get 함수
+        public int getValue() {                        // instance variable get 함수
             return this.value;
         }
 
-        public static int getStaticValue() {           // static valuable get 함수
+        public static int getStaticValue() {           // static variable get 함수
             return staticValue;
         }
 
-        public void setValue(int value) {              // instance valuable set 함수
+        public void setValue(int value) {              // instance variable set 함수
             this.value = value;
         }
 
-        public static void setStaticValue(int value) { // static valuable set 함수
+        public static void setStaticValue(int value) { // static variable set 함수
             staticValue = value;
         }
     }
@@ -134,15 +134,15 @@
         
             ClassName object = new ClassName(value); // 객체 생성
 
-            object.value;                            // instance valuable
+            object.value;                            // instance variable
             object.function(value);                  // instance function
-            object.setValue(value);                  // instance valuable set 함수
-            object.getValue();                       // instance valuable get 함수
+            object.setValue(value);                  // instance variable set 함수
+            object.getValue();                       // instance variable get 함수
             
-            ClassName.staticValue;                   // static valuable
+            ClassName.staticValue;                   // static variable
             ClassName.staticFunction(value);         // static function
-            ClassName.setStaticValue(value);         // static valuable set 함수
-            ClassName.getStaticValue();              // static valuable get 함수
+            ClassName.setStaticValue(value);         // static variable set 함수
+            ClassName.getStaticValue();              // static variable get 함수
             
         }
     }
