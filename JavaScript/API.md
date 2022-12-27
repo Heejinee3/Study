@@ -86,9 +86,7 @@
 # Array
 
     let array = []; 
-    let array = [value1, value2, ...]; 
-    let [var1, ] = [value1, value2, ...]; 
-    let array = [value1, value2, ...]; 
+    let array = [value1, value2, ...];  
     let array = Array(); 
     let array = Array(length);                       
     let array = Array(value1, value2, ...); 
@@ -105,6 +103,46 @@
     array.splice(index, count);                      // index에 count만큼 삭제
 
     array = array1.concat(array2, array3, ...);      // array 병합 
+    
+# Destructuring Assignment
+
+    // 여러개 변수에 값 할당
+    let [var1, var2, var3] = [value1, value2, value3]; // 여러개 변수에 값 할당
+
+    let [var, ...rest] = [value1, value2, value3];     /* 여러개 변수에 값 할당
+                                                          ...: 전개(spread) 연산자 */
+
+    let var1, var2;                                    // 여러개 변수에 값 할당
+    [(var1 = value1), (var2 = value2)];      
+    (var1 = value1), (var2 = value2);
+  
+    let object = {key1: value1, key2: value2};         /* key 이름의 변수 생성
+    let {key1, key2} = object;                            key 이름과 같아야 함 */
+    
+    let object = {key1: value1, key2: value2};         /* 여러개 변수에 값 할당 
+    let {key1: var1, key2: var2} = object;                var1= value1, var2= value2 */
+
+    let object1 = {key1: value1, key2: value2};        // key, value 객체 병합
+    let object2 = {key3: value3, key4: value4};
+    let object3 = {...var1, ...var2}; 
+
+    let array1 = [value1, value2];
+    let array2 = [value3, value2];
+    let array3 = [...array1, ...array2];
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -268,4 +306,4 @@
       console.log(fullTrimStr);
       console.log(string10.charCodeAt(i));
     
-    
+    34부터
