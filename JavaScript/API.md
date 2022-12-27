@@ -106,7 +106,6 @@
     
 # Destructuring Assignment
 
-    // 여러개 변수에 값 할당
     let [var1, var2, var3] = [value1, value2, value3]; // 여러개 변수에 값 할당
 
     let [var, ...rest] = [value1, value2, value3];     /* 여러개 변수에 값 할당
@@ -126,29 +125,48 @@
     let object2 = {key3: value3, key4: value4};
     let object3 = {...var1, ...var2}; 
 
-    let array1 = [value1, value2];
+    let array1 = [value1, value2];                     // 배열 병합
     let array2 = [value3, value2];
     let array3 = [...array1, ...array2];
+    
+# String
 
+    let string = "string";                        // 문자열 선언
+    let string = new String("string");
+ 
+    let lengh = string3.length;                   // 길이
+
+    let string = string.toUpperCase();            // 대문자로 바꾸기
     
+    let string = string.toLowerCase();            // 소문자로 바꾸기
     
+    let char = string.charAt(index);              // index에 있는 character 반환
+
+    let index = string.indexOf("find");           // 첫번째 발생 인덱스 반환
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    let index = string.lastIndexOf("find");       // 마지막 발생 인덱스 반환
+
+    let string = string.replace("from", "to");    // 치환
+
+    let string = string.substring(start, end);    // 일부 반환(start index부터 end index- 1까지)
+   
+    let string = string.substring(start, length); // 일부 반환(start index부터 length만큼)
+
+    let array = string.split("split");            // 분리
+
+    let string = string1.concat(string2);         // 연결
+
+    let string = string.trim();                   // 처음, 끝 공백 제거
+
+    let string = string.replace(/(\s*)/g, "");    // 모든 공백 제거
+
+
+
+
+
+
+
+
     arrayE.reverse();
     arrayE.sort();
          <img onmouseover="this.src='img/banana.png'" onmouseout="this.src='img/apple.png'"/>
@@ -254,56 +272,6 @@
       let superman = new Superman();
       superman.run();
 
-      let string1 = "문자열";
-      let string2 = new String("문자열");
-      console.log(typeof string1);
-      console.log(typeof string2);
 
-      let string3 = "Abcdef";
-      // 문자열길이
-      console.log(string3.length);
-      // 대문자로 변경
-      console.log(string3.toUpperCase());
-      console.log(string3.toLowerCase());
-      let char = string3.charAt(0); // 첫번째 한자
-      console.log(char);
-
-      // 문자의 인덱스 찾기
-      var string4 = "java_script_programming";
-      console.log(string4.indexOf("script")); // 첫번째 발생 인덱스
-      console.log(string4.lastIndexOf("i")); // 마지막 발생 인덱스
-
-      // 문자열 치환
-      var replaced = string4.replace("java", "ECMA");
-      console.log(replaced);
-      console.log(string4); // 원본 그대로
-
-      // 문자열 일부 가져오기
-      let substr1 = string4.substring(5, 11); // 시작인덱스, 종료 인덱스 + 1
-      console.log(substr1);
-      let substr2 = string4.substring(5, 6); // 시작인덱스, 개수
-      console.log(substr2);
-
-      // 문자열 분리 split = > 배열로 반환
-      var string5 = "사과,배,딸기,바나나,포도";
-      let array = string5.split(",");
-      for (let fruit of array) {
-        console.log(fruit);
-      }
-
-      // 문자열 연결 + concat() 함수
-      let string6 = "ECMA";
-      let string7 = "Script";
-      var concated = string6.concat(string7);
-      console.log(concated);
-
-      // 공백 제거: 처음과 끝 공백만 제고(가운데 공백은 제거 안함)
-      let string8 = "    This is java script    ";
-      console.log(string8.trim());
-
-      // 모든 공백을 제거하는 정규식
-      let fullTrimStr = string8.replace(/(\s*)/g, "");
-      console.log(fullTrimStr);
-      console.log(string10.charCodeAt(i));
     
     34부터
