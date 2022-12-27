@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>클릭 이벤트 처리</title>
+    <script>
+      // 1. onclick 익명함수
+      // 2. addEventListener 함수
+      window.onload = () => {
+        let h1 = document.getElementById("header1");
+        h1.onclick = () => {
+          alert("h1 클릭됨");
+        };
+        let h1_2 = document.getElementById("header2");
+        h1_2.addEventListener("click", () => {
+          alert("h1 클릭됨");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="header1">클릭하세요1</h1>
+    <h1 id="header2">클릭하세요2</h1>
+    <h1 onclick="alert('클릭3');">클릭하세요3</h1>
+    <h1 onclick="myFunc('홍길동');">클릭하세요4</h1>
+    <button onclick="myFunc('홍길동');">버튼</button>
+    <script>
+      function myFunc(param) {
+        alert("클릭4:" + param);
+      }
+    </script>
+  </body>
+</html>

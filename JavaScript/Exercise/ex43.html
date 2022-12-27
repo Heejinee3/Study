@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <style>
+      #calculator {
+        width: 50%;
+        padding: 5% 5% 10%;
+        margin: 0 auto;
+        border: 1px solid black;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .header {
+        padding: 3%;
+      }
+
+      #input {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #button {
+        width: 80%;
+        padding: 5%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      label {
+        flex: 1 30%;
+        padding: 3%;
+      }
+      input {
+        flex: 1 40%;
+        padding: 1%;
+        border: 1px solid rgba(7, 7, 7, 0.336);
+        text-align: center;
+      }
+      input:focus {
+        outline: 0;
+      }
+      button {
+        flex: 1 100%;
+        margin: 1%;
+        padding: 3%;
+        border: none;
+        background-color: rgb(129, 129, 248);
+        color: white;
+        cursor: pointer;
+      }
+      #reset {
+        background-color: rgb(248, 141, 109);
+      }
+      #result {
+        background-color: rgb(102, 102, 102);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <div class="header">JavaScript</div>
+      <div class="header">계산기 프로그램을 작성해보자</div>
+      <div id="input">
+        <label for="num1">숫자 1</label><input type="text" id="num1" />
+        <label for="num2">숫자 2</label><input type="text" id="num2" />
+        <label for="result">연산 결과</label
+        ><input type="text" disabled id="result" />
+      </div>
+      <div id="button">
+        <button id="plus" onclick="calc('plus');">덧셈</button>
+        <button id="minus" onclick="calc('minus');">뺄셈</button>
+        <button id="multiple" onclick="calc('multiple');">곱셈</button>
+        <button id="division" onclick="calc('division');">나눗셈</button>
+        <button id="reset" onclick="reset();">지우기</button>
+      </div>
+    </div>
+    <script>
+      function calc(method) {
+        var num1 = document.getElementById("num1");
+        num1 = Number(num1.value);
+
+        var num2 = document.getElementById("num2");
+        num2 = Number(num2.value);
+
+        var result = document.getElementById("result");
+        var num3;
+
+        if (method == "plus") num3 = num1 + num2;
+        if (method == "minus") num3 = num1 - num2;
+        if (method == "multiple") num3 = num1 * num2;
+        if (method == "division") {
+          if (num2 == 0) num3 = "";
+          else num3 = num1 / num2;
+        }
+
+        result.value = num3;
+      }
+
+      function reset() {
+        var num1 = document.getElementById("num1");
+        var num2 = document.getElementById("num2");
+        var result = document.getElementById("result");
+
+        num1.value = "";
+        num2.value = "";
+        result.value = "";
+      }
+    </script>
+  </body>
+</html>
