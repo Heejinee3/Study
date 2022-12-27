@@ -105,16 +105,52 @@
     
     let array = array.splice(index, count, value1, value2, ...); /* index에 count만큼 삭제하고 value넣기
                                                                     count가 없으면 끝까지 삭제
-                                                                    value는 없어도 됨                   */
+                                                                    value는 없어도 됨                   
+                                                                    기존 array가 바뀌고 삭제된 array 반환 */
+                                                                    
+    let array = array.slice(index1, index2);                     // index1부터 index2 - 1까지 slice
     
+    let array = array.sort();                                    // 기존 array, 반환 array 모두 sort
     
+    let array = array.reverse();                                 // 기존 array, 반환 array 모두 역순으로 sort
+    
+    let index= array.indexOf(value);                             // 주어진 값과 첫번째로 동일한 값의 index 반환
+    
+    let index= array.lastIndexOf(value);                         // 주어진 값과 마지막으로 동일한 값의 index 반환
+    
+    let string = array.toString();                               // array의 요소값을 ,로 연결시켜 string으로 반환
+    
+    delete array[index];                                         // index 자리 value 삭제(empty로 남아있음)
+    
+    let undefined = array.forEach(function);                     // 각 element(param)에 대하여 실행문을 실행
+   
+    let array = array.map(function);                             // 각 element(param)에 대하여 실행문을 실행해 반환
+    
+    let array = array.filter(function);                          // 각 element(param)에 대하여 실행문을 실행해 true인 것만 반환
+    
+    let var = array.reduce(function);                            // left부터 right로 reduce 함수 실행
+    
+    let var = array.reduceRight(function);                       // right부터 left로 reduce 함수 실행
+    
+    let boolean = array.every(function);                         // 각 element가 실행문을 실행해 모두 true이면 true 반환
+    
+    let boolean = array.some(function);                          // 각 element가 실행문을 실행해 true인게 하나라도 있으면 true 반환
+    
+    let first = numbers.find(myFunction);
+    
+    let first = numbers.findIndex(myFunction);
+    
+    fruits.includes("Mango"); // is true
+    
+    const f = fruits.entries();
+    [0, "Banana"]
     
     array[index] = value;                            // index 자리에 value 넣기
 
 
-    delete array[index];                             // index 자리 value 삭제(empty로 남아있음)
 
-    array = array1.concat(array2, array3, ...);      // array 병합 
+
+
     
 # Destructuring Assignment
 
