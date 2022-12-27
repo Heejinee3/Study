@@ -207,14 +207,16 @@
 
     let string = string.replace(/ /g, "");        // 모든 공백 제거
     
+    let boolean = string.startsWith(start);       // string이 start로 시작하는지 확인
+    
+    let boolean = string.endsWith(end);           // string이 end로 끝나는지 확인
 
-
+    let boolean = string.includes(search);        // string이 search를 포함하는지 확인
 String search()
 String match()
 String matchAll()
 String includes()
-String startsWith()
-String endsWith()
+
 
 
 
