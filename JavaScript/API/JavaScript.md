@@ -443,7 +443,21 @@
         console.log("value:" + value);
       }
 
-      
+            //페이지 이동
+      //1. 리다이렉트 : 사이트간의 이동, 내부데이타를 가지고 이동하지 않음.
+      //2. 포워드 : 내부 페이지간의 이동, 내부데이타를 가지고 이동.
+
+      //내장객체 : location 사용
+      setTimeout(() => {
+        location.href = "http://www.daum.net";
+        //간략한 표현 : 비추천
+        //location = "http://www.daum.net";
+      }, 3000);
+
+      //그외 페이지 이동(리다이렉트)
+      // 1. 앵커 태그
+      <a href="http://www.daum.net">다음 홈페이지</a>;
+      // 2. html meta태그 refresh
 
 
     
