@@ -34,15 +34,17 @@
  
 # Print
 
-    let undefined = alert(string);          // 알림
+    let undefined = alert(string);            // 알림
     
-    let undefined = confirm(string);        // 확인, 취소
+    let return = confirm(string);             // 확인, 취소
     
-    let return = prompt(string, value);     // input 넣기
+    let return = prompt(string, value);       // input 넣기
     
-    let undefined = document.write(string); // document에 쓰기
+    let undefined = document.write(string);   // document에 쓰기
     
-    let undefined = console.log(string);    // console에 쓰기
+    let undefined = document.writeln(string); // document에 쓰기
+    
+    let undefined = console.log(string);      // console에 쓰기
             
 # Window(Useful)
        
