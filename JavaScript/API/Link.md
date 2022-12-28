@@ -61,13 +61,13 @@ console.log("eee")
 
     let return = document;	                      // 브라우저 창에 표시된 웹 문서에 접근할 수 있음
     
-    let return = frameElement;	                  // 현재 창이 다른 요소 안에 포함되어 있으면 그 요소를 반환, 포함되어 있지 않으면 null
+    let return = frameElement;                    // 현재 창이 다른 요소 안에 포함되어 있으면 그 요소를 반환, 포함되어 있지 않으면 null
     
-    let return = innerHeight;	                  // 내용 영역의 높이
+    let return = innerHeight;                     // 내용 영역의 높이
     
-    let return = innerWidth;	                  // 내용 영역의 너비
+    let return = innerWidth;                      // 내용 영역의 너비
     
-    let return = localStorage;	                  // 웹 브라우저에서 데이터를 저장하는 로컬 스토리지
+    let return = localStorage;                    // 웹 브라우저에서 데이터를 저장하는 로컬 스토리지
     
     let return = location;	                      // Window 객체의 위치 / 현재 URL
     
@@ -123,25 +123,25 @@ console.log("eee")
 
 # Navigator
    
-    let return = navigator.appCodeName;	   // 브라우저 이름(코드 이름)을 문자열로 반환
+    let return = navigator.appCodeName;    // 브라우저 이름(코드 이름)을 문자열로 반환
     
     let return = navigator.appName;	       // 브라우저 공식 이름을 문자열로 반환
     
-    let return = navigator.appVersion;	   // 브라우저 버전을 문자열로 반환
+    let return = navigator.appVersion;     // 브라우저 버전을 문자열로 반환
     
     let return = navigator.battery;	       // 배터리 충전 상태를 알려 주는 정보가 담긴 객체를 반환
     
-    let return = navigator.connection;	   // 브라우저 장치의 네트워크 정보가 담긴 객체를 반환
+    let return = navigator.connection;     // 브라우저 장치의 네트워크 정보가 담긴 객체를 반환
     
     let return = navigator.cookieEnabled;  // 쿠기 정보를 무시한다면 false, 그렇지 않다면 true를 반환
     
-    let return = navigator.geolocation;	   // 모바일 기기를 사용한 위치 정보가 담긴 객체를 반환
+    let return = navigator.geolocation;    // 모바일 기기를 사용한 위치 정보가 담긴 객체를 반환
     
     let return = navigator.maxTouchPoints; // 장치에서 동시에 터치 가능한 포인트가 몇 개인지 반환
     
-    let return = navigator.platform;	   // 브라우저 플랫폼 정보를 가지고 있는 문자열을 반환
+    let return = navigator.platform;       // 브라우저 플랫폼 정보를 가지고 있는 문자열을 반환
     
-    let return = navigator.userAgent;	   // 현재 브라우저 정보가 있는 사용자 에이전트 문자열을 반환
+    let return = navigator.userAgent;      // 현재 브라우저 정보가 있는 사용자 에이전트 문자열을 반환
     
     let return = navigator.oscpu;	       // 현재 운영체제 정보를 반환
     
@@ -149,13 +149,13 @@ console.log("eee")
     
 # History
   
-    let undefined = history.length;	    // 현재 브라우저 창의 History 목록에 있는 항목의 개수, 즉 방문한 사이트 개수를 반환
+    let undefined = history.length;     // 현재 브라우저 창의 History 목록에 있는 항목의 개수, 즉 방문한 사이트 개수를 반환
     
-    let undefined = history.back();	    // History 목록에서 이전 페이지를 현재 화면에 불러옴
+    let undefined = history.back();     // History 목록에서 이전 페이지를 현재 화면에 불러옴
     
-    let undefined = history.forward();	// History 목록에서 다음 페이지를 현재 화면에 불러옴
+    let undefined = history.forward();  // History 목록에서 다음 페이지를 현재 화면에 불러옴
     
-    let undefined = history.go(number);	// History 목록에서 현재 페이지를 기준으로 상대 위치에 있는 페이지를 현재 화면에 불러옵니다.
+    let undefined = history.go(number); // History 목록에서 현재 페이지를 기준으로 상대 위치에 있는 페이지를 현재 화면에 불러옵니다.
 
 # Location
 
