@@ -299,28 +299,24 @@
     
     let number = date.getTime();	                                           // 1970년 1월 1일 이후로의 시간을 밀리초 단위로 얻음
     
-    let number = date.setFullYear(number);	                                   // 연도(0000-), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setFullYear(number);	                               // 연도(0000-), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setMonth(number);	                                       // 월(0-11), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setMonth(number);	                                   // 월(0-11), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setDate(number);	                                       // 일(1-31), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setDate(number);	                                   // 일(1-31), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setDay(number);	                                       // 요일(0-6), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setDay(number);	                                   // 요일(0-6), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setHours(number);	                                       // 시간(0-23), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setHours(number);	                                   // 시간(0-23), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
     let number = date.setMinutes(number);	                                   // 분(0-59), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
     let number = date.setSeconds(number);	                                   // 초(0-59), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setMilliseconds(number);	                               // 밀리초(0-999), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setMilliseconds(number);	                           // 밀리초(0-999), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setTime(number);	                                       // 1970년 1월 1일 이후로의 시간을 밀리초 단위로 세팅, 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setTime(number);	                                   // 1970년 1월 1일 이후로의 시간을 밀리초 단위로 세팅, 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
                                                                                
-
-
-
-
 # 
          <img onmouseover="this.src='img/banana.png'" onmouseout="this.src='img/apple.png'"/>
         <a href="javascript:alert('클릭하셨어요?')"></a>
