@@ -281,13 +281,13 @@
     let date = new Date(2022,12,28,10,36,23,897);                              // YYYY,MM,DD,HH,MM,SS,SSS
     let date = new Date("Wed Dec 28 2022 10:36:23 GMT+0900 (대한민국 표준시)"); // 이름 사용
 
-    let number = date.getFullYear();	                                       // 연도(0000-)
+    let number = date.getFullYear();	                                   // 연도(0000-)
     
     let number = date.getMonth();	                                           // 월(0-11)
     
     let number = date.getDate();	                                           // 일(1-31)
     
-    let number = date.getDay();	                                               // 요일(0-6)
+    let number = date.getDay();	                                           // 요일(0-6)
     
     let number = date.getHours();	                                           // 시간(0-23)
     
