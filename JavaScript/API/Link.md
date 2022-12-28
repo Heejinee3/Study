@@ -155,26 +155,38 @@ console.log("eee")
     
     let undefined = history.forward();  // History 목록에서 다음 페이지를 현재 화면에 불러옴
     
-    let undefined = history.go(number); // History 목록에서 현재 페이지를 기준으로 상대 위치에 있는 페이지를 현재 화면에 불러옵니다.
+    let undefined = history.go(number); // History 목록에서 현재 페이지를 기준으로 상대 위치에 있는 페이지를 현재 화면에 불러옴
 
 # Location
 
     let return = location.hash;            // URL 중 #로 시작하는 해시 부분
-    let return = location.host;            // URL의 호스트 이름과 포트 번호
-    let return = location.hostname;        // URL의 호스트 이름
-    let return = location.href;            // 전체 URL
-    let return = location.pathname;        // URL 경로
-    let return = location.port;            // URL 포트 번호
-    let return = location.protocol;        // http://나 ftp:// 같은 URL의 프로토콜
-    let return = location.password;        // 도메인 이름 앞에 username과 password를 함께 입력해서 접속하는 URL일 경우 password 정보를 저장
-    let return = location.search;          // URL 중 ?(물음표)로 시작하는 검색 내용 부분
-    let return = location.username;        // 도메인 이름 앞에 username을 함께 입력해서 접속하는 사이트 URL일 경우 username 정보를 저장
-    let undefined = location.assign(url);  // 현재 문서에 새 문서 주소를 할당해 새 문서를 가져옴
-    let undefined = location.reload();     // 현재 문서를 다시 불러옴, 브라우저의 [새로 고침]
-    let undefined = location.replace(url); // 현재 문서의 URL을 지우고 다른 URL의 문서로 교체
-    let return = location.toString();      // 현재 문서의 URL을 문자열로 반환
-
     
+    let return = location.host;            // URL의 호스트 이름과 포트 번호
+    
+    let return = location.hostname;        // URL의 호스트 이름
+    
+    let return = location.href;            // 전체 URL
+    
+    let return = location.pathname;        // URL 경로
+    
+    let return = location.port;            // URL 포트 번호
+    
+    let return = location.protocol;        // http://나 ftp:// 같은 URL의 프로토콜
+    
+    let return = location.password;        // 도메인 이름 앞에 username과 password를 함께 입력해서 접속하는 URL일 경우 password 정보를 저장
+    
+    let return = location.search;          // URL 중 ?(물음표)로 시작하는 검색 내용 부분
+    
+    let return = location.username;        // 도메인 이름 앞에 username을 함께 입력해서 접속하는 사이트 URL일 경우 username 정보를 저장
+    
+    let undefined = location.assign(url);  // 현재 문서에 새 문서 주소를 할당해 새 문서를 가져옴
+    
+    let undefined = location.reload();     // 현재 문서를 다시 불러옴, 브라우저의 [새로 고침]
+    
+    let undefined = location.replace(url); // 현재 문서의 URL을 지우고 다른 URL의 문서로 교체
+    
+    let return = location.toString();      // 현재 문서의 URL을 문자열로 반환
+  
 # DOM
     
     document.writeln("<tr>");
