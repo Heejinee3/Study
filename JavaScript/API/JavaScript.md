@@ -317,9 +317,9 @@
     
     let number = date.setTime(number);	                                   // 1970년 1월 1일 이후로의 시간을 밀리초 단위로 세팅, 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
               
-    let string = date.toString();                                          // date을 string으로 변환
+    let string = date.toString();                                              // date을 string으로 변환
     
-    let string = date.toLocaleString("ko-KR", { timeZone: "UTC" });        // 지역 date을 string으로 변환
+    let string = date.toLocaleString("ko-KR", { timeZone: "UTC" });            // 지역 date을 string으로 변환
               
               
 # 
