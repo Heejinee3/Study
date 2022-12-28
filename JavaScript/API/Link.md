@@ -71,11 +71,11 @@ console.log("eee")
     
     let return = location;	                      // Window 객체의 위치 / 현재 URL
     
-    let return = name;	                          // 브라우저 창의 이름을 가져오거나 수정
+    let return = name;                            // 브라우저 창의 이름을 가져오거나 수정
     
-    let return = outerHeight;	                  // 브라우저 창의 바깥 높이
+    let return = outerHeight;                     // 브라우저 창의 바깥 높이
     
-    let return = outerWidth;	                  // 브라우저 창의 바깥 너비
+    let return = outerWidth;                      // 브라우저 창의 바깥 너비
     
     let return = parent;	                      // 현재 창이나 서브 프레임의 부모 프레임
     
@@ -89,9 +89,9 @@ console.log("eee")
     
     let return = sessionStorage;	              // 웹 브라우저에서 데이터를 저장하는 세션 스토리지
     
-    let undefined = blur();  	                  // 창에서 포커스를 제거
+    let undefined = blur();                       // 창에서 포커스를 제거
     
-    let undefined = focus();	                  // 현재 창에 포커스를 부여
+    let undefined = focus();                      // 현재 창에 포커스를 부여
     
     let undefined = moveBy(x, y);	              // 현재 창을 지정한 크키만큼 이동
     
