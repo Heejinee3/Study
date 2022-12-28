@@ -187,23 +187,23 @@
     
 # Screen
 
-    let return = availHeight;                  // 화면에서 윈도우의 작업 표시줄이나 맥의 메뉴/독 같은 UI 영역을 제외한 부분의 높이
+    let return = screen.availHeight;                  // 화면에서 윈도우의 작업 표시줄이나 맥의 메뉴/독 같은 UI 영역을 제외한 부분의 높이
     
-    let return = availWidthUI;                 // 영역을 제외한 부분의 너비
+    let return = screen.availWidthUI;                 // 영역을 제외한 부분의 너비
     
-    let return = colorDepth;                   // 화면상에서 픽셀을 렌더링할 때 사용하는 색상 수
+    let return = screen.colorDepth;                   // 화면상에서 픽셀을 렌더링할 때 사용하는 색상 수
     
-    let return = heightUI;                     // 영역을 포함한 화면의 높이
+    let return = screen.heightUI;                     // 영역을 포함한 화면의 높이
     
-    let return = orientation;                  // 화면의 현재 방향
+    let return = screen.orientation;                  // 화면의 현재 방향
     
-    let return = pixelDepth;                   // 화면상에서 픽셀을 랜더링할 때 사용하는 비트 수
+    let return = screen.pixelDepth;                   // 화면상에서 픽셀을 랜더링할 때 사용하는 비트 수
     
-    let return = widthUI;                      // 영역을 포함한 화면의 너비
+    let return = screen.widthUI;                      // 영역을 포함한 화면의 너비
     
-    let return = lockOrientation(orientation); // 화면 방향을 잠금
+    let return = screen.lockOrientation(orientation); // 화면 방향을 잠금
     
-    let return = unlockOrientation();          // 화면 방향 잠금을 해제
+    let return = screen.unlockOrientation();          // 화면 방향 잠금을 해제
   
 # DOM
     
