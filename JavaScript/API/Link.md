@@ -99,11 +99,11 @@ console.log("eee")
     
     let undefined = postMessage(message, target); // 다른 창으로 메시지를 전달
     
-    let undefined = print();	                  // 현재 문서를 인쇄
+    let undefined = print();                      // 현재 문서를 인쇄
     
-    let undefined = resizeBy(width, height);	  // 지정한 크기만큼 현재 창 크기를 조절
+    let undefined = resizeBy(width, height);      // 지정한 크기만큼 현재 창 크기를 조절
     
-    let undefined = resizeTo(width, height);	  // 동적으로 브라우저 창의 크기를 조절
+    let undefined = resizeTo(width, height);      // 동적으로 브라우저 창의 크기를 조절
     
     let undefined = scroll(x, y);	              // 문서에서 특정 위치로 스크롤
     
@@ -111,11 +111,11 @@ console.log("eee")
     
     let undefined = scrollTo(x, y);	              // 지정한 위치까지 스크롤
     
-    let undefined = setCursor(cursor);	          // 현재 창의 커서를 변
+    let undefined = setCursor(cursor);            // 현재 창의 커서를 변경
     
-    let return = showModalDialog(url);	          // 모달 창을 표시
+    let return = showModalDialog(url);            // 모달 창을 표시
     
-    let undefined = sizeToContent();	          // 내용에 맞체 창 크기를 맞춤
+    let undefined = sizeToContent();              // 내용에 맞체 창 크기를 맞춤
     
     let undefined = stop();                       // 로딩 중지
 
