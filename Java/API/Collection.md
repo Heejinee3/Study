@@ -115,8 +115,8 @@
     while(iterator.hasNext()){
     element             = iterator.next();}
     int[]               = list.stream().mapToInt(i -> i).toArray();     // ArrayList<Integer> -> int[]로 바꾸기
-    void                = list.sort(Comparator.naturalOrder());        // 오름차순 정렬
-    void                = list.sort(Comparator.reverseOrder());        // 내림차순 정렬
+    void                = list.sort(Comparator.naturalOrder());         // 오름차순 정렬
+    void                = list.sort(Comparator.reverseOrder());         // 내림차순 정렬
 
 # LinkedList 
 
