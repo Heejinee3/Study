@@ -79,6 +79,8 @@ console.log("eee")
     
     let return = parent;	                      // 현재 창이나 서브 프레임의 부모 프레임
     
+    let return = opener;	                      // 창을 오픈한 창
+    
     let return = screenX;	                      // 브라우저 창의 왼쪽 테두리가 모니터 왼쪽 테두리에서 떨어져 있는 거리
     
     let return = screenY;	                      // 브라우저 창의 위쪽 테두리가 모니터 위쪽 테두리에서 떨어져 있는 거리
