@@ -88,6 +88,8 @@
     let array = Array(); 
     let array = Array(length);                       
     let array = Array(value1, value2, ...); 
+       
+    array[index] = value;                                        // index 자리에 value 넣기
     
     let length = array.length;                                   // 길이
     
@@ -136,21 +138,13 @@
     
     let boolean = array.some(function);                          // 각 element가 실행문을 실행해 true인게 하나라도 있으면 true 반환
     
-    let first = numbers.find(myFunction);
+    let value = array.find(function);                            // 실행문을 실행해 true가 나오는 첫번째 value
     
-    let first = numbers.findIndex(myFunction);
+    let index = array.findIndex(function);                       // 실행문을 실행해 true가 나오는 첫번째 value의 index
     
-    fruits.includes("Mango"); // is true
+    let boolean = array.includes(value);                         // array의 element 중 value가 있는지 확인
     
-    const f = fruits.entries();
-    [0, "Banana"]
-    
-    array[index] = value;                            // index 자리에 value 넣기
-
-
-
-
-
+    let array = array.entries();                                 // [index, value]의 key-value 형태로 array 생성       
     
 # Destructuring Assignment
 
