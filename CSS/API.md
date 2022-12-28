@@ -794,7 +794,7 @@ https://amango.tistory.com/7
        word-wrap의 단어 분리 
                 normal(기본값)   break-word           
        non-CJK:   단어넘침 O      단어넘침 X         
-       CJK    :   단어넘침 X     단어넘침 X                             */
+       CJK    :   단어넘침 X      단어넘침 X                            */
 
     word-wrap: normal; 
     word-break: normal; 
