@@ -31,23 +31,19 @@
              : label, select, textarea, button
        reset : 폼이 리셋되었을 때 이벤트 발생
        submit: submit 버튼을 클릭했을 때 이벤트 발생       */
-       
-    // Event Handler
-    document.querySelector(selector).onEvent = (parameter) => {
-      statement;
-    }; 
-       
-alert("string")
-confirm("string")
-prompt("string","value")
-document.write("eee")
-console.log("eee")
-       
-       
-  
-
  
-       
+# Print
+
+    let undefined = alert(string);          // 알림
+    
+    let undefined = confirm(string);        // 확인, 취소
+    
+    let return = prompt(string, value);     // input 넣기
+    
+    let undefined = document.write(string); // document에 쓰기
+    
+    let undefined = console.log(string);    // console에 쓰기
+            
 # Window(Useful)
        
     let window = open("www.naver.com", "name", "width=100, height=400, left=100, top=100, scrollbars=yes"); /* 새로운 창 열기
