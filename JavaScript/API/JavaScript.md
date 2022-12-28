@@ -268,17 +268,25 @@
     
     let array = string1.matchAll(string2);              // string1에서 string2와 매치되는 substring array 모두 반환
 
+# Date
+
+    let date = new Date();                                                     // 현재 시간
+    let date = new Date("2022");                                               // YYYY
+    let date = new Date("2022-12");                                            // YYYY,MM
+    let date = new Date("2022-12-28");                                         // YYYY,MM,DD
+    let date = new Date("2022-12-28T10");                                      // YYYY,MM,DD,HH
+    let date = new Date("2022-12-28T10:36");                                   // YYYY,MM,DD,HH,MM
+    let date = new Date("2022-12-28T10:36:23");                                // YYYY,MM,DD,HH,MM,SS
+    let date = new Date("2022-12-28T10:36:23Z");                               // YYYY,MM,DD,HH,MM,SS(국제 표준시)
+    let date = new Date(2022,12,28,10,36,23,897);                              // YYYY,MM,DD,HH,MM,SS,SSS
+    let date = new Date("Wed Dec 28 2022 10:36:23 GMT+0900 (대한민국 표준시)"); // 이름 사용
+
+    
 
 
 
 
 
-
-
-
-
-    arrayE.reverse();
-    arrayE.sort();
          <img onmouseover="this.src='img/banana.png'" onmouseout="this.src='img/apple.png'"/>
         <a href="javascript:alert('클릭하셨어요?')"></a>
         <button onclick="Hello!"></button>
