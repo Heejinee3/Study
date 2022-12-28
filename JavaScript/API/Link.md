@@ -182,6 +182,26 @@
     let undefined = location.replace(url); // 현재 문서의 URL을 지우고 다른 URL의 문서로 교체
     
     let return = location.toString();      // 현재 문서의 URL을 문자열로 반환
+    
+# Screen
+
+    let return = availHeight;                  // 화면에서 윈도우의 작업 표시줄이나 맥의 메뉴/독 같은 UI 영역을 제외한 부분의 높이를 나타냅니다
+    
+    let return = availWidthUI;                 // 영역을 제외한 부분의 너비를 나타냅니다
+    
+    let return = colorDepth;                   // 화면상에서 픽셀을 렌더링할 때 사용하는 색상 수를 나타냅니다
+    
+    let return = heightUI;                     // 영역을 포함한 화면의 높이를 나타냅니다
+    
+    let return = orientation;                  // 화면의 현재 방향을 나타냅니다. 기본은 가로 방향입니다
+    
+    let return = pixelDepth;                   // 화면상에서 픽셀을 랜더링할 때 사용하는 비트 수를 나타냅니다
+    
+    let return = widthUI;                      // 영역을 포함한 화면의 너비를 나타냅니다
+    
+    let return = lockOrientation(orientation); // 화면 방향을 잠급니다
+    
+    let return = unlockOrientation();          // 화면 방향 잠금을 해제합니다
   
 # DOM
     
