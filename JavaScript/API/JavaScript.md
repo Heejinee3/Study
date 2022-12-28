@@ -396,28 +396,18 @@
         <a href="javascript:alert('클릭하셨어요?')"></a>
         <button onclick="Hello!"></button>
 
-        var myVar = 10;
-        let myLet = 20;
-        const PI = 3.14;
+ 
 
         Number.Max_SAFE_INTEGER
         Number.Min_SAFE_INTEGER
-        string.length
-        list.length
+ 
 
-        alert("Hello!")
-        console.log("Hello!");
-        document.write("Hello!");
-        prompt("이름을 입력하세요.");
-        confirm("파일을 전송할까요?");
         typeof(변수);
         Number(myStr);
         parseInt(myStr);
         parseFloat(myStr);
         String(myNum2);
-        Math.floor(value / 3);
-        
-        Math.max();
+
 
 
       let timer = setTimeout(() => {
