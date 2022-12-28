@@ -320,9 +320,78 @@
     let string = date.toString();                                              // date을 string으로 변환
     
     let string = date.toLocaleString("ko-KR", { timeZone: "UTC" });            // 지역 date을 string으로 변환
-              
-              
-# 
+                            
+# Math
+  
+    let number = Math.E;                   // Euler's number
+    
+    let number = Math.PI;                  // PI
+                
+    let number = Math.SQRT2;               // square root of 2
+    
+    let number = Math.SQRT1_2;             // square root of 1/2
+    
+    let number = Math.LN2;                 // natural logarithm of 2
+    
+    let number = Math.LN10;                // natural logarithm of 10
+    
+    let number = Math.LOG2E;               // base 2 logarithm of E
+                                           
+    let number = Math.LOG10E;              // base 10 logarithm of E
+    
+    let number = abs(value);	
+    
+    let number = acos(value);	
+    
+    let number = acosh(value);	
+    
+    let number = asin(value);	
+    
+    let number = asinh(value);	
+    
+    let number = atan(value);	
+    
+    let number = atan2(y, x);	
+    
+    let number = atanh(value);	
+    
+    let number = cos(value);	
+    
+    let number = cosh(value);
+    
+    let number = sin(value);	
+    
+    let number = sinh(value);	
+    
+    let number = tan(value);	
+    
+    let number = tanh(value);	
+    
+    let number = ceil(value);	
+    
+    let number = floor(value);
+
+    let number = round(value);
+    
+    let number = max(value1, value2, ...);	
+    
+    let number = min(value1, value2, ...);	
+    
+    let number = exp(value);	
+
+    let number = log(value);	
+
+    let number = pow(value1, value2);	
+    
+    let number = sqrt(value);	
+    
+    let number = sign(number);	
+                                           
+    let number = random();	               // 랜덤수(0 ~ 0.999)
+
+  
+  
+  
          <img onmouseover="this.src='img/banana.png'" onmouseout="this.src='img/apple.png'"/>
         <a href="javascript:alert('클릭하셨어요?')"></a>
         <button onclick="Hello!"></button>
