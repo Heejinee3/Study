@@ -245,28 +245,53 @@
     let return = screen.unlockOrientation();          // 화면 방향 잠금을 해제
   
 # DOM
+                
+    let undefined = document.writeln(string);                                         // document에 쓰기
     
-    document.writeln("<tr>");
-    document.write("<tr>");
+    let undefined = document.write(string);                                           // document에 쓰기(줄바꿈까지)
     
-    let element = document.getElementById(id);
-    let array = document.getElementsByClassName(class);
-    let array = document.getElementsByTagName(tag);
-    let element = document.querySelector(selector);
-    let array = document.querySelectorAll(selector);
+    let element = document.getElementById(id);                                        // id로 객체 선택
     
-    let string = element.innerHTML;
-    let string = element.innerText;
-    let value = element.getAttribute(name); // element.name
-    let undefinded = element.setAttribute(name, value);  // element.name
-    let array = element.classList;
+    let array = document.getElementsByClassName(class);                               // class로 객체 선택
     
-    let value = element.style.display;
+    let array = document.getElementsByTagName(tag);                                   // tag로 객체 선택
     
-    element.onEvent = function;
-    element.addEventListener("Event", function);
+    let element = document.querySelector(selector);                                   // css로 객체 선택(한개)
+    
+    let array = document.querySelectorAll(selector);                                  // css로 객체 선택(여러개)
+    
+    let string = element.innerHTML;                                                   // 안의 텍스트 선택(HTML로)
+    
+    let string = element.innerText;                                                   // 안의 텍스트 선택(Text로)
+    
+    let value = element.getAttribute(name);                                           // attrubute 얻기(element.name 이용 가능)
+    
+    let undefined = element.setAttribute(name, value);                                // attrubute 세팅하기 (element.name 이용 가능)
+    
+    let value = element.style.attribute;                                              // 스타일 속성
+    
+    let boolean = element.classList.contains(class);                                  // class가 포함되어있는지 확인
+    
+    let undefined = element.classList.remove(class);                                  // class 삭제
+    
+    let undefined = element.classList.add(class);                                     // class 등록
+    
+    element.onEvent = function;                                                       // event handler 정의
+    
+    element.addEventListener("Event", function);                                      // event handler 정의
+    
+    let node = document.createElement(tag);                                           // element node 만들기
+    
+    let node = document.createTextNode(string);                                       // text node 만들기
+    
+    let node = document.createAttribute(attribute);                                   // attribute node 만들기
+    
+    node.value = attribute;                                                           // attibute node에 속성 지정하기
+    
+    let undefined = parentNode.appendChild(childNode);                                // parent node의 child node 중 가장 마지막에 child node 넣기
+    
+    let undefined = parentNode.insertBefore(childNode, parentNode.childNodes[index]); // parent node의 child node 중 index 앞쪽에 새로운 child node 넣기
 
-
-list 제거 
-node 
-eventㅈㅇ류
+    let undefined = parentNode.setAttributeNode(childNode);                           // parent node에 attribute node 넣기
+    
+    let undefined = node.parentNode.removeChild(node);                                // node 제거
