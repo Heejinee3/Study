@@ -145,7 +145,24 @@
     let boolean = array.includes(value);                         // array의 element 중 value가 있는지 확인
     
     let array = array.entries();                                 // [index, value]의 key-value 형태로 array 생성       
+
+# Key-value
+
+    let map = {                                                  // map 초기화
+      key1: value1,
+      key2: value2,
+      ...
+    };
     
+    let value = map["apple"];                                    // value 
+    let value = map.apple;
+
+    for (let key in toy) {
+    }
+
+    for (let [key, value] of Object.entries(toy)) {
+    }
+
 # Destructuring Assignment
 
     let [var1, var2, var3] = [value1, value2, value3]; // 여러개 변수에 값 할당
@@ -392,10 +409,9 @@
   
   
   
-         <img onmouseover="this.src='img/banana.png'" onmouseout="this.src='img/apple.png'"/>
-        <a href="javascript:alert('클릭하셨어요?')"></a>
-        <button onclick="Hello!"></button>
-
+        
+        
+    
  
 
         Number.Max_SAFE_INTEGER
@@ -410,19 +426,13 @@
 
 
 
-      let timer = setTimeout(() => {
-        console.log("3초후 호출됨!");
-      }, 3000);
+      let timer = setTimeout(function, time);     // timer 설정, time(ms) 후에
 
-      clearTimeout(timer);
+      clearTimeout(timer);  // ㅌ타이머 제거
       
-      let interval = setInterval(() => {
-        console.log(Date());
-        console.log(new Date().toTimeString().split(" ")[0]);
-        console.log(new Date().toISOString().split("T")[0]);
-      }, 1000);
+      let interval = setInterval(function, time);
 
-        clearInterval(interval);
+      clearInterval(interval);
 
               var keyValue = {
         apple: 1000,
@@ -443,22 +453,4 @@
         console.log("value:" + value);
       }
 
-            //페이지 이동
-      //1. 리다이렉트 : 사이트간의 이동, 내부데이타를 가지고 이동하지 않음.
-      //2. 포워드 : 내부 페이지간의 이동, 내부데이타를 가지고 이동.
 
-      //내장객체 : location 사용
-      setTimeout(() => {
-        location.href = "http://www.daum.net";
-        //간략한 표현 : 비추천
-        //location = "http://www.daum.net";
-      }, 3000);
-
-      //그외 페이지 이동(리다이렉트)
-      // 1. 앵커 태그
-      <a href="http://www.daum.net">다음 홈페이지</a>;
-      // 2. html meta태그 refresh
-
-
-    
-    34부터
