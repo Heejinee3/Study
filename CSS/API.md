@@ -610,8 +610,8 @@ https://amango.tistory.com/7
        orientation: landscape: 가로 모드 */
        
     yesviz.com/devices.php: 기기 물리적 해상도, 논리적 해상도 정리 사이트
+    http://www.responsinator.com/ : 모바일 테스트 사이트
        
-    
 # Object Fit
 
     object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐               
