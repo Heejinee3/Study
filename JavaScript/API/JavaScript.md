@@ -281,13 +281,13 @@
     let date = new Date(2022,12,28,10,36,23,897);                              // YYYY,MM,DD,HH,MM,SS,SSS
     let date = new Date("Wed Dec 28 2022 10:36:23 GMT+0900 (대한민국 표준시)"); // 이름 사용
 
-    let number = date.getFullYear();	                                   // 연도(0000-)
+    let number = date.getFullYear();                                           // 연도(0000-)
     
     let number = date.getMonth();	                                           // 월(0-11)
     
     let number = date.getDate();	                                           // 일(1-31)
     
-    let number = date.getDay();	                                           // 요일(0-6)
+    let number = date.getDay();                                                // 요일(0-6)
     
     let number = date.getHours();	                                           // 시간(0-23)
     
@@ -301,13 +301,13 @@
     
     let number = date.setFullYear(number);	                                   // 연도(0000-), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setMonth(number);	                                   // 월(0-11), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setMonth(number);                                        // 월(0-11), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setDate(number);	                                   // 일(1-31), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setDate(number);                                         // 일(1-31), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setDay(number);	                                   // 요일(0-6), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setDay(number);                                          // 요일(0-6), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
-    let number = date.setHours(number);	                                   // 시간(0-23), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
+    let number = date.setHours(number);                                        // 시간(0-23), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
     let number = date.setMinutes(number);	                                   // 분(0-59), 업데이트된 날짜와 1970년 1월 1일 사이의 시간을 밀리초 단위로 반환
     
