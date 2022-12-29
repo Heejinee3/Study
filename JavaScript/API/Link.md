@@ -43,7 +43,7 @@
     
     let return = event.charCode;         // keypress 이벤트가 발생할 때 어떤 키를 눌렀는지 유니코드 값으로 반환
     
-    let return = event.keypress;         //이벤트가 발생할 때 어떤 키를 눌렀는지 유니코드 값으로 반환
+    let return = event.keypress;         // 이벤트가 발생할 때 어떤 키를 눌렀는지 유니코드 값으로 반환
     
     let return = event.clientX;          // 이벤트가 발생한 가로 위치 반환
     
@@ -67,7 +67,7 @@
     
     let return = event.type;             // 발생한 이벤트 이름을 반환
     
-    let return = event.which;            //키보드와 관련된 이벤트가 발생할 때 키의 유니코드 값을 반환
+    let return = event.which;            // 키보드와 관련된 이벤트가 발생할 때 키의 유니코드 값을 반환
     
     let return = event.preventDefault(); // 이벤트를 취소할 수 있는 경우에 취소
  
