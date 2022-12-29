@@ -226,3 +226,8 @@
     
     element.onEvent = function;
     element.addEventListener("Event", function);
+
+
+list 제거 
+node 
+eventㅈㅇ류
