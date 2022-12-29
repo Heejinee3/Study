@@ -31,6 +31,46 @@
              : label, select, textarea, button
        reset : 폼이 리셋되었을 때 이벤트 발생
        submit: submit 버튼을 클릭했을 때 이벤트 발생       */
+       
+# Event Method/Property
+
+element.onEvent = function(event) { // event method, pro
+}
+
+
+altKey
+이벤트가 발생할때 ALT를 눌렀는지 여부를 boolean 값으로 반환 합니다.
+button
+마우스에서 누른 버튼의 키값을 반환합니다.
+charCode
+keypress 이벤트가 발생할 때 어떤 키를 눌렀는지 유니코드 값으로 반환 합니다.
+clientX
+이벤트가 발생한 가로 위치 반환
+clientY
+이벤트가 발생한 세로 위치 반환
+ctrlKey
+이벤트가 발생할 때 Ctrl를 눌렀는지 여부를 boolean 값으로 반환합니다.
+pageX
+현재 문서 기준으로 이벤트가 발생한 가로 위치를 반환
+pageY
+현재 문서 기준으로 이벤트가 발생한 세로위치 반환
+screenX
+현재 화면 기준으로 이벤트가 발생한 가로길이 반환
+screenY
+현재 화면 기준으로 이벤트가 발생한 세로길이 반환
+shiftKey
+이벤트가 발생할 때 Shift를 눌렀는지 여부를 boolean 값으로 반환합니다.
+target
+이벤트가 최초로 발생한 대상을 반환
+timeStamp
+이벤트가 발생한 시간을 반환
+type
+발생한 이벤트 이름을 반환
+which
+키보드와 관련된 이벤트가 발생할 때 키의 유니코드 값을 반환합니다.
+메서드
+preventDefault()
+이벤트를 취소할 수 있는 경우에 취소합니다.
  
 # Print
 
