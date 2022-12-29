@@ -10,6 +10,19 @@
     let function = function(param) {console.log(param);};
     let function = (param) => {console.log(param);};
     
+# Type Function
+
+    let type = typeof(variable);     // type 반환
+    
+    let number = parseInt(string);   // string -> int 형태의 number
+    
+    let number = parseFloat(string); // string -> float 형태의 number
+    
+    let type = Type(value);          /* type 변환
+                                        Number()
+                                        String()
+                                        Boolean() */
+    
 # Variable/Constant
 
     var myVar     = value; // 변수(재선언 O, 호이스팅 O, 함수 scope)
@@ -405,52 +418,13 @@
     let number = sign(number);	
                                            
     let number = random();	               // 랜덤수(0 ~ 0.999)
-
-  
-  
-  
-        
-        
-    
  
+# Timer
 
-        Number.Max_SAFE_INTEGER
-        Number.Min_SAFE_INTEGER
- 
+    let timer = setTimeout(function, time);     // time(ms) 후에 울리는 타이머 설정(한번)
 
-        typeof(변수);
-        Number(myStr);
-        parseInt(myStr);
-        parseFloat(myStr);
-        String(myNum2);
+    let undefined = clearTimeout(timer);        // 타이머 제거
 
+    let interval = setInterval(function, time); // time(ms) 후에 울리는 타이머 설정(반복)
 
-
-      let timer = setTimeout(function, time);     // timer 설정, time(ms) 후에
-
-      clearTimeout(timer);  // ㅌ타이머 제거
-      
-      let interval = setInterval(function, time);
-
-      clearInterval(interval);
-
-              var keyValue = {
-        apple: 1000,
-        banana: 2000,
-        pear: 3000,
-      };
-      console.log(keyValue["apple"]);
-      console.log(keyValue.apple);
-
-            for (var key in toy) {
-        console.log("key:" + key);
-        console.log("value:" + toy[key]);
-      }
-
-      // for of문: key, value를 함께 받아옴
-      for (const [key, value] of Object.entries(toy)) {
-        console.log("key:" + key);
-        console.log("value:" + value);
-      }
-
-
+    let undefined = clearInterval(interval);    // 타이머 제거
