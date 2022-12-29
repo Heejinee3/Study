@@ -161,19 +161,19 @@
 
 # Key-value
 
-    let map = {                                                  // map 초기화
+    let map = {                                     // map 초기화
       key1: value1,
       key2: value2,
       ...
     };
     
-    let value = map["apple"];                                    // value 
+    let value = map["apple"];                       // value 
     let value = map.apple;
 
-    for (let key in toy) {
+    for (let key in map) {                          // key 순회      
     }
 
-    for (let [key, value] of Object.entries(toy)) {
+    for (let [key, value] of Object.entries(map)) { // key, value 순회
     }
 
 # Destructuring Assignment
