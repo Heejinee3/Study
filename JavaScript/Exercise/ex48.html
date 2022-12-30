@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>테이블 입력값 조작하기</title>
+    <script>
+      window.onload = () => {
+        makeTable();
+      };
+      function makeTable() {
+        document.writeln("<table border=1>");
+        for (var i = 1; i <= 100; i++) {
+          document.writeln("<tr>");
+          document.writeln("<td>목록" + i + "</td>");
+          document.writeln('<td><input id="input' + i + '" type="text"></td>');
+          document.writeln(
+            '<td><button id="btn' +
+              i +
+              '" value="' +
+              i +
+              " \" onclick='erase(" +
+              i +
+              ");'>값지우기</button></td>"
+          );
+          document.writeln("</tr>");
+        }
+        document.writeln("</table");
+      }
+      function erase(para) {
+        let input = document.getElementById("input" + para);
+        input.value = "";
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
