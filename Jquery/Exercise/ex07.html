@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>n번째 선택자/체인함수</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+      // jQuery에서 n번째 선택
+      // 1. eq() 함수
+      // 2. first() 함수
+      // 3. last() 함수
+      // 4. add() 함수: 객체 선택을 추가한다.
+      $(function () {
+        $("h1").eq(0).css("color", "red");
+        $("h1").eq(1).css("color", "blue");
+        $("h1").first().css("background-color", "yellow");
+        $("h1").last().css("background-color", "cyan");
+
+        $("h1").first().add("h2").add("p").css("color", "brown");
+      });
+    </script>
+  </head>
+  <body>
+    <h1>헤더 1</h1>
+    <h1>헤더 2</h1>
+    <h1>헤더 3</h1>
+    <h1>헤더 4</h1>
+    <h1>헤더 5</h1>
+    <h2>헤더 6</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. At qui, optio
+      natus accusamus dolore eligendi dicta in atque minima odit cum? Nisi
+      debitis, odio non placeat neque dignissimos ipsum ducimus!
+    </p>
+  </body>
+</html>

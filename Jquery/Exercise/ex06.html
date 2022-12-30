@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ex06 -->
+    <title>클래스 이름 추가</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // JS에서 클래스 추가/삭제
+      // 객체.classList.add('class이름')
+      // 객체.classList.remove('class이름')
+      $(function () {
+        $("h1").addClass("class1");
+        $("h1").removeClass("class1");
+        //jquery 배열 순환: each() 함수
+        $("h1").each(function (index, object) {
+          $(object).addClass("class" + (index + 1));
+        });
+        // 배열의 요소 접근
+        $("h1:eq(1)").css("color", "yellow");
+        // 속성을 추가/삭제
+        $("h1:nth-child(3)").attr("id", "id1");
+        $("h1:nth-child(3)").attr("id", "");
+        $("h1:nth-child(4)").attr("name", "pw");
+        $("h1:nth-child(5)").attr("type", "text");
+      });
+    </script>
+    <style>
+      .class1 {
+        background-color: red;
+      }
+      .class2 {
+        background-color: green;
+      }
+      .class3 {
+        background-color: blue;
+      }
+      .class4 {
+        background-color: yellow;
+      }
+      .class5 {
+        background-color: cyan;
+      }
+      #id1 {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>item - 1</h1>
+    <h1>item - 2</h1>
+    <h1>item - 3</h1>
+    <h1>item - 4</h1>
+    <h1>item - 5</h1>
+  </body>
+</html>
