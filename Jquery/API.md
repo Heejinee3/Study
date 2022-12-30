@@ -1,6 +1,8 @@
-<script src="jquery-3.6.0.js"></script>
-<script src="jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+# Input
+
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
 # window.onload()
 
