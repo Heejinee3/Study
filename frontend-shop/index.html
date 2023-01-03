@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="./css/body.css" />
+    <link rel="stylesheet" href="./css/curtainMenu.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script> -->
+    <script>
+      $(document).ready(function () {
+        $("#curtainMenu").load("./html/curtainMenu.html");
+        $("#header").load("./html/header.html");
+      });
+    </script>
+  </head>
+
+  <style>
+    /********************* nav *********************/
+    #nav {
+      padding: 10px 15px;
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 15px;
+      font-size: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /********************* slide *********************/
+    /********************* bestProduct *********************/
+    #bestProduct {
+      padding: 25px 15px;
+    }
+    #bestProduct :first-of-type {
+      text-align: center;
+    }
+    #bestProduct :last-of-type {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    .bestProductItem {
+      width: 30%;
+      padding: 1%;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      font-size: 14px;
+    }
+
+    /********************** ETC **********************/
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    button {
+      border: none;
+      background-color: white;
+    }
+
+    .txt {
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+    .sale {
+      font-weight: bold;
+      color: #c70000;
+      font-style: italic;
+      margin-right: 5px;
+    }
+    /***********footer ****************/
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+  </style>
+
+  <body>
+    <div id="curtainMenu"></div>
+    <div id="header"></div>
+
+    <!-- ********************* nav ********************* -->
+    <div id="nav">
+      <a href="">♡ NURIRI SALE ♡</a>
+      <a href="">TOP</a>
+      <a href="">BOTTOM</a>
+      <a href="">ONE-PIECE</a>
+      <a href="">ACC</a>
+    </div>
+    <!-- ********************* slide ********************* -->
+    <div id="slide">slide</div>
+    <!-- ********************* bestProduct ********************* -->
+    <div id="bestProduct">
+      <h3>베스트 상품</h3>
+      <div>
+        <div class="bestProductItem">
+          <a href=""
+            ><img
+              src="images/product/bottom/아크네데님_연청.png"
+              alt=""
+              width="100%"
+          /></a>
+
+          <div class="product txt">아크네데님 연청</div>
+          <div class="sale">9%</div>
+          <div class="price txt">35,000원</div>
+
+          <div></div>
+        </div>
+        <div class="bestProductItem">
+          <a href=""
+            ><img
+              src="images/product/bottom/아크네데님_연청.png"
+              alt=""
+              width="100%"
+          /></a>
+          <div class="product txt">퍼프블라우스 화이트</div>
+          <div class="price txt">
+            <span class="sale">9%</span>
+            44,500원
+          </div>
+          <div></div>
+        </div>
+        <div class="bestProductItem">
+          <a href=""
+            ><img
+              src="images/product/bottom/아크네데님_연청.png"
+              alt=""
+              width="100%"
+          /></a>
+          <div class="txt">브라운 사각 bag</div>
+          <div class="price txt">32,000원</div>
+          <div></div>
+        </div>
+        <div class="bestProductItem">
+          <a href=""
+            ><img
+              src="images/product/bottom/아크네데님_연청.png"
+              alt=""
+              width="100%"
+          /></a>
+          <div class="txt">린넨 ops 화이트</div>
+          <div class="price txt">39,900원</div>
+          <div></div>
+        </div>
+        <div class="bestProductItem">
+          <a href=""
+            ><img
+              src="images/product/bottom/아크네데님_연청.png"
+              alt=""
+              width="100%"
+          /></a>
+          <div class="txt">도트 sk 오렌지</div>
+          <div class="price txt">42,000원</div>
+          <div></div>
+        </div>
+        <div class="bestProductItem">
+          <a href=""
+            ><img
+              src="images/product/bottom/아크네데님_연청.png"
+              alt=""
+              width="100%"
+          /></a>
+          <div class="txt">린넨 ops 베이지</div>
+          <div class="price txt">
+            <span class="sale txt">10%</span>
+            44,100원
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <!-- ********************* coupon ********************* -->
+    <div id="coupon">
+      <a href=""><img src="images/etc/coupon.png" alt="" width="100%" /></a>
+    </div>
+    <div id="orderProduct">
+      <div id="orderNav">
+        <button>최신순</button><img src="" alt="" />
+        <div>최신순</div>
+        <div>판매순</div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="footer">
+      <button id="info">Section 3</button>
+      <div id="infoPanel">
+        <div>상호 : (주)코리아센터닷컴</div>
+        <div>대표 : 김기록</div>
+        <div>사업자등록번호 : 206-81-21131 [사업자정보확인]</div>
+        <div>통신판매업신고 : 통신판매 제 2005-00874호</div>
+        <div>
+          주소 : 서울 금천구 가산디지털1로 168 (가산동,우림라이온스밸리) A동
+          14층
+        </div>
+        <div>개인정보보호책임자 : 홍길동</div>
+      </div>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo pariatur
+        repellendus cupiditate deleniti illo! Itaque non aliquid, corrupti
+        molestias libero minima delectus vero numquam quam nesciunt nemo, quas
+        inventore architecto! Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nemo pariatur repellendus cupiditate deleniti illo!
+        Itaque non aliquid, corrupti molestias libero minima delectus vero
+        numquam quam nesciunt nemo, quas inventore architecto! Lorem ipsum
+        dolor, sit amet consectetur adipisicing elit. Nemo pariatur repellendus
+        cupiditate deleniti illo! Itaque non aliquid, corrupti molestias libero
+        minima delectus vero numquam quam nesciunt nemo, quas inventore
+        architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Nemo pariatur repellendus cupiditate deleniti illo! Itaque non aliquid,
+        corrupti molestias libero minima delectus vero numquam quam nesciunt
+        nemo, quas inventore architecto! Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nemo pariatur repellendus cupiditate deleniti illo!
+        Itaque non aliquid, corrupti molestias libero minima delectus vero
+        numquam quam nesciunt nemo, quas inventore architecto! Lorem ipsum
+        dolor, sit amet consectetur adipisicing elit. Nemo pariatur repellendus
+        cupiditate deleniti illo! Itaque non aliquid, corrupti molestias libero
+        minima delectus vero numquam quam nesciunt nemo, quas inventore
+        architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Nemo pariatur repellendus cupiditate deleniti illo! Itaque non aliquid,
+        corrupti molestias libero minima delectus vero numquam quam nesciunt
+        nemo, quas inventore architecto! Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Nemo pariatur repellendus cupiditate deleniti illo!
+        Itaque non aliquid, corrupti molestias libero minima delectus vero
+        numquam quam nesciunt nemo, quas inventore architecto!
+      </div>
+    </div>
+
+    <script src="./js/curtainMenu.js"></script>
+    <script>
+      var acc = document.getElementById("info");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

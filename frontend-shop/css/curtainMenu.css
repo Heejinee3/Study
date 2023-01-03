@@ -1,0 +1,63 @@
+#overlayBg {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+#overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#overlayHeader {
+  height: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#overlayContent {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#overlayContent a {
+  padding: 15px;
+}
+#overlayFooter {
+  display: flex;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#overlayFooter a {
+  flex-grow: 1;
+  text-align: center;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  background-color: white;
+}
