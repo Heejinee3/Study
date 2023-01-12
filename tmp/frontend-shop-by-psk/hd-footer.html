@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이소호 샘플샵</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="hd-inner.css" />
+
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body id="bodytest">
+    <div class="wrap">
+      <div class="betweenbtn">
+        <button class="myBtnfooter leftbtn">
+          <img
+            src="https://image.makeshop.co.kr/mysoho/assets/shop/img/btn/h86_tel.png"
+            alt=""
+          />
+        </button>
+        <button
+          onclick="topFunction()"
+          class="myBtnfooter rightbtn"
+          id="myBtnfooter"
+        >
+          <img
+            src="https://image.makeshop.co.kr/mysoho/assets/shop/img/btn/h86_top.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div>
+        <div id="app">
+          <div class="bass">
+            <div class="header">
+              <div class="hd-inner">
+                <div class="side-icon-left">
+                  <div id="mySidenav" class="sidenav">
+                    <div>
+                      <div class="aside-hd">
+                        <div>
+                          <a href="">
+                            <img
+                              src="https://image.makeshop.co.kr/mysoho/assets/shop/img/btn/h40_home.gif"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <a
+                          href="javascript:void(0)"
+                          class="closebtn"
+                          onclick="closeNav()"
+                          >&times;</a
+                        >
+                      </div>
+                      <ul class="aside-cont">
+                        <li><a href="#">♡NURIRI SALE♡</a></li>
+                        <li><a href="#">TOP</a></li>
+                        <li><a href="#">BOTTOM</a></li>
+                        <li><a href="#">ONE-PIECE</a></li>
+                        <li><a href="" id="acc">ACC</a></li>
+                      </ul>
+                      <div class="aside-bot">
+                        <div class="aside-notice">
+                          <a href="notice.html"
+                            ><img
+                              src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/ico_notice.png"
+                              alt=""
+                            />
+                            공지사항</a
+                          >
+                        </div>
+                        <div class="aside-qna">
+                          <a href="QnA.html"
+                            ><img
+                              src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/ico_qna_h25.png"
+                              alt=""
+                            />
+                            Q&A 게시판</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="btn-hambergerMenu"
+                    style="cursor: pointer"
+                    onclick="openNav()"
+                  >
+                    <img
+                      src="https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_hamburger_menu_000000.png"
+                      alt=""
+                    />
+                  </div>
+                  <a href="javascript:openSearch()" class="btn-serch">
+                    <img
+                      class="openBtn"
+                      src="https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_search_000000.png"
+                      alt=""
+                  /></a>
+                  <div id="myOverlay" class="overlay">
+                    <span
+                      class="closebtn"
+                      onclick="closeSearch()"
+                      title="Close Overlay"
+                      >×</span
+                    >
+                    <div class="overlay-inner">
+                      <h3>어떤 상품을 찾고 계신가요?</h3>
+                      <div class="overlay-content">
+                        <form action="/action_page.php">
+                          <input
+                            type="text"
+                            placeholder="검색어를 입력해주세요"
+                            name="search"
+                          />
+                          <button type="submit">
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="home.html"
+                  ><img
+                    class="logo"
+                    src="https://img.makeshop.co.kr/1/1371/201908/583f98cc6e004ec7b3ba880bf0eaf1c9.png"
+                    alt=""
+                /></a>
+                <div class="side-icon-right">
+                  <a class="btn-basket" href="shopping-basket.html">
+                    <img
+                      src="https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_basket_000000.png"
+                      alt=""
+                    />
+                  </a>
+
+                  <a href="userlogin.html" class="btn-login"
+                    ><img
+                      src="https://sohonara.mysoho.com/assets/shop/img/btn/tpl_shop_logoff_000000.png"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <!--  -->
+
+              <!-- 푸터 -->
+              <div class="footer">
+                <div class="info down">
+                  <div class="footer-wrap">
+                    <!-- 클릭이벤트 -->
+                    <div>
+                      <a href="javascript:footerbtn()"
+                        >쇼핑몰 사업자정보
+                        <img
+                          src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/arr_h9_bottom.png"
+                          alt=""
+                          class="footer-down" />
+                        <img
+                          src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/arr_h9_top.png"
+                          alt=""
+                          class="footer-up"
+                      /></a>
+                    </div>
+                    <div class="hidden">
+                      <div class="store-info">
+                        <div>상호 : (주)코리아센터닷컴</div>
+                        <div>대표 : 김기록</div>
+                        <div class="store-info-a">
+                          사업자등록번호 : 206-81-21131
+                          <a href="javascript:footerbtn2()">[사업자정보확인]</a>
+                        </div>
+                        <div>통신판매업신고 : 통신판매 제 2005-00874호</div>
+                        <div>
+                          주소 : 서울 금천구 가산디지털1로 168
+                          (가산동,우림라이온스밸리) A동 14층
+                        </div>
+                        <div>개인정보보호책임자 : 홍길동</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bt">
+                  <p>10:00~18:00(주말, 공휴일 휴무)</p>
+                  <ul class="cscenter">
+                    <li>
+                      <a href=""
+                        ><img
+                          class="footer-ico-phone"
+                          src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/bul_num.png"
+                          alt=""
+                        />
+                        02-6903-9118</a
+                      >
+                    </li>
+                    <li>
+                      <a href="">
+                        <img
+                          class="footer-ico-email"
+                          src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/bul_email.png"
+                          alt=""
+                        />help@mysoho.com</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="link">
+                    <li class="link1">
+                      <a href="javascript:openPopup1()">이용약관 |</a>
+                    </li>
+                    <li class="link2">
+                      <a href="javascript:openPopup2()"
+                        ><b>개인정보처리방침</b></a
+                      >
+                    </li>
+                    <li class="link1"><a href="QnA.html">| Q&A 게시판</a></li>
+                  </ul>
+                  <div class="copy">
+                    <div class="copy-left">
+                      free service by
+                      <a href="javascript:openPopupsoho1()"><b>mysoho</b></a>
+                    </div>
+                    <div>
+                      <a href="javascript:openPopupsoho2()"
+                        ><img
+                          class="ico-footer-lens"
+                          src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/bg_ico_h26.png"
+                          alt="" />
+                        <b> 소호마켓</b>
+                        <img
+                          class="btnSohoSch"
+                          src="https://image.makeshop.co.kr/mysoho/assets/shop/img/common/bg_arr_h14.png"
+                          alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fix-body">
+                  <a href="" class="btn-tel"></a>
+                  <a href="" class="btn-top"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      //사이드메뉴
+      function openNav() {
+        // document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+        document.getElementById("mySidenav").style.width = "80%";
+      }
+      function closeNav() {
+        // document.body.style.backgroundColor = "white";
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+
+    <script>
+      //돋보기
+      function openSearch() {
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function closeSearch() {
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      function openPopup1() {
+        popup = window.open("pop-page1.html");
+      }
+      function openPopup2() {
+        popup = window.open("pop-page2.html");
+      }
+      function openPopupsoho1() {
+        popup = window.open("https://mysoho.com/");
+      }
+      function openPopupsoho2() {
+        popup = window.open("https://sohomarket.kr/?shop=sohonara");
+      }
+      function footerbtn() {
+        //
+        if (document.querySelector(".hidden").style.display === "block") {
+          document.querySelector(".hidden").style.display = "none";
+          document.querySelector(".footer-down").style.display = "block";
+          document.querySelector(".footer-up").style.display = "none";
+        } else {
+          document.querySelector(".hidden").style.display = "block";
+          document.querySelector(".footer-down").style.display = "none";
+          document.querySelector(".footer-up").style.display = "block";
+        }
+      }
+      function footerbtn2() {
+        popup = window.open(
+          "https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2068121131&apv_perm_no="
+        );
+      }
+      // Get the button
+      let mybutton = document.getElementById("myBtnfooter");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          //mybutton.style.display = "block";
+          mybutton.style.opacity = "1";
+        } else {
+          //mybutton.style.display = "none";
+          mybutton.style.opacity = "0";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

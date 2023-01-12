@@ -1,59 +1,114 @@
--- 한줄 코멘트
-/_
-여러줄
-코멘트
-_/
+# Database Show/ Create/ Drop/ Use
 
-# Database Create
+#### Show
 
-    CREATE DATABASE market_db;
+    show databases;
 
-# Database Drop
+#### Create
 
-    DROP DATABASE IF EXISTS market_db;
+    CREATE DATABASE IF NOT EXISTS <database>;
 
-# Database Use
+#### Drop
+
+    DROP DATABASE IF EXISTS <database>;
+
+#### Use
 
     USE <database>;
 
-# Table Create/ Drop
+# Table Describe/ Create/ Drop
 
-    CREATE TABLE buy -- 구매 테이블
-    (  num 		INT AUTO_INCREMENT NOT NULL PRIMARY KEY, -- 순번(PK)
-        mem_id  	CHAR(8) NOT NULL, -- 아이디(FK)
-        prod_name 	CHAR(6) NOT NULL, --  제품이름
-        group_name 	CHAR(4)  , -- 분류
-        price     	INT  NOT NULL, -- 가격
-        amount    	SMALLINT  NOT NULL, -- 수량
-        FOREIGN KEY (mem_id) REFERENCES member(mem_id)
+#### Describe
+
+    DESC <table>;
+
+#### Create
+
+    CREATE TABLE IF NOT EXISTS <table>
+    (   <variable> <type> AUTO_INCREMENT,
+        <variable> <type> NOT NULL,
+        <variable> <type> PRIMARY KEY,
+        <variable> <type> UNIQUE,
+        <variable> <type> CHECK (<condition>),
+        <variable> <type> DEFAULT <value>,
+        PRiMARY KEY(<variable>),
+        FOREIGN KEY(<variable>)
+            REFERENCES <table>(<variable>)
+            ON UPDATE <way>
+            ON DELETE <way>
     );
+
+#### Alter
+
+    ALTER TABLE <table> ADD COLUMN <column> <type> <option>; -- add column
+
+    ALTER TABLE <table> ADD COLUMN <column> <type> <option> <column>; -- add column behind
+
+    ALTER TABLE <table> MODIFY COLUMN <column> <type> <option>; -- modify column
+
+    ALTER TABLE <table> CHANGE COLUMN <column> <column> <type> <option>; -- change name;
+
+    ALTER TABLE table_name DROP COLUMN ex_column;
+
+    ALTER TABLE <table> RENAME <table>;
+
+
+
+    ALTER TABLE <table>
+        ADD CONSTRAINT PRIMARY KEY(<variable>);
+    ALTER TABLE <table>
+        ADD CONSTRAINT FOREIGN KEY(<variable>)
+            REFERENCES <table> (<variable>)
+            ON UPDATE <way>
+            ON DELETE <way>;
+    ALTER TABLE <table>
+        ALTER COLUMN phone1 SET DEFAULT <value>;
+
+DESCRIBE member;
+
+    /* AUTO_INCREMENT: 1부터 자동으로 숫자가 지정, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함
+       NOT NULL: NULL이 입력될 수 없음
+       UNIQUE: 같은 값이 올 수 없음
+       PRIMARY KEY: NOT NULL + UNIQUE
+       FOREIGN KEY: 다른 테이블의 열과 연결, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함
+            CASCADE
+            SET NULL
+            RESTRICT
 
     CREATE TABLE buy
         SELECT 문
 
-    DROP TABLE `member`;
+#### Drop
+
+    DROP TABLE IF EXISTS <table>;
 
 # Data Insert/ Update/ Delete
 
-    INSERT INTO <database>.<table> (<column>, <column>, ...)
+#### Insert
+
+    INSERT INTO <table> (<column>, <column>, ...)
         VALUES (<value>, <value>, ...), (<value>, <value>, ...), ...; -- insert values
 
-    INSERT INTO <database>.<table> (<column>, <column>, ...)
-        SELECT <column> <column> ... FROM <database>.<table>;         -- insert table
+    INSERT INTO <table> (<column>, <column>, ...)
+        SELECT <column> <column> ... FROM <table>;                    -- insert table
 
-    UPDATE <database>.<table>
+#### Update
+
+    UPDATE <table>
         SET <column> = <value>, <column> = <value>, ...
-        WHERE <condition>;                                            -- update
+        WHERE <condition>;
 
-    DELETE FROM <database>.<table>
+#### Delete
+
+    DELETE FROM <table>
         WHERE <condition>;                                            -- delete data
 
-    TRUNCATE TABLE <database>.<table>;                                -- delete all
+    TRUNCATE TABLE <table>;                                           -- delete all
 
 # Select
 
     SELECT <column> <name>, <column> <name>, ...
-        FROM <database>.<table>
+        FROM <table>
         WHERE <condition>
         GROUP BY <column>
         HAVING <condition>
@@ -62,20 +117,28 @@ _/
 
 # JOIN
 
+#### Inner Join/ Self Join
+
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
             INNER JOIN  <table> <name>
             ON <table>.<column> = <table>.<column>;              -- inner join / self join
+
+#### Left Outer Join
 
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
             LEFT OUTER JOIN  <table> <name>
             ON <table>.<column> = <table>.<column>;              -- left outer join
 
+#### Right Outer Join
+
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
             RIGHT OUTER JOIN  <table> <name>
             ON <table>.<column> = <table>.<column>;              -- right outer join
+
+#### Full Outer Join
 
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
@@ -87,20 +150,84 @@ _/
             RIGHT OUTER JOIN  <table> <name>
             ON <table>.<column> = <table>.<column>;              -- full outer join
 
+#### Cross Join
+
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
             CROSS JOIN JOIN  <table> <name>                      -- cross join
 
 # Procedure
 
+#### Make Procedure
+
+    DROP PROCEDURE IF EXISTS <procedure>;
     DELIMITER $$
     CREATE PROCEDURE <procedure>()
     BEGIN
-
+        <statement>;
     END $$
-    DELIMITER;
+    DELIMITER ;
+
+#### Call Procedure
 
     CALL <procedure>();
+
+#### Declaration/ Initializaion
+
+    DECLARE <variable> <type>;      -- declaration
+
+    SET <variable> = <value>;       -- set variable
+
+    SELECT <column> INTO <variable>
+        FROM <table>
+        WHERE <condition>;          -- set variable using table
+
+#### If Statement
+
+    IF <condition> THEN
+    	<statement>;
+    ELSEIF <condition> THEN
+        <statement>;
+    ELSE
+    	<statement>;
+    END IF;
+
+#### Case Statement
+
+    CASE
+    	WHEN <condition> THEN
+    		SET <variable> = <value>;
+    	WHEN <condition> THEN
+    		SET <variable> = <value>;
+    	WHEN <condition> THEN
+    		SET <variable> = <value>;
+    	WHEN <condition> THEN
+    		SET <variable> = <value>;
+    	ELSE
+    		SET <variable> = <value>;
+    END CASE;
+
+#### While Loop
+
+    <loop>:
+    WHILE <condition> DO
+        <statement>;     -- ITERATE <loop> : continue, loop 제외 가능
+                         -- LEAVE <loop>   : break, loop 제외 가능
+    END WHILE;
+
+# Prepare
+
+#### Allocate
+
+    PREPARE <prepare> FROM <sql>;                           -- variable을 넣는 곳에는 ?을 넣음
+
+#### Execute
+
+    EXECUTE <prepare> USING @<variable> , @<variable>, ...;
+
+#### Deallocate
+
+    DEALLOCATE PREPARE <prepare>;
 
 # Operator
 
@@ -122,6 +249,8 @@ _/
 
 # Type
 
+#### Kind
+
     TINYINT          : 정수                           (1B)
     SMALLINT         : 정수                           (2B)
     INT              : 정수                           (4B)
@@ -138,11 +267,13 @@ _/
     BLOB             : 이미지, 동영상                 (0~65535B)
     LONGBLOB         : 이미지, 동영상                 (0~4294967295B)
 
+#### Reference
+
     -- 정수에 UNSIGNED | SIGNED 사용 가능
     -- CAST(<value> AS <type>)   : 형 변환
     -- CONVERT (<value>, <type>) : 형 변환
 
-# ECT
+# Reference
 
 #### AUTO_INCREMENT
 
@@ -154,27 +285,39 @@ _/
 
     SET @@auto_increment_increment = <value>;     -- 증가값 설정
 
-    -- DISTINCT
+#### DISTINCT
 
-    SELECT DISTINCT <column> FROM <database>.<table>;
+    SELECT DISTINCT <column> FROM <table>;
 
-    -- DESCRIBE
-
-    DESC <database>.<table>;
-
-    -- SET
+#### Using Variable
 
     SET @<variable> := <value>;
+    SET @<variable> = <value>;
 
     PREPARE <prepare> FROM <sql>;
     EXECUTE <prepare> USING @<variable>;
+    DEALLOCATE PREPARE mySQL;
 
-SELECT LAST_INSERT_ID();
-ALTER TABLE toys2 AUTO_INCREMENT=100;
-SELECT CURRENT_DATE(), DATEDIFF('2021-12-31', '2000-1-1');
-CONCAT(,);
+#### Function
 
-UNION DISTINCT
-UNION ALL
+    LAST_INSERT_ID()          //
+    CURRENT_DATE()                        -- 현재
+    CURRENT_TIMESTAMP()                        -- 현재
+    DATEDIFF(<date>, <date>)              -- date 차이 반환
+    TIMESTAMPDIFF(<unit>, <date>, <date>) -- date 차이 반환
+                                          /* <unit>
+                                             SECOND
+                                             MINUTE
+                                             HOUR
+                                             DAY
+                                             WEEK
+                                             MONTH
+                                             QUARTER
+                                             YEAR    */
+    CONCAT(,)
+    length
 
-<mark>형광펜</mark>
+## UNION
+
+    UNION DISTINCT
+    UNION ALL
