@@ -177,10 +177,4 @@ CONCAT(,);
 UNION DISTINCT
 UNION ALL
 
-<span style="color:red">
-
-빨강 글씨
-
-Red Font
-
-</span>
+<mark>형광펜</mark>
