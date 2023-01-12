@@ -144,7 +144,7 @@ _/
 
 # ECT
 
-    -- AUTO_INCREMENT
+#### AUTO_INCREMENT
 
     CREATE TABLE <table>(
         <column> <type> AUTO_INCREMENT
