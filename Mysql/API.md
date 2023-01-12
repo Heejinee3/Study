@@ -28,6 +28,9 @@ _/
         FOREIGN KEY (mem_id) REFERENCES member(mem_id)
     );
 
+    CREATE TABLE buy
+        SELECT 문
+
     DROP TABLE `member`;
 
 # Data Insert/ Update/ Delete
@@ -61,13 +64,43 @@ _/
 
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
-        INNER JOIN  <table> <name>
-        ON <table>.<column> = <table>.<column>;                  -- inner join
+            INNER JOIN  <table> <name>
+            ON <table>.<column> = <table>.<column>;              -- inner join / self join
 
--- 데카르트 곱(CROSS JOIN)
-SELECT m.mem_id, m.mem_name, b.mem_id
-FROM member m, buy b
-ORDER BY m.mem_id;
+    SELECT <table>.<column> <name>, <table>.<column> <name>, ...
+        FROM <table> <name>
+            LEFT OUTER JOIN  <table> <name>
+            ON <table>.<column> = <table>.<column>;              -- left outer join
+
+    SELECT <table>.<column> <name>, <table>.<column> <name>, ...
+        FROM <table> <name>
+            RIGHT OUTER JOIN  <table> <name>
+            ON <table>.<column> = <table>.<column>;              -- right outer join
+
+    SELECT <table>.<column> <name>, <table>.<column> <name>, ...
+        FROM <table> <name>
+            LEFT OUTER JOIN  <table> <name>
+            ON <table>.<column> = <table>.<column>
+    UNION
+    SELECT <table>.<column> <name>, <table>.<column> <name>, ...
+        FROM <table> <name>
+            RIGHT OUTER JOIN  <table> <name>
+            ON <table>.<column> = <table>.<column>;              -- full outer join
+
+    SELECT <table>.<column> <name>, <table>.<column> <name>, ...
+        FROM <table> <name>
+            CROSS JOIN JOIN  <table> <name>                      -- cross join
+
+# Procedure
+
+    DELIMITER $$
+    CREATE PROCEDURE <procedure>()
+    BEGIN
+
+    END $$
+    DELIMITER;
+
+    CALL <procedure>();
 
 # Operator
 
@@ -76,6 +109,7 @@ ORDER BY m.mem_id;
     BETWEEN <number> AND <number> : 값 사이에 있는지 확인
     IN(<element>, <element>, ...) : 포함되어있는지 확인
     LIKE                          : 정규식 확인, _(한 문자), %(여러 문자) 사용 가능
+    IS NULL, IS NOT NULL          : NULL인지 아닌지 확인
 
 # Aggregate Function
 
@@ -128,6 +162,8 @@ ORDER BY m.mem_id;
 
     DESC <database>.<table>;
 
+    -- SET
+
     SET @<variable> := <value>;
 
     PREPARE <prepare> FROM <sql>;
@@ -137,3 +173,14 @@ SELECT LAST_INSERT_ID();
 ALTER TABLE toys2 AUTO_INCREMENT=100;
 SELECT CURRENT_DATE(), DATEDIFF('2021-12-31', '2000-1-1');
 CONCAT(,);
+
+UNION DISTINCT
+UNION ALL
+
+<span style="color:red">
+
+빨강 글씨
+
+Red Font
+
+</span>
