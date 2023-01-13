@@ -41,18 +41,14 @@
     CREATE TABLE IF NOT EXISTS <table>
         <select statement>;
 
-Foreign Key Update/ Delete Option
-
-| th             | th                                                                  | th          |
-| -------------- | ------------------------------------------------------------------- | ----------- |
 | AUTO_INCREMENT | 1부터 자동으로 숫자가 지정, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함 |
-| NOT NULL       | NULL이 입력될 수 없음                                               |
-| UNIQUE         | 같은 값이 올 수 없음                                                |
-| PRIMARY KEY    | NOT NULL + UNIQUE                                                   |
-| FOREIGN KEY    | 다른 테이블의 열과 연결, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함    |
-|                | CASCADE                                                             | 함께 작동   |
-|                | SET NULL                                                            | NULL로 설정 |
-|                | RESTRICT                                                            | error 발생  |
+| NOT NULL | NULL이 입력될 수 없음 |
+| UNIQUE | 같은 값이 올 수 없음 |
+| PRIMARY KEY | NOT NULL + UNIQUE |
+| FOREIGN KEY | 다른 테이블의 열과 연결, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함 |
+| | CASCADE | 함께 작동 |
+| | SET NULL | NULL로 설정 |
+| | RESTRICT | error 발생 |
 
 #### Alter
 
