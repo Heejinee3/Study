@@ -2,7 +2,7 @@
 
 #### Show
 
-    show databases;
+    SHOW DATABASES;
 
 #### Create
 
@@ -16,7 +16,7 @@
 
     USE <database>;
 
-# Table Describe/ Create/ Drop
+# Table Describe/ Create/ Alter/ Drop
 
 #### Describe
 
@@ -25,82 +25,106 @@
 #### Create
 
     CREATE TABLE IF NOT EXISTS <table>
-    (   <variable> <type> AUTO_INCREMENT,
-        <variable> <type> NOT NULL,
-        <variable> <type> PRIMARY KEY,
-        <variable> <type> UNIQUE,
-        <variable> <type> CHECK (<condition>),
-        <variable> <type> DEFAULT <value>,
-        PRiMARY KEY(<variable>),
-        FOREIGN KEY(<variable>)
-            REFERENCES <table>(<variable>)
+    (   <column> <type> AUTO_INCREMENT,
+        <column> <type> NOT NULL,
+        <column> <type> PRIMARY KEY,
+        <column> <type> UNIQUE,
+        <column> <type> CHECK (<condition>),
+        <column> <type> DEFAULT <value>,
+        PRiMARY KEY(<column>),
+        FOREIGN KEY(<column>)
+            REFERENCES <table>(<column>)
             ON UPDATE <way>
             ON DELETE <way>
     );
 
+    CREATE TABLE IF NOT EXISTS <table>
+        <select statement>;
+
+###### Foreign Key Update/ Delete Option
+
+    AUTO_INCREMENT: 1부터 자동으로 숫자가 지정, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함
+    NOT NULL      : NULL이 입력될 수 없음
+    UNIQUE        : 같은 값이 올 수 없음
+    PRIMARY KEY   : NOT NULL + UNIQUE
+    FOREIGN KEY   : 다른 테이블의 열과 연결, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함
+        CASCADE  : 함께 작동
+        SET NULL : NULL로 설정
+        RESTRICT : error 발생
+
 #### Alter
 
-    ALTER TABLE <table> ADD COLUMN <column> <type> <option>; -- add column
+    ALTER TABLE <table> ADD COLUMN <column> <type> <option>;             -- add column
 
-    ALTER TABLE <table> ADD COLUMN <column> <type> <option> <column>; -- add column behind
+    ALTER TABLE <table> ADD COLUMN <column> <type> <option> <column>;    -- add column behind
 
-    ALTER TABLE <table> MODIFY COLUMN <column> <type> <option>; -- modify column
+    ALTER TABLE <table> MODIFY COLUMN <column> <type> <option>;          -- modify column
 
-    ALTER TABLE <table> CHANGE COLUMN <column> <column> <type> <option>; -- change name;
+    ALTER TABLE <table> CHANGE COLUMN <column> <column> <type> <option>; -- change column name
 
-    ALTER TABLE table_name DROP COLUMN ex_column;
+    ALTER TABLE table_name DROP COLUMN <column>;                         -- drop column
 
-    ALTER TABLE <table> RENAME <table>;
-
-
+    ALTER TABLE <table> RENAME <table>;                                  -- change table name
 
     ALTER TABLE <table>
-        ADD CONSTRAINT PRIMARY KEY(<variable>);
+        ADD CONSTRAINT PRIMARY KEY(<column>);                            -- primary key 지정
+
     ALTER TABLE <table>
-        ADD CONSTRAINT FOREIGN KEY(<variable>)
-            REFERENCES <table> (<variable>)
+        ADD CONSTRAINT FOREIGN KEY(<column>)
+            REFERENCES <table> (<column>)
             ON UPDATE <way>
-            ON DELETE <way>;
+            ON DELETE <way>;                                             -- foreign key 지정
+
     ALTER TABLE <table>
-        ALTER COLUMN phone1 SET DEFAULT <value>;
-
-DESCRIBE member;
-
-    /* AUTO_INCREMENT: 1부터 자동으로 숫자가 지정, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함
-       NOT NULL: NULL이 입력될 수 없음
-       UNIQUE: 같은 값이 올 수 없음
-       PRIMARY KEY: NOT NULL + UNIQUE
-       FOREIGN KEY: 다른 테이블의 열과 연결, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함
-            CASCADE
-            SET NULL
-            RESTRICT
-
-    CREATE TABLE buy
-        SELECT 문
+        ALTER COLUMN <column> SET DEFAULT <value>;                       -- default value 지정
 
 #### Drop
 
     DROP TABLE IF EXISTS <table>;
 
+# View
+
+#### Create
+
+    CREATE OR REPLACE VIEW <view> AS
+        <select statement>;
+
+#### Alter
+
+    ALTER VIEW <view> AS
+        <select statement>;
+
+#### Drop
+
+    DROP VIEW <view>;
+
+#### Show
+
+    DESC v_viewtest2;
+
+    SHOW CREATE VIEW <view>;
+
+update할때 not null이 없어야함 아니면 모두 input하거나
+
 # Data Insert/ Update/ Delete
 
 #### Insert
 
-    INSERT INTO <table> (<column>, <column>, ...)
+    INSERT INTO <table | view> (<column>, <column>, ...)
         VALUES (<value>, <value>, ...), (<value>, <value>, ...), ...; -- insert values
 
     INSERT INTO <table> (<column>, <column>, ...)
-        SELECT <column> <column> ... FROM <table>;                    -- insert table
+        <select statement>;                                           -- insert table
 
 #### Update
 
-    UPDATE <table>
+    UPDATE <table | view>
         SET <column> = <value>, <column> = <value>, ...
         WHERE <condition>;
 
 #### Delete
 
-    DELETE FROM <table>
+    DELETE FROM <table | view>
         WHERE <condition>;                                            -- delete data
 
     TRUNCATE TABLE <table>;                                           -- delete all
@@ -158,7 +182,7 @@ DESCRIBE member;
 
 # Procedure
 
-#### Make Procedure
+#### Create
 
     DROP PROCEDURE IF EXISTS <procedure>;
     DELIMITER $$
@@ -168,7 +192,7 @@ DESCRIBE member;
     END $$
     DELIMITER ;
 
-#### Call Procedure
+#### Call
 
     CALL <procedure>();
 
