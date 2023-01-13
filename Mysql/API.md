@@ -24,7 +24,7 @@
 
 #### Create
 
-    CREATE TABLE IF NOT EXISTS <table>
+    CREATE <OR REPLACE TABLE | TABLE IF NOT EXISTS> <table>
     (   <column> <type> AUTO_INCREMENT,
         <column> <type> NOT NULL,
         <column> <type> PRIMARY KEY,
@@ -38,10 +38,10 @@
             ON DELETE <way>
     );
 
-    CREATE TABLE IF NOT EXISTS <table>
-        <select statement>;
+    CREATE <OR REPLACE TABLE | TABLE IF NOT EXISTS> <table>
+        <select statement>;                                 -- select 문을 이용한 table 만들기
 
-| option         | explanation                                                         | way         |
+| Option         | Explanation                                                         | Way         |
 | -------------- | ------------------------------------------------------------------- | ----------- |
 | AUTO_INCREMENT | 1부터 자동으로 숫자가 지정, 지정한 열이 PRIMARY KEY나 UNIQUE여야 함 |
 | NOT NULL       | NULL이 입력될 수 없음                                               |
@@ -89,6 +89,9 @@
     CREATE OR REPLACE VIEW <view> AS
         <select statement>;
 
+    CREATE VIEW IF NOT EXISTS <view> AS
+        <select statement>;
+
 #### Alter
 
     ALTER VIEW <view> AS
@@ -96,7 +99,7 @@
 
 #### Drop
 
-    DROP VIEW <view>;
+    DROP VIEW IF EXISTS <view>;
 
 #### Show
 
