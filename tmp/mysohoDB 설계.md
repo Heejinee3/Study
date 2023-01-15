@@ -1,6 +1,6 @@
 database: mysoho
 
-# account
+# member_all
 
     account_no INT UNSIGNED PRIMARY KEY AUTO_INCREMENT -- 회원/비회원/탈퇴회원 key
 
@@ -14,18 +14,6 @@ database: mysoho
     contact VARCHAR(13) NOT NULL                                                     -- 전화번호
     point INT UNSIGNED NOT NULL                                                      -- 적립금
     signup_date DATETIME NOT NULL                                                    -- 가입 날짜
-    address VARCHAR(255)                                                             -- 주소
-
-# withdrawal_member
-
-    id VARCHAR(20) PRIMARY KEY                                                       -- 아이디
-    account_no INT UNSIGNED FOREIGN KEY ON UPDATE CASCADE ON DELETE CASCADE NOT NULL -- account table과 연결
-    name VARCHAR(20) NOT NULL                                                        -- 이름
-    email VARCHAR(255) NOT NULL                                                      -- 이메일
-    contact VARCHAR(13) NOT NULL                                                     -- 전화번호
-    point INT UNSIGNED NOT NULL                                                      -- 적립금
-    signup_date DATETIME NOT NULL                                                    -- 가입 날짜
-    withdrawal_date DATETIME NOT NULL                                                -- 탈퇴 날짜
     address VARCHAR(255)                                                             -- 주소
 
 # item
@@ -109,7 +97,7 @@ database: mysoho
     start_date DATETIME NOT NULL                                                     -- 시작 날짜
     end_date DATETIME NOT NULL                                                       -- 종료 날짜
     use TINYINT NOT NULL                                                             -- 사용 여부
-    type TINYINT NOT NULL                                                            -- 쿠폰 종류
+    rate TINYINT NOT NULL                                                            -- 할인율
 
 # review
 
