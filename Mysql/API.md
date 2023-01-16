@@ -410,31 +410,8 @@
     SET @<variable> := <value>;
     SET @<variable> = <value>;
 
-    PREPARE <prepare> FROM <sql>;
-    EXECUTE <prepare> USING @<variable>;
-    DEALLOCATE PREPARE mySQL;
+#### UNION
 
-#### Function
-
-    LAST_INSERT_ID()          //
-    CURRENT_DATE()                        -- 현재
-    CURRENT_TIMESTAMP()                        -- 현재
-    DATEDIFF(<date>, <date>)              -- date 차이 반환
-    TIMESTAMPDIFF(<unit>, <date>, <date>) -- date 차이 반환
-                                          /* <unit>
-                                             SECOND
-                                             MINUTE
-                                             HOUR
-                                             DAY
-                                             WEEK
-                                             MONTH
-                                             QUARTER
-                                             YEAR    */
-    YEAR(),MONTH(DATE)DAY()
-    CONCAT(,)
-    length
-
-## UNION
-
-    UNION DISTINCT
-    UNION ALL
+    <select statement>
+    UNION <DISTINCT | ALL>
+    <select statement>
