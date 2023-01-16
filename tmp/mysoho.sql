@@ -348,4 +348,3 @@ INSERT INTO notice_content
 	VALUES (NULL,1,"img1.png"); 
 SELECT * FROM notice_content;
 
-

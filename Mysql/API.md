@@ -1,4 +1,4 @@
-# Database Show/ Create/ Drop/ Use
+# Database
 
 #### Show
 
@@ -16,11 +16,7 @@
 
     USE <database>;
 
-# Table Describe/ Create/ Alter/ Drop
-
-#### Describe
-
-    DESC <table>;
+# Table
 
 #### Create
 
@@ -76,7 +72,13 @@
             ON DELETE <way>;                                             -- foreign key 지정
 
     ALTER TABLE <table>
-        ALTER COLUMN <column> SET DEFAULT <value>;                       -- default value 지정
+        ADD CONSTRAINT UNIQUE(<column>);                                 -- unique 지정
+
+    ALTER TABLE <table> DROP  PRIMARY KEY;                               -- primary key 삭제
+
+    ALTER TABLE <table> DROP  FOREIGN KEY;                               -- foreign key 삭제
+
+    ALTER TABLE <table> DROP  UNIQUE;                                    -- unique 삭제
 
 #### Drop
 
@@ -86,37 +88,28 @@
 
 #### Create
 
-    CREATE OR REPLACE VIEW <view> AS
-        <select statement>;
-
-    CREATE VIEW IF NOT EXISTS <view> AS
-        <select statement>;
+    CREATE <OR REPLACE VIEW | VIEW IF NOT EXISTS> <view> AS
+        <select statement>
+        <WITH CHECK OPTION>;
 
 #### Alter
 
     ALTER VIEW <view> AS
-        <select statement>;
+        <select statement>
+        <WITH CHECK OPTION>;
 
 #### Drop
 
     DROP VIEW IF EXISTS <view>;
 
-#### Show
-
-    DESC v_viewtest2;
-
-    SHOW CREATE VIEW <view>;
-
-update할때 not null이 없어야함 아니면 모두 input하거나
-
-# Data Insert/ Update/ Delete
+# Data
 
 #### Insert
 
     INSERT INTO <table | view> (<column>, <column>, ...)
         VALUES (<value>, <value>, ...), (<value>, <value>, ...), ...; -- insert values
 
-    INSERT INTO <table> (<column>, <column>, ...)
+    INSERT INTO <table | view> (<column>, <column>, ...)
         <select statement>;                                           -- insert table
 
 #### Update
@@ -130,7 +123,15 @@ update할때 not null이 없어야함 아니면 모두 input하거나
     DELETE FROM <table | view>
         WHERE <condition>;                                            -- delete data
 
-    TRUNCATE TABLE <table>;                                           -- delete all
+    TRUNCATE TABLE <table | view>;                                    -- delete all
+
+#### Show
+
+    DESC <table | view>;                                              -- 정보를 보여줌
+
+    SHOW CREATE <TABLE | VIEW> <table | view>;                        -- 소스코드를 보여줌
+
+    CHECK TABLE <table | view>;                                       -- 상태를 확인
 
 # Select
 
@@ -187,9 +188,8 @@ update할때 not null이 없어야함 아니면 모두 input하거나
 
 #### Create
 
-    DROP PROCEDURE IF EXISTS <procedure>;
     DELIMITER $$
-    CREATE PROCEDURE <procedure>()
+    CREATE PROCEDURE <procedure>(IN <variable> <type>, OUT <variable> <type>)
     BEGIN
         <statement>;
     END $$
@@ -197,7 +197,51 @@ update할때 not null이 없어야함 아니면 모두 input하거나
 
 #### Call
 
-    CALL <procedure>();
+    CALL <procedure>(<value>, @<variable>);
+
+#### Drop
+
+    DROP PROCEDURE IF EXISTS <procedure>;
+
+# Function
+
+#### Create
+
+    DELIMITER $$
+    CREATE Function <function>(<variable> <type>) RETURNS <type>
+    BEGIN
+        <statement>;
+        RETURN <value>;
+    END $$
+    DELIMITER ;
+
+#### Call
+
+    SELECT <function>(<value>);
+
+#### Drop
+
+    DROP Function IF EXISTS <function>;
+
+# Trigger
+
+#### Create
+
+    DELIMITER $$
+    CREATE Trigger <trigger>
+        AFTER <DELETE | UPDATE | INSERT>
+        ON <table>
+        FOR EACH ROW
+    BEGIN
+        <statement>;                     -- OLD table, NEW table 사용 가능
+    END $$
+    DELIMITER ;
+
+#### Drop
+
+    DROP Trigger IF EXISTS <trigger>;
+
+# If/ Case/ While
 
 #### Declaration/ Initializaion
 
@@ -242,6 +286,32 @@ update할때 not null이 없어야함 아니면 모두 input하거나
                          -- LEAVE <loop>   : break, loop 제외 가능
     END WHILE;
 
+# Cursor
+
+    DECLARE <row variable> <type>;
+    DECLARE <end variable> BOOLEAN DEFAULT FALSE;
+    DECLARE <count variable> INT DEFAULT 0;          -- 변수 설정
+
+    DECLARE <cursor> CURSOR FOR
+        <select statement>;                          -- cursor 지정
+
+    DECLARE CONTINUE HANDLER
+        FOR NOT FOUND SET <end variable> = TRUE;     -- loop end 조건
+
+    OPEN <cursor>;                                   -- cursor open
+
+    <loop>: LOOP                                     -- loop 시작
+
+        FETCH <cursor> INTO <row variable>;          -- table에서 값 받아오기
+
+        IF <end variable> THEN                       -- table 끝까지 오면 loop 빠져나가기
+            LEAVE <loop>;
+        END IF;
+
+        SET <count variable> = <count variable> + 1; -- table의 row count 세기
+
+    END LOOP <loop>;
+
 # Prepare
 
 #### Allocate
@@ -255,6 +325,25 @@ update할때 not null이 없어야함 아니면 모두 input하거나
 #### Deallocate
 
     DEALLOCATE PREPARE <prepare>;
+
+# Index
+
+#### Show
+
+    SHOW INDEX FROM <table>;               -- 존재하는 index 보기
+
+    SHOW TABLE STATUS LIKE <table string>; -- index 상태 보기
+
+#### Create
+
+    CREATE <UNIQUE> INDEX <index>
+        ON <table>(<column>) <ASC | DESC>; -- index create
+
+    ANALYZE TABLE <table>;                 -- index apply
+
+#### Drop
+
+    DROP INDEX <index> ON <table>;
 
 # Operator
 
@@ -341,6 +430,7 @@ update할때 not null이 없어야함 아니면 모두 input하거나
                                              MONTH
                                              QUARTER
                                              YEAR    */
+    YEAR(),MONTH(DATE)DAY()
     CONCAT(,)
     length
 
