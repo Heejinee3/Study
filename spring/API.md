@@ -24,14 +24,25 @@
 
     server.port = 8090 or 8080
 
-# Application
+#
 
-#### SpringBootApplication
+| 22                       | 22                                                                    |
+| ------------------------ | --------------------------------------------------------------------- |
+| @SpringBootApplication   | 기본적인 스프링부트 앱 개발환경과 설정을 해주는 어노테이션            |
+| @ComponentScan           | @Component가 붙은 클래스를 Bean으로 등록                              |
+| @EnableAutoConfiguration | 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션    |
+| @SpringBootConfiguration | @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록 |
+| @Configuration           | 스프링 설정 클래스                                                    |
+| @Controller              | HTTP Request를 처리하는 클래스                                        |
+| @Bean                    | @Bean이 붙은 함수의 반환 객체를 빈으로 등록                           |
+| @Component               | @Component가 붙은 클래스를 자바 빈으로 등록                           |
 
-- 기본적인 스프링부트 앱 개발환경과 설정을 해주는 어노테이션
-  - @ComponentScan : @Component가 붙은 클래스를 Bean으로 등록
-  - @EnableAutoConfiguration : 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션
-  - @SpringBootConfiguration : @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록
+ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
+@Autowired : 자동 객체 생성
+
+# File
+
+### SpringBootApplication
 
 ```
 @SpringBootApplication
@@ -40,9 +51,7 @@ public class AppNameApplication {
 }
 ```
 
-#### Configuration
-
-- 스프링 설정 클래스
+### Configuration
 
 ```
 @Configuration
@@ -51,32 +60,20 @@ public class AppConfig {
 }
 ```
 
-# MainController.java
+### Controller
 
-    import org.springframework.web.bind.annotation.GetMapping; // GET
-    import org.springframework.web.bind.annotation.ResponseBody; // HTTP 응답으로 순수한 문자열로 반환한다는 의미
+```
+@Controller
+public class MainController {
 
-    @Controller // HTTP Request를 처리하는 클래스
-    public class MainController {
-
-        // 요청 URL: localhost:8080/
-        @GetMapping("/")
-        @ResponseBody
-        public String main(){
-            return "Hello Springboot~!!";
-        }
-    }
+}
+```
 
 # Bean
 
-#### Use Bean
+### Use Bean
 
-- @Configuration + @Bean + ApplicationContext
-- @Component + @Autowired
-
-#### Add to Bean
-
-- @Bean : @Bean이 붙은 함수의 반환 객체를 빈으로 등록
+### Add to Bean
 
 ```
 @Bean
@@ -84,8 +81,6 @@ public ObjectName function(){
   return new ObjectName();
 }
 ```
-
-- @Component : @Component가 붙은 클래스를 자바 빈으로 등록
 
 ```
 @Component
@@ -96,14 +91,10 @@ public class ObjectName {
 
 ### Get from Bean
 
-- ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
-
 ```
 ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 ObjectName object = (ObjectName)context.getBean("objectName");
 ```
-
-- @Autowired : 자동 객체 생성
 
 ```
 // 멤버변수 주입
@@ -134,40 +125,28 @@ public Constructor(ObjectName object){
 }
 ```
 
-# MainControllerText.java
+# Test
 
-    package com.study.springboot;
+- MockMvc : 가상으로 HTTP 요청을 보내줌
+- @Test : 테스트 케이스 메서드임을 알려주며 단돋 실행이 가능
 
-    import org.junit.jupiter.api.Test;
-    import org.junit.jupiter.api.extension.ExtendWith;
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-    import org.springframework.test.context.junit.jupiter.SpringExtension;
+```
+@ExtendWith(SpringExtension.class)
+@WebMvcTest(controllers = javaFile.class)
+class javaFileTest {
 
-    import org.springframework.test.web.servlet.MockMvc;
-    import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-    import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-    import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+  @Autowired
+  private MockMvc mockMvc;
 
-    @ExtendWith(SpringExtension.class)
-    @WebMvcTest(controllers = MainController.class)
-    class MainControllerTest {
-    //@Autowired : 자동객체생성
-    //MockMvc: 가상으로 HTTP 요청을 보내줌
-    @Autowired
-    private MockMvc mockMvc;
-
-        //@Test : 테스트 케이스 메서드임을 알려줌.
-        //      : 단독실행이 가능함.
-        @Test
-        void main() throws Exception{
-            String hello = "Hello Springboot~!!";
-            mockMvc.perform(get("/"))
-                    .andExpect(status().isOk())
-                    .andExpect(content().string(hello));
-        }
-
-    }
+  @Test
+  void main() throws Exception{
+      String hello = "Hello Springboot~!!";
+      mockMvc.perform(get("/"))
+              .andExpect(status().isOk())
+              .andExpect(content().string(hello));
+  }
+}
+```
 
 # build.gradle
 
@@ -211,3 +190,15 @@ public Constructor(ObjectName object){
 ```
 
 ```
+
+# HTML
+
+    @Controller
+    public class MainController {
+        // 요청 URL: localhost:8080/
+        @GetMapping("/")// GET
+        @ResponseBody // HTTP 응답으로 순수한 문자열로 반환한다는 의미
+        public String main(){
+            return "Hello Springboot~!!";
+        }
+    }
