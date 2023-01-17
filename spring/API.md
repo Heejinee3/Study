@@ -3,7 +3,7 @@
     Spring Initializr
     https://start.spring.io/
 
-| ㅈㅈㅈ           | ㅈㅈㅈ                     | ㅈㅈㅈ        |
+| ㅈㅈㅈ           | ㅈㅈㅈ                     | ㅈㅈㅈ        | 222             |
 | ---------------- | -------------------------- | ------------- | --------------- |
 | Project          |                            |               | Gradle - Groovy |
 | Language         |                            |               | Java            |
