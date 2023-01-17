@@ -39,8 +39,8 @@
 | @Test                    | 테스트 케이스 메서드임을 알려주며 단돋 실행이 가능                      |
 | @WebMvcTest              | 웹 영역만을 테스트 하기 위한 지시어                                     |
 | @Test                    | 테스트 케이스 메서드를 지정                                             |
+| @Getter                  | getter 자동생성                                                         |
 
-// @Getter : getter 자동생성
 // @Setter : setter 자동생성
 // @NoArgsConstructor : 매개변수 없는 기본생성자 자동생성
 // @AllArgsConstructor : 모든 필드를 파라미터로 받는 생성자 자동생성
