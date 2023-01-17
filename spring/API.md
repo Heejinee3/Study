@@ -69,59 +69,70 @@ public class AppConfig {
 
 # Bean
 
+#### Use Bean
+
+- @Configuration + @Bean + ApplicationContext
+- @Component + @Autowired
+
 #### Add to Bean
 
-> @Configuration + @Bean + ApplicationContext
->
-> @Component + @Autowired
+- @Bean : @Bean이 붙은 함수의 반환 객체를 빈으로 등록
 
-#### Add to Bean
+```
+@Bean
+public ObjectName function(){
+  return new ObjectName();
+}
+```
 
-> @Bean : @Bean이 붙은 함수의 반환 객체를 빈으로 등록
+- @Component : @Component가 붙은 클래스를 자바 빈으로 등록
 
-    @Bean
-    public ObjectName function(){
-      return new ObjectName();
-    }
+```
+@Component
+public class ObjectName {
 
-> @Component : @Component가 붙은 클래스를 자바 빈으로 등록
-
-    @Component
-    public class ObjectName {
-
-    }
+}
+```
 
 #### Get from Bean
 
-> ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
+- ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
 
-    ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-    ObjectName object = (ObjectName)context.getBean("objectName");
+```
+ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+ObjectName object = (ObjectName)context.getBean("objectName");
+```
 
-> @Autowired : 자동 객체 생성
+- @Autowired : 자동 객체 생성
 
-    // 멤버변수 주입
+```
+// 멤버변수 주입
 
-    @Autowired
-    private ObjectName object;
+@Autowired
+private ObjectName object;
+```
 
-    // setter 주입
+```
+// setter 주입
 
-    private ObjectName object;
+private ObjectName object;
 
-    @Autowired
-    public void setObjectName(ObjectName object){
-        this.object = object;
-    }
+@Autowired
+public void setObjectName(ObjectName object){
+    this.object = object;
+}
+```
 
-    // constructor 주입 (final 사용 가능)
+```
+// constructor 주입 (final 사용 가능)
 
-    private final ObjectName object;
+private final ObjectName object;
 
-    @Autowired
-    public Constructor(ObjectName object){
-        this.object = object;
-    }
+@Autowired
+public Constructor(ObjectName object){
+    this.object = object;
+}
+```
 
 # MainControllerText.java
 
@@ -196,3 +207,7 @@ public class AppConfig {
     tasks.named('test') {
     useJUnitPlatform()
     }
+
+```
+
+```
