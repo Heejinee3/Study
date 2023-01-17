@@ -29,10 +29,11 @@
 #### SpringBootApplication
 
 - 기본적인 스프링부트 앱 개발환경과 설정을 해주는 어노테이션
-
   - @ComponentScan : @Component가 붙은 클래스를 Bean으로 등록
   - @EnableAutoConfiguration : 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션
   - @SpringBootConfiguration : @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록
+
+
 
 
     @SpringBootApplication
