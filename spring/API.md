@@ -34,10 +34,12 @@
   - @EnableAutoConfiguration : 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션
   - @SpringBootConfiguration : @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록
 
+```
     @SpringBootApplication
     public class AppNameApplication {
 
     }
+```
 
 #### Configuration
 
