@@ -30,11 +30,11 @@
 
 > 기본적인 스프링부트 앱 개발환경과 설정을 해주는 어노테이션
 >
-> > @ComponentScan : @Component가 붙은 클래스를 Bean으로 등록
-> >
-> > @EnableAutoConfiguration : 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션
-> >
-> > @SpringBootConfiguration : @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록
+> @ComponentScan : @Component가 붙은 클래스를 Bean으로 등록
+>
+> @EnableAutoConfiguration : 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션
+>
+> @SpringBootConfiguration : @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록
 
     @SpringBootApplication
     public class AppNameApplication {
@@ -69,6 +69,7 @@
 # Bean
 
 > @Configuration + @Bean + ApplicationContext
+>
 > @Component + @Autowired
 
 #### Add to Bean
@@ -97,18 +98,23 @@
 > @Autowired : 자동 객체 생성
 
     // 멤버변수 주입
+
     @Autowired
     private ObjectName object;
 
     // setter 주입
+
     private ObjectName object;
+
     @Autowired
     public void setObjectName(ObjectName object){
         this.object = object;
     }
 
     // constructor 주입 (final 사용 가능)
+
     private final ObjectName object;
+
     @Autowired
     public Constructor(ObjectName object){
         this.object = object;
