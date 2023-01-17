@@ -94,7 +94,7 @@ public class ObjectName {
 }
 ```
 
-## Get from Bean
+### Get from Bean
 
 - ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
 
