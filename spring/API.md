@@ -34,19 +34,22 @@
   - @SpringBootConfiguration : @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록
 
 ```
-    @SpringBootApplication
-    public class AppNameApplication {
-    }
+@SpringBootApplication
+public class AppNameApplication {
+
+}
 ```
 
 #### Configuration
 
-> 스프링 설정 클래스
+- 스프링 설정 클래스
 
-    @Configuration
-    public class AppConfig {
+```
+@Configuration
+public class AppConfig {
 
-    }
+}
+```
 
 # MainController.java
 
