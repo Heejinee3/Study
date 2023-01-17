@@ -24,7 +24,7 @@
 
     server.port = 8090 or 8080
 
-#
+# Application
 
 #### SpringBootApplication
 
@@ -38,6 +38,15 @@
 
     @SpringBootApplication
     public class AppNameApplication {
+
+    }
+
+#### Configuration
+
+> 스프링 설정 클래스
+
+    @Configuration
+    public class AppConfig {
 
     }
 
@@ -57,47 +66,52 @@
         }
     }
 
-# AppConfig.java
+# Bean
 
-    @Configuration // 스프링 설정 클래스
-    public class AppConfig {
+> @Configuration + @Bean + ApplicationContext
+> @Component + @Autowired
 
-      @Bean // 메서드 위에 기술하여 반환되는 객체를 스프링 빈으로 등록
-      public ObjectName function(){
-        return new ObjectName("머스크");
-      }
+#### Add to Bean
 
-      /* 다른 클래스에서 빈에 있는 객체를 얻어 사용
-         ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
+> @Bean : @Bean이 붙은 함수의 반환 객체를 빈으로 등록
 
-         <example>
-    	   ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-    	   ObjectName member = (ObjectName)context.getBean("objectName");     	//빈의 이름은 클래스의 이름(첫글자는 소문자로)
+    @Bean
+    public ObjectName function(){
+      return new ObjectName();
     }
 
-# ObjectName.java
+> @Component : @Component가 붙은 클래스를 자바 빈으로 등록
 
-    @Autowired
-    private Member member1;
+    @Component
+    public class ObjectName {
 
-    private Member member3;
-    @Autowired
-    public void setMember(Member member){
-        this.member3 = member;
     }
 
-    // 3. 생성자 주입 - final 사용 가능(객체 재할당 방지)
-    //              - 생성자로서 미리 주입을 받는다. null safety를 제공받는다.
-    private final Member member4;
+#### Get from Bean
+
+> ApplicationContext : 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함
+
+    ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+    ObjectName object = (ObjectName)context.getBean("objectName");
+
+> @Autowired : 자동 객체 생성
+
+    // 멤버변수 주입
     @Autowired
-    public MainController(Member member){
-        System.out.println("생성자 주입~");
-        this.member4 = member;
+    private ObjectName object;
+
+    // setter 주입
+    private ObjectName object;
+    @Autowired
+    public void setObjectName(ObjectName object){
+        this.object = object;
     }
 
-    @Component // @Component가 붙은 클래스를 자바 빈으로 등록한다.
-    public class Member {
-
+    // constructor 주입 (final 사용 가능)
+    private final ObjectName object;
+    @Autowired
+    public Constructor(ObjectName object){
+        this.object = object;
     }
 
 # MainControllerText.java
