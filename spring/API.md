@@ -68,6 +68,8 @@
 
 # Bean
 
+#### Add to Bean
+
 > @Configuration + @Bean + ApplicationContext
 >
 > @Component + @Autowired
