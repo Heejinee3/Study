@@ -324,88 +324,50 @@ public Type function(){
 @WebMvcTest(controllers = javaFile.class)
 class javaFileTest {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Test
-  void function() throws Exception{ // perform()은 RuntimeException이 발생할 수 있는 코드이므로 예외 처리 해주어야함
+    @Test
+    void function() throws Exception{ // perform()은 RuntimeException이 발생할 수 있는 코드이므로 예외 처리 해주어야함
 
-      String str = "str";
+        String str = "str";
 
-      mockMvc.perform(get("/")) // HTTP GET방식으로 루트 경로(/)를 호출
-              .andExpect(status().isOk()) // HTTP 응답이 200으로 성공적인 응답인지를 확인
-              .andExpect(content().string(str)); // 응답의 내용이 문자열 str과 같은지를 확인
-  }
+        mockMvc.perform(get("/")) // HTTP GET방식으로 루트 경로(/)를 호출
+            .andExpect(status().isOk()) // HTTP 응답이 200으로 성공적인 응답인지를 확인
+            .andExpect(content().string(str)); // 응답의 내용이 문자열 str과 같은지를 확인
+    }
 }
 ```
 
 # build.gradle
 
-    plugins {
-    id 'java'
-    id 'org.springframework.boot' version '2.7.7'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-    }
-
-    group = 'com.study'
-    version = '0.0.1-SNAPSHOT'
-    sourceCompatibility = '17'
-
-    configurations {
-      compileOnly {
+```
+configurations {
+    compileOnly {
         extendsFrom annotationProcessor
-      }
     }
-
-    // 라이브러리 저장소
-    repositories {
-    mavenCentral()
-    // jcenter()
-    }
-
-    // 임포트하는 라이브러리들
-    dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.mockito:mockito-core:4.11.0'
-
 }
 
-    tasks.named('test') {
-    useJUnitPlatform()
-    }
-
+dependencies {
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' // Thymeleaf Layout
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf
+    implementation 'org.springframework.boot:spring-boot-starter-web' // Spring Web
+    compileOnly 'org.projectlombok:lombok' // Lombok
+    developmentOnly 'org.springframework.boot:spring-boot-devtools' // Spring Boot Dev Tools
+    annotationProcessor 'org.projectlombok:lombok' // Lombok
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // Spring
+    testImplementation 'org.mockito:mockito-core:4.11.0' // Mock
+}
 ```
-
-```
-
-# HTML Request
-
-    @Controller
-    public class MainController {
-        // 요청 URL: localhost:8080/
-        @GetMapping("/")// GET
-        @ResponseBody // HTTP 응답으로 순수한 문자열로 반환한다는 의미
-        public String main(){
-            return "Hello Springboot~!!";
-        }
-    }
 
 # application.properties
 
+### Port
+
     server.port = 8090 or 8080
 
-#
+### Thymeleaf
 
-@Component
-@RequiredArgsConstructor
-@NoArgsConstructor(force = true) // final 필드를 0이나 null이나 false로 설정합니다
-public class Member {
-// Spring Security에서 기본적으로 사용하는 id/pw
-private final String username; // user id
-@NonNull
-private String password; // user pw
-}
+    spring.thymeleaf.cache=false
+    spring.thymeleaf.prefix=classpath:/templates/
+    spring.thymeleaf.suffix=.html
