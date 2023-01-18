@@ -254,7 +254,7 @@ public class ObjectName {
 ### Get
 
 ```
-@GetMapping("/") // localhost:8080
+@GetMapping("/")    // localhost:8080
 public Type function(){
 
     return "index"; // @ResponseBody를 사용하면 HTTP 응답으로 순수한 문자열로 반환
@@ -328,12 +328,12 @@ class javaFileTest {
     private MockMvc mockMvc;
 
     @Test
-    void function() throws Exception{ // perform()은 RuntimeException이 발생할 수 있는 코드이므로 예외 처리 해주어야함
+    void function() throws Exception{          // perform()은 RuntimeException이 발생할 수 있는 코드이므로 예외 처리 해주어야함
 
         String str = "str";
 
-        mockMvc.perform(get("/")) // HTTP GET방식으로 루트 경로(/)를 호출
-            .andExpect(status().isOk()) // HTTP 응답이 200으로 성공적인 응답인지를 확인
+        mockMvc.perform(get("/"))              // HTTP GET방식으로 루트 경로(/)를 호출
+            .andExpect(status().isOk())        // HTTP 응답이 200으로 성공적인 응답인지를 확인
             .andExpect(content().string(str)); // 응답의 내용이 문자열 str과 같은지를 확인
     }
 }
@@ -349,14 +349,14 @@ configurations {
 }
 
 dependencies {
-    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' // Thymeleaf Layout
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'       // Thymeleaf Layout
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf
-    implementation 'org.springframework.boot:spring-boot-starter-web' // Spring Web
-    compileOnly 'org.projectlombok:lombok' // Lombok
-    developmentOnly 'org.springframework.boot:spring-boot-devtools' // Spring Boot Dev Tools
-    annotationProcessor 'org.projectlombok:lombok' // Lombok
-    testImplementation 'org.springframework.boot:spring-boot-starter-test' // Spring
-    testImplementation 'org.mockito:mockito-core:4.11.0' // Mock
+    implementation 'org.springframework.boot:spring-boot-starter-web'       // Spring Web
+    compileOnly 'org.projectlombok:lombok'                                  // Lombok
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'         // Spring Boot Dev Tools
+    annotationProcessor 'org.projectlombok:lombok'                          // Lombok
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'  // Spring
+    testImplementation 'org.mockito:mockito-core:4.11.0'                    // Mock
 }
 ```
 
