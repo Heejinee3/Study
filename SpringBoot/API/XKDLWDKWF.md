@@ -40,7 +40,7 @@
 ### th:href
 
 ```
-<a th:href="@{ index }">Redirect</a>
+<a th:href="@{index}">Redirect</a>
 ```
 
 # Logic
@@ -161,5 +161,3 @@
 ```
 <p th:text="${#numbers.formatDecimal(variable, comma_num, 'COMMA', point_num, 'POINT')}"></p>
 ```
-
-<a th:href="@{ index7 }">타임리프 링크입니다. /index7로 redirect 됩니다.</a>
