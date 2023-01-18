@@ -37,9 +37,15 @@
 <p th:with="variable2=${variable1}" text="${variable2}">값 넣기</p>
 ```
 
+### th:href
+
+```
+<a th:href="@{ index }">Redirect</a>
+```
+
 # Logic
 
-### th:if th:unless
+### If Else Statement
 
 ```
 <th:block th:if="${expression}">
@@ -50,7 +56,7 @@
 </th:block>
 ```
 
-### th:switch th:case
+### Switch Case Statement
 
 ```
 <div th:switch="${variable}">
@@ -60,11 +66,17 @@
 </div>
 ```
 
-### not
+### Not Condition
 
-<p th:if="${not #strings.isEmpty(address)}" th:text="|address는 empty가 아닙니다.|">not isEmpty 함수 결과</p>
+```
+<p th:if="${not expression}" th:text="${variable}">not 조건</p>
+```
 
+### Ternary Operator
+
+```
 <p th:text="${expression} ? 'true' : 'false'">삼항연산자</p>
+```
 
 # Expression
 
@@ -89,6 +101,28 @@
   <p th:text="*{member_var}"></p>
 </th:block>
 ```
+
+### List
+
+```
+<table>
+  <tr th:each="element, status: ${list}">
+    <td><span th:text="${status.count}"></span></td>
+    <td><span th:text="${element.member_var}"></span></td>
+  </tr>
+</table>
+```
+
+| Status         | Explanation                   |
+| -------------- | ----------------------------- |
+| status.index   | 현재 반복 인덱스 (0부터 시작) |
+| status.count   | 현재 반복 인덱스 (1부터 시작) |
+| status.size    | 총 요소 수                    |
+| status.current | 현재 요소                     |
+| status.even    | 현재 반복이 짝수인지 여부     |
+| status.odd     | 현재 반복이 홀수인지 여부     |
+| status.first   | 현재 반복이 첫번째인지 여부   |
+| status.last    | 현재 반복이 마지막인지 여부   |
 
 # Function
 
@@ -127,24 +161,5 @@
 ```
 <p th:text="${#numbers.formatDecimal(variable, comma_num, 'COMMA', point_num, 'POINT')}"></p>
 ```
-
-객체 리스트 출력 <br>
-
-  <table border="1">
-    <tr th:each="member, status: ${list}">
-      <td><span th:text="${status.count}"></span></td>
-      <td><span th:text="${member.username}"></span></td>
-      <td><span th:text="${member.password}"></span></td>
-    </tr>
-  </table>
-
-status.index : 현재 반복 인덱스 (0부터 시작합니다.)<br>
-status.count : 현재 반복 인덱스 (1부터 시작합니다.)<br>
-status.size : 총 요소 수<br>
-status.current : 현재 요소 (0부터 시작합니다.)<br>
-status.even : 현재 반복이 짝수인지 여부 (boolean값)<br>
-status.odd : 현재 반복이 홀수인지 여부 (boolean값)<br>
-status.first : 현재 반복이 첫번째인지 여부 (boolean값)<br>
-status.last : 현재 반복이 마지막인지 여부 (boolean값)<br>
 
 <a th:href="@{ index7 }">타임리프 링크입니다. /index7로 redirect 됩니다.</a>
