@@ -1,4 +1,4 @@
-request.getSession().setAttribute("variable", value);
+# Communication
 
 > Get variable
 >
@@ -14,7 +14,7 @@ request.getSession().setAttribute("variable", value);
 >
 > `<p th:text="${name}"></p>`
 >
-> `<p th:text="${session.name}"></p>`
+> `<p th:text="${session.id}"></p>`
 >
 > `<p th:text="${member.name}"></p>`
 >
@@ -124,6 +124,19 @@ public String function(Member member, Model model){ // get variable
 public String function(@RequestParam Map<String,Object> map, Model model){ // get variable
 
     model.addAttribute("map", map);                                        // set variable
+
+    return "index";
+
+}
+```
+
+### Refer: Session
+
+```
+@RequestMapping("/formAction")
+public String function(HttpServletRequest request){
+
+    request.getSession().setAttribute("id", value); // set session variable
 
     return "index";
 
