@@ -2,13 +2,15 @@
 
 > Get variable
 >
-> `<form action="/formAction" method="post">`
+> ```
+> <form action="/formAction" method="post">
 >
-> `  <input type="text" name="name" value="">`
+>   <input type="text" name="name" value="">
 >
-> `  <input type="submit">`
+>   <input type="submit">`
 >
-> `</form>`
+> </form>
+> ```
 
 > Set variable
 >
