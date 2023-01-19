@@ -350,6 +350,7 @@ configurations {
 
 dependencies {
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'       // Thymeleaf Layout
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-web'       // Spring Web
     compileOnly 'org.projectlombok:lombok'                                  // Lombok
@@ -364,10 +365,41 @@ dependencies {
 
 ### Port
 
-    server.port = 8090 or 8080
+```
+server.port = 8090 or 8080
+```
 
 ### Thymeleaf
 
-    spring.thymeleaf.cache=false
-    spring.thymeleaf.prefix=classpath:/templates/
-    spring.thymeleaf.suffix=.html
+```
+spring.thymeleaf.cache=false
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+```
+
+### H2 Database
+
+```
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+```
+
+```
+# in-memory DB
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+```
+
+```
+# file DB
+user home directory is C:\Users(user name) in Windows OS.
+testdb.mv.db file make ( file is empty file ).
+cmd console : type nul > testdb.mv.db
+spring.datasource.url=jdbc:h2:~/testdb
+spring.datasource.driverClassName=org.h2.Driver
+```
+
+```
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update                                    # 상용 DB에서는 none이나 validate
+```
