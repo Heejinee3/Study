@@ -9,10 +9,9 @@ request.getSession().setAttribute("variable", value);
 
 > Set variable
 >
-> <p th:text="${name}"></p>
-> <p th:text="${session.name}"></p>
-> <p th:text="${member.name}"></p>
-> <p th:text="${map.name}"></p>
+> `<p th:text="${name}"></p>` > `<p th:text="${session.name}"></p>`
+>
+> `<p th:text="${member.name}"></p>` > `<p th:text="${map.name}"></p>`
 
 ### Way1
 
