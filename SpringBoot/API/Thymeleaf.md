@@ -78,12 +78,8 @@ public ModelAndView function(HttpServletRequest request, ModelAndView mv){
 
 ```
 @RequestMapping("/formAction/{username}/{password}")
-public String function(@PathVariable("username") String username, // get variable
-                       @PathVariable("password") String password,
-                       Model model){
-
-    model.addAttribute("username", username);                     // set variable
-    model.addAttribute("password", password);
+public String function(@PathVariable("username") String username, // get, set variable
+                       @PathVariable("password") String password){
 
     return "loginResult";
 
@@ -241,7 +237,7 @@ public String function(HttpServletRequest request){
 
 ```
 <table>
-  <tr th:each="element, status: ${list}">
+  <tr th:each="element, status: ${list}"> // list 대신 #numbers.sequence(num1, num2) 사용 가능
     <td><span th:text="${status.count}"></span></td>
     <td><span th:text="${element.member_var}"></span></td>
   </tr>
