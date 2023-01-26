@@ -562,14 +562,18 @@
 
 # Transition
 
+```
     transition-property: all;           /* 대상 지정
                                            all  : 모든 속성
                                            none : 없음
                                            width: 속성 이름 */
+```
 
+```
     transition-duration: 1s;            /* 진행 시간
                                            1s : 초
                                            1ms: 밀리초 */
+```
 
     transition-delay: 1s;               /* 지연 시간
                                            1s : 초
