@@ -1044,152 +1044,162 @@ gap: 10px;                   // content 사이의 gap 크기
 # Grid
 
 ```
-    display: grid; /* 그리드 지정
-                      grid       : grid
-                      inline-grid: inline-grid */
+display: grid;                          /* 그리드 지정
+                                           grid       : grid
+                                           inline-grid: inline-grid */
 ```
 
 ```
-    grid-template-columns: 100px 100px ...; /* 열의 크기와 개수 지정
-                                               100px                                : 크기
-                                               1fr                                  : 상대적 크기
-                                               repeat(3, 1fr)                       : 반복(n번, 길이)
-                                               minmax(100px, 1fr)                   : 최소, 최대
-                                               repeat(auto-fit, minmax(100px, 1fr)) : 남는 공간 없음
-                                               repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
+grid-template-columns: 100px 100px ...; /* 열의 크기와 개수 지정
+                                           100px                                : 크기
+                                           1fr                                  : 상대적 크기
+                                           repeat(3, 1fr)                       : 반복(n번, 길이)
+                                           minmax(100px, 1fr)                   : 최소, 최대
+                                           repeat(auto-fit, minmax(100px, 1fr)) : 남는 공간 없음
+                                           repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
 ```
 
 ```
-    grid-template-rows: 100px 100px ...; /* 줄의 크기와 개수 지정
-                                            100px 100px ...         : 크기
-                                            1fr 1fr ...             : 상대적 크기
-                                            repeat(3, 1fr)          : 반복(n번, 길이)
-                                            minmax(100px, 1fr)      : 최소, 최대
-                                            repeat(auto-fit, 100px) : 남는 공간 없음
-                                            repeat(auto-fill, 100px): 남는 공간 있음  */
+grid-template-rows: 100px 100px ...;    /* 줄의 크기와 개수 지정
+                                           100px 100px ...         : 크기
+                                           1fr 1fr ...             : 상대적 크기
+                                           repeat(3, 1fr)          : 반복(n번, 길이)
+                                           minmax(100px, 1fr)      : 최소, 최대
+                                           repeat(auto-fit, 100px) : 남는 공간 없음
+                                           repeat(auto-fill, 100px): 남는 공간 있음  */
 ```
 
 ```
-    grid-column-gap: 10px;               // 열 간격 지정
+grid-column-gap: 10px;                  // 열 간격 지정
 ```
 
 ```
-    grid-row-gap: 10px;                  // 행 간격 지정
+grid-row-gap: 10px;                     // 행 간격 지정
 ```
 
 ```
-    grid-gap: 10px 10px;                 // 행, 열 간격 지정
+grid-gap: 10px 10px;                    // 행, 열 간격 지정
 ```
 
 ```
-    align-items: start;                  /* 한줄 row 이동
-                                            start   : row의 원점으로 이동
-                                            end     : row의 화살표로 이동
-                                            center  : row의 가운데로 이동
-                                            stretch : row 방향에 따라 길게 늘림
-                                            baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
+align-items: start;                     /* 한줄 row 이동
+                                           start   : row의 원점으로 이동
+                                           end     : row의 화살표로 이동
+                                           center  : row의 가운데로 이동
+                                           stretch : row 방향에 따라 길게 늘림
+                                           baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
 ```
 
 ```
-    align-content: start;                /* 여러줄 row 이동
-                                            start        : row의 원점으로 이동
-                                            end          : row의 화살표로 이동
-                                            center       : row의 가운데로 이동
-                                            space-between: between 방식으로 row을 고르게 이동
-                                            space-around : around 방식으로 row을 고르게 이동
-                                            stretch      : row 방향에 따라 길게 늘림          */
+align-content: start;                   /* 여러줄 row 이동
+                                           start        : row의 원점으로 이동
+                                           end          : row의 화살표로 이동
+                                           center       : row의 가운데로 이동
+                                           space-between: between 방식으로 row을 고르게 이동
+                                           space-around : around 방식으로 row을 고르게 이동
+                                           stretch      : row 방향에 따라 길게 늘림          */
 ```
 
 ```
-    align-self: start;                   /* 각 box row 이동
-                                            start   : row의 원점으로 이동
-                                            end     : row의 화살표로 이동
-                                            center  : row의 가운데로 이동
-                                            stretch : row 방향에 따라 길게 늘림
-                                            baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
+align-self: start;                      /* 각 box row 이동
+                                           start   : row의 원점으로 이동
+                                           end     : row의 화살표로 이동
+                                           center  : row의 가운데로 이동
+                                           stretch : row 방향에 따라 길게 늘림
+                                           baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
 ```
 
 ```
-    justify-items: start;                /* 한줄 column 이동
-                                            start   : column의 원점으로 이동
-                                            end     : column의 화살표로 이동
-                                            center  : column의 가운데로 이동
-                                            stretch : column 방향에 따라 길게 늘림
-                                            baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
+justify-items: start;                   /* 한줄 column 이동
+                                           start   : column의 원점으로 이동
+                                           end     : column의 화살표로 이동
+                                           center  : column의 가운데로 이동
+                                           stretch : column 방향에 따라 길게 늘림
+                                           baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
 ```
 
 ```
-    justify-content: start;              /* 여러줄 column 이동
-                                            start        : column의 원점으로 이동
-                                            end          : column의 화살표로 이동
-                                            center       : column의 가운데로 이동
-                                            space-between: between 방식으로 column을 고르게 이동
-                                            space-around : around 방식으로 column을 고르게 이동
-                                            stretch      : column 방향에 따라 길게 늘림          */
+justify-content: start;                 /* 여러줄 column 이동
+                                           start        : column의 원점으로 이동
+                                           end          : column의 화살표로 이동
+                                           center       : column의 가운데로 이동
+                                           space-between: between 방식으로 column을 고르게 이동
+                                           space-around : around 방식으로 column을 고르게 이동
+                                           stretch      : column 방향에 따라 길게 늘림          */
 ```
 
 ```
-    justify-self: start;                 /* 각 box column 이동
-                                            start   : column의 원점으로 이동
-                                            end     : column의 화살표로 이동
-                                            center  : column의 가운데로 이동
-                                            stretch : column 방향에 따라 길게 늘림
-                                            baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
+justify-self: start;                    /* 각 box column 이동
+                                           start   : column의 원점으로 이동
+                                           end     : column의 화살표로 이동
+                                           center  : column의 가운데로 이동
+                                           stretch : column 방향에 따라 길게 늘림
+                                           baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
 ```
 
 ```
-    grid-column-start: 1;                // 열 시작 라인 번호 지정
+grid-column-start: 1;                   // 열 시작 라인 번호 지정
 ```
 
 ```
-    grid-column-end: 1;                  // 열 끝 라인 번호 지정
+grid-column-end: 1;                     // 열 끝 라인 번호 지정
 ```
 
 ```
-    grid-column: 1/1;                    // 열 시작/끝 라인 번호 지정
+grid-column: 1/1;                       // 열 시작/끝 라인 번호 지정
 ```
 
 ```
-    grid-row-start: 1;                   // 줄 시작 라인 번호 지정
+grid-row-start: 1;                      // 줄 시작 라인 번호 지정
 ```
 
 ```
-    grid-row-end: 1;                     // 줄 끝 라인 번호 지정
+grid-row-end: 1;                        // 줄 끝 라인 번호 지정
 ```
 
 ```
-    grid-row: 1/1;                       // 줄 시작/끝 라인 번호 지정
+grid-row: 1/1;                          // 줄 시작/끝 라인 번호 지정
 ```
 
 ```
-    grid-template-areas: "box1 box1";    // 영역 배치
-                         "box2 .";
+grid-template-areas: "box1 box1";       // 영역 배치
+                     "box2 .";
 ```
 
 ```
-    grid-area: box1;                     // 영역 이름
+grid-area: box1;                        // 영역 이름
 ```
 
 # Word Break
 
-    /* word-break : 단어의 분리를 어떻게 할 것인지 결정
-       word-wrap  : 자기영역을 벗어난 단어의 줄바꿈을 어떻게 할 것인지 결정
+```
+word-wrap: normal;
+word-break: normal;
+```
 
-       CJK    : 중국어, 일본어, 한글
-       non-CJK: 숫자, 영어, 베트남어
+| 함수       | 설명                                                    |
+| ---------- | ------------------------------------------------------- |
+| word-break | 단어의 분리를 어떻게 할 것인지 결정                     |
+| word-wrap  | 자기영역을 벗어난 단어의 줄바꿈을 어떻게 할 것인지 결정 |
 
-       word-break의 단어 분리
-                normal(기본값)         break-all        keep-all
-       non-CJK: 공백,하이픈(-)           음절          공백,하이픈
-       CJK    :     음절                 음절      공백,하이픈,그외기호
+| 언어    | 설명                 |
+| ------- | -------------------- |
+| CJK     | 중국어, 일본어, 한글 |
+| non-CJK | 숫자, 영어, 베트남어 |
 
-       word-wrap의 단어 분리
-                normal(기본값)   break-word
-       non-CJK:   단어넘침 O      단어넘침 X
-       CJK    :   단어넘침 X      단어넘침 X                            */
+> word-break
 
-    word-wrap: normal;
-    word-break: normal;
+|          | normal(기본값) | break-all | keep-all             |
+| -------- | -------------- | --------- | -------------------- |
+| non-CJK: | 공백,하이픈(-) | 음절      | 공백,하이픈          |
+| CJK :    | 음절           | 음절      | 공백,하이픈,그외기호 |
+
+> word-wrap
+
+|         | normal(기본값) | break-word |
+| ------- | -------------- | ---------- |
+| non-CJK | 단어넘침 O     | 단어넘침 X |
+| CJK     | 단어넘침 X     | 단어넘침 X |
 
 # Vendor Prefix
 
@@ -1204,15 +1214,3 @@ gap: 10px;                   // content 사이의 gap 크기
     background: -o-linear-gradient(red, yellow);      // 오페라 10.0 이상을 위한 코드
 
     background: linear-gradient(red, yellow);         // CSS 표준 문법 코드
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
