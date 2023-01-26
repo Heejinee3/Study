@@ -162,173 +162,245 @@ A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하�
 
 # Font
 
-    font-size: 10px;     // Font 사이즈
+```
+font-size: 10px;     // Font 사이즈
 
-                         /* em  : 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준(1em)으로 한 후 비율값을 지정
-                            rem : 문서 시작 부분(root)에서 지정한 크기를 기준(1rem)으로 한 후 비율값을 지정
-                            ex  : 해당 글꼴의 소문자 x의 높이를 기준(1ex)으로 한 후 비율값을 지정
-                            px  : 모니터의 1픽셀을 기준(1px)으로 한 후 비율값을 지정
-                            pt  : 포인트라고 하며, 일반 문서에서 많이 사용
-                            %   : 부모 요소의 글자 크기를 기준으로 계산하여 지정
-                            vh  : 화면 높이에 비례(화면 높이가 100px일때, 1vh=1px
-                            vw  : 화면 너비에 비례(화면 너비가 100px일때, 1vw=1px
-                            vmax: 화면 너비나 높이 중 큰 값을 선택
-                            vmin: 화면 너비나 높이 중 작은 값을 선택                                           */
+                      /* em  : 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준(1em)으로 한 후 비율값을 지정
+                        rem : 문서 시작 부분(root)에서 지정한 크기를 기준(1rem)으로 한 후 비율값을 지정
+                        ex  : 해당 글꼴의 소문자 x의 높이를 기준(1ex)으로 한 후 비율값을 지정
+                        px  : 모니터의 1픽셀을 기준(1px)으로 한 후 비율값을 지정
+                        pt  : 포인트라고 하며, 일반 문서에서 많이 사용
+                        %   : 부모 요소의 글자 크기를 기준으로 계산하여 지정
+                        vh  : 화면 높이에 비례(화면 높이가 100px일때, 1vh=1px
+                        vw  : 화면 너비에 비례(화면 너비가 100px일때, 1vw=1px
+                        vmax: 화면 너비나 높이 중 큰 값을 선택
+                        vmin: 화면 너비나 높이 중 작은 값을 선택                                           */
+```
 
-    font-style: normal;  /* Font 스타일
-                            normal : 기본
-                            italic : 이탤릭체
-                            oblique: 이탤릭체 */
+```
+font-style: normal;  /* Font 스타일
+                        normal : 기본
+                        italic : 이탤릭체
+                        oblique: 이탤릭체 */
+```
 
-    font-weight: normal; /* Font 굵기
-                            normal : 기본
-                            bold   : 굵게
-                            bolder : 원래보다 더 굵게
-                            lighter: 원래보다 더 가늘게
-                            100~900: 가장 가늘게(100)~가장 굵게(900) */
+```
+font-weight: normal; /* Font 굵기
+                        normal : 기본
+                        bold   : 굵게
+                        bolder : 원래보다 더 굵게
+                        lighter: 원래보다 더 가늘게
+                        100~900: 가장 가늘게(100)~가장 굵게(900) */
+```
 
-    color: #000000;      /* Text 색상
-                            #000000 ~ #FFFFFF                            : 레드, 그린, 블루
-                            hsl(0, 0%, 0%) ~ hsl(360, 100%, 100%)        : 색상, 채도, 명도
-                            hsla(0, 0%, 0%, 0) ~ hsla(360, 100%, 100%, 1): 색상, 채도, 명도, 불투명도
-                            rgb(0, 0, 0) ~ rgb(255, 255, 255)            : 레드, 그린, 블루
-                            rgba(0, 0, 0, 0) ~ rgba(255, 255, 255, 1)    : 레드, 그린, 블루, 불투명도 */
+```
+color: #000000;      /* Text 색상
+                        #000000 ~ #FFFFFF                            : 레드, 그린, 블루
+                        hsl(0, 0%, 0%) ~ hsl(360, 100%, 100%)        : 색상, 채도, 명도
+                        hsla(0, 0%, 0%, 0) ~ hsla(360, 100%, 100%, 1): 색상, 채도, 명도, 불투명도
+                        rgb(0, 0, 0) ~ rgb(255, 255, 255)            : 레드, 그린, 블루
+                        rgba(0, 0, 0, 0) ~ rgba(255, 255, 255, 1)    : 레드, 그린, 블루, 불투명도 */
+```
 
 ### Apply
 
-    <style>
-    @font-face {
-      font-family: 'Ostrich';
-      src: local('Ostrich Sans'),
-           url('fonts/ostrich-sans-bold.woff') format('woff'),
-           url('fonts/ostrich-sans-bold.ttf') format('truetype'),
-           url('fonts/ostrich-sans-bold.svg') format('svg');
-    }
-    h {font-family:'Ostrich', sans-serif;}
-    </style>
+```
+<style>
+@font-face {
+  font-family: 'Ostrich';
+  src: local('Ostrich Sans'),
+        url('fonts/ostrich-sans-bold.woff') format('woff'),
+        url('fonts/ostrich-sans-bold.ttf') format('truetype'),
+        url('fonts/ostrich-sans-bold.svg') format('svg');
+}
+h {font-family:'Ostrich', sans-serif;}
+</style>
+```
 
 # Text
 
-    text-align: start;                   /* Text 정렬
-                                            start       : 줄 시작 위치에 맞춰 정렬
-                                            end         : 줄 끝 위치에 맞춰 정렬
-                                            left        : 왼쪽에 맞춰 정렬
-                                            right       : 오른쪽에 맞춰 정렬
-                                            center      : 가운데에 맞춰 정렬
-                                            justify     : 양쪽에 맞춰 정렬
-                                            match-parent: 부모 요소를 따라 정렬   */
+```
+text-align: start;                   /* Text 정렬
+                                        start       : 줄 시작 위치에 맞춰 정렬
+                                        end         : 줄 끝 위치에 맞춰 정렬
+                                        left        : 왼쪽에 맞춰 정렬
+                                        right       : 오른쪽에 맞춰 정렬
+                                        center      : 가운데에 맞춰 정렬
+                                        justify     : 양쪽에 맞춰 정렬
+                                        match-parent: 부모 요소를 따라 정렬   */
+```
 
-    vertical-align: middle;              // Text를 세로 중앙으로 보내기
+```
+vertical-align: middle;              // Text를 세로 중앙으로 보내기
+```
 
-    line-height: 10px;                   // Line 높이
+```
+line-height: 10px;                   // Line 높이
+```
 
-    text-decoration: none;               /* Text 데코
-                                            none        : 아무것도 없음
-                                            underline   : 밑줄
-                                            overline    : 윗줄
-                                            line-through: 가운데줄      */
+```
+text-decoration: none;               /* Text 데코
+                                        none        : 아무것도 없음
+                                        underline   : 밑줄
+                                        overline    : 윗줄
+                                        line-through: 가운데줄      */
+```
 
-    text-shadow: 10px 10px 10px #FFFFFF; /* Text에 그림자 넣기
-                                            가로, 세로, 번짐, 색상 */
+```
+text-shadow: 10px 10px 10px #FFFFFF; /* Text에 그림자 넣기
+                                        가로, 세로, 번짐, 색상 */
+```
 
-    text-transform: capitalize;          /* Text 대소문자 변환
-                                            capitalize: 첫번째 글자를 대문자로 변환
-                                            uppercase : 대문자로 변환
-                                            lowercase : 소문자로 변환
-                                            full-width: 전각문자(가로,세로 비율이 같은 글자)로 변환 */
+```
+text-transform: capitalize;          /* Text 대소문자 변환
+                                        capitalize: 첫번째 글자를 대문자로 변환
+                                        uppercase : 대문자로 변환
+                                        lowercase : 소문자로 변환
+                                        full-width: 전각문자(가로,세로 비율이 같은 글자)로 변환 */
+```
 
-    letter-spacing: 0.1em;               // 글자와 글자 사이 간격 조절
+```
+letter-spacing: 0.1em;               // 글자와 글자 사이 간격 조절
+```
 
-    word-spacing: 0.1em;                 // 단어와 단어 사이 간격 조절
+```
+word-spacing: 0.1em;                 // 단어와 단어 사이 간격 조절
+```
 
 # List
 
-    list-style-type: none;              /* List 요소 앞 모양 지정
-                                           none                    : 없음
-                                           disc                    : ●
-                                           circle                  : ○
-                                           square                  : ■
-                                           decimal                 : 1, 2, 3, ...
-                                           decimal-leading-zero    : 01, 02, 03, ...
-                                           lower-roman             : i, ii, iii, ...
-                                           upper-roman             : I, II, III, ...
-                                           lower-alpha(lower-latin): a, b, c, ...
-                                           upper-alpha(upper-latin): A, B, C, ...    */
+```
+list-style-type: none;              /* List 요소 앞 모양 지정
+                                        none                    : 없음
+                                        disc                    : ●
+                                        circle                  : ○
+                                        square                  : ■
+                                        decimal                 : 1, 2, 3, ...
+                                        decimal-leading-zero    : 01, 02, 03, ...
+                                        lower-roman             : i, ii, iii, ...
+                                        upper-roman             : I, II, III, ...
+                                        lower-alpha(lower-latin): a, b, c, ...
+                                        upper-alpha(upper-latin): A, B, C, ...    */
+```
 
-    list-style-image: url('image.jpg'); // List 요소 앞 모양 이미지 넣기
+```
+list-style-image: url('image.jpg'); // List 요소 앞 모양 이미지 넣기
+```
 
-    list-style-position: inside;        /* List 요소 앞 모양을 들여쓸 지 결정
-                                           inside : 안으로 들여씀
-                                           outside: 밖에 있음                */
+```
+list-style-position: inside;        /* List 요소 앞 모양을 들여쓸 지 결정
+                                        inside : 안으로 들여씀
+                                        outside: 밖에 있음                */
+```
 
-    list-style: none inside;            // List type, position
+```
+list-style: none inside;            // List type, position
+```
 
 # Table
 
-    caption-side: top;         /* caption의 위치 결정
-                                  top   : 표 위
-                                  bottom: 표 아래    */
+```
+caption-side: top;         /* caption의 위치 결정
+                              top   : 표 위
+                              bottom: 표 아래    */
+```
 
-    border: 1px solid black;   // 테두리 굵기,  선 모양, 색상
+```
+border: 1px solid black;   // 테두리 굵기,  선 모양, 색상
+```
 
-    border-spacing: 1px 1px;   // 테두리 여백 수평 거리, 수직 거리
+```
+border-spacing: 1px 1px;   // 테두리 여백 수평 거리, 수직 거리
+```
 
-    border-collapse: separate; /* 테두리 두 줄로 둘 것인지, 아닌지 결정
-                                  separate: 두 줄
-                                  collapse: 한 줄                     */
+```
+border-collapse: separate; /* 테두리 두 줄로 둘 것인지, 아닌지 결정
+                              separate: 두 줄
+                              collapse: 한 줄                       */
+```
 
 # Box
 
-    width: 100px;                                  // 너비
+```
+width: 100px;                                  // 너비
+```
 
-    min-width: 100px;                              // 최소 너비
+```
+min-width: 100px;                              // 최소 너비
+```
 
-    max-width: 100px;                              // 최대 너비
+```
+max-width: 100px;                              // 최대 너비
+```
 
-    height: 100px;                                 // 높이
+```
+height: 100px;                                 // 높이
+```
 
-    min-height: 100px;                             // 최소 높이
+```
+min-height: 100px;                             // 최소 높이
+```
 
-    max-height: 100px;                             // 최대 높이
+```
+max-height: 100px;                             // 최대 높이
+```
 
-    box-sizing: content-box;                       /* Box의 너비와 높이를 어떻게 맞출건지 결정
-                                                      content-box: content
-                                                      border-box :content+padding+border    */
+```
+box-sizing: content-box;                       /* Box의 너비와 높이를 어떻게 맞출건지 결정
+                                                  content-box: content
+                                                  border-box :content+padding+border    */
+```
 
-    box-shadow: 10px 10px 10px 10px #FFFFFF inset; /* 박스에 그림자 넣기
-                                                      수평 거리, 수직 거리, 흐림, 번짐, 색상, 안쪽 or 바깥쪽 결정 */
+```
+box-shadow: 10px 10px 10px 10px #FFFFFF inset; /* 박스에 그림자 넣기
+                                                  수평 거리, 수직 거리, 흐림, 번짐, 색상, 안쪽 or 바깥쪽 결정 */
+```
 
 # Border/Padding/Margin
 
-    border-style: none;                 /* Border 선 종류
-                                           none  : 없음
-                                           hidden: 감춤
-                                           solid : 실선
-                                           dotted: 점선
-                                           dashed: 줄선
-                                           double: 이중선
-                                           groove: groove 방식
-                                           inset : inset 방식
-                                           outset: outset 방식
-                                           ridge : ridge 방식  */
+```
+border-style: none;                 /* Border 선 종류
+                                        none  : 없음
+                                        hidden: 감춤
+                                        solid : 실선
+                                        dotted: 점선
+                                        dashed: 줄선
+                                        double: 이중선
+                                        groove: groove 방식
+                                        inset : inset 방식
+                                        outset: outset 방식
+                                        ridge : ridge 방식  */
+```
 
-    border-width: 10px;                 /* Border 크기
-                                           10px  : 크기 지정
-                                           thin  : 얇음
-                                           medium: 보통
-                                           thick : 두꺼움   */
+```
+border-width: 10px;                 /* Border 크기
+                                        10px  : 크기 지정
+                                        thin  : 얇음
+                                        medium: 보통
+                                        thick : 두꺼움   */
+```
 
-    border-color: #000000;              // Border 색상
+```
+border-color: #000000;              // Border 색상
+```
 
-    border: 1px solid red;              // Border 크기, 선 종류, 색상
+```
+border: 1px solid red;              // Border 크기, 선 종류, 색상
+```
 
-    border-radius: 10px 10px 10px 10px; /* Border 모서리 둥글게 만들기
-                                           타원 모양일 때는 '가로 반지름/세로 반지름' 넣기 */
+```
+border-radius: 10px 10px 10px 10px; /* Border 모서리 둥글게 만들기
+                                        타원 모양일 때는 '가로 반지름/세로 반지름' 넣기 */
+```
 
-    padding: 10px 10px 10px 10px;       // Padding 크기(위, 오른쪽, 아래, 왼쪽)
+```
+padding: 10px 10px 10px 10px;       // Padding 크기(위, 오른쪽, 아래, 왼쪽)
+```
 
-    margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼쪽)
-                                           세로 Margin은 더 큰쪽으로 합쳐짐     */
+```
+margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼쪽)
+                                        세로 Margin은 더 큰쪽으로 합쳐짐     */
+```
 
 # Display
 
