@@ -1,6 +1,6 @@
 # Useful Site
 
-#### Design Tool
+### Design Tool
 
 > [Sketch](https://www.sketch.com/)
 >
@@ -8,7 +8,7 @@
 >
 > [Adobe XD](https://helpx.adobe.com/support/xd.html)
 
-#### Design Idea
+### Design Idea
 
 > [iOS Design Guide](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios/)
 >
@@ -20,7 +20,7 @@
 >
 > [dribbble](https://dribbble.com/)
 
-#### Color
+### Color
 
 > [Material Design Palette](https://www.materialpalette.com/)
 >
@@ -28,13 +28,13 @@
 >
 > [Coolors](https://coolors.co/palettes/trending)
 
-#### Font
+### Font
 
 > [Apple Font](https://developer.apple.com/fonts/)
 >
 > [Google Font](https://fonts.google.com/)
 
-#### Icon
+### Icon
 
 > [Icons8](https://icons8.com/)
 >
@@ -54,7 +54,7 @@
 >
 > [Font Awesome](https://fontawesome.com/)
 
-#### Version
+### Version
 
 > [Can I Use](https://caniuse.com/)
 
@@ -70,7 +70,7 @@
 
 # Selector
 
-#### Unary Operator
+### Unary Operator
 
     *                   // universal
     tag                 // tag
@@ -79,7 +79,7 @@
     :pseudo             // pseudo-class
     ::pseudo-element    // pseudo-element
 
-#### Property
+### Property
 
     [property]          // 해당 속성이 있는 요소
     [property="value"]  // 지정한 속성값이 있는 요소
@@ -89,7 +89,7 @@
     [property$="value"] // 지정한 속성값으로 끝나는 요소
     [property*="value"] // 지정한 속성값의 일부가 일치하는 요소
 
-#### Binary Operator
+### Binary Operator
 
     A                   // A의 모든 후손들에게 영향
     A,B                 // A의 후손들, B의 후손들에게 영향
@@ -100,7 +100,7 @@
 
 # Pseudo Class/Pseudo Element
 
-#### Pseudo Class
+### Pseudo Class
 
     :link              // 방문하지 않은 상태
     :visited           // 방문한 상태
@@ -131,7 +131,7 @@
 >
 > 홀수번째를 선택할 때는 2n+1, odd 사용
 
-#### Pseudo Element
+### Pseudo Element
 
     ::first-line       // 첫 번째 줄을 선택
     ::first-letter     // 첫 번째 글자를 선택
@@ -172,12 +172,7 @@
                             rgb(0, 0, 0) ~ rgb(255, 255, 255)            : 레드, 그린, 블루
                             rgba(0, 0, 0, 0) ~ rgba(255, 255, 255, 1)    : 레드, 그린, 블루, 불투명도 */
 
-# Font Apply
-
-    <style>                                                                                        // Google Font Apply (https://fonts.google.com/)
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap");
-      h {font-family: "Noto Serif KR", serif;}
-    </style>
+### Apply
 
     <style>                                                                                        // General Apply
     @font-face {
