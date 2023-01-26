@@ -27,6 +27,8 @@
 > [Color Hunt](https://colorhunt.co/)
 >
 > [Coolors](https://coolors.co/palettes/trending)
+>
+> [Gradient Editor](https://www.colorzilla.com/gradient-editor/)
 
 ### Font
 
@@ -174,7 +176,7 @@
 
 ### Apply
 
-    <style>                                                                                        // General Apply
+    <style>
     @font-face {
       font-family: 'Ostrich';
       src: local('Ostrich Sans'),
@@ -406,60 +408,64 @@
 
 # Gradation
 
-    https://www.colorzilla.com/gradient-editor/ : 그라데이션 만들기 사이트
+    background: linear-gradient(to right bottom, #000000, #FFFFFF);
 
-    background: linear-gradient(to right bottom, #000000, #FFFFFF);                             /* 선형 그라데이션
+    /* 선형 그라데이션
 
-                                                                                                   첫번째 인자(방향)
-                                                                                                     to left      : 왼쪽으로
-                                                                                                     to right     : 오른쪽으로
-                                                                                                     to top       : 위쪽으로
-                                                                                                     to bottom    : 아래쪽으로
-                                                                                                     to right top : 오른쪽 위로
-                                                                                                     0deg ~ 360deg: 시계 방향으로 각도만큼
+       첫번째 인자(방향)
+       to left      : 왼쪽으로
+       to right     : 오른쪽으로
+       to top       : 위쪽으로
+       to bottom    : 아래쪽으로
+       to right top : 오른쪽 위로
+       0deg ~ 360deg: 시계 방향으로 각도만큼
 
-                                                                                                   두번째 인자 ~ 마지막 인자(색상, 위치)
-                                                                                                     #000000 20%: 색상, 위치              */
+       두번째 인자 ~ 마지막 인자(색상, 위치)
+       #000000 20%: 색상, 위치               */
 
-    background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);                   /* 선형 그라데이션(반복)
+    background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);
 
-                                                                                                   첫번째 인자(방향)
-                                                                                                     to left      : 왼쪽으로
-                                                                                                     to right     : 오른쪽으로
-                                                                                                     to top       : 위쪽으로
-                                                                                                     to bottom    : 아래쪽으로
-                                                                                                     to right top : 오른쪽 위로
-                                                                                                     0deg ~ 360deg: 시계 방향으로 각도만큼
+    /* 선형 그라데이션(반복)
 
-                                                                                                   두번째 인자 ~ 마지막 인자(색상, 위치)
-                                                                                                     #000000 20%: 색상, 위치              */
+       첫번째 인자(방향)
+       to left      : 왼쪽으로
+       to right     : 오른쪽으로
+       to top       : 위쪽으로
+       to bottom    : 아래쪽으로
+       to right top : 오른쪽 위로
+       0deg ~ 360deg: 시계 방향으로 각도만큼
 
-    background: radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);           /* 원형 그라데이션
+       두번째 인자 ~ 마지막 인자(색상, 위치)
+       #000000 20%: 색상, 위치              */
 
-                                                                                                   첫번째 인자(모양)
-                                                                                                     circle : 원형
-                                                                                                     ellipse: 타원형
+    background: radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
 
-                                                                                                   두번째 인자(크기)
-                                                                                                     closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
-                                                                                                     closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
-                                                                                                     farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
-                                                                                                     farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
+    /* 원형 그라데이션
 
-                                                                                                   세번째 인자(가로 위치)
-                                                                                                     50%   : 백분율
-                                                                                                     left  : 왼쪽
-                                                                                                     center: 가운데
-                                                                                                     right : 오른쪽
+       첫번째 인자(모양)
+        circle : 원형
+        ellipse: 타원형
 
-                                                                                                   네번째 인자(세로 위치)
-                                                                                                     50%   : 백분율
-                                                                                                     top   : 위쪽
-                                                                                                     center: 가운데
-                                                                                                     bottom: 아래쪽
+       두번째 인자(크기)
+        closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
+        closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
+        farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
+        farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
 
-                                                                                                   다섯번째 인자 ~ 마지막 인자(색상, 위치)
-                                                                                                     #000000 20%: 색상, 위치                                                  */
+       세번째 인자(가로 위치)
+        50%   : 백분율
+        left  : 왼쪽
+        center: 가운데
+        right : 오른쪽
+
+       네번째 인자(세로 위치)
+        50%   : 백분율
+        top   : 위쪽
+        center: 가운데
+        bottom: 아래쪽
+
+       다섯번째 인자 ~ 마지막 인자(색상, 위치)
+        #000000 20%: 색상, 위치                                                  */
 
     background: repeating-radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF); /* 원형 그라데이션(반복)
 
