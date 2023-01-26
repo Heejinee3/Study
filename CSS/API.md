@@ -117,24 +117,24 @@ A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하�
 ### Pseudo Class
 
 ```
-:link              // 방문하지 않은 상태
-:visited           // 방문한 상태
-:hover             // 마우스가 올려진 상태
-:active            // text가 마우스로 눌려진 상태
-:enabled           // 활성화 된 상태
-:disabled          // 비활성화 된 상태
-:checked           // checkbox에서 체크된 상태
-:focus             // input에서 눌려진 상태
-:target            // a로 연결된 부분이 눌린
-:not()             // 부정
+:link                // 방문하지 않은 상태
+:visited             // 방문한 상태
+:hover               // 마우스가 올려진 상태
+:active              // text가 마우스로 눌려진 상태
+:enabled             // 활성화 된 상태
+:disabled            // 비활성화 된 상태
+:checked             // checkbox에서 체크된 상태
+:focus               // input에서 눌려진 상태
+:target              // a로 연결된 부분이 눌린
+:not()               // 부정
 ```
 
 ```
-:only-child        // 자식 요소 선택(형제가 없을 때)
-:nth-child(n)      // 자식 요소 선택(형제 관계인 태그들 중 n번째)
-:nth-last-child(n) // 자식 요소 선택(형제 관계인 태그들 중 마지막에서 n번째)
-:first-child       // 자식 요소 선택(형제 관계인 태그들 중 첫번째)
-:last-child        // 자식 요소 선택(형제 관계인 태그들 중 마지막)
+:only-child          // 자식 요소 선택(형제가 없을 때)
+:nth-child(n)        // 자식 요소 선택(형제 관계인 태그들 중 n번째)
+:nth-last-child(n)   // 자식 요소 선택(형제 관계인 태그들 중 마지막에서 n번째)
+:first-child         // 자식 요소 선택(형제 관계인 태그들 중 첫번째)
+:last-child          // 자식 요소 선택(형제 관계인 태그들 중 마지막)
 ```
 
 ```
@@ -154,10 +154,10 @@ A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하�
 ### Pseudo Element
 
 ```
-::first-line       // 첫 번째 줄을 선택
-::first-letter     // 첫 번째 글자를 선택
-::before           // 특정 요소의 앞에 내용이나 스타일 추가
-::after            // 특정 요소의 뒤에 내용이나 스타일 추가
+::first-line         // 첫 번째 줄을 선택
+::first-letter       // 첫 번째 글자를 선택
+::before             // 특정 요소의 앞에 내용이나 스타일 추가
+::after              // 특정 요소의 뒤에 내용이나 스타일 추가
 ```
 
 # Font
@@ -165,7 +165,7 @@ A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하�
 ```
 font-size: 10px;     // Font 사이즈
 
-                      /* em  : 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준(1em)으로 한 후 비율값을 지정
+                     /* em  : 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준(1em)으로 한 후 비율값을 지정
                         rem : 문서 시작 부분(root)에서 지정한 크기를 기준(1rem)으로 한 후 비율값을 지정
                         ex  : 해당 글꼴의 소문자 x의 높이를 기준(1ex)으로 한 후 비율값을 지정
                         px  : 모니터의 1픽셀을 기준(1px)으로 한 후 비율값을 지정
@@ -271,16 +271,16 @@ word-spacing: 0.1em;                 // 단어와 단어 사이 간격 조절
 
 ```
 list-style-type: none;              /* List 요소 앞 모양 지정
-                                        none                    : 없음
-                                        disc                    : ●
-                                        circle                  : ○
-                                        square                  : ■
-                                        decimal                 : 1, 2, 3, ...
-                                        decimal-leading-zero    : 01, 02, 03, ...
-                                        lower-roman             : i, ii, iii, ...
-                                        upper-roman             : I, II, III, ...
-                                        lower-alpha(lower-latin): a, b, c, ...
-                                        upper-alpha(upper-latin): A, B, C, ...    */
+                                       none                    : 없음
+                                       disc                    : ●
+                                       circle                  : ○
+                                       square                  : ■
+                                       decimal                 : 1, 2, 3, ...
+                                       decimal-leading-zero    : 01, 02, 03, ...
+                                       lower-roman             : i, ii, iii, ...
+                                       upper-roman             : I, II, III, ...
+                                       lower-alpha(lower-latin): a, b, c, ...
+                                       upper-alpha(upper-latin): A, B, C, ...    */
 ```
 
 ```
@@ -289,8 +289,8 @@ list-style-image: url('image.jpg'); // List 요소 앞 모양 이미지 넣기
 
 ```
 list-style-position: inside;        /* List 요소 앞 모양을 들여쓸 지 결정
-                                        inside : 안으로 들여씀
-                                        outside: 밖에 있음                */
+                                       inside : 안으로 들여씀
+                                       outside: 밖에 있음                */
 ```
 
 ```
@@ -360,24 +360,24 @@ box-shadow: 10px 10px 10px 10px #FFFFFF inset; /* 박스에 그림자 넣기
 
 ```
 border-style: none;                 /* Border 선 종류
-                                        none  : 없음
-                                        hidden: 감춤
-                                        solid : 실선
-                                        dotted: 점선
-                                        dashed: 줄선
-                                        double: 이중선
-                                        groove: groove 방식
-                                        inset : inset 방식
-                                        outset: outset 방식
-                                        ridge : ridge 방식  */
+                                       none  : 없음
+                                       hidden: 감춤
+                                       solid : 실선
+                                       dotted: 점선
+                                       dashed: 줄선
+                                       double: 이중선
+                                       groove: groove 방식
+                                       inset : inset 방식
+                                       outset: outset 방식
+                                       ridge : ridge 방식  */
 ```
 
 ```
 border-width: 10px;                 /* Border 크기
-                                        10px  : 크기 지정
-                                        thin  : 얇음
-                                        medium: 보통
-                                        thick : 두꺼움   */
+                                       10px  : 크기 지정
+                                       thin  : 얇음
+                                       medium: 보통
+                                       thick : 두꺼움   */
 ```
 
 ```
@@ -390,7 +390,7 @@ border: 1px solid red;              // Border 크기, 선 종류, 색상
 
 ```
 border-radius: 10px 10px 10px 10px; /* Border 모서리 둥글게 만들기
-                                        타원 모양일 때는 '가로 반지름/세로 반지름' 넣기 */
+                                       타원 모양일 때는 '가로 반지름/세로 반지름' 넣기 */
 ```
 
 ```
@@ -399,7 +399,7 @@ padding: 10px 10px 10px 10px;       // Padding 크기(위, 오른쪽, 아래, �
 
 ```
 margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼쪽)
-                                        세로 Margin은 더 큰쪽으로 합쳐짐     */
+                                       세로 Margin은 더 큰쪽으로 합쳐짐     */
 ```
 
 # Display
@@ -448,11 +448,11 @@ clear: both; /* float 영향을 받지 않기
 
 ```
 position: static; /* Postition 정하기
-                      static  : 기본값
-                      relative: 기본에서 위치만 옮길 수 있음
-                      absolute: relative를 사용한 상위 요소를 기준으로 배치
-                              : relative를 사용한 상위 요소가 없으면 fixed와 같음
-                      fixed   : 뷰포트를 기준으로 위치를 배치                     */
+                     static  : 기본값
+                     relative: 기본에서 위치만 옮길 수 있음
+                     absolute: relative를 사용한 상위 요소를 기준으로 배치
+                             : relative를 사용한 상위 요소가 없으면 fixed와 같음
+                     fixed   : 뷰포트를 기준으로 위치를 배치                     */
 ```
 
 ```
@@ -506,14 +506,14 @@ background-position: 10px 10px;                            /* 수평 위치, 수
                                                               10%   : 백분율
 
                                                               첫번째 인자(가로)
-                                                                left  : 왼쪽
-                                                                center: 가운데
-                                                                right : 오른쪽
+                                                              left  : 왼쪽
+                                                              center: 가운데
+                                                              right : 오른쪽
 
                                                               두번째 인자(세로)
-                                                                center: 가운데
-                                                                top   : 위쪽
-                                                                bottom: 아래쪽         */
+                                                              center: 가운데
+                                                              top   : 위쪽
+                                                              bottom: 아래쪽            */
 ```
 
 ```
@@ -722,16 +722,16 @@ transform: skewY(10deg);                 // y축 비틀기
 transform-origin: 10% 10%;               /* pivot
 
                                             첫번째 인자(가로 위치)
-                                              10%   : 백분율
-                                              left  : 왼쪽
-                                              center: 가운데
-                                              right : 오른쪽
+                                            10%   : 백분율
+                                            left  : 왼쪽
+                                            center: 가운데
+                                            right : 오른쪽
 
                                             네번째 인자(세로 위치)
-                                              10%   : 백분율
-                                              top   : 위쪽
-                                              center: 가운데
-                                              bottom: 아래쪽     */
+                                            10%   : 백분율
+                                            top   : 위쪽
+                                            center: 가운데
+                                            bottom: 아래쪽     */
 ```
 
 ```
@@ -747,68 +747,82 @@ perspective(100px);                      // 입체적으로 보일 수 있게 �
 # Transition
 
 ```
-
-    transition-property: all;           /* 대상 지정
-                                           all  : 모든 속성
-                                           none : 없음
-                                           width: 속성 이름 */
-
+transition-property: all;           /* 대상 지정
+                                       all  : 모든 속성
+                                       none : 없음
+                                       width: 속성 이름 */
 ```
 
 ```
+transition-duration: 1s;            /* 진행 시간
+                                       1s : 초
+                                       1ms: 밀리초 */
+```
 
-    transition-duration: 1s;            /* 진행 시간
+```
+transition-delay: 1s;               /* 지연 시간
+                                       1s : 초
+                                       1ms: 밀리초 */
+```
+
+```
+transition-timing-function: linear; /* 속도 곡선 지정
+                                       linear                  : linear
+                                       ease                    : ease
+                                       ease-in                 : ease-in
+                                       ease-out                : ease-out
+                                       ease-in-out             : ease-in-out
+                                       cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
+```
+
+```
+transition: all 1s 1s linear;       /* property, duration, delay, timing-function */
+```
+
+# Animation
+
+```
+animation-name: name;                   // Animation name
+```
+
+```
+animation-duration:1s;                  /* 지속 시간
                                            1s : 초
                                            1ms: 밀리초 */
-
 ```
 
-    transition-delay: 1s;               /* 지연 시간
+```
+animation-delay:1s;                     /* 지연 시간
                                            1s : 초
                                            1ms: 밀리초 */
+```
 
-    transition-timing-function: linear; /* 속도 곡선 지정
+```
+animation-direction: normal;            /* 진행 방향
+                                           normal: from에서 to로 진행
+                                           reverse: to에서 from으로 진행
+                                           alternate: 홀수번째는 normal, 짝수번째는 reverse
+                                           alternate-reverse: 홀수번째는 reverse, 짝수번째는 normal */
+```
+
+```
+animation-iteration-count: 1;           /* 반복 횟수
+                                           1: 반복 획수
+                                           infinite: 무힌 반복 */
+```
+
+````
+animation-timing-function: linear;      /* 속도 곡선 지정
                                            linear                  : linear
                                            ease                    : ease
                                            ease-in                 : ease-in
                                            ease-out                : ease-out
                                            ease-in-out             : ease-in-out
                                            cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
-
-    transition: all 1s 1s linear;       /* property, duration, delay, timing-function */
-
-# Animation
-
-    animation-name: name;                   // Animation name
-
-    animation-duration:1s;                  */ 지속 시간
-                                               1s : 초
-                                               1ms: 밀리초 */
-
-    animation-delay:1s;                     /* 지연 시간
-                                               1s : 초
-                                               1ms: 밀리초 */
-
-    animation-direction: normal;            /* 진행 방향
-                                               normal: from에서 to로 진행
-                                               reverse: to에서 from으로 진행
-                                               alternate: 홀수번째는 normal, 짝수번째는 reverse
-                                               alternate-reverse: 홀수번째는 reverse, 짝수번째는 normal */
-
-    animation-iteration-count: 1;           /* 반복 횟수
-                                               1: 반복 획수
-                                               infinite: 무힌 반복 */
-
-    animation-timing-function: linear;      /* 속도 곡선 지정
-                                               linear                  : linear
-                                               ease                    : ease
-                                               ease-in                 : ease-in
-                                               ease-out                : ease-out
-                                               ease-in-out             : ease-in-out
-                                               cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
-
-    animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
-
+```
+```
+animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
+```
 ### Declaration
 
     @keyframes name{     /* Animation 선언
@@ -1093,3 +1107,4 @@ perspective(100px);                      // 입체적으로 보일 수 있게 �
 ```
 
 ```
+````
