@@ -840,7 +840,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 
 # Media Query
 
-### Apply
+### Import
 
 ```
 <link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
@@ -862,13 +862,17 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 </style>
 ```
 
-###
+### Apply
 
-    @media [only|not] 미디어유형 [and 조건] [and 조건] ...
+```
+@media [only|not] 미디어유형 [and 조건] [and 조건] ...
+```
 
-     only: 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음
-       not : not 다음에 지정하는 미디어 유형을 제외
-       and : 조건을 여러개 연결해서 추가
+|       |                                                                                    |
+| ----- | ---------------------------------------------------------------------------------- |
+| only: | 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음 |
+| not : | not 다음에 지정하는 미디어 유형을 제외                                             |
+| and : | 조건을 여러개 연결해서 추가                                                        |
 
 | 미디어 유형 |                                    |
 | ----------- | ---------------------------------- |
