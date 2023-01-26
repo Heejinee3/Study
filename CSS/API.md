@@ -4,7 +4,7 @@
 
 > [Sketch](https://www.sketch.com/)
 >
-> https://www.sketch.com/
+> <span style="color:red">[Sketch](https://www.sketch.com/)</span>
 
 Flaticon.com
 
