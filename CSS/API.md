@@ -883,25 +883,28 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 | tty         | 디스플레이 기능이 제한된 장치      |
 | embossed    | 점자 프린터                        |
 
-    /* 웹 문서의 너비 높이
-       width     : 너비
-       height    : 높이
-       min-width : 최소 너비
-       min-height: 최소 높이
-       max-width : 최대 너비
-       max-height: 최대 높이 */
+| 웹 문서의 너비 높이 |           |
+| ------------------- | --------- |
+| width               | 너비      |
+| height              | 높이      |
+| min-width           | 최소 너비 |
+| min-height          | 최소 높이 |
+| max-width           | 최대 너비 |
+| max-height          | 최대 높이 |
 
-    /* 단말기의 너비 높이
-       device-width     : 너비
-       device-height    : 높이
-       min-device-width : 최소 너비
-       min-device-height: 최소 높이
-       max-device-width : 최대 너비
-       max-device-height: 최대 높이 */
+| 단말기의 너비 높이 |           |
+| ------------------ | --------- |
+| device-width       | 너비      |
+| device-height      | 높이      |
+| min-device-width   | 최소 너비 |
+| min-device-height  | 최소 높이 |
+| max-device-width   | 최대 너비 |
+| max-device-height  | 최대 높이 |
 
-    /* 화면 회전
-       orientation: portrait : 세로 모드
-       orientation: landscape: 가로 모드 */
+| 화면 회전   |           |           |
+| ----------- | --------- | --------- |
+| orientation | portrait  | 세로 모드 |
+| orientation | landscape | 가로 모드 |
 
     yesviz.com/devices.php: 기기 물리적 해상도, 논리적 해상도 정리 사이트
     http://www.responsinator.com/ : 모바일 테스트 사이트
