@@ -870,7 +870,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
        not : not 다음에 지정하는 미디어 유형을 제외
        and : 조건을 여러개 연결해서 추가
 
-| 미디어 유형 |
+| 미디어 유형 |                                    |
 | ----------- | ---------------------------------- |
 | all         | 모든 유형                          |
 | print       | 인쇄 장치                          |
