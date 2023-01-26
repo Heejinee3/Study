@@ -408,8 +408,6 @@
 
 # Gradation
 
-    background: linear-gradient(to right bottom, #000000, #FFFFFF);
-
     /* 선형 그라데이션
 
        첫번째 인자(방향)
@@ -423,7 +421,7 @@
        두번째 인자 ~ 마지막 인자(색상, 위치)
        #000000 20%: 색상, 위치               */
 
-    background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);
+    background: linear-gradient(to right bottom, #000000, #FFFFFF);
 
     /* 선형 그라데이션(반복)
 
@@ -438,67 +436,73 @@
        두번째 인자 ~ 마지막 인자(색상, 위치)
        #000000 20%: 색상, 위치              */
 
-    background: radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
+    background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);
 
     /* 원형 그라데이션
 
        첫번째 인자(모양)
-        circle : 원형
-        ellipse: 타원형
+       circle : 원형
+       ellipse: 타원형
 
        두번째 인자(크기)
-        closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
-        closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
-        farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
-        farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
+       closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
+       closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
+       farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
+       farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
 
        세번째 인자(가로 위치)
-        50%   : 백분율
-        left  : 왼쪽
-        center: 가운데
-        right : 오른쪽
+       50%   : 백분율
+       left  : 왼쪽
+       center: 가운데
+       right : 오른쪽
 
        네번째 인자(세로 위치)
-        50%   : 백분율
-        top   : 위쪽
-        center: 가운데
-        bottom: 아래쪽
+       50%   : 백분율
+       top   : 위쪽
+       center: 가운데
+       bottom: 아래쪽
 
        다섯번째 인자 ~ 마지막 인자(색상, 위치)
-        #000000 20%: 색상, 위치                                                  */
+       #000000 20%: 색상, 위치                                                      */
 
-    background: repeating-radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF); /* 원형 그라데이션(반복)
+    background: radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
 
-                                                                                                   첫번째 인자(모양)
-                                                                                                     circle : 원형
-                                                                                                     ellipse: 타원형
+    /* 원형 그라데이션(반복)
 
-                                                                                                   두번째 인자(크기)
-                                                                                                     closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
-                                                                                                     closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
-                                                                                                     farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
-                                                                                                     farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
+       첫번째 인자(모양)
+       circle : 원형
+       ellipse: 타원형
 
-                                                                                                   세번째 인자(가로 위치)
-                                                                                                     50%   : 백분율
-                                                                                                     left  : 왼쪽
-                                                                                                     center: 가운데
-                                                                                                     right : 오른쪽
+       두번째 인자(크기)
+       closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
+       closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
+       farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
+       farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
 
-                                                                                                   네번째 인자(세로 위치)
-                                                                                                     50%   : 백분율
-                                                                                                     top   : 위쪽
-                                                                                                     center: 가운데
-                                                                                                     bottom: 아래쪽
+       세번째 인자(가로 위치)
+       50%   : 백분율
+       left  : 왼쪽
+       center: 가운데
+       right : 오른쪽
 
-                                                                                                   다섯번째 인자 ~ 마지막 인자(색상, 위치)
-                                                                                                     #000000 20%: 색상, 위치                                                  */
+       네번째 인자(세로 위치)
+       50%   : 백분율
+       top   : 위쪽
+       center: 가운데
+       bottom: 아래쪽
+
+       다섯번째 인자 ~ 마지막 인자(색상, 위치)
+       #000000 20%: 색상, 위치                                                      */
+
+    background: repeating-radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
 
 # Transform
 
-    /* X: +방향(왼쪽)      -방향(오른쪽)
-       Y: +방향(아래쪽)    -방향(위쪽)
-       Z: +방향(화면 앞쪽) -방향(화면 뒤쪽) */
+> X: +방향(왼쪽) -방향(오른쪽)
+>
+> Y: +방향(아래쪽) -방향(위쪽)
+>
+> Z: +방향(화면 앞쪽) -방향(화면 뒤쪽)
 
     transform: translate(10px, 10px);        // x, y축 이동
 
