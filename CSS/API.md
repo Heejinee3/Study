@@ -62,70 +62,88 @@
 
 # CSS Apply
 
-    <style>                                  // 1 (head 사이)
-      h {color: red;}
-    </style>
+```
+<style>                                  // head 사이
+  h {color: red;}
+</style>
+```
 
-    <h style="color: red;"></h>              // 2 (body 사이)
+```
+<h style="color: red;"></h>              // body 사이
+```
 
-    <link rel="stylesheet" href="mycss.css"> // 3 (head 사이)
+```
+<link rel="stylesheet" href="mycss.css"> // head 사이
+```
 
 # Selector
 
 ### Unary Operator
 
-    *                   // universal
-    tag                 // tag
-    .class              // class
-    #id                 // id
-    :pseudo             // pseudo-class
-    ::pseudo-element    // pseudo-element
+```
+*                   // universal
+tag                 // tag
+.class              // class
+#id                 // id
+:pseudo             // pseudo-class
+::pseudo-element    // pseudo-element
+```
 
 ### Property
 
-    [property]          // 해당 속성이 있는 요소
-    [property="value"]  // 지정한 속성값이 있는 요소
-    [property~="value"] // 지정한 속성값이 포함된 요소(단어별)
-    [property|="value"] // 지정한 속성값이 포함된 요소(하이픈 포함, 단어별)
-    [property^="value"] // 지정한 속성값으로 시작하는 요소
-    [property$="value"] // 지정한 속성값으로 끝나는 요소
-    [property*="value"] // 지정한 속성값의 일부가 일치하는 요소
+```
+[property]          // 해당 속성이 있는 요소
+[property="value"]  // 지정한 속성값이 있는 요소
+[property~="value"] // 지정한 속성값이 포함된 요소(단어별)
+[property|="value"] // 지정한 속성값이 포함된 요소(하이픈 포함, 단어별)
+[property^="value"] // 지정한 속성값으로 시작하는 요소
+[property$="value"] // 지정한 속성값으로 끝나는 요소
+[property*="value"] // 지정한 속성값의 일부가 일치하는 요소
+```
 
 ### Binary Operator
 
-    A                   // A의 모든 후손들에게 영향
-    A,B                 // A의 후손들, B의 후손들에게 영향
-    A B                 // A의 후손들 중 B 조건을 만족하는 사람과 그의 후손들에게 영향
-    A > B               // A의 직계들 중 B 조건을 만족하는 사람과 그의 후손들에게 영향
-    A + B               // A의 형제들 중 A 다음으로 첫번째로 B 조건을 만족하는 사람과 그의 후손들에게 영향
-    A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하는 사람과 그의 후손들에게 영향
+```
+A                   // A의 모든 후손들에게 영향
+A,B                 // A의 후손들, B의 후손들에게 영향
+A B                 // A의 후손들 중 B 조건을 만족하는 사람과 그의 후손들에게 영향
+A > B               // A의 직계들 중 B 조건을 만족하는 사람과 그의 후손들에게 영향
+A + B               // A의 형제들 중 A 다음으로 첫번째로 B 조건을 만족하는 사람과 그의 후손들에게 영향
+A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하는 사람과 그의 후손들에게 영향
+```
 
 # Pseudo Class/Pseudo Element
 
 ### Pseudo Class
 
-    :link              // 방문하지 않은 상태
-    :visited           // 방문한 상태
-    :hover             // 마우스가 올려진 상태
-    :active            // text가 마우스로 눌려진 상태
-    :enabled           // 활성화 된 상태
-    :disabled          // 비활성화 된 상태
-    :checked           // checkbox에서 체크된 상태
-    :focus             // input에서 눌려진 상태
-    :target            // a로 연결된 부분이 눌린
-    :not()             // 부정
+```
+:link              // 방문하지 않은 상태
+:visited           // 방문한 상태
+:hover             // 마우스가 올려진 상태
+:active            // text가 마우스로 눌려진 상태
+:enabled           // 활성화 된 상태
+:disabled          // 비활성화 된 상태
+:checked           // checkbox에서 체크된 상태
+:focus             // input에서 눌려진 상태
+:target            // a로 연결된 부분이 눌린
+:not()             // 부정
+```
 
-    :only-child        // 자식 요소 선택(형제가 없을 때)
-    :nth-child(n)      // 자식 요소 선택(형제 관계인 태그들 중 n번째)
-    :nth-last-child(n) // 자식 요소 선택(형제 관계인 태그들 중 마지막에서 n번째)
-    :first-child       // 자식 요소 선택(형제 관계인 태그들 중 첫번째)
-    :last-child        // 자식 요소 선택(형제 관계인 태그들 중 마지막)
+```
+:only-child        // 자식 요소 선택(형제가 없을 때)
+:nth-child(n)      // 자식 요소 선택(형제 관계인 태그들 중 n번째)
+:nth-last-child(n) // 자식 요소 선택(형제 관계인 태그들 중 마지막에서 n번째)
+:first-child       // 자식 요소 선택(형제 관계인 태그들 중 첫번째)
+:last-child        // 자식 요소 선택(형제 관계인 태그들 중 마지막)
+```
 
-    :only-of-type        // 자식 요소 선택(형제가 없을 때)
-    :nth-of-type(n)      // 자식 요소 선택(형제 관계인 같은 태그들 중 n번째)
-    :nth-last-of-type(n) // 자식 요소 선택(형제 관계인 같은 태그들 중 마지막에서 n번째)
-    :first-of-type       // 자식 요소 선택(형제 관계인 같은 태그들 중 첫번째)
-    :last-of-type        // 자식 요소 선택(형제 관계인 같은 태그들 중 마지막)
+```
+:only-of-type        // 자식 요소 선택(형제가 없을 때)
+:nth-of-type(n)      // 자식 요소 선택(형제 관계인 같은 태그들 중 n번째)
+:nth-last-of-type(n) // 자식 요소 선택(형제 관계인 같은 태그들 중 마지막에서 n번째)
+:first-of-type       // 자식 요소 선택(형제 관계인 같은 태그들 중 첫번째)
+:last-of-type        // 자식 요소 선택(형제 관계인 같은 태그들 중 마지막)
+```
 
 > nth-child(n), nth-last-child(n), nth-of-type(n), nth-last-of-type(n)에서
 >
@@ -135,10 +153,12 @@
 
 ### Pseudo Element
 
-    ::first-line       // 첫 번째 줄을 선택
-    ::first-letter     // 첫 번째 글자를 선택
-    ::before           // 특정 요소의 앞에 내용이나 스타일 추가
-    ::after            // 특정 요소의 뒤에 내용이나 스타일 추가
+```
+::first-line       // 첫 번째 줄을 선택
+::first-letter     // 첫 번째 글자를 선택
+::before           // 특정 요소의 앞에 내용이나 스타일 추가
+::after            // 특정 요소의 뒤에 내용이나 스타일 추가
+```
 
 # Font
 
