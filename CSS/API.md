@@ -811,7 +811,7 @@ animation-iteration-count: 1;           /* 반복 횟수
                                            infinite: 무힌 반복 */
 ```
 
-````
+```
 animation-timing-function: linear;      /* 속도 곡선 지정
                                            linear                  : linear
                                            ease                    : ease
@@ -820,67 +820,74 @@ animation-timing-function: linear;      /* 속도 곡선 지정
                                            ease-in-out             : ease-in-out
                                            cubic-bezier(0, 0, 0, 0): cubic-bezier.com 이용 */
 ```
+
 ```
 animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
 ```
+
 ### Declaration
 
-    @keyframes name{     /* Animation 선언
-      0%{                   0%  : 백분율
-      }                     from: 처음
-      50%{                  to  : 끝       */
-      }
-      100%{
-      }
-    }
+```
+@keyframes name{     /* Animation 선언
+  0%{                   0%  : 백분율
+  }                     from: 처음
+  50%{                  to  : 끝       */
+  }
+  100%{
+  }
+}
+```
 
 # Media Query
 
-```
-
-    <link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
+### Apply
 
 ```
-
-```
-
-    @import url("mycss.css") only screen and (min-width:768px) and (max-width:1024px); // 외부 css 파일 연결(비추천, head 사이)
-
+<link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
 ```
 
 ```
-
-    <style media="only screen and (min-width:768px) and (max-width:1024px)">           // 내부 직접 정의(head 사이)
-    </style>
-
+@import url("mycss.css") only screen and (min-width:768px) and (max-width:1024px); // 외부 css 파일 연결(비추천, head 사이)
 ```
 
 ```
-
-    <style>
-      @media only screen and (min-width:768px) and (max-width:1024px){                 // 내부 직접 정의(head 사이)
-      }
-    </style>
+<style media="only screen and (min-width:768px) and (max-width:1024px)">           // 내부 직접 정의(head 사이)
+</style>
+```
 
 ```
+<style>
+  @media only screen and (min-width:768px) and (max-width:1024px){                 // 내부 직접 정의(head 사이)
+  }
+</style>
+```
+
+###
 
     @media [only|not] 미디어유형 [and 조건] [and 조건] ...
 
-    /* only: 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음
+     only: 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음
        not : not 다음에 지정하는 미디어 유형을 제외
-       and : 조건을 여러개 연결해서 추가                                                    */
+       and : 조건을 여러개 연결해서 추가
 
-    /* 미디어 유형
-       all       : 모든 유형
-       print     : 인쇄 장치
-       screen    : 컴퓨터, 스마트폰 스크린
-       tv        : TV
-       aural     : 화면을 읽어 소리로 출력해주는 장치
-       braille   : 점자 표시 장치
-       handheld  : 손에 들고 다니는 장치
-       projection: 프로젝터
-       tty       : 디스플레이 기능이 제한된 장치
-       embossed  : 점자 프린터                      */
+> 미디어 유형
+>
+> all : 모든 유형
+>
+> print : 인쇄 장치
+>
+> screen : 컴퓨터, 스마트폰 스크린
+>
+> tv : TV
+>
+> aural : 화면을 읽어 소리로 출력해주는 장치
+>
+> braille : 점자 표시 장치
+>
+> handheld : 손에 들고 다니는 장치
+> projection: 프로젝터
+> tty : 디스플레이 기능이 제한된 장치
+> embossed : 점자 프린터
 
     /* 웹 문서의 너비 높이
        width     : 너비
@@ -1107,4 +1114,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 ```
 
 ```
-````
+
+```
+
+```
