@@ -870,24 +870,18 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
        not : not 다음에 지정하는 미디어 유형을 제외
        and : 조건을 여러개 연결해서 추가
 
-> 미디어 유형
->
-> all : 모든 유형
->
-> print : 인쇄 장치
->
-> screen : 컴퓨터, 스마트폰 스크린
->
-> tv : TV
->
-> aural : 화면을 읽어 소리로 출력해주는 장치
->
-> braille : 점자 표시 장치
->
-> handheld : 손에 들고 다니는 장치
-> projection: 프로젝터
-> tty : 디스플레이 기능이 제한된 장치
-> embossed : 점자 프린터
+| 미디어 유형 |
+| ----------- | ---------------------------------- |
+| all         | 모든 유형                          |
+| print       | 인쇄 장치                          |
+| screen      | 컴퓨터, 스마트폰 스크린            |
+| tv          | TV                                 |
+| aural       | 화면을 읽어 소리로 출력해주는 장치 |
+| braille     | 점자 표시 장치                     |
+| handheld    | 손에 들고 다니는 장치              |
+| projection  | 프로젝터                           |
+| tty         | 디스플레이 기능이 제한된 장치      |
+| embossed    | 점자 프린터                        |
 
     /* 웹 문서의 너비 높이
        width     : 너비
