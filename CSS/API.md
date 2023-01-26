@@ -408,6 +408,7 @@
 
 # Gradation
 
+```
     /* 선형 그라데이션
 
        첫번째 인자(방향)
@@ -422,7 +423,9 @@
        #000000 20%: 색상, 위치               */
 
     background: linear-gradient(to right bottom, #000000, #FFFFFF);
+```
 
+```
     /* 선형 그라데이션(반복)
 
        첫번째 인자(방향)
@@ -437,6 +440,7 @@
        #000000 20%: 색상, 위치              */
 
     background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);
+```
 
     /* 원형 그라데이션
 
@@ -498,12 +502,6 @@
 
 # Transform
 
-> X: +방향(왼쪽) -방향(오른쪽)
->
-> Y: +방향(아래쪽) -방향(위쪽)
->
-> Z: +방향(화면 앞쪽) -방향(화면 뒤쪽)
-
     transform: translate(10px, 10px);        // x, y축 이동
 
     transform: translate3d(10px, 10px,10px); // x, y, z축 이동
@@ -556,6 +554,12 @@
 
     perspective(100px);                      // 입체적으로 보일 수 있게 깊이 조정
 
+> X: +방향(왼쪽) -방향(오른쪽)
+>
+> Y: +방향(아래쪽) -방향(위쪽)
+>
+> Z: +방향(화면 앞쪽) -방향(화면 뒤쪽)
+
 # Transition
 
     transition-property: all;           /* 대상 지정
@@ -582,15 +586,6 @@
     transition: all 1s 1s linear;       /* property, duration, delay, timing-function */
 
 # Animation
-
-    @keyframes name{     /* Animation 선언
-      0%{                   0%  : 백분율
-      }                     from: 처음
-      50%{                  to  : 끝       */
-      }
-      100%{
-      }
-    }
 
     animation-name: name;                   // Animation name
 
@@ -622,19 +617,38 @@
 
     animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
 
+### Declaration
+
+    @keyframes name{     /* Animation 선언
+      0%{                   0%  : 백분율
+      }                     from: 처음
+      50%{                  to  : 끝       */
+      }
+      100%{
+      }
+    }
+
 # Media Query
 
+```
     <link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
+```
 
+```
     @import url("mycss.css") only screen and (min-width:768px) and (max-width:1024px); // 외부 css 파일 연결(비추천, head 사이)
+```
 
+```
     <style media="only screen and (min-width:768px) and (max-width:1024px)">           // 내부 직접 정의(head 사이)
     </style>
+```
 
+```
     <style>
       @media only screen and (min-width:768px) and (max-width:1024px){                 // 내부 직접 정의(head 사이)
       }
     </style>
+```
 
     @media [only|not] 미디어유형 [and 조건] [and 조건] ...
 
