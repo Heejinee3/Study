@@ -34,7 +34,7 @@
 | @Bean                    | @Bean이 붙은 함수의 반환 객체를 빈으로 등록                               |
 | @Component               | @Component가 붙은 클래스를 자바 빈으로 등록                               |
 | @Autowired               | 자동 객체 생성                                                            |
-| @Test                    | 테스트 케이스 메서드임을 알려주며 단돋 실행이 가능                        |
+| @SpringBootTest          |                                                                           |
 | @WebMvcTest              | 웹 영역만을 테스트 하기 위한 지시어                                       |
 | @Test                    | 테스트 케이스 메서드를 지정                                               |
 | @Getter                  | getter 자동생성                                                           |

@@ -4,30 +4,73 @@
 
 > [Sketch](https://www.sketch.com/)
 >
-> <span style="color:red">[Sketch](https://www.sketch.com/)</span>
+> [Figma](https://www.figma.com/)
+>
+> [Adobe XD](https://helpx.adobe.com/support/xd.html)
 
-Flaticon.com
+#### Design Idea
 
-flaticon
-https://coding-factory.tistory.com/192
+> [iOS Design Guide](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios/)
+>
+> [Android Design Guide](https://m3.material.io/)
+>
+> [Mobile Patterns](https://www.simform.com/mobile-patterns/)
+>
+> [pttrns](https://www.pttrns.com/)
+>
+> [dribbble](https://dribbble.com/)
 
-https://fontawesome.com/v5/cheatsheet#use
+#### Color
 
-https://amango.tistory.com/7
+> [Material Design Palette](https://www.materialpalette.com/)
+>
+> [Color Hunt](https://colorhunt.co/)
+>
+> [Coolors](https://coolors.co/palettes/trending)
+
+#### Font
+
+> [Apple Font](https://developer.apple.com/fonts/)
+>
+> [Google Font](https://fonts.google.com/)
+
+#### Icon
+
+> [Icons8](https://icons8.com/)
+>
+> [Vecteezy](https://www.vecteezy.com/)
+>
+> [Iconduck](https://iconduck.com/)
+>
+> [Flat Icon](https://www.flaticon.com/)
+>
+> [Feather](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols)
+>
+> [Canva](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols)
+>
+> [Apple SF Symbols](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols)
+>
+> [Material Icons](https://fonts.google.com/icons?selected=Material+Icons)
+>
+> [Font Awesome](https://fontawesome.com/)
+
+#### Version
+
+> [Can I Use](https://caniuse.com/)
 
 # CSS Apply
 
-    <style>                                  // 1(head 사이)
+    <style>                                  // 1 (head 사이)
       h {color: red;}
     </style>
 
-    <h style="color: red;"></h>              // 2(body 사이)
+    <h style="color: red;"></h>              // 2 (body 사이)
 
-    <link rel="stylesheet" href="mycss.css"> // 3(head 사이)
-
-    https://caniuse.com/: CSS 속성 지원하는 웹브라우저 버전 확인
+    <link rel="stylesheet" href="mycss.css"> // 3 (head 사이)
 
 # Selector
+
+#### Unary Operator
 
     *                   // universal
     tag                 // tag
@@ -35,6 +78,8 @@ https://amango.tistory.com/7
     #id                 // id
     :pseudo             // pseudo-class
     ::pseudo-element    // pseudo-element
+
+#### Property
 
     [property]          // 해당 속성이 있는 요소
     [property="value"]  // 지정한 속성값이 있는 요소
@@ -44,6 +89,8 @@ https://amango.tistory.com/7
     [property$="value"] // 지정한 속성값으로 끝나는 요소
     [property*="value"] // 지정한 속성값의 일부가 일치하는 요소
 
+#### Binary Operator
+
     A                   // A의 모든 후손들에게 영향
     A,B                 // A의 후손들, B의 후손들에게 영향
     A B                 // A의 후손들 중 B 조건을 만족하는 사람과 그의 후손들에게 영향
@@ -52,6 +99,8 @@ https://amango.tistory.com/7
     A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하는 사람과 그의 후손들에게 영향
 
 # Pseudo Class/Pseudo Element
+
+#### Pseudo Class
 
     :link              // 방문하지 않은 상태
     :visited           // 방문한 상태
@@ -76,9 +125,13 @@ https://amango.tistory.com/7
     :first-of-type       // 자식 요소 선택(형제 관계인 같은 태그들 중 첫번째)
     :last-of-type        // 자식 요소 선택(형제 관계인 같은 태그들 중 마지막)
 
-    /* nth-child(n), nth-last-child(n), nth-of-type(n), nth-last-of-type(n)에서
-       짝수번째를 선택할 때는 2n, even 사용
-       홀수번째를 선택할 때는 2n+1, odd 사용                                      */
+> nth-child(n), nth-last-child(n), nth-of-type(n), nth-last-of-type(n)에서
+>
+> 짝수번째를 선택할 때는 2n, even 사용
+>
+> 홀수번째를 선택할 때는 2n+1, odd 사용
+
+#### Pseudo Element
 
     ::first-line       // 첫 번째 줄을 선택
     ::first-letter     // 첫 번째 글자를 선택
