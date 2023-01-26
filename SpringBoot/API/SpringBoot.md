@@ -1,3 +1,8 @@
+해야할 거
+ex15_jpa_realdb
+ex13_jpa_h2db
+ex14_jpa_h2db_test
+
 # Make Spring Project
 
 > Spring Initializr
@@ -30,11 +35,11 @@
 | @EnableAutoConfiguration | 스프링 프레임워크의 기본적인 기능을 활성화할때 사용하는 어노테이션        |
 | @SpringBootConfiguration | @Configuration이 붙은 클래스를 스프링 프레임워크의 설정 클래스로 등록     |
 | @Configuration           | 스프링 설정 클래스                                                        |
-| @Controller              | HTTP Request를 처리하는 클래스                                            |
+| @Controller              | HTTP Request를 처리하는 클래스, @Component가 적용됨                       |
 | @Bean                    | @Bean이 붙은 함수의 반환 객체를 빈으로 등록                               |
 | @Component               | @Component가 붙은 클래스를 자바 빈으로 등록                               |
 | @Autowired               | 자동 객체 생성                                                            |
-| @SpringBootTest          |                                                                           |
+| @SpringBootTest          | 통합 테스트                                                               |
 | @WebMvcTest              | 웹 영역만을 테스트 하기 위한 지시어                                       |
 | @Test                    | 테스트 케이스 메서드를 지정                                               |
 | @Getter                  | getter 자동생성                                                           |
@@ -53,11 +58,23 @@
 | @DeleteMapping           | 사용자의 HTTP Delete요청에 대한 응답 경로와 메서드를 정의                 |
 | @PatchMapping            | 사용자의 HTTP Patch요청에 대한 응답 경로와 메서드를 정의                  |
 | @RequestMapping          | 모든 타입의 요청을 처리                                                   |
+| @Entity                  | DB 테이블과 1:1로 매칭되는 JPA 클래스에 사용                              |
+| @Table                   | 클래스 이름이 테이블 이름으로 기본 설정되는데, 테이블의 이름을 바꿔줌     |
+| @Id                      | 기본키 id열로 사용                                                        |
+| @GeneratedValue          | 해당 ID값을 어떻게 생성할지 전략을 선언                                   |
+| @Column                  | DB 열과 매칭                                                              |
+| @DateTimeFormat          | 자바 클래스와 DB/Form Data와 매핑시 형식을 정해줌                         |
+| @Repository              | JPA DAO클래스에 적용, @Component가 적용됨                                 |
+| @Service                 | 서비스 로직 클래스에 적용, @Component가 적용됨                            |
+| @BeforeAll               | 클래스를 초기화시 한번 수행                                               |
+| @BeforeEach              | 메소드 호출시마다 한번 수행"                                              |
+| @DisplayName             | 테스트 이름 설정                                                          |
 
-| Class              | Explanation                                                             |
-| ------------------ | ----------------------------------------------------------------------- |
-| MockMvc            | 가상으로 HTTP 요청을 보내줌                                             |
-| ApplicationContext | 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함 |
+| Class              | Explanation                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------- |
+| MockMvc            | 가상으로 HTTP 요청을 보내줌                                                                          |
+| ApplicationContext | 자바 빈을 관리하는 클래스이며 스프링 컨텍스트 또는 스프링 풀이라고도 함                              |
+| JpaRepository      | 스프링 JPA 라이브러리에서 Entity에 대한 기복적인 조회, 삽입, 수정, 삭제가 가능하도록 만든 인터페이스 |
 
 # Annotation
 
@@ -350,7 +367,6 @@ configurations {
 
 dependencies {
     implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'       // Thymeleaf Layout
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-web'       // Spring Web
     compileOnly 'org.projectlombok:lombok'                                  // Lombok
@@ -375,31 +391,4 @@ server.port = 8090 or 8080
 spring.thymeleaf.cache=false
 spring.thymeleaf.prefix=classpath:/templates/
 spring.thymeleaf.suffix=.html
-```
-
-### H2 Database
-
-```
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
-```
-
-```
-# in-memory DB
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-```
-
-```
-# file DB
-user home directory is C:\Users(user name) in Windows OS.
-testdb.mv.db file make ( file is empty file ).
-cmd console : type nul > testdb.mv.db
-spring.datasource.url=jdbc:h2:~/testdb
-spring.datasource.driverClassName=org.h2.Driver
-```
-
-```
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update                                    # 상용 DB에서는 none이나 validate
 ```
