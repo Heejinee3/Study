@@ -1187,30 +1187,38 @@ word-break: normal;
 | CJK     | 중국어, 일본어, 한글 |
 | non-CJK | 숫자, 영어, 베트남어 |
 
-> word-break
+| word-break | normal(기본값) | break-all | keep-all             |
+| ---------- | -------------- | --------- | -------------------- |
+| non-CJK:   | 공백,하이픈(-) | 음절      | 공백,하이픈          |
+| CJK :      | 음절           | 음절      | 공백,하이픈,그외기호 |
 
-|          | normal(기본값) | break-all | keep-all             |
-| -------- | -------------- | --------- | -------------------- |
-| non-CJK: | 공백,하이픈(-) | 음절      | 공백,하이픈          |
-| CJK :    | 음절           | 음절      | 공백,하이픈,그외기호 |
-
-> word-wrap
-
-|         | normal(기본값) | break-word |
-| ------- | -------------- | ---------- |
-| non-CJK | 단어넘침 O     | 단어넘침 X |
-| CJK     | 단어넘침 X     | 단어넘침 X |
+| word-wrap | normal(기본값) | break-word |
+| --------- | -------------- | ---------- |
+| non-CJK   | 단어넘침 O     | 단어넘침 X |
+| CJK       | 단어넘침 X     | 단어넘침 X |
 
 # Vendor Prefix
 
-    background: red;                                  // gradient 속성을 지원하지 않는 모든 브라우저를 위한 코드
+```
+background: red;                                  // gradient 속성을 지원하지 않는 모든 브라우저를 위한 코드
+```
 
-    background: -webkit-linear-gradient(red, yellow); // 크롬과 사파리 4.0 이상을 위한 코드
+```
+background: -webkit-linear-gradient(red, yellow); // 크롬과 사파리 4.0 이상을 위한 코드
+```
 
-    background: -moz-linear-gradient(red, yellow);    // 파이어폭스 3.6 이상을 위한 코드
+```
+background: -moz-linear-gradient(red, yellow);    // 파이어폭스 3.6 이상을 위한 코드
+```
 
-    background: -ms-linear-gradient(red, yellow);     // 익스플로러 10.0 이상을 위한 코드
+```
+background: -ms-linear-gradient(red, yellow);     // 익스플로러 10.0 이상을 위한 코드
+```
 
-    background: -o-linear-gradient(red, yellow);      // 오페라 10.0 이상을 위한 코드
+```
+background: -o-linear-gradient(red, yellow);      // 오페라 10.0 이상을 위한 코드
+```
 
-    background: linear-gradient(red, yellow);         // CSS 표준 문법 코드
+```
+background: linear-gradient(red, yellow);         // CSS 표준 문법 코드
+```
