@@ -404,193 +404,245 @@ margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼
 
 # Display
 
-    visibility: hidden;    // 공간이 남아있지만 안보이게 만듦
+```
+visibility: hidden;    // 공간이 남아있지만 안보이게 만듦
+```
 
-    overflow: hidden;      // overflow가 된 부분은 안보여지게 함
+```
+overflow: hidden;      // overflow가 된 부분은 안보여지게 함
+```
 
-    display: none;         // 공간이 사라짐
+```
+display: none;         // 공간이 사라짐
+```
 
-    display: inline-block; // inline이면서 자기 공간을 확보
+```
+display: inline-block; // inline이면서 자기 공간을 확보
+```
 
-    display: inline;       // inline이고, 자기 공간을 확보하지 못함
+```
+display: inline;       // inline이고, 자기 공간을 확보하지 못함
+```
 
-    display: block;        // blcok
+```
+display: block;        // blcok
+```
 
 # Float
 
-    float: none; /* float 상태로 만들기
-                    none : 없음
-                    right: 오른쪽으로 보내기
-                    left : 왼쪽으로 보내기   */
+```
+float: none; /* float 상태로 만들기
+                none : 없음
+                right: 오른쪽으로 보내기
+                left : 왼쪽으로 보내기   */
+```
 
-    clear: both; /* float 영향을 받지 않기
-                    right: 오른쪽
-                    left : 왼쪽
-                    both : 둘 다          */
+```
+clear: both; /* float 영향을 받지 않기
+                right: 오른쪽
+                left : 왼쪽
+                both : 둘 다          */
+```
 
 # Position
 
-    position: static; /* Postition 정하기
-                         static  : 기본값
-                         relative: 기본에서 위치만 옮길 수 있음
-                         absolute: relative를 사용한 상위 요소를 기준으로 배치
-                                 : relative를 사용한 상위 요소가 없으면 fixed와 같음
-                         fixed   : 뷰포트를 기준으로 위치를 배치                     */
+```
+position: static; /* Postition 정하기
+                      static  : 기본값
+                      relative: 기본에서 위치만 옮길 수 있음
+                      absolute: relative를 사용한 상위 요소를 기준으로 배치
+                              : relative를 사용한 상위 요소가 없으면 fixed와 같음
+                      fixed   : 뷰포트를 기준으로 위치를 배치                     */
+```
 
-    left: 10px;       // 기준의 왼쪽을 기준으로 오른쪽으로 이동
+```
+left: 10px;       // 기준의 왼쪽을 기준으로 오른쪽으로 이동
+```
 
-    right: 10px;      // 기준의 오른쪽을 기준으로 왼쪽으로 이동
+```
+right: 10px;      // 기준의 오른쪽을 기준으로 왼쪽으로 이동
+```
 
-    top: 10px;        // 기준의 위쪽을 기준으로 아래쪽으로 이동
+```
+top: 10px;        // 기준의 위쪽을 기준으로 아래쪽으로 이동
+```
 
-    bottom: 10px;     // 기준의 아래쪽을 기준으로 위쪽으로 이동
+```
+bottom: 10px;     // 기준의 아래쪽을 기준으로 위쪽으로 이동
+```
 
-    z-index: 10;      // z index 조정
+```
+z-index: 10;      // z index 조정
+```
 
 # Background
 
-    background-color: #000000;                                 // 배경 색상
+```
+background-color: #000000;                                 // 배경 색상
+```
 
-    background-clip: border-box;                               /* 배경 적용 범위 지정
-                                                                  border-box : 테두리까지 적용
-                                                                  padding-box: 패딩까지 적용
-                                                                  content-box: 콘텐츠까지 적용 */
+```
+background-clip: border-box;                               /* 배경 적용 범위 지정
+                                                              border-box : 테두리까지 적용
+                                                              padding-box: 패딩까지 적용
+                                                              content-box: 콘텐츠까지 적용 */
+```
 
-    background-image: url("img.jpg");                          // 뒷 배경을 이미지로 채우기
+```
+background-image: url("img.jpg");                          // 뒷 배경을 이미지로 채우기
+```
 
-    background-repeat: no-repeat;                              /* 뒷 배경의 반복 유무 정하기
-                                                                  repeat   : 가로, 세로 반복
-                                                                  repeat-x : 가로 반복
-                                                                  repeat-y : 세로 반복
-                                                                  no-repeat: 반복하지 않음   */
+```
+background-repeat: no-repeat;                              /* 뒷 배경의 반복 유무 정하기
+                                                              repeat   : 가로, 세로 반복
+                                                              repeat-x : 가로 반복
+                                                              repeat-y : 세로 반복
+                                                              no-repeat: 반복하지 않음   */
+```
 
-    background-position: 10px 10px;                            /* 수평 위치, 수직 위치 지정
-                                                                  10px  : 단위
-                                                                  10%   : 백분율
+```
+background-position: 10px 10px;                            /* 수평 위치, 수직 위치 지정
+                                                              10px  : 단위
+                                                              10%   : 백분율
 
-                                                                  첫번째 인자(가로)
-                                                                    left  : 왼쪽
-                                                                    center: 가운데
-                                                                    right : 오른쪽
+                                                              첫번째 인자(가로)
+                                                                left  : 왼쪽
+                                                                center: 가운데
+                                                                right : 오른쪽
 
-                                                                  두번째 인자(세로)
-                                                                    center: 가운데
-                                                                    top   : 위쪽
-                                                                    bottom: 아래쪽         */
+                                                              두번째 인자(세로)
+                                                                center: 가운데
+                                                                top   : 위쪽
+                                                                bottom: 아래쪽         */
+```
 
-    background-origin: content-box;                            /* 이미지 적용 범위 지정
-                                                                  content-box: 콘텐츠까지
-                                                                  padding-box: 패딩까지
-                                                                  border-box : 테두리까지 */
+```
+background-origin: content-box;                            /* 이미지 적용 범위 지정
+                                                              content-box: 콘텐츠까지
+                                                              padding-box: 패딩까지
+                                                              border-box : 테두리까지 */
+```
 
-    background-attachment: fixed;                              /* 스크롤을 내릴때 이미지 고정 여부
-                                                                  fixed : 고정
-                                                                  scroll: 스크롤                 */
+```
+background-attachment: fixed;                              /* 스크롤을 내릴때 이미지 고정 여부
+                                                              fixed : 고정
+                                                              scroll: 스크롤                 */
+```
 
-    background: url("img.jpg") no-repeat center center scroll; // image, repeat, position, attachment
+```
+background: url("img.jpg") no-repeat center center scroll; // image, repeat, position, attachment
+```
 
-    background-size: 100px 100px;                              /* 배경의 크기 조정
-                                                                  contain: 비율을 맞추면서 공백(여백)이 생김
-                                                                  cover  : 비율을 맞추면서 이미지가 잘림
-                                                                  100px  : 단위
-                                                                  100%   : 원래 크기의 백분율
-                                                                  auto   : 원래 이미지 크기                 */
+```
+background-size: 100px 100px;                              /* 배경의 크기 조정
+                                                              contain: 비율을 맞추면서 공백(여백)이 생김
+                                                              cover  : 비율을 맞추면서 이미지가 잘림
+                                                              100px  : 단위
+                                                              100%   : 원래 크기의 백분율
+                                                              auto   : 원래 이미지 크기                 */
+```
 
-    opacity: 0.5;                                              // 투명도 변경
+```
+opacity: 0.5;                                              // 투명도 변경
+```
 
 # Gradation
 
 ```
-    /* 선형 그라데이션
+background: linear-gradient(to right bottom, #000000, #FFFFFF);
 
-       첫번째 인자(방향)
-       to left      : 왼쪽으로
-       to right     : 오른쪽으로
-       to top       : 위쪽으로
-       to bottom    : 아래쪽으로
-       to right top : 오른쪽 위로
-       0deg ~ 360deg: 시계 방향으로 각도만큼
+/* 선형 그라데이션
 
-       두번째 인자 ~ 마지막 인자(색상, 위치)
-       #000000 20%: 색상, 위치               */
+   첫번째 인자(방향)
+   to left      : 왼쪽으로
+   to right     : 오른쪽으로
+   to top       : 위쪽으로
+   to bottom    : 아래쪽으로
+   to right top : 오른쪽 위로
+   0deg ~ 360deg: 시계 방향으로 각도만큼
 
-    background: linear-gradient(to right bottom, #000000, #FFFFFF);
+   두번째 인자 ~ 마지막 인자(색상, 위치)
+   #000000 20%: 색상, 위치               */
 ```
 
 ```
-    /* 선형 그라데이션(반복)
+background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);
 
-       첫번째 인자(방향)
-       to left      : 왼쪽으로
-       to right     : 오른쪽으로
-       to top       : 위쪽으로
-       to bottom    : 아래쪽으로
-       to right top : 오른쪽 위로
-       0deg ~ 360deg: 시계 방향으로 각도만큼
+/* 선형 그라데이션(반복)
 
-       두번째 인자 ~ 마지막 인자(색상, 위치)
-       #000000 20%: 색상, 위치              */
+   첫번째 인자(방향)
+   to left      : 왼쪽으로
+   to right     : 오른쪽으로
+   to top       : 위쪽으로
+   to bottom    : 아래쪽으로
+   to right top : 오른쪽 위로
+   0deg ~ 360deg: 시계 방향으로 각도만큼
 
-    background: repeating-linear-gradient(to right bottom, #000000, #FFFFFF);
+   두번째 인자 ~ 마지막 인자(색상, 위치)
+   #000000 20%: 색상, 위치              */
 ```
 
-    /* 원형 그라데이션
+```
+background: radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
 
-       첫번째 인자(모양)
-       circle : 원형
-       ellipse: 타원형
+/* 원형 그라데이션
 
-       두번째 인자(크기)
-       closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
-       closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
-       farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
-       farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
+   첫번째 인자(모양)
+   circle : 원형
+   ellipse: 타원형
 
-       세번째 인자(가로 위치)
-       50%   : 백분율
-       left  : 왼쪽
-       center: 가운데
-       right : 오른쪽
+   두번째 인자(크기)
+   closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
+   closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
+   farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
+   farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
 
-       네번째 인자(세로 위치)
-       50%   : 백분율
-       top   : 위쪽
-       center: 가운데
-       bottom: 아래쪽
+   세번째 인자(가로 위치)
+   50%   : 백분율
+   left  : 왼쪽
+   center: 가운데
+   right : 오른쪽
 
-       다섯번째 인자 ~ 마지막 인자(색상, 위치)
-       #000000 20%: 색상, 위치                                                      */
+   네번째 인자(세로 위치)
+   50%   : 백분율
+   top   : 위쪽
+   center: 가운데
+   bottom: 아래쪽
 
-    background: radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
+   다섯번째 인자 ~ 마지막 인자(색상, 위치)
+   #000000 20%: 색상, 위치                                                      */
+```
 
-    /* 원형 그라데이션(반복)
+```
+background: repeating-radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
 
-       첫번째 인자(모양)
-       circle : 원형
-       ellipse: 타원형
+/* 원형 그라데이션(반복)
 
-       두번째 인자(크기)
-       closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
-       closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
-       farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
-       farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
+   첫번째 인자(모양)
+   circle : 원형
+   ellipse: 타원형
 
-       세번째 인자(가로 위치)
-       50%   : 백분율
-       left  : 왼쪽
-       center: 가운데
-       right : 오른쪽
+   두번째 인자(크기)
+   closest-side   : 그라데이션 가장자리가 가장 가까운 요소의 측면에 닿을 때까지
+   closest-corner : 그라데이션 가장자리가 가장 가까운 요소의 코너에 닿을 때까지
+   farthest-side  : 그라데이션 가장자리가 가장 먼 요소의 측면에 닿을 때까지
+   farthest-corner: 그라데이션 가장자리가 가장 먼 요소의 코너에 닿을 때까지
 
-       네번째 인자(세로 위치)
-       50%   : 백분율
-       top   : 위쪽
-       center: 가운데
-       bottom: 아래쪽
+   세번째 인자(가로 위치)
+   50%   : 백분율
+   left  : 왼쪽
+   center: 가운데
+   right : 오른쪽
 
-       다섯번째 인자 ~ 마지막 인자(색상, 위치)
-       #000000 20%: 색상, 위치                                                      */
+   네번째 인자(세로 위치)
+   50%   : 백분율
+   top   : 위쪽
+   center: 가운데
+   bottom: 아래쪽
 
-    background: repeating-radial-gradient(circle farthest-corner at 50% 50%, #000000, #FFFFFF);
+   다섯번째 인자 ~ 마지막 인자(색상, 위치)
+   #000000 20%: 색상, 위치                                                      */
+```
 
 # Transform
 
@@ -655,16 +707,20 @@ margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼
 # Transition
 
 ```
+
     transition-property: all;           /* 대상 지정
                                            all  : 모든 속성
                                            none : 없음
                                            width: 속성 이름 */
+
 ```
 
 ```
+
     transition-duration: 1s;            /* 진행 시간
                                            1s : 초
                                            1ms: 밀리초 */
+
 ```
 
     transition-delay: 1s;               /* 지연 시간
@@ -727,23 +783,31 @@ margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼
 # Media Query
 
 ```
+
     <link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
+
 ```
 
 ```
+
     @import url("mycss.css") only screen and (min-width:768px) and (max-width:1024px); // 외부 css 파일 연결(비추천, head 사이)
+
 ```
 
 ```
+
     <style media="only screen and (min-width:768px) and (max-width:1024px)">           // 내부 직접 정의(head 사이)
     </style>
+
 ```
 
 ```
+
     <style>
       @media only screen and (min-width:768px) and (max-width:1024px){                 // 내부 직접 정의(head 사이)
       }
     </style>
+
 ```
 
     @media [only|not] 미디어유형 [and 조건] [and 조건] ...
@@ -985,3 +1049,7 @@ margin: 10px 10px 10px 10px;        /* Margin 크기(위, 오른쪽, 아래, 왼
     background: -o-linear-gradient(red, yellow);      // 오페라 10.0 이상을 위한 코드
 
     background: linear-gradient(red, yellow);         // CSS 표준 문법 코드
+
+```
+
+```
