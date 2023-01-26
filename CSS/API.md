@@ -873,7 +873,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
  <td> only   </td> <td>미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음</td> 
  </tr>
   <tr>
-  <td>not  </td>  <td>not 다음에 지정하는 미디어 유형을 제외        </td>                                      
+  <td>not  </td>  <td>not 다음에 지정하는 미디어 유형을 제외        </td>   </tr>     <tr>                                
   <td>and   </td> <td>조건을 여러개 연결해서 추가     </td> 
  </tr>
 </table>
