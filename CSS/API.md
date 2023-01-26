@@ -56,9 +56,13 @@
 >
 > [Font Awesome](https://fontawesome.com/)
 
-### Version
+### Test
 
 > [Can I Use](https://caniuse.com/)
+>
+> [Device Resolution](yesviz.com/devices.php)
+>
+> [Mobile Test](http://www.responsinator.com/)
 
 # CSS Apply
 
@@ -868,7 +872,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 @media [only|not] 미디어유형 [and 조건] [and 조건] ...
 ```
 
- <table width=100%>
+ <table>
   <tr>
     <td>only</td> 
     <td>미디어 쿼리를 지원하지 않는 웹 브라우저에서는 미디어 쿼리를 무기하고 실행하지 않음</td> 
@@ -883,22 +887,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
  </tr>
 </table>
 
-<table>
-  <tr>
-    <td>all</td> 
-    <td>모든 유형</td> 
-  </tr>
-  <tr>
-    <td>not</td>
-    <td>not 다음에 지정하는 미디어 유형을 제외</td>   
-  </tr>    
-  <tr>                                
-    <td>and</td>
-    <td>조건을 여러개 연결해서 추가</td> 
- </tr>
-</table>
-
-| 미디어 유형 |                                    |
+| 미디어 유형 | 설명                               |
 | ----------- | ---------------------------------- |
 | all         | 모든 유형                          |
 | print       | 인쇄 장치                          |
@@ -911,7 +900,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 | tty         | 디스플레이 기능이 제한된 장치      |
 | embossed    | 점자 프린터                        |
 
-| 웹 문서의 너비 높이 |           |
+| 웹 문서의 너비 높이 | 설명      |
 | ------------------- | --------- |
 | width               | 너비      |
 | height              | 높이      |
@@ -920,7 +909,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 | max-width           | 최대 너비 |
 | max-height          | 최대 높이 |
 
-| 단말기의 너비 높이 |           |
+| 단말기의 너비 높이 | 설명      |
 | ------------------ | --------- |
 | device-width       | 너비      |
 | device-height      | 높이      |
@@ -929,96 +918,138 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 | max-device-width   | 최대 너비 |
 | max-device-height  | 최대 높이 |
 
-| 화면 회전   |           |           |
+| 화면 회전   | 방향      | 설명      |
 | ----------- | --------- | --------- |
 | orientation | portrait  | 세로 모드 |
 | orientation | landscape | 가로 모드 |
 
-    yesviz.com/devices.php: 기기 물리적 해상도, 논리적 해상도 정리 사이트
-    http://www.responsinator.com/ : 모바일 테스트 사이트
-
 # Object Fit
 
-    object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐
-    object-fit: contain;    // 가로세로 비율 유지가 되지만 여백이 생김
-    object-fit: cover;      // 가로세로 비율 유지가 되지만 이미지가 잘림
-    object-fit: fill;       // 가로세로 비율 유지가 안됨
-    object-fit: scale-down; // none 또는 contain 중에 더 적절한 방향으로 사이즈를 조절
+```
+object-fit: none;       // 가로세로 크기 유지가 되고 가운데가 보여짐
+```
+
+```
+object-fit: contain;    // 가로세로 비율 유지가 되지만 여백이 생김
+```
+
+```
+object-fit: cover;      // 가로세로 비율 유지가 되지만 이미지가 잘림
+```
+
+```
+object-fit: fill;       // 가로세로 비율 유지가 안됨
+```
+
+```
+object-fit: scale-down; // none 또는 contain 중에 더 적절한 방향으로 사이즈를 조절
+```
 
 # Flex
 
-    display: flex;               /* container 지정
-                                    flex       : flex
-                                    inline-flex: inline-flex */
+```
+display: flex;               /* container 지정
+                                flex       : flex
+                                inline-flex: inline-flex */
+```
 
-    flex-direction: row;         /* 주축 설정
-                                    row           : 오른 방향
-                                    row-reverse   : 왼 방향
-                                    column        : 아래 방향
-                                    column-reverse: 위 방향   */
+```
+flex-direction: row;         /* 주축 설정
+                                row           : 오른 방향
+                                row-reverse   : 왼 방향
+                                column        : 아래 방향
+                                column-reverse: 위 방향   */
+```
 
-    flex-wrap: nowrap;           /* 보조축 설정
-                                    nowrap      : 컨테이너를 넘어가도 박스는 안넘어감
-                                    wrap        : 보조축이 아래 또는 오른 방향
-                                    wrap-reverse: 보조축이 위 또는 왼 방향           */
+```
+flex-wrap: nowrap;           /* 보조축 설정
+                                nowrap      : 컨테이너를 넘어가도 박스는 안넘어감
+                                wrap        : 보조축이 아래 또는 오른 방향
+                                wrap-reverse: 보조축이 위 또는 왼 방향           */
+```
 
-    flex-flow: row nowrap;       // direction, flex-wrap
+```
+flex-flow: row nowrap;       // direction, flex-wrap
+```
 
-    justify-content: flex-start; /* 주축 이동
-                                    flex-start   : 주축의 원점으로 이동
-                                    flex-end     : 주축의 화살표로 이동
-                                    center       : 주축의 가운데로 이동
-                                    space-between: between 방식으로 주축을 고르게 이동
-                                    space-around : around 방식으로 주축을 고르게 이동
-                                    space-evenly : evenly 방식으로 주축을 고르게 이동  */
+```
+justify-content: flex-start; /* 주축 이동
+                                flex-start   : 주축의 원점으로 이동
+                                flex-end     : 주축의 화살표로 이동
+                                center       : 주축의 가운데로 이동
+                                space-between: between 방식으로 주축을 고르게 이동
+                                space-around : around 방식으로 주축을 고르게 이동
+                                space-evenly : evenly 방식으로 주축을 고르게 이동  */
+```
 
-    align-items: flex-start;     /* 한줄 보조축 이동
-                                    flex-start: 보조축의 원점으로 이동
-                                    flex-end  : 보조축의 화살표로 이동
-                                    center    : 보조축의 가운데로 이동
-                                    stretch   : 보조축 방향에 따라 길게 늘림
-                                    baseline  : 보조축 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
+align-items: flex-start;     /* 한줄 보조축 이동
+                                flex-start: 보조축의 원점으로 이동
+                                flex-end  : 보조축의 화살표로 이동
+                                center    : 보조축의 가운데로 이동
+                                stretch   : 보조축 방향에 따라 길게 늘림
+                                baseline  : 보조축 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
 
-    align-content: flex-start;   /* 여러줄 보조축 이동
-                                    flex-start   : 보조축의 원점으로 이동
-                                    flex-end     : 보조축의 화살표로 이동
-                                    center       : 보조축의 가운데로 이동
-                                    space-between: between 방식으로 보조축을 고르게 이동
-                                    space-around : around 방식으로 보조축을 고르게 이동
-                                    stretch      : 보조축 방향에 따라 길게 늘림          */
+```
+align-content: flex-start;   /* 여러줄 보조축 이동
+                                flex-start   : 보조축의 원점으로 이동
+                                flex-end     : 보조축의 화살표로 이동
+                                center       : 보조축의 가운데로 이동
+                                space-between: between 방식으로 보조축을 고르게 이동
+                                space-around : around 방식으로 보조축을 고르게 이동
+                                stretch      : 보조축 방향에 따라 길게 늘림          */
+```
 
-    align-self: flex-start;      /* 각 box 보조축 이동
-                                    flex-start: 보조축의 원점으로 이동
-                                    flex-end  : 보조축의 화살표로 이동
-                                    center    : 보조축의 가운데로 이동
-                                    stretch   : 보조축 방향에 따라 길게 늘림
-                                    baseline  : 보조축 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
+align-self: flex-start;      /* 각 box 보조축 이동
+                                flex-start: 보조축의 원점으로 이동
+                                flex-end  : 보조축의 화살표로 이동
+                                center    : 보조축의 가운데로 이동
+                                stretch   : 보조축 방향에 따라 길게 늘림
+                                baseline  : 보조축 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
 
-    flex-basis: 100px;           /* content 크기 */
-                                    주축이 row일때는 width
-                                    column일때는 height를 바꿈
-                                    basis값보다 content가 크면 더 크게 바꿈 */
+```
+flex-basis: 100px;           /* content 크기 */
+                                주축이 row일때는 width
+                                column일때는 height를 바꿈
+                                basis값보다 content가 크면 더 크게 바꿈 */
+```
 
-    flex-grow: 1;                /* 늘어나는 공백 비율을 따질 수 있음
-                                    0: 안늘어남
-                                    1: 길게 늘어남                         */
+```
+flex-grow: 1;                /* 늘어나는 공백 비율을 따질 수 있음
+                                0: 안늘어남
+                                1: 길게 늘어남                         */
+```
 
-    flex-shrink: 1;              /* 줄어드는 공백 비율을 따질 수 있음
-                                    0: 안늘어남
-                                    1: 길게 늘어남                         */
+```
+flex-shrink: 1;              /* 줄어드는 공백 비율을 따질 수 있음
+                                0: 안늘어남
+                                1: 길게 늘어남                         */
+```
 
-    flex: 1 1 auto;              // grow shrink basis
+```
+flex: 1 1 auto;              // grow shrink basis
+```
 
-    order: 1;                    // content의 순서 변경
+```
+order: 1;                    // content의 순서 변경
+```
 
-    gap: 10px;                   // content 사이의 gap 크기
+```
+gap: 10px;                   // content 사이의 gap 크기
+```
 
 # Grid
 
+```
     display: grid; /* 그리드 지정
                       grid       : grid
                       inline-grid: inline-grid */
+```
 
+```
     grid-template-columns: 100px 100px ...; /* 열의 크기와 개수 지정
                                                100px                                : 크기
                                                1fr                                  : 상대적 크기
@@ -1026,7 +1057,9 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
                                                minmax(100px, 1fr)                   : 최소, 최대
                                                repeat(auto-fit, minmax(100px, 1fr)) : 남는 공간 없음
                                                repeat(auto-fill, minmax(100px, 1fr)): 남는 공간 있음  */
+```
 
+```
     grid-template-rows: 100px 100px ...; /* 줄의 크기와 개수 지정
                                             100px 100px ...         : 크기
                                             1fr 1fr ...             : 상대적 크기
@@ -1034,20 +1067,30 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
                                             minmax(100px, 1fr)      : 최소, 최대
                                             repeat(auto-fit, 100px) : 남는 공간 없음
                                             repeat(auto-fill, 100px): 남는 공간 있음  */
+```
 
+```
     grid-column-gap: 10px;               // 열 간격 지정
+```
 
+```
     grid-row-gap: 10px;                  // 행 간격 지정
+```
 
+```
     grid-gap: 10px 10px;                 // 행, 열 간격 지정
+```
 
+```
     align-items: start;                  /* 한줄 row 이동
                                             start   : row의 원점으로 이동
                                             end     : row의 화살표로 이동
                                             center  : row의 가운데로 이동
                                             stretch : row 방향에 따라 길게 늘림
                                             baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
 
+```
     align-content: start;                /* 여러줄 row 이동
                                             start        : row의 원점으로 이동
                                             end          : row의 화살표로 이동
@@ -1055,21 +1098,27 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
                                             space-between: between 방식으로 row을 고르게 이동
                                             space-around : around 방식으로 row을 고르게 이동
                                             stretch      : row 방향에 따라 길게 늘림          */
+```
 
+```
     align-self: start;                   /* 각 box row 이동
                                             start   : row의 원점으로 이동
                                             end     : row의 화살표로 이동
                                             center  : row의 가운데로 이동
                                             stretch : row 방향에 따라 길게 늘림
                                             baseline: row 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
 
+```
     justify-items: start;                /* 한줄 column 이동
                                             start   : column의 원점으로 이동
                                             end     : column의 화살표로 이동
                                             center  : column의 가운데로 이동
                                             stretch : column 방향에 따라 길게 늘림
                                             baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
 
+```
     justify-content: start;              /* 여러줄 column 이동
                                             start        : column의 원점으로 이동
                                             end          : column의 화살표로 이동
@@ -1077,29 +1126,49 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
                                             space-between: between 방식으로 column을 고르게 이동
                                             space-around : around 방식으로 column을 고르게 이동
                                             stretch      : column 방향에 따라 길게 늘림          */
+```
 
+```
     justify-self: start;                 /* 각 box column 이동
                                             start   : column의 원점으로 이동
                                             end     : column의 화살표로 이동
                                             center  : column의 가운데로 이동
                                             stretch : column 방향에 따라 길게 늘림
                                             baseline: column 방향의 텍스트 베이스라인 기준으로 정렬 */
+```
 
+```
     grid-column-start: 1;                // 열 시작 라인 번호 지정
+```
 
+```
     grid-column-end: 1;                  // 열 끝 라인 번호 지정
+```
 
+```
     grid-column: 1/1;                    // 열 시작/끝 라인 번호 지정
+```
 
+```
     grid-row-start: 1;                   // 줄 시작 라인 번호 지정
+```
 
+```
     grid-row-end: 1;                     // 줄 끝 라인 번호 지정
+```
 
+```
     grid-row: 1/1;                       // 줄 시작/끝 라인 번호 지정
+```
 
-    grid-template-areas: "box1 box1"     // 영역 배치
+```
+    grid-template-areas: "box1 box1";    // 영역 배치
                          "box2 .";
+```
+
+```
     grid-area: box1;                     // 영역 이름
+```
 
 # Word Break
 
@@ -1135,6 +1204,10 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
     background: -o-linear-gradient(red, yellow);      // 오페라 10.0 이상을 위한 코드
 
     background: linear-gradient(red, yellow);         // CSS 표준 문법 코드
+
+```
+
+```
 
 ```
 
