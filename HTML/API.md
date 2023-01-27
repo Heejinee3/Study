@@ -151,23 +151,33 @@
 
 # Form
 
-    <form action="http://myserver.com">                                                             /*
-                                                                                                       method="POST","GET"
-                                                                                                       name="name"
-                                                                                                       target="_blank","_self"
-                                                                                                       autocomplete="on","off"
-                                                                                                    */
-      <fieldset>
-        <legend>Group</legend>
-          <label for="id">Label</label>
-          <input type="text" name="name" id="id">                                                   /*
-                                                                                                       placeholder="placeholder"
-                                                                                                       value="value"
-                                                                                                       size="10"
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       required
-                                                                                                    */
+```
+/*
+   method="POST","GET"
+   name="name"
+   target="_blank","_self"
+   autocomplete="on","off"
+*/
+<form action="http://myserver.com">
+  <fieldset>
+    <legend>Group</legend>
+  </fieldset>
+</form>
+```
+
+```
+<label for="id">Label</label>
+<input type="text" name="name" id="id">
+/*
+   placeholder="placeholder"
+   value="value"
+   size="10"
+   minlength="0"
+   maxlength="10"
+   required
+*/
+```
+
           <label for="id">Label</label>
           <input type="password" name="name" id="id">                                               /*
                                                                                                        placeholder="placeholder"
@@ -345,8 +355,6 @@
 
           <label for="id">Label</label>
           <input type="color" name="name" id="id" value="#000000">
-      </fieldset>
-    </form>
 
 # Meta Tag
 
