@@ -1,7 +1,5 @@
 해야할 거
-ex15_jpa_realdb
-ex13_jpa_h2db
-ex14_jpa_h2db_test
+ex15_jpa_realdb_crud
 
 # Make Spring Project
 

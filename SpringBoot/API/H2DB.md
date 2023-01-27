@@ -30,6 +30,29 @@ public class MemberEntity {
 }
 ```
 
+# MainController.java
+
+```
+@Controller
+@RequiredArgsConstructor
+public class MainController {
+
+    private final MemberRepository memberRepository;
+
+    @RequestMapping("/")
+    public String function(Model model){
+        memberRepository.save(
+                new MemberEntity(Long.valueOf(1),"hong","1234", LocalDate.now())
+        );
+
+        List<MemberEntity> list = memberRepository.findAll();
+
+        model.addAttribute("list", list);
+        return "index";
+    }
+}
+```
+
 # MemberRepository.java
 
 ```
@@ -48,14 +71,12 @@ public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
     @Query(value = "UPDATE member SET user_id = :userid WHERE id = :id", nativeQuery = true)
     int funciton(String userid, Integer id); // Update, Insert, Delete문은 @Modifying, @Transactional을 추가해야됨
 
-    // And, Or를 메소드 이름에 추가할 수 있다.
-    // OrderBy 필드이름 Desc, Asc
-    // First5, Last5
-    List<MemberEntity> findFirst5ByUserIdAndUserNameOrderByIdDesc(String userid, String username);
-
     // JPQL
     @Query(value = "SELECT m FROM MemberEntity m WHERE m.userId = :userid")
     List<MemberEntity> findByUserId_JPQL_Query(String userid);
+
+    // 메소드 이름 추가
+    List<MemberEntity> findFirst5ByUserIdAndUserNameOrderByIdDesc(String userid, String username);
 
 }
 ```
@@ -83,6 +104,8 @@ public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
 | Distinct           | findDistinctByLastnameAndFirstname                      | select distinct …​ where x.lastname = ?1 and x.firstname = ?2  |
 | Firstn             | findFirst5                                              | …​ limit 5                                                     |
 | Lastn              | findLast5                                               | …​ order by x.id limit 5                                       |
+| Asc                | findByAgeOrderByIdAsc                                   | …​ order by x.id asc                                           |
+| Desc               | findByAgeOrderByIdDesc                                  | …​ order by x.id desc                                          |
 | And                | findByLastnameAndFirstname                              | … where x.lastname = ?1 and x.firstname = ?2                   |
 | Or                 | findByLastnameOrFirstname                               | … where x.lastname = ?1 or x.firstname = ?2                    |
 | Is, Equals         | findByFirstname,findByFirstnameIs,findByFirstnameEquals | … where x.firstname = ?1                                       |
@@ -110,6 +133,7 @@ public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
 
 # Test
 
+```
 class MemberRepositoryTest extends AppNameApplicationTests{
 
     @Autowired
@@ -127,13 +151,14 @@ class MemberRepositoryTest extends AppNameApplicationTests{
     }
 
 }
+```
 
 # build.gradle
 
 ```
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA
-	  runtimeOnly 'com.h2database:h2'                                        // H2DB
+	runtimeOnly 'com.h2database:h2'                                        // H2DB
 }
 ```
 
