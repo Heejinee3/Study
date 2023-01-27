@@ -161,9 +161,13 @@
 <form action="http://myserver.com">
   <fieldset>
     <legend>Group</legend>
+    <label for="id">Label</label>
+    <input type="text" name="name" id="id">
   </fieldset>
 </form>
 ```
+
+### Text
 
 ```
 <label for="id">Label</label>
@@ -178,49 +182,93 @@
 */
 ```
 
-          <label for="id">Label</label>
-          <input type="password" name="name" id="id">                                               /*
-                                                                                                       placeholder="placeholder"
-                                                                                                       size="10"
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="file" name="name" id="id">                                                   /*
-                                                                                                       placeholder="placeholder"
-                                                                                                       required
-                                                                                                    */
-          <input type="checkbox" name="name" id="id1" value="value1"><label for="id1">Label</label>
-          <input type="checkbox" name="name" id="id2" value="value2"><label for="id2">Label</label> /*
-                                                                                                       checked
-                                                                                                       required
-                                                                                                    */
-          <input type="radio" name="name" id="id1" value="value1"><label for="id1">Label</label>
-          <input type="radio" name="name" id="id2" value="value2"><label for="id2">Label</label>    /*
-                                                                                                       checked
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="number" name="name" id="id" value="1" min="1" max="10">                      /*
-                                                                                                       step="1"
-                                                                                                       value="1"
-                                                                                                       placeholder="placeholder"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="range" name="name" id="id" min="1"max="10" step="1"/>                        /*
-                                                                                                       step="1"
-                                                                                                       value="1"
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="date" name="name" id="id">                                                   /*
-                                                                                                       min="2022-01-01"
-                                                                                                       max="2022-12-31"
-                                                                                                       step="1"
-                                                                                                       value="2022-01-01"
-                                                                                                       required
-                                                                                                    */
+### Password
+
+```
+<label for="id">Label</label>
+<input type="password" name="name" id="id">
+/*
+   placeholder="placeholder"
+   size="10"
+   minlength="0"
+   maxlength="10"
+   required
+*/
+```
+
+### File
+
+```
+<label for="id">Label</label>
+<input type="file" name="name" id="id">
+/*
+   placeholder="placeholder"
+   required
+*/
+```
+
+### Checkbox
+
+```
+<input type="checkbox" name="name" id="id1" value="value1"><label for="id1">Label</label>
+<input type="checkbox" name="name" id="id2" value="value2"><label for="id2">Label</label>
+/*
+   checked
+   required
+*/
+```
+
+### Radio
+
+```
+<input type="radio" name="name" id="id1" value="value1"><label for="id1">Label</label>
+<input type="radio" name="name" id="id2" value="value2"><label for="id2">Label</label>
+/*
+   checked
+   required
+*/
+```
+
+### Number
+
+```
+<label for="id">Label</label>
+<input type="number" name="name" id="id" value="1" min="1" max="10">
+/*
+   step="1"
+   value="1"
+   placeholder="placeholder"
+   required
+*/
+```
+
+### Range
+
+```
+<label for="id">Label</label>
+<input type="range" name="name" id="id" min="1"max="10" step="1"/>
+/*
+   step="1"
+   value="1"
+*/
+```
+
+### Date
+
+```
+<label for="id">Label</label>
+<input type="date" name="name" id="id">
+/*
+   min="2022-01-01"
+   max="2022-12-31"
+   step="1"
+   value="2022-01-01"
+   required
+*/
+```
+
+### Month
+
           <label for="id">Label</label>
           <input type="month" name="name" id="id">                                                  /*
                                                                                                        min="2022-01"
@@ -381,3 +429,7 @@
     <meta http-equiv="author" content="홍길동">                             // 제작자 표시
 
     <meta http-equiv="refresh" content="5;url=http://www.naver.com">       // 5초 간격으로 새로고침
+
+```
+
+```
