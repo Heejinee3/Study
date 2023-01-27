@@ -267,142 +267,240 @@
 */
 ```
 
-### Month
+### Month (수정)
 
-          <label for="id">Label</label>
-          <input type="month" name="name" id="id">                                                  /*
-                                                                                                       min="2022-01"
-                                                                                                       max="2022-12"
-                                                                                                       step="1"
-                                                                                                       value="2022-01"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="week" name="name" id="id">                                                   /*
-                                                                                                       min="2022-W01"
-                                                                                                       max="2023-W01"
-                                                                                                       step="1"
-                                                                                                       value="2022-W01"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="time" name="name" id="id">                                                   /*
-                                                                                                       min="00:00"
-                                                                                                       max="23:59"
-                                                                                                       step="1"
-                                                                                                       value="00:00"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="datetime" name="name" id="id">                                               /*
-                                                                                                       min="2022-01-01T00:00"
-                                                                                                       max="2022-12-23T23:59"
-                                                                                                       step="1"
-                                                                                                       value="2022-01-01T00:00"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="datetime-local" name="name" id="id">                                         /*
-                                                                                                       min="2022-01-01T00:00"
-                                                                                                       max="2022-12-23T23:59"
-                                                                                                       step="1"
-                                                                                                       value="2022-01-01T00:00"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="submit" name="name" id="id">
-          <button type="submit">submit</button>                                                     /*
-                                                                                                       value="submit"
-                                                                                                       formaction="http://myserver.com"
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="reset" name="name" id="id">
-          <button type="reset">reset</button>                                                       /*
-                                                                                                       value="reset"
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="image" name="name" id="id" src="data.jpg" alt="Alternative">
-          <button type="submit">
-            <img src="data.jpg">
-          </button>                                                                                 /*
-                                                                                                       width="100px"
-                                                                                                       formaction="http://myserver.com"
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="email" name="name" id="id">                                                  /*
-                                                                                                       value="aaa@gmail.com"
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       placeholder="placeholder"
-                                                                                                       size="10"
-                                                                                                       multiple
-                                                                                                       pattern=".+@naver\.com"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="search" name="name" id="id">                                                 /*
-                                                                                                       value="value"
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       placeholder="placeholder"
-                                                                                                       size="10"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="url" name="name" id="id">                                                    /*
-                                                                                                       value="https://naver.com"
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       placeholder="placeholder"
-                                                                                                       size="10"
-                                                                                                       pattern="https://.*"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="tel" name="name" id="id">                                                    /*
-                                                                                                       value="010-0000-0000"
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       placeholder="placeholder"
-                                                                                                       size="10"
-                                                                                                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <input type="button" name="name" id="id" value="button" onclick="function();">
-          <button type="button" name="name" id="id" onclick="function();">button</button>
+```
+<label for="id">Label</label>
+<input type="month" name="name" id="id">
+/*
+    min="2022-01"
+    max="2022-12"
+    step="1"
+    value="2022-01"
+    required
+*/
+```
 
-          <label for="id">Label</label>
-          <input type="hidden" name="name" id="id" value="value">
+### Week
 
-          <label for="id">Label</label>
-          <textarea name="name" id="id" cols="30" rows="10">Text</textarea>                         /*
-                                                                                                       minlength="0"
-                                                                                                       maxlength="10"
-                                                                                                       placeholder="placeholder"
-                                                                                                       required
-                                                                                                    */
-          <label for="id">Label</label>
-          <select name="name" id="id">
-            <option value="1">option</option>
-            <option value="2">option</option>
-            <option value="3">option</option>
-          </select>                                                                                 /*
-                                                                                                       multiple
-                                                                                                       size
-                                                                                                       required
-                                                                                                       selected(option)
-                                                                                                    */
-          <label for="id">Label</label>
-          <input list="id" id="id" name="name">
-          <datalist id="id" name="name">
-              <option value="1">option</option>
-              <option value="2">option</option>
-              <option value="3">option</option>
-          </datalist>
+```
+<label for="id">Label</label>
+<input type="week" name="name" id="id">
+/*
+  min="2022-W01"
+  max="2023-W01"
+  step="1"
+  value="2022-W01"
+  required
+*/
+```
 
-          <label for="id">Label</label>
-          <input type="color" name="name" id="id" value="#000000">
+### Time
+
+```
+<label for="id">Label</label>
+<input type="time" name="name" id="id">
+/*
+    min="00:00"
+    max="23:59"
+    step="1"
+    value="00:00"
+    required
+*/
+```
+
+### Datetime
+
+```
+<label for="id">Label</label>
+<input type="datetime" name="name" id="id">
+/*
+    min="2022-01-01T00:00"
+    max="2022-12-23T23:59"
+    step="1"
+    value="2022-01-01T00:00"
+    required
+*/
+```
+
+### Datetime Local
+
+```
+<label for="id">Label</label>
+<input type="datetime-local" name="name" id="id">
+/*
+    min="2022-01-01T00:00"
+    max="2022-12-23T23:59"
+    step="1"
+    value="2022-01-01T00:00"
+    required
+*/
+```
+
+### Submit
+
+```
+<label for="id">Label</label>
+<input type="submit" name="name" id="id">
+<button type="submit">submit</button>
+/*
+    value="submit"
+    formaction="http://myserver.com"
+*/
+```
+
+### Reset
+
+```
+<label for="id">Label</label>
+<input type="reset" name="name" id="id">
+<button type="reset">reset</button>
+/*
+    value="reset"
+*/
+```
+
+### Image Submit
+
+```
+<label for="id">Label</label>
+<input type="image" name="name" id="id" src="data.jpg" alt="Alternative">
+<button type="submit">
+<img src="data.jpg">
+</button>
+/*
+    width="100px"
+    formaction="http://myserver.com"
+*/
+```
+
+### Email
+
+```
+<label for="id">Label</label>
+<input type="email" name="name" id="id">
+/*
+    value="aaa@gmail.com"
+    minlength="0"
+    maxlength="10"
+    placeholder="placeholder"
+    size="10"
+    multiple
+    pattern=".+@naver\.com"
+    required
+*/
+```
+
+### Search
+
+```
+<label for="id">Label</label>
+<input type="search" name="name" id="id">
+/*
+    value="value"
+    minlength="0"
+    maxlength="10"
+    placeholder="placeholder"
+    size="10"
+    required
+*/
+```
+
+### Url
+
+```
+<label for="id">Label</label>
+<input type="url" name="name" id="id">
+/*
+    value="https://naver.com"
+    minlength="0"
+    maxlength="10"
+    placeholder="placeholder"
+    size="10"
+    pattern="https://.*"
+    required
+*/
+```
+
+### Tel
+
+```
+<label for="id">Label</label>
+<input type="tel" name="name" id="id">
+/*
+    value="010-0000-0000"
+    minlength="0"
+    maxlength="10"
+    placeholder="placeholder"
+    size="10"
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    required
+*/
+```
+
+### Button
+
+```
+<label for="id">Label</label>
+<input type="button" name="name" id="id" value="button" onclick="function();">
+<button type="button" name="name" id="id" onclick="function();">button</button>
+```
+
+### Hidden
+
+```
+<label for="id">Label</label>
+<input type="hidden" name="name" id="id" value="value">
+```
+
+### TextArea
+
+```
+<label for="id">Label</label>
+<textarea name="name" id="id" cols="30" rows="10">Text</textarea>
+/*
+    minlength="0"
+    maxlength="10"
+    placeholder="placeholder"
+    required
+*/
+```
+
+### Select
+
+```
+<label for="id">Label</label>
+<select name="name" id="id">
+  <option value="1">option</option>
+  <option value="2">option</option>
+  <option value="3">option</option>
+</select>
+/*
+    multiple
+    size
+    required
+    selected(option)
+*/
+```
+
+### Datalist
+
+```
+<label for="id">Label</label>
+<input list="id" id="id" name="name">
+<datalist id="id" name="name">
+    <option value="1">option</option>
+    <option value="2">option</option>
+    <option value="3">option</option>
+</datalist>
+```
+
+### Color
+
+```
+<label for="id">Label</label>
+<input type="color" name="name" id="id" value="#000000">
+```
 
 # Meta Tag
 
