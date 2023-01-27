@@ -267,17 +267,17 @@
 */
 ```
 
-### Month (수정)
+### Month
 
 ```
 <label for="id">Label</label>
 <input type="month" name="name" id="id">
 /*
-    min="2022-01"
-    max="2022-12"
-    step="1"
-    value="2022-01"
-    required
+   min="2022-01"
+   max="2022-12"
+   step="1"
+   value="2022-01"
+   required
 */
 ```
 
@@ -287,11 +287,11 @@
 <label for="id">Label</label>
 <input type="week" name="name" id="id">
 /*
-  min="2022-W01"
-  max="2023-W01"
-  step="1"
-  value="2022-W01"
-  required
+   min="2022-W01"
+   max="2023-W01"
+   step="1"
+   value="2022-W01"
+   required
 */
 ```
 
@@ -301,11 +301,11 @@
 <label for="id">Label</label>
 <input type="time" name="name" id="id">
 /*
-    min="00:00"
-    max="23:59"
-    step="1"
-    value="00:00"
-    required
+   min="00:00"
+   max="23:59"
+   step="1"
+   value="00:00"
+   required
 */
 ```
 
@@ -315,11 +315,11 @@
 <label for="id">Label</label>
 <input type="datetime" name="name" id="id">
 /*
-    min="2022-01-01T00:00"
-    max="2022-12-23T23:59"
-    step="1"
-    value="2022-01-01T00:00"
-    required
+   min="2022-01-01T00:00"
+   max="2022-12-23T23:59"
+   step="1"
+   value="2022-01-01T00:00"
+   required
 */
 ```
 
@@ -329,11 +329,11 @@
 <label for="id">Label</label>
 <input type="datetime-local" name="name" id="id">
 /*
-    min="2022-01-01T00:00"
-    max="2022-12-23T23:59"
-    step="1"
-    value="2022-01-01T00:00"
-    required
+   min="2022-01-01T00:00"
+   max="2022-12-23T23:59"
+   step="1"
+   value="2022-01-01T00:00"
+   required
 */
 ```
 
@@ -344,8 +344,8 @@
 <input type="submit" name="name" id="id">
 <button type="submit">submit</button>
 /*
-    value="submit"
-    formaction="http://myserver.com"
+   value="submit"
+   formaction="http://myserver.com"
 */
 ```
 
@@ -356,7 +356,7 @@
 <input type="reset" name="name" id="id">
 <button type="reset">reset</button>
 /*
-    value="reset"
+   value="reset"
 */
 ```
 
@@ -369,8 +369,8 @@
 <img src="data.jpg">
 </button>
 /*
-    width="100px"
-    formaction="http://myserver.com"
+   width="100px"
+   formaction="http://myserver.com"
 */
 ```
 
@@ -380,14 +380,14 @@
 <label for="id">Label</label>
 <input type="email" name="name" id="id">
 /*
-    value="aaa@gmail.com"
-    minlength="0"
-    maxlength="10"
-    placeholder="placeholder"
-    size="10"
-    multiple
-    pattern=".+@naver\.com"
-    required
+   value="aaa@gmail.com"
+   minlength="0"
+   maxlength="10"
+   placeholder="placeholder"
+   size="10"
+   multiple
+   pattern=".+@naver\.com"
+   required
 */
 ```
 
@@ -397,12 +397,12 @@
 <label for="id">Label</label>
 <input type="search" name="name" id="id">
 /*
-    value="value"
-    minlength="0"
-    maxlength="10"
-    placeholder="placeholder"
-    size="10"
-    required
+   value="value"
+   minlength="0"
+   maxlength="10"
+   placeholder="placeholder"
+   size="10"
+   required
 */
 ```
 
@@ -412,13 +412,13 @@
 <label for="id">Label</label>
 <input type="url" name="name" id="id">
 /*
-    value="https://naver.com"
-    minlength="0"
-    maxlength="10"
-    placeholder="placeholder"
-    size="10"
-    pattern="https://.*"
-    required
+   value="https://naver.com"
+   minlength="0"
+   maxlength="10"
+   placeholder="placeholder"
+   size="10"
+   pattern="https://.*"
+   required
 */
 ```
 
@@ -428,13 +428,13 @@
 <label for="id">Label</label>
 <input type="tel" name="name" id="id">
 /*
-    value="010-0000-0000"
-    minlength="0"
-    maxlength="10"
-    placeholder="placeholder"
-    size="10"
-    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-    required
+   value="010-0000-0000"
+   minlength="0"
+   maxlength="10"
+   placeholder="placeholder"
+   size="10"
+   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+   required
 */
 ```
 
@@ -459,10 +459,10 @@
 <label for="id">Label</label>
 <textarea name="name" id="id" cols="30" rows="10">Text</textarea>
 /*
-    minlength="0"
-    maxlength="10"
-    placeholder="placeholder"
-    required
+   minlength="0"
+   maxlength="10"
+   placeholder="placeholder"
+   required
 */
 ```
 
@@ -476,10 +476,10 @@
   <option value="3">option</option>
 </select>
 /*
-    multiple
-    size
-    required
-    selected(option)
+   multiple
+   size
+   required
+   selected(option)
 */
 ```
 
