@@ -364,8 +364,6 @@ configurations {
 }
 
 dependencies {
-    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'       // Thymeleaf Layout
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-web'       // Spring Web
     compileOnly 'org.projectlombok:lombok'                                  // Lombok
     developmentOnly 'org.springframework.boot:spring-boot-devtools'         // Spring Boot Dev Tools
@@ -381,12 +379,4 @@ dependencies {
 
 ```
 server.port = 8090 or 8080
-```
-
-### Thymeleaf
-
-```
-spring.thymeleaf.cache=false
-spring.thymeleaf.prefix=classpath:/templates/
-spring.thymeleaf.suffix=.html
 ```

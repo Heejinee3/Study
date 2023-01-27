@@ -292,3 +292,20 @@ public String function(HttpServletRequest request){
 ```
 <p th:text="${#numbers.formatDecimal(variable, comma_num, 'COMMA', point_num, 'POINT')}"></p>
 ```
+
+# build.gradle
+
+```
+dependencies {
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'       // Thymeleaf Layout
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf
+}
+```
+
+# application.properties
+
+```
+spring.thymeleaf.cache=false
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+```
