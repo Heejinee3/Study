@@ -158,7 +158,7 @@ class MemberRepositoryTest extends AppNameApplicationTests{
 ```
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA
-	runtimeOnly 'com.h2database:h2'                                        // H2DB
+    runtimeOnly 'com.h2database:h2'                                        // H2DB
 }
 ```
 
