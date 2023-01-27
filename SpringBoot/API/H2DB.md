@@ -39,7 +39,7 @@ public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
     // 기본 함수에서 변형
     List<MemberEntity> findByUserId(String userid);
 
-    // 네이티브 쿼리
+    // Native Query
     @Query(value = "SELECT * FROM member WHERE user_id = :userid", nativeQuery = true)
     List<MemberEntity> funciton(String userid);
 
@@ -57,7 +57,6 @@ public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
     @Query(value = "SELECT m FROM MemberEntity m WHERE m.userId = :userid")
     List<MemberEntity> findByUserId_JPQL_Query(String userid);
 
-    Boolean existsByJoindateLessThanEqual(LocalDate date);
 }
 ```
 
@@ -76,6 +75,38 @@ public interface MemberRepository extends JpaRepository<MemberEntity, Integer> {
 | findById(Integer id)                                | Optional< Employee >     | returns an entity identified using id                              |
 | save(MemberEntity member)                           | MemberEntity             | saves an entity and return the updated one                         |
 | saveAll(Iterable< Employee> entities)               | Iterable< Employee>      | saves all entities passed and return the updated entities          |
+
+### Query Function
+
+| Keyword            | Sample                                                  | JPQL snippet                                                   |
+| ------------------ | ------------------------------------------------------- | -------------------------------------------------------------- |
+| Distinct           | findDistinctByLastnameAndFirstname                      | select distinct …​ where x.lastname = ?1 and x.firstname = ?2  |
+| Firstn             | findFirst5                                              | …​ limit 5                                                     |
+| Lastn              | findLast5                                               | …​ order by x.id limit 5                                       |
+| And                | findByLastnameAndFirstname                              | … where x.lastname = ?1 and x.firstname = ?2                   |
+| Or                 | findByLastnameOrFirstname                               | … where x.lastname = ?1 or x.firstname = ?2                    |
+| Is, Equals         | findByFirstname,findByFirstnameIs,findByFirstnameEquals | … where x.firstname = ?1                                       |
+| Between            | findByStartDateBetween                                  | … where x.startDate between ?1 and ?2                          |
+| LessThan           | findByAgeLessThan                                       | … where x.age < ?1                                             |
+| LessThanEqual      | findByAgeLessThanEqual                                  | … where x.age <= ?1                                            |
+| GreaterThan        | findByAgeGreaterThan                                    | … where x.age > ?1                                             |
+| GreaterThanEqual   | findByAgeGreaterThanEqual                               | … where x.age >= ?1                                            |
+| After              | findByStartDateAfter                                    | … where x.startDate > ?1                                       |
+| Before             | findByStartDateBefore                                   | … where x.startDate < ?1                                       |
+| IsNull, Null       | findByAge(Is)Null                                       | … where x.age is null                                          |
+| IsNotNull, NotNull | findByAge(Is)NotNull                                    | … where x.age not null                                         |
+| Like               | findByFirstnameLike                                     | … where x.firstname like ?1                                    |
+| NotLike            | findByFirstnameNotLike                                  | … where x.firstname not like ?1                                |
+| StartingWith       | findByFirstnameStartingWith                             | … where x.firstname like ?1 (parameter bound with appended %)  |
+| EndingWith         | findByFirstnameEndingWith                               | … where x.firstname like ?1 (parameter bound with prepended %) |
+| Containing         | findByFirstnameContaining                               | … where x.firstname like ?1 (parameter bound wrapped in %)     |
+| OrderBy            | findByAgeOrderByLastnameDesc                            | … where x.age = ?1 order by x.lastname desc                    |
+| Not                | findByLastnameNot                                       | … where x.lastname <> ?1                                       |
+| In                 | findByAgeIn(Collection<Age> ages)                       | … where x.age in ?1                                            |
+| NotIn              | findByAgeNotIn(Collection<Age> ages)                    | … where x.age not in ?1                                        |
+| True               | findByActiveTrue()                                      | … where x.active = true                                        |
+| False              | findByActiveFalse()                                     | … where x.active = false                                       |
+| IgnoreCase         | findByFirstnameIgnoreCase                               | … where UPPER(x.firstname) = UPPER(?1)                         |
 
 # Test
 
