@@ -1,14 +1,23 @@
 # Index
 
 [Basic Structure](#basic-structure)
+
 [Title](#title)
+
 [Paragraph](#paragraph)
+
 [Text](#text)
+
 [List](#list)
+
 [Table](#table)
+
 [Multimedia](#multimedia)
+
 [Link](#link)
+
 [Form](#form)
+
 [Meta Tag](#meta-tag)
 
 # Basic Structure
