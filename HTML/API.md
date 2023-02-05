@@ -1,3 +1,16 @@
+# Index
+
+[Basic Structure](#basic-structure)
+[Title](#title)
+[Paragraph](#paragraph)
+[Text](#text)
+[List](#list)
+[Table](#table)
+[Multimedia](#multimedia)
+[Link](#link)
+[Form](#form)
+[Meta Tag](#meta-tag)
+
 # Basic Structure
 
     <!DOCTYPE html>
@@ -504,6 +517,7 @@
 
 # Meta Tag
 
+```
     <meta charset="UTF-8">                                                 // 문자인코딩 타입(UTF-8, EUC-KR)
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* viewport     : 뷰포트
@@ -527,7 +541,4 @@
     <meta http-equiv="author" content="홍길동">                             // 제작자 표시
 
     <meta http-equiv="refresh" content="5;url=http://www.naver.com">       // 5초 간격으로 새로고침
-
-```
-
 ```
