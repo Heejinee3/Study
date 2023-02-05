@@ -387,7 +387,7 @@ box-shadow: 10px 10px 10px 10px #FFFFFF inset; /* 박스에 그림자 넣기
                                                   수평 거리, 수직 거리, 흐림, 번짐, 색상, 안쪽 or 바깥쪽 결정 */
 ```
 
-# Border/Padding/Margin
+<h1 id = "border-padding-margin">Border/Padding/Margin</h1>
 
 ```
 border-style: none;                 /* Border 선 종류
