@@ -143,7 +143,7 @@ A + B               // A의 형제들 중 A 다음으로 첫번째로 B 조건�
 A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하는 사람과 그의 후손들에게 영향
 ```
 
-# Pseudo Class/Pseudo Element
+<h1 id = "pseudo-class-pseudo-element">Pseudo Class/Pseudo Element</h1>
 
 ### Pseudo Class
 
