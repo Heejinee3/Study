@@ -545,6 +545,19 @@ public class Controller {
 }
 ```
 
+# Lombok
+
+| Annotation               | Explanation                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| @Getter                  | getter 생성                                                               |
+| @Setter                  | setter 생성                                                               |
+| @NoArgsConstructor       | 매개변수가 없는 생성자 생성                                               |
+| @AllArgsConstructor      | 모든 필드를 매개변수로 갖는 생성자를 생성                                 |
+| @RequiredArgsConstructor | final이나 @NotNull이 설정된 변수를 매개변수로 갖는 생성자를 생성          |
+| @ToString                | toString() 생성                                                           |
+| @EqualsAndHashCode       | equals(), hashCode() 생성                                                 |
+| @Data                    | @Getter, @Setter, @RequiredArgsConstructor, @ToString, @EqualsAndHashCode |
+
 # 그외
 
 @RestController: @Controller + @ResponseBody
