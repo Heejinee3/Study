@@ -1,29 +1,6 @@
 해야할 거
 ex15_jpa_realdb_crud
 
-# Make Spring Project
-
-> Spring Initializr
->
-> https://start.spring.io/
-
-| Name             | Sub Name              | Explanation                                               | Example                          |
-| ---------------- | --------------------- | --------------------------------------------------------- | -------------------------------- |
-| Project          |                       |                                                           | Gradle - Groovy                  |
-| Language         |                       |                                                           | Java                             |
-| Spring Boot      |                       |                                                           | (SNAPSHOT)이 없는 가장 최신 버전 |
-| Project Metadata | Group                 | 프로젝트 집합                                             | com.companyName                  |
-|                  | Artifact              | 프로젝트 이름                                             | AppName                          |
-|                  | Name                  | 프로젝트 이름                                             | AppName                          |
-|                  | Description           | 프로젝트 설명                                             | 빈칸                             |
-|                  | Package name          | 애플리케이션 id 문구                                      | com.companyName.AppName          |
-|                  | Packaging             |                                                           | Jar                              |
-|                  | Java                  |                                                           | 17                               |
-| Dependencies     | Spring Boot Dev Tools | 소스파일의 변화를 감지하여 자동으로 빌드해주는 라이브러리 |
-|                  | Spring Web            | 기본적인 웹 애플리케이션을 만들때 사용하는 라이브러리     |
-|                  | Lombok                | 기본적인 웹 애플리케이션을 만들때 사용하는 라이브러리     |
-|                  | Thymeleaf             | 기본적인 웹 애플리케이션을 만들때 사용하는 라이브러리     |
-
 # Annotation
 
 | Annotation               | Explanation                                                               |
@@ -273,61 +250,6 @@ public class ObjectName {
 public Type function(){
 
     return "index"; // @ResponseBody를 사용하면 HTTP 응답으로 순수한 문자열로 반환
-
-}
-```
-
-### Post
-
-```
-@PostMapping("/")
-public Type function(){
-
-    return "index";
-
-}
-```
-
-### Put
-
-```
-@PutMapping("/")
-public Type function(){
-
-    return "index";
-
-}
-```
-
-### Delete
-
-```
-@DeleteMapping("/")
-public Type function(){
-
-    return "index";
-
-}
-```
-
-### Patch
-
-```
-@PatchMapping("/")
-public Type function(){
-
-    return "index";
-
-}
-```
-
-### Request
-
-```
-@RequestMapping(value = "/", method = RequestMethod.GET) // GET, POST, PUT, DELETE, PATCH
-public Type function(){
-
-    return "index";
 
 }
 ```
