@@ -18,14 +18,15 @@
 |                  | Spring Web            | 기본적인 웹 애플리케이션을 만들때 사용하는 라이브러리         |
 |                  | Lombok                | 기본적인 웹 애플리케이션을 만들때 사용하는 라이브러리         |
 |                  | Thymeleaf             | 기본적인 웹 애플리케이션을 만들때 사용하는 라이브러리         |
-
-# Talend API Tester
+|                  | Swagger               | API 명세 관리 라이브러리                                      |
 
 # Request
 
 ### Method
 
 > @Controller 클래스 안에 함수 선언
+>
+> Talend API Tester로 테스트
 
 ```
 // Get, Post, Put, Patch, Delete Request
@@ -39,7 +40,7 @@ public String function(){
 ```
 // Get Request
 
-@GetMapping(value = "/")
+@GetMapping("/")
 public String function(){
   return "index"
 }
@@ -48,7 +49,7 @@ public String function(){
 ```
 // Post Request
 
-@PostMapping(value = "/")
+@PostMapping("/")
 public String function(){
   return "index"
 }
@@ -57,7 +58,7 @@ public String function(){
 ```
 // Put Request
 
-@PutMapping(value = "/")
+@PutMapping("/")
 public String function(){
   return "index"
 }
@@ -66,7 +67,7 @@ public String function(){
 ```
 // Patch Request
 
-@PatchMapping(value = "/")
+@PatchMapping("/")
 public String function(){
   return "index"
 }
@@ -75,7 +76,7 @@ public String function(){
 ```
 // Delete Request
 
-@DeleteMapping(value = "/")
+@DeleteMapping("/")
 public String function(){
   return "index"
 }
@@ -83,12 +84,20 @@ public String function(){
 
 ### Get Value
 
+> HttpEntity<T>: Header와 Body로 구성된 HTTP 요청과 응답을 구성
+>
+> RequestEntity: HTTP 요청 구성
+>
+> ResponseEntity: HTTP 응답 구성
+>
+> 아래 예제에서 ResponseEntity로도 return 가능 (status, headers, body 구성)
+
 ```
 /* URL에 값을 담은 요청을 받음
    localhost:8080/variable */
 
-@RequestMapping("value = /{variable}")
-public String function(@PathVariable(value = "variable") String variable){
+@RequestMapping("/{variable}")
+public String function(@PathVariable("variable") String variable){
   return "index";
 }
 ```
@@ -97,17 +106,17 @@ public String function(@PathVariable(value = "variable") String variable){
 /* URI에서 ?을 기준으로 우측에 키=값 형태로 구성한 요청을 받음
    localhost:8080?variable=value                        */
 
-@RequestMapping(value = "/")
-public String function(@RequestParam(value = "variable") String variable){
+@RequestMapping("/")
+public String function(@RequestParam("variable") String variable){
   return "index";
 }
 
-@RequestMapping(value = "/")
+@RequestMapping("/")
 public String function(@RequestParam Map<String, String> map){
   return "index";
 }
 
-@RequestMapping(value = "/")
+@RequestMapping("/")
 public String function(Class object){
   return "index";
 }
@@ -117,24 +126,16 @@ public String function(Class object){
 /* HTTP Body 내용에 값을 포함한 요청을 받음 (보통 JSON 형식)
    localhost:8080                                    */
 
-@RequestMapping(value = "/")
+@RequestMapping("/")
 public String function(@RequestBody Map<String, String> map){
   return "index";
 }
 
-@RequestMapping(value = "/")
+@RequestMapping("/")
 public String function(@RequestBody Class object){
   return "index";
 }
 ```
-
-> HttpEntity<T>: Header와 Body로 구성된 HTTP 요청과 응답을 구성
->
-> RequestEntity: HTTP 요청 구성
->
-> ResponseEntity: HTTP 응답 구성
->
-> 위 예제에서 ResponseEntity로 return 가능 (status, headers, body 구성)
 
 # Swagger
 
@@ -151,7 +152,47 @@ implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 spring.mvc.pathmatch.matching-strategy=ant_path_matcher
 ```
 
-###
+### Configuration
+
+```
+@Configuration
+@EnableSwagger2
+public class Configuration {
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(function())                                                  // ApiInfo object
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.companyName.AppName")) // 스캔할 패키지 범위
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    private ApiInfo function() {
+        return new ApiInfoBuilder()
+                .title("Title")      // API 페이지 제목
+                .description("설명") // API 페이지 설명
+                .version("1.0.0")    // API 페이지 버전
+                .build();
+    }
+}
+```
+
+### Controller
+
+```
+@ApiOperation(value = "Title", notes = "설명") // API 함수 제목과 설명
+@RequestMapping("/")
+public String function(@ApiParam(value = "설명", required = true) @RequestParam String variable){ /* API 함수의 파라미터 설명
+                                                                                                     DTO 클래스 내의 매개변수에도 정의 가능 */
+  return "index";
+}
+```
+
+### Access
+
+> https://localhost:8080/swagger-ui.html
 
 # 그외
 
