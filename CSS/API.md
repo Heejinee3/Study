@@ -50,7 +50,7 @@
 
 # Useful Site
 
-### Design Tool
+#### Design Tool
 
 > [Sketch](https://www.sketch.com/)
 >
@@ -58,7 +58,7 @@
 >
 > [Adobe XD](https://helpx.adobe.com/support/xd.html)
 
-### Design Idea
+#### Design Idea
 
 > [iOS Design Guide](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios/)
 >
@@ -70,7 +70,7 @@
 >
 > [dribbble](https://dribbble.com/)
 
-### Color
+#### Color
 
 > [Material Design Palette](https://www.materialpalette.com/)
 >
@@ -80,13 +80,13 @@
 >
 > [Gradient Editor](https://www.colorzilla.com/gradient-editor/)
 
-### Font
+#### Font
 
 > [Apple Font](https://developer.apple.com/fonts/)
 >
 > [Google Font](https://fonts.google.com/)
 
-### Icon
+#### Icon
 
 > [Icons8](https://icons8.com/)
 >
@@ -106,7 +106,7 @@
 >
 > [Font Awesome](https://fontawesome.com/)
 
-### Test
+#### Test
 
 > [Can I Use](https://caniuse.com/)
 >
@@ -132,7 +132,7 @@
 
 # Selector
 
-### Unary Operator
+#### Unary Operator
 
 ```
 *                   // universal
@@ -143,7 +143,7 @@ tag                 // tag
 ::pseudo-element    // pseudo-element
 ```
 
-### Property
+#### Property
 
 ```
 [property]          // 해당 속성이 있는 요소
@@ -155,7 +155,7 @@ tag                 // tag
 [property*="value"] // 지정한 속성값의 일부가 일치하는 요소
 ```
 
-### Binary Operator
+#### Binary Operator
 
 ```
 A                   // A의 모든 후손들에게 영향
@@ -168,7 +168,7 @@ A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하�
 
 <h1 id = "pseudo-class-pseudo-element">Pseudo Class/Pseudo Element</h1>
 
-### Pseudo Class
+#### Pseudo Class
 
 ```
 :link                // 방문하지 않은 상태
@@ -205,7 +205,7 @@ A ~ B               // A의 형제들 중 A 다음으로 B 조건을 만족하�
 >
 > 홀수번째를 선택할 때는 2n+1, odd 사용
 
-### Pseudo Element
+#### Pseudo Element
 
 ```
 ::first-line         // 첫 번째 줄을 선택
@@ -256,7 +256,7 @@ color: #000000;      /* Text 색상
                         rgba(0, 0, 0, 0) ~ rgba(255, 255, 255, 1)    : 레드, 그린, 블루, 불투명도 */
 ```
 
-### Apply
+#### Apply
 
 ```
 <style>
@@ -879,7 +879,7 @@ animation-timing-function: linear;      /* 속도 곡선 지정
 animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, delay, iteration-count, direction */
 ```
 
-### Declaration
+#### Declaration
 
 ```
 @keyframes name{     /* Animation 선언
@@ -894,7 +894,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 
 # Media Query
 
-### Import
+#### Import
 
 ```
 <link rel="stylesheet" media="screen" href="mycss.css">                            // 외부 css 파일 연결(추천, head 사이)
@@ -916,7 +916,7 @@ animation: name 1s linear 1s 1  normal; /* name, duration, timing-function, dela
 </style>
 ```
 
-### Apply
+#### Apply
 
 ```
 @media [only|not] 미디어유형 [and 조건] [and 조건] ...

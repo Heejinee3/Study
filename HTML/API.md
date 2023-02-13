@@ -189,7 +189,7 @@
 </form>
 ```
 
-### Text
+#### Text
 
 ```
 <label for="id">Label</label>
@@ -204,7 +204,7 @@
 */
 ```
 
-### Password
+#### Password
 
 ```
 <label for="id">Label</label>
@@ -218,7 +218,7 @@
 */
 ```
 
-### File
+#### File
 
 ```
 <label for="id">Label</label>
@@ -229,7 +229,7 @@
 */
 ```
 
-### Checkbox
+#### Checkbox
 
 ```
 <input type="checkbox" name="name" id="id1" value="value1"><label for="id1">Label</label>
@@ -240,7 +240,7 @@
 */
 ```
 
-### Radio
+#### Radio
 
 ```
 <input type="radio" name="name" id="id1" value="value1"><label for="id1">Label</label>
@@ -251,7 +251,7 @@
 */
 ```
 
-### Number
+#### Number
 
 ```
 <label for="id">Label</label>
@@ -264,7 +264,7 @@
 */
 ```
 
-### Range
+#### Range
 
 ```
 <label for="id">Label</label>
@@ -275,7 +275,7 @@
 */
 ```
 
-### Date
+#### Date
 
 ```
 <label for="id">Label</label>
@@ -289,7 +289,7 @@
 */
 ```
 
-### Month
+#### Month
 
 ```
 <label for="id">Label</label>
@@ -303,7 +303,7 @@
 */
 ```
 
-### Week
+#### Week
 
 ```
 <label for="id">Label</label>
@@ -317,7 +317,7 @@
 */
 ```
 
-### Time
+#### Time
 
 ```
 <label for="id">Label</label>
@@ -331,7 +331,7 @@
 */
 ```
 
-### Datetime
+#### Datetime
 
 ```
 <label for="id">Label</label>
@@ -345,7 +345,7 @@
 */
 ```
 
-### Datetime Local
+#### Datetime Local
 
 ```
 <label for="id">Label</label>
@@ -359,7 +359,7 @@
 */
 ```
 
-### Submit
+#### Submit
 
 ```
 <label for="id">Label</label>
@@ -371,7 +371,7 @@
 */
 ```
 
-### Reset
+#### Reset
 
 ```
 <label for="id">Label</label>
@@ -382,7 +382,7 @@
 */
 ```
 
-### Image Submit
+#### Image Submit
 
 ```
 <label for="id">Label</label>
@@ -396,7 +396,7 @@
 */
 ```
 
-### Email
+#### Email
 
 ```
 <label for="id">Label</label>
@@ -413,7 +413,7 @@
 */
 ```
 
-### Search
+#### Search
 
 ```
 <label for="id">Label</label>
@@ -428,7 +428,7 @@
 */
 ```
 
-### Url
+#### Url
 
 ```
 <label for="id">Label</label>
@@ -444,7 +444,7 @@
 */
 ```
 
-### Tel
+#### Tel
 
 ```
 <label for="id">Label</label>
@@ -460,7 +460,7 @@
 */
 ```
 
-### Button
+#### Button
 
 ```
 <label for="id">Label</label>
@@ -468,14 +468,14 @@
 <button type="button" name="name" id="id" onclick="function();">button</button>
 ```
 
-### Hidden
+#### Hidden
 
 ```
 <label for="id">Label</label>
 <input type="hidden" name="name" id="id" value="value">
 ```
 
-### TextArea
+#### TextArea
 
 ```
 <label for="id">Label</label>
@@ -488,7 +488,7 @@
 */
 ```
 
-### Select
+#### Select
 
 ```
 <label for="id">Label</label>
@@ -505,7 +505,7 @@
 */
 ```
 
-### Datalist
+#### Datalist
 
 ```
 <label for="id">Label</label>
@@ -517,7 +517,7 @@
 </datalist>
 ```
 
-### Color
+#### Color
 
 ```
 <label for="id">Label</label>

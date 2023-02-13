@@ -1,3 +1,39 @@
+# Index
+
+> [Database](#database)
+>
+> [Table](#table)
+>
+> [View](#view)
+>
+> [Data](#data)
+>
+> [Select](#select)
+>
+> [Join](#join)
+>
+> [Procedure](#procedure)
+>
+> [Function](#function)
+>
+> [Trigger](#trigger)
+>
+> [If/Case/While](#if-case-while)
+>
+> [Cursor](#cursor)
+>
+> [Prepare](#prepare)
+>
+> [Index](#index)
+>
+> [Operator](#operator)
+>
+> [Aggregate Function](#aggregate-function)
+>
+> [Type](#type)
+>
+> [Reference](#reference-1)
+
 # Database
 
 #### Show
@@ -143,9 +179,9 @@
         ORDER BY <column> <ASC | DESC>, <column2> <ASC | DESC> ...
         LIMIT <offset> <number>;
 
-# JOIN
+# Join
 
-#### Inner Join/ Self Join
+#### Inner Join/Self Join
 
     SELECT <table>.<column> <name>, <table>.<column> <name>, ...
         FROM <table> <name>
@@ -241,9 +277,9 @@
 
     DROP Trigger IF EXISTS <trigger>;
 
-# If/ Case/ While
+<h1 id = "if-case-while">If/Case/While</h1>
 
-#### Declaration/ Initializaion
+#### Declaration/Initializaion
 
     DECLARE <variable> <type>;      -- declaration
 
