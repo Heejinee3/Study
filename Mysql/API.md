@@ -277,7 +277,7 @@
 
     DROP Trigger IF EXISTS <trigger>;
 
-<h1 id = "if-case-while">If/Case/While</h1>
+# If/Case/While
 
 #### Declaration/Initializaion
 
