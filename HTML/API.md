@@ -22,66 +22,136 @@
 
 # Basic Structure
 
-    <!DOCTYPE html>
-    <html lang="ko">
-      <head>
-        <title>Title</title>
-      </head>
-      <body>
-        <header>Header</header>    // 윗쪽 구역
-        <main>Main</main>          // 본문
-        <aside>Aside</aside>       // 사이드바
-        <footer>Footer</footer>    // 아랫쪽 구역
-        <article>Article</article> // 개별적이고 독립적인 콘텐츠마다 사용
-        <section>Section</section> // 관련있는 콘텐츠를 묶을 때 사용
-        <div>Division</div>        // 페이지를 block으로 나눌 때 사용
-      </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Title</title>
+  </head>
+  <body>
+    <!-- 윗쪽 구역 -->
+    <header>Header</header>
+
+    <!-- 본문 -->
+    <main>Main</main>
+
+    <!-- 사이드바 -->
+    <aside>Aside</aside>
+
+    <!-- 아랫쪽 구역 -->
+    <footer>Footer</footer>
+
+    <!-- 개별적이고 독립적인 콘텐츠마다 사용 -->
+    <article>Article</article>
+
+    <!-- 관련있는 콘텐츠를 묶을 때 사용 -->
+    <section>Section</section>
+
+    <!-- 페이지를 block으로 나눌 때 사용 -->
+    <div>Division</div>
+  </body>
+</html>
+```
 
 # Title
 
-    <h1>Title</h1> // 2 times
-    <h2>Title</h2> // 1.5 times
-    <h3>Title</h3> // 1.33 times
-    <h4>Title</h4> // 1.17 times
-    <h5>Title</h5> // 0.83 times
-    <h6>Title</h6> // 0.67 times
+```html
+<!-- 2 times -->
+<h1>Title</h1>
+
+<!-- 1.5 times -->
+<h2>Title</h2>
+
+<!-- 1.33 times -->
+<h3>Title</h3>
+
+<!-- 1.17 times -->
+<h4>Title</h4>
+
+<!-- 0.83 times -->
+<h5>Title</h5>
+
+<!-- 0.67 times -->
+<h6>Title</h6>
+```
 
 # Paragraph
 
-    <br>                                 // 줄바꿈
-    <p>Paragraph</p>                     // 단락
-    <blockquote>Block Quote</blockquote> // 인용문
-    <hr>                                 // 수평선
-    <div>Division</div>                  // block
-    <span>Span</span>                    // inline
+```html
+<!-- 줄바꿈 -->
+<br />
+
+<!-- 단락 -->
+<p>Paragraph</p>
+
+<!-- 인용문 -->
+<blockquote>Block Quote</blockquote>
+
+<!-- 수평선 -->
+<hr />
+
+<!-- block -->
+<div>Division</div>
+
+<!-- inline -->
+<span>Span</span>
+```
 
 # Text
 
-    <b>Text</b>                                               // 굵은 글씨
-    <strong>Text</strong>                                     // 굵은 글씨(강조)
-    <i>Text</i>                                               // 기울어진 글씨(관용구)
-    <em>Text</em>                                             // 기울어진 글씨(강조)
-    <cite>Text</cite>                                         // 기울어진 글씨(창작물의 제목)
-    <small>Text</small>                                       // 작은 글씨
-    <sub>Text</sub>                                           // 아래쪽 글씨
-    <sup>Text</sup>                                           // 위쪽 글씨
-    <s>Text</s>                                               // 가운데줄 그어진 글씨(잘못됨)
-    <del>Text</del>                                           // 가운데줄 그어진 글씨(삭제)
-    <u>Text</u>                                               // 밑줄 그어진 글씨
-    <ins>Text</ins>                                           // 밑줄 그어진 글씨(추가)
-    <abbr title="Original Text">Abbreviated Text</abbr>       // 축약된 글씨
-    <code>Text</code>                                         // 코드 글씨
-    <font color="#000000" size="10px" face="돋움">Text</font> // 색깔, 크기, 모양 조절 글씨
+```html
+<!-- 굵은 글씨 -->
+<b>Text</b>
+
+<!-- 굵은 글씨(강조) -->
+<strong>Text</strong>
+
+<!-- 기울어진 글씨(관용구) -->
+<i>Text</i>
+
+<!-- 기울어진 글씨(강조) -->
+<em>Text</em>
+
+<!-- 기울어진 글씨(창작물의 제목) -->
+<cite>Text</cite>
+
+<!-- 작은 글씨 -->
+<small>Text</small>
+
+<!-- 아래쪽 글씨 -->
+<sub>Text</sub>
+
+<!-- 위쪽 글씨 -->
+<sup>Text</sup>
+
+<!-- 가운데줄 그어진 글씨(잘못됨) -->
+<s>Text</s>
+
+<!-- 가운데줄 그어진 글씨(삭제) -->
+<del>Text</del>
+
+<!-- 밑줄 그어진 글씨 -->
+<u>Text</u>
+
+<!-- 밑줄 그어진 글씨(추가) -->
+<ins>Text</ins>
+
+<!-- 축약된 글씨 -->
+<abbr title="Original Text">Abbreviated Text</abbr>
+
+<!-- 코드 글씨 -->
+<code>Text</code>
+
+<!-- 색깔, 크기, 모양 조절 글씨 -->
+<font color="#000000" size="10px" face="돋움">Text</font>
+```
 
 # List
 
-```
-/* 순서가 있는 목록 */
-/*
-    type = "1","a","A","i","I"
-    start = "1"
-*/
+```html
+<!-- 순서가 있는 목록 -->
+<!-- type  = "1","a","A","i","I"
+     start = "1" -->
 <ol>
   <li>List</li>
   <li>List</li>
@@ -89,8 +159,8 @@
 </ol>
 ```
 
-```
-/* 순서가 없는 목록 */
+```html
+<!-- 순서가 없는 목록 -->
 <ul>
   <li>List</li>
   <li>List</li>
@@ -98,8 +168,8 @@
 </ul>
 ```
 
-```
-/* 용어 목록 */
+```html
+<!-- 용어 목록 -->
 <dl>
   <dt>Terms</dt>
   <dd>Explanation</dd>
@@ -526,28 +596,37 @@
 
 # Meta Tag
 
-```
-    <meta charset="UTF-8">                                                 // 문자인코딩 타입(UTF-8, EUC-KR)
+```html
+<!-- 문자인코딩 타입(UTF-8, EUC-KR) -->
+<meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* viewport     : 뷰포트
-                                                                              device-width : 웹페이지의 너비가 기기 너비와 동일
-                                                                              initial-scale: 초기 확대 비율                   */
+<!-- viewport     : 뷰포트
+     device-width : 웹페이지의 너비가 기기 너비와 동일
+     initial-scale: 초기 확대 비율 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">                  // IE브라우저에서 각 버전 중 가장 최신 표준 모드를 선택하는 문서 모드
+<!-- IE브라우저에서 각 버전 중 가장 최신 표준 모드를 선택하는 문서 모드 -->
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    /* content-type    : 콘텐츠의 형식을 알려줌
-                                                                              text/html       : text 기반의 html 콘텐츠
-                                                                              text/xml        : text 기반의 xml 콘텐츠
-                                                                              application/json: AOS/IOS 앱 또는 REST API 서버와 통신할 때 콘텐츠 형식 */
+<!-- content-type : 콘텐츠의 형식을 알려줌 
+     text/html : text 기반의 html 콘텐츠
+     text/xml : text 기반의 xml 콘텐츠 
+     application/json: AOS/IOS 앱 또는 REST API 서버와 통신할 때 콘텐츠 형식 -->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-    <meta name="keyword" content="Web, html, 웹, 블로그">                   // 검색 로봇에 의해 검색되는 단어를 지정
+<!-- 검색 로봇에 의해 검색되는 단어를 지정 -->
+<meta name="keyword" content="Web, html, 웹, 블로그" />
 
-    <meta name="description" content="저의 웹사이트입니다.">                 // 검색 로봇에 의해 검색되는 문자열
+<!-- 검색 로봇에 의해 검색되는 문자열 -->
+<meta name="description" content="저의 웹사이트입니다." />
 
-    <meta name="robots" content="noindex,nofollow">                        /* noindex: 검색 로봇에 검색 안되게 함
-                                                                              nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함
+<!-- noindex: 검색 로봇에 검색 안되게 함 
+nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함 -->
+<meta name="robots" content="noindex,nofollow" /> /* noindex: 검색 로봇에 검색
+안되게 함 nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함
 
-    <meta http-equiv="author" content="홍길동">                             // 제작자 표시
+<meta http-equiv="author" content="홍길동" /> // 제작자 표시
 
-    <meta http-equiv="refresh" content="5;url=http://www.naver.com">       // 5초 간격으로 새로고침
+<meta http-equiv="refresh" content="5;url=http://www.naver.com" /> // 5초
+간격으로 새로고침
 ```
