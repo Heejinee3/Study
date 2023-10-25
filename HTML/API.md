@@ -403,195 +403,173 @@
 
 #### Datetime
 
-```
+```html
 <label for="id">Label</label>
-<input type="datetime" name="name" id="id">
-/*
-   min="2022-01-01T00:00"
-   max="2022-12-23T23:59"
-   step="1"
-   value="2022-01-01T00:00"
-   required
-*/
+<!-- min   = "2022-01-01T00:00"
+     max   = "2022-12-23T23:59"
+     step  = "1"
+     value = "2022-01-01T00:00"
+     required  -->
+<input type="datetime" name="name" id="id" />
 ```
 
 #### Datetime Local
 
-```
+```html
 <label for="id">Label</label>
-<input type="datetime-local" name="name" id="id">
-/*
-   min="2022-01-01T00:00"
-   max="2022-12-23T23:59"
-   step="1"
-   value="2022-01-01T00:00"
-   required
-*/
+<!-- min   = "2022-01-01T00:00"
+     max   = "2022-12-23T23:59"
+     step  = "1"
+     value = "2022-01-01T00:00"
+     required  -->
+<input type="datetime-local" name="name" id="id" />
 ```
 
 #### Submit
 
-```
+```html
 <label for="id">Label</label>
-<input type="submit" name="name" id="id">
+<!-- value      = "submit"
+     formaction = "http://myserver.com" -->
+<input type="submit" name="name" id="id" />
 <button type="submit">submit</button>
-/*
-   value="submit"
-   formaction="http://myserver.com"
-*/
 ```
 
 #### Reset
 
-```
+```html
 <label for="id">Label</label>
-<input type="reset" name="name" id="id">
+<!-- value = "reset" -->
+<input type="reset" name="name" id="id" />
 <button type="reset">reset</button>
-/*
-   value="reset"
-*/
 ```
 
 #### Image Submit
 
-```
+```html
 <label for="id">Label</label>
-<input type="image" name="name" id="id" src="data.jpg" alt="Alternative">
+<!-- width      = "100px"
+     formaction = "http://myserver.com" -->
+<input type="image" name="name" id="id" src="data.jpg" alt="Alternative" />
 <button type="submit">
-<img src="data.jpg">
+  <img src="data.jpg" />
 </button>
-/*
-   width="100px"
-   formaction="http://myserver.com"
-*/
 ```
 
 #### Email
 
-```
+```html
 <label for="id">Label</label>
-<input type="email" name="name" id="id">
-/*
-   value="aaa@gmail.com"
-   minlength="0"
-   maxlength="10"
-   placeholder="placeholder"
-   size="10"
-   multiple
-   pattern=".+@naver\.com"
-   required
-*/
+<!-- value       = "aaa@gmail.com"
+     minlength   = "0"
+     maxlength   = "10"
+     placeholder = "placeholder"
+     size        = "10"
+     multiple
+     pattern     = ".+@naver\.com"
+     required -->
+<input type="email" name="name" id="id" />
 ```
 
 #### Search
 
-```
+```html
 <label for="id">Label</label>
-<input type="search" name="name" id="id">
-/*
-   value="value"
-   minlength="0"
-   maxlength="10"
-   placeholder="placeholder"
-   size="10"
-   required
-*/
+<!-- value       = "value"
+     minlength   = "0"
+     maxlength   = "10"
+     placeholder = "placeholder"
+     size        = "10"
+     required -->
+<input type="search" name="name" id="id" />
 ```
 
 #### Url
 
-```
+```html
 <label for="id">Label</label>
-<input type="url" name="name" id="id">
-/*
-   value="https://naver.com"
-   minlength="0"
-   maxlength="10"
-   placeholder="placeholder"
-   size="10"
-   pattern="https://.*"
-   required
-*/
+<!-- value       = "https://naver.com"
+     minlength   = "0"
+     maxlength   = "10"
+     placeholder = "placeholder"
+     size        = "10"
+     pattern     = "https://.*"
+     required -->
+<input type="url" name="name" id="id" />
 ```
 
 #### Tel
 
-```
+```html
 <label for="id">Label</label>
-<input type="tel" name="name" id="id">
-/*
-   value="010-0000-0000"
-   minlength="0"
-   maxlength="10"
-   placeholder="placeholder"
-   size="10"
-   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-   required
-*/
+<!-- value="010-0000-0000"
+     minlength   = "0"
+     maxlength   = "10"
+     placeholder = "placeholder"
+     size        = "10"
+     pattern     = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+     required -->
+<input type="tel" name="name" id="id" />
 ```
 
 #### Button
 
-```
+```html
 <label for="id">Label</label>
-<input type="button" name="name" id="id" value="button" onclick="function();">
+<input type="button" name="name" id="id" value="button" onclick="function();" />
 <button type="button" name="name" id="id" onclick="function();">button</button>
 ```
 
 #### Hidden
 
-```
+```html
 <label for="id">Label</label>
-<input type="hidden" name="name" id="id" value="value">
+<input type="hidden" name="name" id="id" value="value" />
 ```
 
 #### TextArea
 
-```
+```html
 <label for="id">Label</label>
+<!-- minlength   = "0"
+     maxlength   = "10"
+     placeholder = "placeholder"
+     required -->
 <textarea name="name" id="id" cols="30" rows="10">Text</textarea>
-/*
-   minlength="0"
-   maxlength="10"
-   placeholder="placeholder"
-   required
-*/
 ```
 
 #### Select
 
-```
+```html
 <label for="id">Label</label>
+<!-- multiple
+     size
+     required
+     selected(option) -->
 <select name="name" id="id">
   <option value="1">option</option>
   <option value="2">option</option>
   <option value="3">option</option>
 </select>
-/*
-   multiple
-   size
-   required
-   selected(option)
-*/
 ```
 
 #### Datalist
 
-```
+```html
 <label for="id">Label</label>
-<input list="id" id="id" name="name">
+<input list="id" id="id" name="name" />
 <datalist id="id" name="name">
-    <option value="1">option</option>
-    <option value="2">option</option>
-    <option value="3">option</option>
+  <option value="1">option</option>
+  <option value="2">option</option>
+  <option value="3">option</option>
 </datalist>
 ```
 
 #### Color
 
-```
+```html
 <label for="id">Label</label>
-<input type="color" name="name" id="id" value="#000000">
+<input type="color" name="name" id="id" value="#000000" />
 ```
 
 # Meta Tag
@@ -608,9 +586,9 @@
 <!-- IE브라우저에서 각 버전 중 가장 최신 표준 모드를 선택하는 문서 모드 -->
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<!-- content-type : 콘텐츠의 형식을 알려줌 
-     text/html : text 기반의 html 콘텐츠
-     text/xml : text 기반의 xml 콘텐츠 
+<!-- content-type    : 콘텐츠의 형식을 알려줌 
+     text/html       : text 기반의 html 콘텐츠
+     text/xml        : text 기반의 xml 콘텐츠 
      application/json: AOS/IOS 앱 또는 REST API 서버와 통신할 때 콘텐츠 형식 -->
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
@@ -620,13 +598,13 @@
 <!-- 검색 로봇에 의해 검색되는 문자열 -->
 <meta name="description" content="저의 웹사이트입니다." />
 
-<!-- noindex: 검색 로봇에 검색 안되게 함 
-nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함 -->
-<meta name="robots" content="noindex,nofollow" /> /* noindex: 검색 로봇에 검색
-안되게 함 nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함
+<!-- noindex : 검색 로봇에 검색 안되게 함 
+     nofollow: 검색 로봇이 페이지 링크를 따라가지 않도록 함 -->
+<meta name="robots" content="noindex,nofollow" />
 
-<meta http-equiv="author" content="홍길동" /> // 제작자 표시
+<!-- 제작자 표시 -->
+<meta http-equiv="author" content="홍길동" />
 
-<meta http-equiv="refresh" content="5;url=http://www.naver.com" /> // 5초
-간격으로 새로고침
+<!-- 5초 간격으로 새로고침 -->
+<meta http-equiv="refresh" content="5;url=http://www.naver.com" />
 ```
