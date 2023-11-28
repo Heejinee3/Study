@@ -179,226 +179,236 @@
 
 # Table
 
-    /*
-       border="1px"
-       rowspan="1"
-       colspan="1"
-       align="center","left","right"
-       bgcolor="#000000"
-    */
+```html
+<!-- border  = "1px"
+     rowspan = "1"
+     colspan = "1"
+     align   = "center","left","right"
+     bgcolor="#000000" -->
+<table width="100px" height="100px">
+  <!-- 제목 -->
+  <caption>
+    Title
+  </caption>
 
-    <table width="100px" height="100px">
-      <caption>Title</caption> // 제목
-      <colgroup>               // 열
-        <col>
-        <col>
-      </colgroup>
-      <thead>                  // 헤드
-        <tr>
-          <th>Head</th>
-          <th>Head</th>
-        </tr>
-      </thead>
-      <tbody>                  // 본문
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tbody>
-      <tfoot>                  // 요약
-        <tr>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-      </tfoot>
-    </table>
+  <!-- 열 -->
+  <colgroup>
+    <col />
+    <col />
+  </colgroup>
+
+  <!-- 헤드 -->
+  <thead>
+    <tr>
+      <th>Head</th>
+      <th>Head</th>
+    </tr>
+  </thead>
+
+  <!-- 본문 -->
+  <tbody>
+    <tr>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+
+  <!-- 요약 -->
+  <tfoot>
+    <tr>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tfoot>
+</table>
+```
 
 # Multimedia
 
-    <object width="100px" data="data.pdf">Alternative</object>        // 멀티미디어
-    <embed width="100px" src="data.pdf">Alternative</embed>           // 멀티미디어
-    <img src="data.jpg" alt="Alternative" width="100px">              /* 이미지
-                                                                         https://pixabay.com/ko/: 무료 이미지 다운로드 사이트
-                                                                         https://www.canva.com/: 이미지 만들기 사이트         */
-    <audio src="data.mp3" width="100px" controls >Alternative</audio> // 오디오
-    <video src="data.mp4" width="100px" controls >Alternative</video> // 비디오
-                                                                      /* 오디오/비디오 속성
-                                                                         autoplay
-                                                                         loop
-                                                                         muted
-                                                                         preload="auto","metadata","none"
-                                                                         poster="data.jpg"
-                                                                      */
+```html
+<!-- 멀티미디어 -->
+<object width="100px" data="data.pdf">Alternative</object>
+<embed width="100px" src="data.pdf">Alternative</embed>
+
+<!-- 이미지 -->
+<!-- https://pixabay.com/ko/: 무료 이미지 다운로드 사이트
+     https://www.canva.com/: 이미지 만들기 사이트 -->
+<img src="data.jpg" alt="Alternative" width="100px">
+
+<!-- 오디오/비디오 -->
+<!-- autoplay
+     loop
+     muted
+     preload = "auto","metadata","none"
+     poster  = "data.jpg" -->
+<audio src="data.mp3" width="100px" controls >Alternative</audio>
+<video src="data.mp4" width="100px" controls >Alternative</video>
+```
 
 # Link
 
-    <a href="http://www.naver.com" target="_blank">Move</a>                                               // 링크로 이동(텍스트)
-    <a href="http://www.naver.com" target="_blank"><img src="data.jpg" alt="Alternative" width="100"></a> // 링크로 이동(이미지)
-    <a href="#id">Move</a>                                                                                // 해당 구역으로 이동
-    <a href="#" download="data.jpg">Download</a>                                                          // 다운로드
+```html
+<!-- 링크로 이동(텍스트) -->
+<a href="http://www.naver.com" target="_blank">Move</a>
+
+<!-- 링크로 이동(이미지) -->
+<a href="http://www.naver.com" target="_blank">
+  <img src="data.jpg" alt="Alternative" width="100" />
+</a>
+
+<!-- 해당 구역으로 이동 -->
+<a href="#id">Move</a>
+
+<!-- 다운로드 -->
+<a href="#" download="data.jpg">Download</a>
+```
 
 # Form
 
-```
-/*
-   method="POST","GET"
-   name="name"
-   target="_blank","_self"
-   autocomplete="on","off"
-*/
+```html
+<!-- method       = "POST","GET"
+     name         = "name"
+     target       = "_blank","_self"
+     autocomplete = "on","off" -->
 <form action="http://myserver.com">
   <fieldset>
     <legend>Group</legend>
     <label for="id">Label</label>
-    <input type="text" name="name" id="id">
+    <input type="text" name="name" id="id" />
   </fieldset>
 </form>
 ```
 
 #### Text
 
-```
+```html
 <label for="id">Label</label>
-<input type="text" name="name" id="id">
-/*
-   placeholder="placeholder"
-   value="value"
-   size="10"
-   minlength="0"
-   maxlength="10"
-   required
-*/
+<!-- placeholder = "placeholder"
+     value       = "value"
+     size        = "10"
+     minlength   = "0"
+     maxlength   = "10"
+     required -->
+<input type="text" name="name" id="id" />
 ```
 
 #### Password
 
-```
+```html
 <label for="id">Label</label>
-<input type="password" name="name" id="id">
-/*
-   placeholder="placeholder"
-   size="10"
-   minlength="0"
-   maxlength="10"
-   required
-*/
+<!-- placeholder = "placeholder"
+     size        = "10"
+     minlength   = "0"
+     maxlength   = "10"
+     required -->
+<input type="password" name="name" id="id" />
 ```
 
 #### File
 
-```
+```html
 <label for="id">Label</label>
-<input type="file" name="name" id="id">
-/*
-   placeholder="placeholder"
-   required
-*/
+<!-- placeholder = "placeholder"
+     required -->
+<input type="file" name="name" id="id" />
 ```
 
 #### Checkbox
 
-```
-<input type="checkbox" name="name" id="id1" value="value1"><label for="id1">Label</label>
-<input type="checkbox" name="name" id="id2" value="value2"><label for="id2">Label</label>
-/*
-   checked
-   required
-*/
+```html
+<!-- checked
+     required -->
+<input type="checkbox" name="name" id="id1" value="value1" /><label for="id1"
+  >Label</label
+>
+<input type="checkbox" name="name" id="id2" value="value2" /><label for="id2"
+  >Label</label
+>
 ```
 
 #### Radio
 
-```
-<input type="radio" name="name" id="id1" value="value1"><label for="id1">Label</label>
-<input type="radio" name="name" id="id2" value="value2"><label for="id2">Label</label>
-/*
-   checked
-   required
-*/
+```html
+<!-- checked
+     required -->
+<input type="radio" name="name" id="id1" value="value1" /><label for="id1"
+  >Label</label
+>
+<input type="radio" name="name" id="id2" value="value2" /><label for="id2"
+  >Label</label
+>
 ```
 
 #### Number
 
-```
+```html
 <label for="id">Label</label>
-<input type="number" name="name" id="id" value="1" min="1" max="10">
-/*
-   step="1"
-   value="1"
-   placeholder="placeholder"
-   required
-*/
+<!-- step        = "1"
+     value       = "1"
+     placeholder = "placeholder"
+     required -->
+<input type="number" name="name" id="id" value="1" min="1" max="10" />
 ```
 
 #### Range
 
-```
+```html
 <label for="id">Label</label>
-<input type="range" name="name" id="id" min="1"max="10" step="1"/>
-/*
-   step="1"
-   value="1"
-*/
+<!-- step  = "1"
+     value = "1" -->
+<input type="range" name="name" id="id" min="1" max="10" step="1" />
 ```
 
 #### Date
 
-```
+```html
 <label for="id">Label</label>
-<input type="date" name="name" id="id">
-/*
-   min="2022-01-01"
-   max="2022-12-31"
-   step="1"
-   value="2022-01-01"
-   required
-*/
+<!-- min   = "2022-01-01"
+     max   = "2022-12-31"
+     step  = "1"
+     value = "2022-01-01"
+     required -->
+<input type="date" name="name" id="id" />
 ```
 
 #### Month
 
-```
+```html
 <label for="id">Label</label>
-<input type="month" name="name" id="id">
-/*
-   min="2022-01"
-   max="2022-12"
-   step="1"
-   value="2022-01"
-   required
-*/
+<!-- min   = "2022-01"
+     max   = "2022-12"
+     step  = "1"
+     value = "2022-01"
+     required -->
+<input type="month" name="name" id="id" />
 ```
 
 #### Week
 
-```
+```html
 <label for="id">Label</label>
-<input type="week" name="name" id="id">
-/*
-   min="2022-W01"
-   max="2023-W01"
-   step="1"
-   value="2022-W01"
-   required
-*/
+<!-- min   = "2022-W01"
+     max   = "2023-W01"
+     step  = "1"
+     value = "2022-W01"
+     required -->
+<input type="week" name="name" id="id" />
 ```
 
 #### Time
 
-```
+```html
 <label for="id">Label</label>
-<input type="time" name="name" id="id">
-/*
-   min="00:00"
-   max="23:59"
-   step="1"
-   value="00:00"
-   required
-*/
+<!-- min   = "00:00"
+     max   = "23:59"
+     step  = "1"
+     value = "00:00"
+     required -->
+<input type="time" name="name" id="id" />
 ```
 
 #### Datetime
@@ -409,7 +419,7 @@
      max   = "2022-12-23T23:59"
      step  = "1"
      value = "2022-01-01T00:00"
-     required  -->
+     required -->
 <input type="datetime" name="name" id="id" />
 ```
 
@@ -421,7 +431,7 @@
      max   = "2022-12-23T23:59"
      step  = "1"
      value = "2022-01-01T00:00"
-     required  -->
+     required -->
 <input type="datetime-local" name="name" id="id" />
 ```
 
@@ -502,7 +512,7 @@
 
 ```html
 <label for="id">Label</label>
-<!-- value="010-0000-0000"
+<!-- value       = "010-0000-0000"
      minlength   = "0"
      maxlength   = "10"
      placeholder = "placeholder"
