@@ -1,26 +1,6 @@
-# Index
+<br />
 
-> [Basic Structure](#basic-structure)
->
-> [Title](#title)
->
-> [Paragraph](#paragraph)
->
-> [Text](#text)
->
-> [List](#list)
->
-> [Table](#table)
->
-> [Multimedia](#multimedia)
->
-> [Link](#link)
->
-> [Form](#form)
->
-> [Meta Tag](#meta-tag)
-
-# Basic Structure
+## Basic Structure
 
 ```html
 <!DOCTYPE html>
@@ -53,7 +33,9 @@
 </html>
 ```
 
-# Title
+<br />
+
+## Title
 
 ```html
 <!-- 2 times -->
@@ -75,7 +57,9 @@
 <h6>Title</h6>
 ```
 
-# Paragraph
+<br />
+
+## Paragraph
 
 ```html
 <!-- 줄바꿈 -->
@@ -97,7 +81,9 @@
 <span>Span</span>
 ```
 
-# Text
+<br />
+
+## Text
 
 ```html
 <!-- 굵은 글씨 -->
@@ -146,7 +132,9 @@
 <font color="#000000" size="10px" face="돋움">Text</font>
 ```
 
-# List
+<br />
+
+## List
 
 ```html
 <!-- 순서가 있는 목록 -->
@@ -177,7 +165,9 @@
 </dl>
 ```
 
-# Table
+<br />
+
+## Table
 
 ```html
 <!-- border  = "1px"
@@ -227,7 +217,9 @@
 </table>
 ```
 
-# Multimedia
+<br />
+
+## Multimedia
 
 ```html
 <!-- 멀티미디어 -->
@@ -249,7 +241,9 @@
 <video src="data.mp4" width="100px" controls >Alternative</video>
 ```
 
-# Link
+<br />
+
+## Link
 
 ```html
 <!-- 링크로 이동(텍스트) -->
@@ -267,7 +261,9 @@
 <a href="#" download="data.jpg">Download</a>
 ```
 
-# Form
+<br />
+
+## Form
 
 ```html
 <!-- method       = "POST","GET"
@@ -582,7 +578,9 @@
 <input type="color" name="name" id="id" value="#000000" />
 ```
 
-# Meta Tag
+<br />
+
+## Meta Tag
 
 ```html
 <!-- 문자인코딩 타입(UTF-8, EUC-KR) -->
@@ -618,3 +616,5 @@
 <!-- 5초 간격으로 새로고침 -->
 <meta http-equiv="refresh" content="5;url=http://www.naver.com" />
 ```
+
+<br />

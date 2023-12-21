@@ -1,38 +1,6 @@
-# Index
+<br />
 
-> [Type](#type)
->
-> [Control Statement](#control-statement)
->
-> [Function](#function)
->
-> [Class](#class)
->
-> [File Input/Output](#file-inputoutput)
->
-> [Module/Package](#modulepackage)
->
-> [Exception](#exception)
->
-> [Built-in Function](#built-in-function)
->
-> [Library](#library)
->
-> [Encoding/Decoding](#encodingdecoding)
->
-> [Closure](#closure)
->
-> [Decorator](#decorator)
->
-> [Iterator](#iterator)
->
-> [Generator](#generator)
->
-> [Type Annotation](#type-annotation)
->
-> [Regular Expression](#regular-expression)
-
-# Type
+## Type
 
 ```python
 variable = 123
@@ -45,7 +13,7 @@ variable = {1, 2, 3}
 variable = True
 ```
 
-#### Integer/ Float Method
+#### Integer/Float Method
 
 ```python
 integer = integer1 + integer2  # 덧셈
@@ -215,7 +183,9 @@ deque1.extendleft(deque2)        # 왼쪽에 deque2를 넣음
 deque.remove(variable)           # 첫번쨰로 나오는 variable 삭제, 없으면 error
 ```
 
-# Control Statement
+<br />
+
+## Control Statement
 
 #### If/Elif/Else Condition
 
@@ -254,7 +224,9 @@ list = [<statement> for <variable1> in <iterable1> if <condition1>
 | break     | loop를 빠져나감    |
 | continue  | 다음 loop로 넘어감 |
 
-# Function
+<br />
+
+## Function
 
 ```python
 def function(parameter1, parameter2): # initial value 지정 가능 ex. parameter = value
@@ -289,7 +261,9 @@ dictionary = function(parameter1 = variable1, parameter2 = variable2)
 variable = lambda parameter1, parameter2: parameter1 + parameter2
 ```
 
-# Class
+<br />
+
+## Class
 
 ```python
 class Class(Parent):
@@ -314,7 +288,9 @@ class    = Class(value)
 variable = class.variable
 ```
 
-# File Input/Output
+<br />
+
+## File Input/Output
 
 ```python
 path = "C:/chunja/file.txt" # "C:\\chunja\\file.txt" or r"C:/chunja/file.txt"
@@ -333,7 +309,9 @@ list = file.readlines()  # 파일에서 여러줄 읽기, string list로 반환
 string = file.read()     # 파일 모두 읽기
 ```
 
-# Module/Package
+<br />
+
+## Module/Package
 
 #### Import Module
 
@@ -380,7 +358,9 @@ __all__ = ['module']                                     # 'from package import 
                                                          # 'from package.module import *'일 경우 자동으로 모두 추가됨
 ```
 
-# Exception
+<br />
+
+## Exception
 
 #### Exception Handling
 
@@ -410,7 +390,9 @@ class Error(Exception):
 raise Error()
 ```
 
-# Built-in Function
+<br />
+
+## Built-in Function
 
 ```python
 number    = abs(number)                      # 절댓값 반환
@@ -448,7 +430,9 @@ type      = type(variable)                   # type 반환
 zip       = zip(*iterable)                   # 동일한 개수로 이루어진 데이터들을 묶어서 반환
 ```
 
-# Library
+<br />
+
+## Library
 
 #### Standard Library
 
@@ -458,14 +442,18 @@ zip       = zip(*iterable)                   # 동일한 개수로 이루어진 
 
 [External Library](https://wikidocs.net/180538)
 
-# Encoding/Decoding
+<br />
+
+## Encoding/Decoding
 
 ```python
 encoded = string.encode('utf-8')
 decoded = encoded.decode('utf-8')
 ```
 
-# Closure
+<br />
+
+## Closure
 
 ```python
 def closure(function):
@@ -481,7 +469,9 @@ wrapper = closure(function)
 wrapper()
 ```
 
-# Decorator
+<br />
+
+## Decorator
 
 ```python
 def decorator(function):
@@ -497,7 +487,9 @@ def function(parameter):
 function(variable)
 ```
 
-# Iterator
+<br />
+
+## Iterator
 
 ```python
 iterator = iter(iterable) # next(iterator) 함수로 하나씩 접근 가능
@@ -524,7 +516,9 @@ for item in iterator:                       # for loop은 한번밖에 사용 �
     <statement>
 ```
 
-# Generator
+<br />
+
+## Generator
 
 ```python
 def generator():
@@ -553,7 +547,9 @@ class Generator:
         return result
 ```
 
-# Type Annotation
+<br />
+
+## Type Annotation
 
 ```python
 variable: type = value
@@ -563,7 +559,12 @@ def function(parameter1: type, parameter2: type) -> type:
     return result
 ```
 
-# Regular Expression
+<br />
+
+## Regular Expression
 
 [Regular Expression1](https://wikidocs.net/4308)
+
 [Regular Expression2](https://wikidocs.net/4309)
+
+<br />

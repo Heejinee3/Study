@@ -1,120 +1,19 @@
-# Index
+<br />
 
-> [Useful Site](#useful-site)
->
-> [CSS Apply](#css-apply)
->
-> [Selector](#selector)
->
-> [Pseudo Class/Pseudo Element](#pseudo-class-pseudo-element)
->
-> [Font](#font-1)
->
-> [Text](#text)
->
-> [List](#list)
->
-> [Table](#table)
->
-> [Box](#box)
->
-> [Border/Padding/Margin](#border-padding-margin)
->
-> [Display](#display)
->
-> [Float](#float)
->
-> [Position](#position)
->
-> [Background](#background)
->
-> [Gradation](#gradation)
->
-> [Transform](#transform)
->
-> [Transition](#transition)
->
-> [Animation](#animation)
->
-> [Media Query](#media-query)
->
-> [Object Fit](#object-fit)
->
-> [Flex](#flex)
->
-> [Grid](#grid)
->
-> [Word Break](#word-break)
->
-> [Vendor Prefix](#vendor-prefix)
+## Useful Site
 
-# Useful Site
+| 분류        | 도구/가이드                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Design Tool | [Sketch](https://www.sketch.com/), [Figma](https://www.figma.com/), [Adobe XD](https://helpx.adobe.com/support/xd.html)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Design Idea | [iOS Design Guide](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios/), [Android Design Guide](https://m3.material.io/), [Mobile Patterns](https://www.simform.com/mobile-patterns/), [pttrns](https://www.pttrns.com/), [dribbble](https://dribbble.com/)                                                                                                                                                                                                                                                                            |
+| Color       | [Material Design Palette](https://www.materialpalette.com/), [Color Hunt](https://colorhunt.co/), [Coolors](https://coolors.co/palettes/trending), [Gradient Editor](https://www.colorzilla.com/gradient-editor/)                                                                                                                                                                                                                                                                                                                                                             |
+| Font        | [Apple Font](https://developer.apple.com/fonts/), [Google Font](https://fonts.google.com/)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Icon        | [Icons8](https://icons8.com/), [Vecteezy](https://www.vecteezy.com/), [Iconduck](https://iconduck.com/), [Flat Icon](https://www.flaticon.com/), [Feather](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols), [Canva](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols), [Apple SF Symbols](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols), [Material Icons](https://fonts.google.com/icons?selected=Material+Icons), [Font Awesome](https://fontawesome.com/) |
+| Test        | [Can I Use](https://caniuse.com/), [Device Resolution](yesviz.com/devices.php), [Mobile Test](http://www.responsinator.com/)                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-#### Design Tool
+<br />
 
-> [Sketch](https://www.sketch.com/)
->
-> [Figma](https://www.figma.com/)
->
-> [Adobe XD](https://helpx.adobe.com/support/xd.html)
-
-#### Design Idea
-
-> [iOS Design Guide](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios/)
->
-> [Android Design Guide](https://m3.material.io/)
->
-> [Mobile Patterns](https://www.simform.com/mobile-patterns/)
->
-> [pttrns](https://www.pttrns.com/)
->
-> [dribbble](https://dribbble.com/)
-
-#### Color
-
-> [Material Design Palette](https://www.materialpalette.com/)
->
-> [Color Hunt](https://colorhunt.co/)
->
-> [Coolors](https://coolors.co/palettes/trending)
->
-> [Gradient Editor](https://www.colorzilla.com/gradient-editor/)
-
-#### Font
-
-> [Apple Font](https://developer.apple.com/fonts/)
->
-> [Google Font](https://fonts.google.com/)
-
-#### Icon
-
-> [Icons8](https://icons8.com/)
->
-> [Vecteezy](https://www.vecteezy.com/)
->
-> [Iconduck](https://iconduck.com/)
->
-> [Flat Icon](https://www.flaticon.com/)
->
-> [Feather](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols)
->
-> [Canva](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols)
->
-> [Apple SF Symbols](https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols)
->
-> [Material Icons](https://fonts.google.com/icons?selected=Material+Icons)
->
-> [Font Awesome](https://fontawesome.com/)
-
-#### Test
-
-> [Can I Use](https://caniuse.com/)
->
-> [Device Resolution](yesviz.com/devices.php)
->
-> [Mobile Test](http://www.responsinator.com/)
-
-# CSS Apply
+## CSS Apply
 
 ```html
 <!-- head 사이 -->
@@ -135,7 +34,9 @@
 <link rel="stylesheet" href="mycss.css" />
 ```
 
-# Selector
+<br />
+
+## Selector
 
 #### Unary Operator
 
@@ -171,7 +72,9 @@ A + B /* A의 형제들 중 A 다음으로 첫번째로 B 조건을 만족하는
 A ~ B /* A의 형제들 중 A 다음으로 B 조건을 만족하는 사람과 그의 후손들에게 영향 */
 ```
 
-<h1 id = "pseudo-class-pseudo-element">Pseudo Class/Pseudo Element</h1>
+<br />
+
+## Pseudo Class/Pseudo Element
 
 #### Pseudo Class
 
@@ -219,7 +122,9 @@ A ~ B /* A의 형제들 중 A 다음으로 B 조건을 만족하는 사람과 �
 ::after        /* 특정 요소의 뒤에 내용이나 스타일 추가 */
 ```
 
-# Font
+<br />
+
+## Font
 
 ```css
 font-size: 10px; /* Font 사이즈 */
@@ -277,7 +182,9 @@ color: #000000; /* Text 색상
 </style>
 ```
 
-# Text
+<br />
+
+## Text
 
 ```css
 text-align: start; /* Text 정렬
@@ -327,7 +234,9 @@ letter-spacing: 0.1em; /* 글자와 글자 사이 간격 조절 */
 word-spacing: 0.1em; /* 단어와 단어 사이 간격 조절 */
 ```
 
-# List
+<br />
+
+## List
 
 ```css
 list-style-type: none; /* List 요소 앞 모양 지정
@@ -357,7 +266,9 @@ list-style-position: inside; /* List 요소 앞 모양을 들여쓸 지 결정
 list-style: none inside; /* List type, position */
 ```
 
-# Table
+<br />
+
+## Table
 
 ```css
 caption-side: top; /* caption의 위치 결정
@@ -379,7 +290,9 @@ border-collapse: separate; /* 테두리 두 줄로 둘 것인지, 아닌지 결�
                               collapse: 한 줄 */
 ```
 
-# Box
+<br />
+
+## Box
 
 ```css
 width: 100px; /* 너비 */
@@ -416,7 +329,9 @@ box-shadow: 10px 10px 10px 10px #ffffff inset; /* 박스에 그림자 넣기
                                                   수평 거리, 수직 거리, 흐림, 번짐, 색상, 안쪽 or 바깥쪽 결정 */
 ```
 
-<h1 id = "border-padding-margin">Border/Padding/Margin</h1>
+<br />
+
+## Border/Padding/Margin
 
 ```css
 border-style: none; /* Border 선 종류
@@ -462,7 +377,9 @@ margin: 10px 10px 10px 10px; /* Margin 크기(위, 오른쪽, 아래, 왼쪽)
                                 세로 Margin은 더 큰쪽으로 합쳐짐 */
 ```
 
-# Display
+<br />
+
+## Display
 
 ```css
 visibility: hidden; /* 공간이 남아있지만 안보이게 만듦 */
@@ -488,7 +405,9 @@ display: inline; /* inline이고, 자기 공간을 확보하지 못함 */
 display: block; /* blcok */
 ```
 
-# Float
+<br />
+
+## Float
 
 ```css
 float: none; /* float 상태로 만들기
@@ -504,7 +423,9 @@ clear: both; /* float 영향을 받지 않기
                 both : 둘 다 */
 ```
 
-# Position
+<br />
+
+## Position
 
 ```css
 position: static; /* Postition 정하기
@@ -535,7 +456,9 @@ bottom: 10px; /* 기준의 아래쪽을 기준으로 위쪽으로 이동 */
 z-index: 10; /* z index 조정 */
 ```
 
-# Background
+<br />
+
+## Background
 
 ```css
 background-color: #000000; /* 배경 색상 */
@@ -606,7 +529,9 @@ background-size: 100px 100px; /* 배경의 크기 조정
 opacity: 0.5; /* 투명도 변경 */
 ```
 
-# Gradation
+<br />
+
+## Gradation
 
 ```css
 background: linear-gradient(to right bottom, #000000, #ffffff);
@@ -712,7 +637,9 @@ background: repeating-radial-gradient(
    #000000 20%: 색상, 위치 */
 ```
 
-# Transform
+<br />
+
+## Transform
 
 ```css
 transform: translate(10px, 10px); /* x, y축 이동 */
@@ -806,13 +733,44 @@ transform-origin: 10% 10%; /* pivot
 perspective(100px); /* 입체적으로 보일 수 있게 깊이 조정 */
 ```
 
-> X: +방향(왼쪽) -방향(오른쪽)
->
-> Y: +방향(아래쪽) -방향(위쪽)
->
-> Z: +방향(화면 앞쪽) -방향(화면 뒤쪽)
+<table>
+  <tr>
+    <th>축</th>
+    <th>부호</th>
+    <th>방향</th>
+  </tr>
+  <tr>
+    <td rowspan="2">X</td>
+    <td>+</td>
+    <td>왼쪽</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>오른쪽</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Y</td>
+    <td>+</td>
+    <td>아래쪽</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>위쪽</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Z</td>
+    <td>+</td>
+    <td>화면 앞쪽</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>화면 뒤쪽</td>
+  </tr>
+</table>
 
-# Transition
+<br />
+
+## Transition
 
 ```css
 transition-property: all; /* 대상 지정
@@ -847,7 +805,9 @@ transition-timing-function: linear; /* 속도 곡선 지정
 transition: all 1s 1s linear; /* property, duration, delay, timing-function */
 ```
 
-# Animation
+<br />
+
+## Animation
 
 ```css
 animation-name: name; /* Animation name */
@@ -910,7 +870,9 @@ animation: name 1s linear 1s 1 normal; /* name, duration, timing-function, delay
 }
 ```
 
-# Media Query
+<br />
+
+## Media Query
 
 #### Import
 
@@ -997,7 +959,9 @@ animation: name 1s linear 1s 1 normal; /* name, duration, timing-function, delay
 | orientation | portrait  | 세로 모드 |
 | orientation | landscape | 가로 모드 |
 
-# Object Fit
+<br />
+
+## Object Fit
 
 ```css
 object-fit: none; /* 가로세로 크기 유지가 되고 가운데가 보여짐 */
@@ -1019,7 +983,9 @@ object-fit: fill; /* 가로세로 비율 유지가 안됨 */
 object-fit: scale-down; /* none 또는 contain 중에 더 적절한 방향으로 사이즈를 조절 */
 ```
 
-# Flex
+<br />
+
+## Flex
 
 ```css
 display: flex; /* container 지정
@@ -1115,7 +1081,9 @@ order: 1; /* content의 순서 변경 */
 gap: 10px; /* content 사이의 gap 크기 */
 ```
 
-# Grid
+<br />
+
+## Grid
 
 ```css
 display: grid; /* 그리드 지정
@@ -1244,7 +1212,9 @@ grid-template-areas: "box2 .";
 grid-area: box1; /* 영역 이름 */
 ```
 
-# Word Break
+<br />
+
+## Word Break
 
 ```css
 word-wrap: normal;
@@ -1271,7 +1241,9 @@ word-break: normal;
 | non-CJK   | 단어넘침 O     | 단어넘침 X |
 | CJK       | 단어넘침 X     | 단어넘침 X |
 
-# Vendor Prefix
+<br />
+
+## Vendor Prefix
 
 ```css
 background: red; /* gradient 속성을 지원하지 않는 모든 브라우저를 위한 코드 */
@@ -1305,3 +1277,5 @@ background: -o-linear-gradient(red, yellow); /* 오페라 10.0 이상을 위한 
 ```css
 background: linear-gradient(red, yellow); /* CSS 표준 문법 코드 */
 ```
+
+<br />
