@@ -1,5 +1,11 @@
 <br />
 
+본 글은 한빛미디어의 <혼자 공부하는 SQL>을 요약 정리했습니다.
+
+[출처: 우재남, 「혼자 공부하는 SQL」, 한빛미디어](https://www.hanbit.co.kr/store/books/look.php?p_code=B6846155853)
+
+<br />
+
 ## Database
 
 #### Show

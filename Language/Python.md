@@ -568,3 +568,9 @@ def function(parameter1: type, parameter2: type) -> type:
 [Regular Expression2](https://wikidocs.net/4309)
 
 <br />
+<br />
+<br />
+
+[출처: 박응용, 「Do it! 점프 투 파이썬」, 이지스퍼블리싱](http://www.easyspub.co.kr/20_Menu/BookView/421/PUB)
+
+<br />

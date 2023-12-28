@@ -831,3 +831,9 @@ let undefined = node.parentNode.removeChild(node);                              
 ```
 
 <br />
+<br />
+<br />
+
+[출처: 고경희, 「Do it! HTML+CSS+자바스크립트 웹 표준의 정석」, 이지스퍼블리싱](http://www.easyspub.co.kr/20_Menu/BookView/421/PUB)
+
+<br />

@@ -988,3 +988,9 @@ public class SocketServer {
 ```
 
 <br />
+<br />
+<br />
+
+[출처: 박응용, 「Do it! 점프 투 자바, 이지스퍼블리싱](http://www.easyspub.co.kr/20_Menu/BookView/602/PUB)
+
+<br />
