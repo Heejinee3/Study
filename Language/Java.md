@@ -991,6 +991,6 @@ public class SocketServer {
 <br />
 <br />
 
-[출처: 박응용, 「Do it! 점프 투 자바, 이지스퍼블리싱](http://www.easyspub.co.kr/20_Menu/BookView/602/PUB)
+[출처: 서민구, 「Lets 실전예제로 배우는 자바 프로그래밍(Java Programming), 엠제이씨북스](https://www.kimyoung.co.kr/book/book_view.asp?book_flg=C&dom_cd=6&sub_cd=&book_cd=6628)
 
 <br />
