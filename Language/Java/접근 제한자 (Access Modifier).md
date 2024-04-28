@@ -17,7 +17,7 @@
 | --------- | ----------------------------------- |
 | 클래스    | public, default                     |
 | 메서드    | public, protected, default, private |
-| 멤버 변수 |
+| 멤버 변수 | public, protected, default, private |
 | 지역 변수 | 없음                                |
 
 <br />
