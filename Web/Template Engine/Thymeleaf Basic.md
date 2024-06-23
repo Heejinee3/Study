@@ -109,15 +109,18 @@ spring.thymeleaf.suffix=.html
 
 #### Expression Basic Objects
 
-| 표현            | 설명                                         |
-| --------------- | -------------------------------------------- |
-| #ctx            | 컨텍스트 객체                                |
-| #vars           | 컨텍스트 변수                                |
-| #locale         | 컨텍스트 로케일                              |
-| #request        | (웹 컨텍스트에서만) HttpServletRequest 객체  |
-| #response       | (웹 컨텍스트에서만) HttpServletResponse 객체 |
-| #session        | (웹 컨텍스트에서만) HttpSession 객체         |
-| #servletContext | (웹 컨텍스트에서만) ServletContext 객체      |
+| 표현                   | 설명                                             |
+| ---------------------- | ------------------------------------------------ |
+| #ctx                   | Context Object                                   |
+| #vars                  | Context Variable                                 |
+| #locale                | Context Locale                                   |
+| #request               | HttpServletRequest (스프링 부트 3.0부터 지원 X)  |
+| #response              | HttpServletResponse (스프링 부트 3.0부터 지원 X) |
+| #session               | HttpSession (스프링 부트 3.0부터 지원 X)         |
+| #servletContext        | ServletContext (스프링 부트 3.0부터 지원 X)      |
+| session                | HttpSession                                      |
+| param                  | Request Parameter                                |
+| @helloBean (Bean name) | Spring Bean                                      |
 
 [공식 문서 보기](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-a-expression-basic-objects)
 
@@ -133,6 +136,7 @@ spring.thymeleaf.suffix=.html
 | #conversions | 구성된 변환 서비스를 실행하는 메서드를 제공                           |
 | #dates       | java.util.Date 객체에 대한 형식 지정, 구성 요소 추출 등을 위한 메서드 |
 | #calendars   | java.util.Calendar 객체에 대한 #dates와 유사한 메서드                 |
+| #temporals   | 자바 8 날짜 서식 지원 메서드                                          |
 | #numbers     | 숫자 객체에 대한 형식 지정 메서드                                     |
 | #strings     | String 객체에 대한 메서드: contains, startsWith, 추가/추가 등         |
 | #objects     | 일반 객체에 대한 메서드                                               |
@@ -144,7 +148,7 @@ spring.thymeleaf.suffix=.html
 | #aggregates  | 배열이나 컬렉션에서 집계를 생성하는 메서드                            |
 | #ids         | 반복될 수 있는 id 속성 처리를 위한 메서드                             |
 
-[공식 문서 보기](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-b-expression-utility-objects)
+[공식 문서 보기](https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html#appendix-b-expression-utility-objects)
 
 <br />
 
@@ -682,9 +686,9 @@ fragment을 표현할 때 사용하는 표현식이다.
 
 <br />
 
-## th:attrappend / th:classappend
+## th:attrappend / th:attrprepend / th:classappend
 
-속성 값을 추가하고 싶을 때, th:attrappend을 이용하면 된다.
+속성 값을 추가하고 싶을 때, th:attrappend, th:attrprepend을 이용하면 된다.
 
 ```html
 <input
@@ -692,6 +696,15 @@ fragment을 표현할 때 사용하는 표현식이다.
   value="Do it!"
   class="btn"
   th:attrappend="class=${' ' + cssStyle}"
+/>
+```
+
+```html
+<input
+  type="button"
+  value="Do it!"
+  class="btn"
+  th:attrprepend="class=${cssStyle + ' '}"
 />
 ```
 
