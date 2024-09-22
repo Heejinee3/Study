@@ -64,21 +64,21 @@ switch (변수) {      // switch문
 ## For/While/Do-while
 
 ```java
-for (초기화; 조건식; 증감문){ // for문
+for (초기화; 조건식; 증감문) { // for문
     수행문;
 }
 
-for (int value: array) {    // 간단한 for문
+for (int value: array) {     // 간단한 for문
     수행문;
 }
 
-while(조건식){               // while문
+while(조건식) {               // while문
     수행문;
 }
 
-do{                         // do-while문
+do {                         // do-while문
     수행문;
-}while(조건식);
+} while(조건식);
 ```
 
 <br />
@@ -118,19 +118,19 @@ EnumName.values();                   // enumtype list
 ## Class
 
 ```java
-class ClassName{                                   // class 이름
+class ClassName {                                  // class 이름
 
     int value;                                     // instance variable
 
     static int staticValue;                        // static variable
 
-    void function(int param){                      // instance function
+    void function(int param) {                     // instance function
     }
 
-    static void staticFunction(int param){         // static function
+    static void staticFunction(int param) {        // static function
     }
 
-    public ClassName(int value){                   // constructor
+    public ClassName(int value) {                  // constructor
         this.value = value;
     }
 
@@ -186,17 +186,17 @@ public class Main {
 ## Inheritance
 
 ```java
-class ClassName1{
+class ClassName1 {
 
     int value;
     void function(int param) {
     }
-    public ClassName1(int value){
+    public ClassName1(int value) {
         this.value = value;
     }
 }
 
-class  ClassName2 extends ClassName1{
+class  ClassName2 extends ClassName1 {
     public ClassName2(int value) {
         super(value);
     }
@@ -212,13 +212,13 @@ class  ClassName2 extends ClassName1{
 ## Abstract Class
 
 ```java
-abstract class ClassName1{
+abstract class ClassName1 {
     abstract void function1();
-    void function2(){
+    void function2() {
     }
 }
 
-class ClassName2 extends ClassName1{
+class ClassName2 extends ClassName1 {
     @Override
     void function1() {
     }
@@ -251,7 +251,7 @@ class ClassName implements InterfaceName {
 ## Thread
 
 ```java
-class ClassName extends Thread{         // 1. Thread Class에 상속받기
+class ClassName extends Thread {        // 1. Thread Class에 상속받기
     @Override
     public void run() {
     }
@@ -259,7 +259,7 @@ class ClassName extends Thread{         // 1. Thread Class에 상속받기
 ClassName object = new ClassName();
 object.start();
 
-class ClassName implements Runnable{    // 2. Runnable Interface에 상속받기
+class ClassName implements Runnable {   // 2. Runnable Interface에 상속받기
     @Override
     public void run() {
     }
@@ -274,12 +274,12 @@ thread.start();
 ## Exception
 
 ```java
-try{                                // 1. 직접 처리하기
+try {                               // 1. 직접 처리하기
     throw new Exception();
-}catch (Exception e){
+} catch (Exception e) {
 }
 
-void Function() throws Exception{   // 2. 호출한 곳으로 넘기기
+void Function() throws Exception {  // 2. 호출한 곳으로 넘기기
 }
 
 throw new Exception();              // cf. Exception 발생
@@ -290,11 +290,11 @@ throw new Exception();              // cf. Exception 발생
 ## Singleton
 
 ```java
-class Singleton{
+class Singleton {
 
     private static Singleton singleton = new Singleton();
 
-    static Singleton getInstance(){
+    static Singleton getInstance() {
         return singleton;
     }
 }
@@ -307,7 +307,7 @@ Singleton singleton = Singleton.getInstance();
 ## Anonymous Object
 
 ```java
-interface Anonymous{
+interface Anonymous {
     void function();
 }
 
@@ -324,14 +324,14 @@ ao.function();
 ## Nested Class
 
 ```java
-class Outer{
+class Outer {
     String name = "outer";
 
-    class Inner{
+    class Inner {
         String name = "inner";
     }
 
-    static class InnerStatic{
+    static class InnerStatic {
         String name = "inner static";
     }
 }
@@ -352,7 +352,7 @@ System.out.println(is.name);
 
 ```java
 @FunctionalInterface
-interface MyFunction{
+interface MyFunction {
     int function(int x, int y);
 }
 
