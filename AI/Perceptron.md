@@ -1,0 +1,58 @@
+<br />
+
+## 단층 퍼셉트론 (Single-Layer Perceptron)
+
+퍼셉트론(Perceptron)은 단층 신경망을 통해 간단한 이진 분류 문제를 해결하는 알고리즘
+
+입력 데이터가 특정 클래스에 속하는지 아닌지를 판별하는 데 사용
+
+다수의 신호를 입력으로 받아 하나의 신호를 출력하며, 0이나 1의 두 가지 값을 가짐
+
+<p></p>
+
+**입력값 (Input)**: 입력 노드에 들어오는 데이터 (x1, x2, x3, …)
+
+**가중치 (Weight)**: 입력에 각각 곱해지는 값 (w1, w2, w3, …)
+
+**바이어스 (Bias)**: 퍼셉트론의 활성화 함수를 조정해주는 상수 (b)
+
+**활성화 함수 (Activation Function)**:
+
+가중치와 입력값의 합이 특정 임계값을 넘는지 판단하여 출력값을 결정
+
+단순 퍼셉트론에서는 주로 계단 함수(step function)가 사용되며, 이 함수는 가중합이 0을 넘으면 1, 그렇지 않으면 0을 출력
+
+<p></p>
+
+<div style="display: flex; justify-content: center;">
+  <img src="./Figure/Figure1.png" style="margin: 0 10px; width: 300px;">
+</div>
+<div style="display: flex; justify-content: center;">
+  <img src="./Figure/Figure2.png" style="margin: 0 10px; width: 300px;">
+</div>
+
+</br>
+
+## 다층 퍼셉트론 (Multi-Layer Perceptron, MLP)
+
+기존 단층 퍼셉트론을 이용해 AND, NAND, OR 게이트를 만들 수 있지만, XOR 게이트를 구현하지 못함
+
+XOR 게이트는 기존의 AND, NAND, OR 게이트를 조합하면 만들 수 있음
+
+즉, 다층 퍼셉트론을 이용하여 XOR 구현 가능
+
+<p></p>
+
+<div style="display: flex; justify-content: center;">
+  <img src="./Figure/Figure3.png" style="margin: 0 10px; width: 300px;">
+</div>
+
+<br />
+<br />
+<br />
+
+[출처: 사이토 고키, 「밑바닥부터 시작하는 딥러닝 - 파이썬으로 익히는 딥러닝 이론과 구현, 한빛미디어](https://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198)
+
+[출처: 유원준, 상준, 「딥 러닝을 이용한 자연어 처리 입문, 위키독스](https://wikidocs.net/24958)
+
+<br />
