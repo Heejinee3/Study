@@ -430,10 +430,10 @@ clear: both; /* float 영향을 받지 않기
 ```css
 position: static; /* Postition 정하기
                      static  : 기본값
-                     relative: 기본에서 위치만 옮길 수 있음
-                     absolute: relative를 사용한 상위 요소를 기준으로 배치
-                             : relative를 사용한 상위 요소가 없으면 fixed와 같음
-                     fixed   : 뷰포트를 기준으로 위치를 배치 */
+                     relative: 현재 요소를 기준으로 위치를 배치치
+                     absolute: relative, absolute, fixed, sticky인 상위 요소를 기준으로 위치를 배치
+                     fixed   : 뷰포트를 기준으로 위치를 배치 (화면 고정)
+                     sticky  : 뷰포트를 기준으로 위치를 배치 (스크롤 시 고정) */
 ```
 
 ```css
