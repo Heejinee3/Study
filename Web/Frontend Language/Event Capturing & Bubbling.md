@@ -34,8 +34,9 @@ document.getElementById("inner").addEventListener("click", () => {
 });
 ```
 
-```html
-Outer clicked ← 캡처링 단계 Inner clicked ← 버블링 단계
+```
+Outer clicked ← 캡처링 단계
+Inner clicked ← 버블링 단계
 ```
 
 <br />
@@ -51,18 +52,18 @@ Outer clicked ← 캡처링 단계 Inner clicked ← 버블링 단계
 
 <script>
   document.getElementById("outer").addEventListener("click", () => {
-    console.log("outer click");
+    console.log("Outer clicked");
   });
 
   document.getElementById("inner").addEventListener("click", (e) => {
     e.stopPropagation();
-    console.log("inner click");
+    console.log("Inner clicked");
   });
 </script>
 ```
 
-```html
-inner click
+```
+Inner clicked
 ```
 
 <br />
