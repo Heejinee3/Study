@@ -5,8 +5,7 @@
 데이터 마이닝에서 빈번한 아이템쌍을 찾는 과정에서 공간을 줄이기 위한 해시 기반 알고리즘
 
 해시 테이블을 한 번만 쓰는 PCY와 달리, 해시 과정을 여러 단계(Stage)로 나누어, 더 정밀하게 후보를 걸러냄
-
-![alt text](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FLMHQp%2FbtsPFfNAupV%2FAAAAAAAAAAAAAAAAAAAAADoxbTkhNqqBYgucCwTHua1xE0RBfCN59HAuTaLfWu3p%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3D0XaEqque5ITdLEWoRfB6OlpynuI%253D)
+![alt text](./Figure/Figure2.png)
 
 <br />
 

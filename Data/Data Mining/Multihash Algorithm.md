@@ -6,7 +6,7 @@
 
 PCY와 비슷하게 해시를 사용하지만, 한 번이 아니라 여러 개의 서로 다른 해시 함수를 사용
 
-![alt text](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FR1hQD%2FbtsPGFrJmOT%2FAAAAAAAAAAAAAAAAAAAAAFMODlH3ZcIJjU3hN_ovktw7OFt9GVqQdYGRa_BN2L6t%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DsDOKrartrohRtaIN1rL6PYrdvoA%253D)
+![alt text](./Figure/Figure3.png)
 
 <br />
 

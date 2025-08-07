@@ -8,7 +8,7 @@ PCY(Park-Chen-Yu) 알고리즘은 Apriori 알고리즘의 확장 버전으로, 2
 
 <p></p>
 
-![alt text](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbf1mhD%2FbtsPDZEukB5%2FAAAAAAAAAAAAAAAAAAAAACOLAl-6ns2F1saX6KZQdStvNCH8g7PGA7qLsm7zlALo%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DW82GElJWGqalr1qkG3eYussgmjg%253D)
+![alt text](./Figure/Figure1.png)
 
 1-pass:
 

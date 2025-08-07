@@ -205,7 +205,7 @@ transactions = [
 | {bread, diaper} | 4     | 0.80 ✅ |
 | {bread, beer}   | 2     | 0.40 ❌ |
 | {milk, diaper}  | 4     | 0.80 ✅ |
-| {milk, beer}    | 1     | 0.20 ❌ |
+| {milk, beer}    | 2     | 0.40 ❌ |
 | {diaper, beer}  | 3     | 0.60 ✅ |
 
 <p></p>
@@ -223,6 +223,7 @@ frequent 2-itemsets끼리 조합해서 3-itemset candidates 생성
 (단, 교집합 2개 이상 → 합집합이 정확히 3개일 때만 후보로 유지)
 
 `{bread, milk, diaper}`
+`{bread, diaper, beer}`
 `{milk, diaper, beer}`
 
 <p></p>
@@ -232,7 +233,8 @@ frequent 2-itemsets끼리 조합해서 3-itemset candidates 생성
 | 아이템셋              | 등장 횟수 | Support |
 | --------------------- | --------- | ------- |
 | {bread, milk, diaper} | 3         | 0.60 ✅ |
-| {milk, diaper, beer}  | 1         | 0.20 ❌ |
+| {bread, diaper, beer} | 2         | 0.40 ✅ |
+| {milk, diaper, beer}  | 2         | 0.40 ❌ |
 
 <p></p>
 
