@@ -1,6 +1,6 @@
 <br />
 
-![alt text](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbLaLYj%2FbtsPEMEEBi4%2FAAAAAAAAAAAAAAAAAAAAAFkwa0-m1-bM46VkWny55AxfeXfiyQHIneLgJsnN7kGM%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1756652399%26allow_ip%3D%26allow_referer%3D%26signature%3DdBjTSbe6sLpsJ%252FZdRVs5j1zFg%252Fc%253D)
+![alt text](https://github.com/Heejinee3/Study/blob/master/Basic/Algorithm/Figure/Figure1.png?raw=true)
 
 <br />
 
