@@ -1,10 +1,10 @@
 {
-  "AI": [false],
-  "App": [false],
+  "AI": ["Agent"],
+  "App": [true],
   "Basic": [true],
-  "CI CD": [false],
+  "CI CD": [true],
   "Data": [false],
-  "Database": [false],
+  "Infrastructure": [true],
   "Language": [true],
   "Web": ["Frontend Basic", "React", "Template Engine", false]
 }
