@@ -1,6 +1,15 @@
 {
-  "AI": ["Agent"],
-  "App": [true],
+  "AI": {
+    "Agent": "Done",
+    "Deep Learning": "Ongoing",
+    "Reinforcement Learning": "Not started",
+    "Machine Learning": "Not started",
+    "Generative Model": "Not started",
+    "Computer Vision": "Not started"
+  },
+  "App": {
+    "Kotlin": "Ongoing"
+  },
   "Basic": [true],
   "CI CD": [true],
   "Data": [false],

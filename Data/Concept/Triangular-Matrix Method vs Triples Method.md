@@ -29,7 +29,7 @@
 <br />
 <br />
 
-![alt text](./Figure/Figure2.png)
+![alt text](https://github.com/Heejinee3/Study/blob/master/Data/Concept/Figure/Figure2.png?raw=true)
 
 <br />
 <br />

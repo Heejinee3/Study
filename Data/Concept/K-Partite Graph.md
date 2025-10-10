@@ -5,7 +5,7 @@
 - 각 그룹: 독립적인 집합 (independent set)
 - edge는 오직 서로 다른 집합에 속한 정점들 사이에만 존재
 
-![alt text](./Figure/Figure1.png)
+![alt text](https://github.com/Heejinee3/Study/blob/master/Data/Concept/Figure/Figure1.png?raw=true)
 
 <br />
 <br />
