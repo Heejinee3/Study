@@ -5,15 +5,63 @@
     "Reinforcement Learning": "Not started",
     "Machine Learning": "Not started",
     "Generative Model": "Not started",
-    "Computer Vision": "Not started"
+    "Computer Vision": "Not started",
+    "Concept": "Not started"
   },
   "App": {
     "Kotlin": "Ongoing"
   },
-  "Basic": [true],
-  "CI CD": [true],
-  "Data": [false],
-  "Infrastructure": [true],
-  "Language": [true],
-  "Web": ["Frontend Basic", "React", "Template Engine", false]
+  "Basic": {
+    "Algorithm": "Done",
+    "Design Pattern": ["Stopped", "GoF 공부 후 파일명 바꾸기"],
+    "Git": "Done",
+    "Http": "Done"
+  },
+  "CI CD": {
+    "Docker": "Done",
+    "Kubernetes": "Done",
+    "Jenkins": "Not started"
+  },
+  "Data": {
+    "Concept": "Stopped",
+    "Data Mining": [
+      "Ongoing",
+      "p.240(BFR)부터 공부, pp.390-524(Link Analysis, Mining Social Network Graphs)는 공부하고 정리했으니 제외, 해당 부분 넘어가면 글 다시 수정"
+    ],
+    "Data Science": "Not started"
+  },
+  "Infrastructure": {
+    "ElasticSearch": ["Stopped", "Elastic Stack 공부 후 파일명 바꾸기"],
+    "MySQL": "Done",
+    "Kafka": "Not started"
+  },
+  "Game": {
+    "Unity": "Not started",
+    "OpenGL": "Not started"
+  },
+  "Language": {
+    "Java": "Done",
+    "Python": "Done"
+  },
+  "Web": {
+    "Frontend Basic": "Stopped",
+    "React": "Ongoing",
+    "Template Engine": "Done",
+    "Vue": "Ongoing",
+    "Spring Boot": [
+      "Ongoing",
+      {
+        "스프링 핵심 원리 - 기본편": "",
+        "스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술": [
+          "Done",
+          "스프링 핵심 원리 - 기본편 공부 후 파일명 바꾸기"
+        ],
+        "스프링 MVC 2편 - 백엔드 웹 개발 활용 기술": "",
+        "스프링 DB 1편 - 데이터 접근 핵심 원리": "",
+        "스프링 DB 2편 - 데이터 접근 활용 기술": "",
+        "스프링 핵심 원리 - 고급편": "",
+        "스프링 부트 - 핵심 원리와 활용": ""
+      }
+    ]
+  }
 }
